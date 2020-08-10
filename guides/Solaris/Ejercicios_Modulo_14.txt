@@ -1,0 +1,1647 @@
+[lab5]/#su user5
+[lab5]/#exit
+exit
+[lab5]/#bash
+[lab5]/#su - user5
+Sun Microsystems Inc.   SunOS 5.10      Generic January 2005
+-bash-3.00$ exit
+logout
+[lab5]/#prstat
+   PID USERNAME  SIZE   RSS STATE  PRI NICE      TIME  CPU PROCESS/NLWP       
+  4454 root      113M   53M sleep   59    0   0:00:11 3.7% java/44
+  2213 root      141M   70M sleep   59    0   0:00:19 0.9% java/28
+   806 noaccess  191M  128M sleep   59    0   0:09:43 0.3% java/19
+  4417 root     7560K 4096K sleep   59    0   0:00:00 0.3% dtterm/1
+  4460 root     3760K 2944K cpu0    59    0   0:00:00 0.2% prstat/1
+   700 root       44M   19M sleep   59    0   0:01:58 0.2% Xorg/1
+   819 root       11M 7128K sleep   59    0   0:01:31 0.2% dtgreet/1
+  4418 root     7576K 4012K sleep   59    0   0:00:00 0.1% sdtperfmeter/1
+  4423 root     2284K 1336K sleep   59    0   0:00:00 0.1% rpc.rstatd/1
+   146 root     6044K 2924K sleep   59    0   0:00:14 0.1% nscd/31
+   279 root     3360K 1340K sleep   59    0   0:00:38 0.0% VBoxService/6
+  4416 root     7528K 4048K sleep   59    0   0:00:00 0.0% dtterm/1
+  4415 root       10M 7104K sleep   59    0   0:00:01 0.0% dtwm/5
+  4439 root     2936K 1688K sleep   59    0   0:00:00 0.0% bash/1
+   605 root     8380K 1728K sleep   59    0   0:00:15 0.0% sendmail/1
+   695 root     5744K 1836K sleep   59    0   0:00:04 0.0% dtlogin/1
+   377 root     6008K 3188K sleep   59    0   0:00:09 0.0% inetd/4
+  3958 root     2864K 1944K sleep   59    0   0:00:00 0.0% remotedprovider/4
+   485 root     2384K 1104K sleep   59    0   0:00:02 0.0% in.routed/1
+  3959 root     3416K 2140K sleep   59    0   0:00:00 0.0% remotedprovider/4
+     9 root     8488K 7184K sleep   59    0   0:00:48 0.0% svc.configd/17
+  4335 root     6968K 2572K sleep   59    0   0:00:00 0.0% VBoxClient/2
+  4390 root     1532K  968K sleep   59    0   0:00:00 0.0% ksh/1
+   579 root       13M 8792K sleep   59    0   0:00:37 0.0% fmd/19
+   249 root     2240K  756K sleep   59    0   0:00:00 0.0% iscsid/2
+   276 root     2768K  960K sleep   59    0  12:48:32 0.0% cron/1
+Total: 68 processes, 306 lwps, load averages: 0.34, 0.27, 0.23
+[lab5]/#prstat -a
+   PID USERNAME  SIZE   RSS STATE  PRI NICE      TIME  CPU PROCESS/NLWP       
+   806 noaccess  191M  128M sleep   59    0   0:09:45 0.6% java/19
+  4454 root      113M   53M sleep   59    0   0:00:13 0.6% java/44
+  4461 root     3776K 2936K cpu0    59    0   0:00:00 0.4% prstat/1
+  2213 root      137M   67M sleep   59    0   0:00:20 0.4% java/28
+  4417 root     7560K 4104K sleep   59    0   0:00:01 0.3% dtterm/1
+   700 root       44M   19M sleep   59    0   0:01:58 0.1% Xorg/1
+  4418 root     7576K 4012K sleep   59    0   0:00:00 0.1% sdtperfmeter/1
+   819 root       11M 7128K sleep   59    0   0:01:31 0.1% dtgreet/1
+  4423 root     2284K 1336K sleep   59    0   0:00:00 0.1% rpc.rstatd/1
+   146 root     6044K 2924K sleep   59    0   0:00:14 0.0% nscd/31
+   279 root     3360K 1340K sleep   59    0   0:00:38 0.0% VBoxService/6
+  4415 root       10M 7104K sleep   59    0   0:00:01 0.0% dtwm/5
+   605 root     8380K 1728K sleep   59    0   0:00:15 0.0% sendmail/1
+  4439 root     2936K 1688K sleep   59    0   0:00:00 0.0% bash/1
+   377 root     6008K 3188K sleep   59    0   0:00:09 0.0% inetd/4
+     9 root     8488K 7184K sleep   59    0   0:00:48 0.0% svc.configd/17
+     1 root     2496K 1216K sleep   59    0   0:00:00 0.0% init/1
+   276 root     2768K  960K sleep   59    0  12:48:32 0.0% cron/1
+ NPROC USERNAME  SWAP   RSS MEMORY      TIME  CPU                             
+    60 root      167M  269M    13%  13:15:22 2.1%
+     1 noaccess  109M  180M   8.8%   0:09:45 0.6%
+     1 smmsp    1136K 4508K   0.2%   0:15:00 0.0%
+     6 daemon   6420K 5936K   0.3%   0:00:00 0.0%
+
+
+
+Total: 68 processes, 306 lwps, load averages: 0.12, 0.19, 0.20
+[lab5]/#prstat -Z
+   PID USERNAME  SIZE   RSS STATE  PRI NICE      TIME  CPU PROCESS/NLWP       
+  4454 root      113M   53M sleep   59    0   0:00:14 1.0% java/45
+   806 noaccess  191M  128M sleep   59    0   0:09:45 0.6% java/19
+  2213 root      137M   67M sleep   59    0   0:00:20 0.4% java/29
+  4462 root     3776K 2936K cpu0    59    0   0:00:00 0.4% prstat/1
+  4417 root     7560K 4104K sleep   59    0   0:00:01 0.3% dtterm/1
+   700 root       44M   19M sleep   59    0   0:01:58 0.2% Xorg/1
+   819 root       11M 7128K sleep   59    0   0:01:31 0.1% dtgreet/1
+  4418 root     7576K 4012K sleep   59    0   0:00:00 0.1% sdtperfmeter/1
+  4423 root     2284K 1336K sleep   59    0   0:00:00 0.1% rpc.rstatd/1
+   146 root     6044K 2924K sleep   59    0   0:00:14 0.0% nscd/31
+   279 root     3360K 1340K sleep   59    0   0:00:38 0.0% VBoxService/6
+  4439 root     2936K 1688K sleep   59    0   0:00:00 0.0% bash/1
+   605 root     8380K 1728K sleep   59    0   0:00:15 0.0% sendmail/1
+   695 root     5744K 1836K sleep   59    0   0:00:04 0.0% dtlogin/1
+   377 root     6008K 3188K sleep   59    0   0:00:09 0.0% inetd/4
+  4415 root       10M 7104K sleep   59    0   0:00:01 0.0% dtwm/5
+   600 root     9544K 5964K sleep   59    0   0:00:03 0.0% snmpd/1
+   485 root     2384K 1104K sleep   59    0   0:00:02 0.0% in.routed/1
+ZONEID    NPROC  SWAP   RSS MEMORY      TIME  CPU ZONE                        
+     0       68  284M  399M    19%  13:40:08 3.4% global                      
+
+
+
+
+
+
+Total: 68 processes, 308 lwps, load averages: 0.13, 0.19, 0.20
+[lab5]/#prstat -u
+prstat: option requires an argument -- u
+Usage:  prstat [-acJLmRtTvZ] [-u euidlist] [-U uidlist]
+        [-p pidlist] [-P cpulist] [-C psrsetlist]
+        [-j projidlist] [-k taskidlist] [-z zoneidlist]
+        [-s key | -S key] [-n nprocs[,nusers]]
+        [interval [counter]]
+[lab5]/#prstat -P
+prstat: option requires an argument -- P
+Usage:  prstat [-acJLmRtTvZ] [-u euidlist] [-U uidlist]
+        [-p pidlist] [-P cpulist] [-C psrsetlist]
+        [-j projidlist] [-k taskidlist] [-z zoneidlist]
+        [-s key | -S key] [-n nprocs[,nusers]]
+        [interval [counter]]
+[lab5]/#prstat -p
+prstat: option requires an argument -- p
+Usage:  prstat [-acJLmRtTvZ] [-u euidlist] [-U uidlist]
+        [-p pidlist] [-P cpulist] [-C psrsetlist]
+        [-j projidlist] [-k taskidlist] [-z zoneidlist]
+        [-s key | -S key] [-n nprocs[,nusers]]
+        [interval [counter]]
+[lab5]/#vmstat   
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5468016 1568304 3 12  3  0  0  0  2  0 -0 -0 -0  231  127  148  1 28 72
+[lab5]/#vmstat 3
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5468008 1568288 3 12  3  0  0  0  2  0 -0 -0 -0  231  127  148  1 28 72
+ 0 0 0 5346020 1387128 0 14  0  0  0  0  0  0  0  0  0  240  289  195  0 38 62
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  235  295  197  1 32 68
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  236  267  189  0 27 73
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  230  260  191  4 18 78
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  244  339  208  1 12 87
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  244  260  191  0 10 89
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  251  276  204  0  6 94
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  4  0  0  0  263  283  207  0  5 95
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  259  363  213  1  4 95
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  256  266  200  0  5 94
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  258  277  210  0  5 95
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  268  311  230  1  8 91
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  273  258  224  1 11 89
+ 0 0 0 5345940 1387048 0  0  0  0  0  0  0  0  0  0  0  261  254  211  1 11 88
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  258  373  221  1 12 87
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  256  252  203  0 13 87
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  253  274  205  1 15 85
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  249  271  201  1 16 84
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  258  292  209  1 18 82
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  250  294  204  1 18 81
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  251  263  201  1 19 80
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  255  289  206  1 21 78
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  255  267  197  1 22 77
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  247  288  199  6 22 71
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  252  303  213  2 24 74
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  252  247  203  1 26 74
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  247  263  196  1 27 72
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  257  302  217  1 29 70
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  246  269  197  1 29 70
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  244  256  189  1 30 69
+ 0 0 0 5345940 1387044 0  0  0  0  0  0  0  0  0  0  0  250  266  197  1 33 66
+ 0 0 0 5345936 1387040 0  0  0  0  0  0  0  0  0  0  0  250  341  206  2 34 65
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  249  305  203  1 34 65
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  248  365  245  1 37 61
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  247  303  194  1 37 62
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  245  257  188  1 37 62
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  249  286  199  1 40 59
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  248  309  199  1 38 60
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  254  252  212  1 40 59
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  246  259  188  1 41 58
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  255  267  197  1 44 55
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  259  323  204  1 45 54
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  253  268  206  1 49 50
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  245  266  190  3 46 51
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  253  305  191  1 48 51
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  243  257  188  1 47 52
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  244  272  193  0 48 52
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  238  307  196  1 43 57
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  244  270  193  0 38 61
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  240  293  188  1 37 63
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  239  266  194  0 29 71
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  240  275  214  0 20 80
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  236  259  208  1 14 85
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  232  255  192  0 11 89
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  242  330  202  0  8 91
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  251  254  196  0  4 96
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  251  425  207  0  4 95
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  248  298  205  0  5 95
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  262  265  206  0  5 94
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  250  257  197  1  5 94
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  252  266  207  0  7 92
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  248  287  203  1 12 87
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  253  266  199  1 13 87
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  254  293  212  4 14 82
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  260  292  215  1 14 85
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  254  249  214  1 17 83
+ 0 0 0 5345936 1387036 0  0  0  0  0  0  0  0  0  0  0  255  314  219  1 17 82
+ 0 0 0 5345936 1387036 0  1  0  0  0  0  0  0  0  0  0  279  435  242  1 18 81
+ 0 0 0 5345948 1387048 0  0  0  0  0  0  0  0  0  0  0  257  265  204  1 20 79
+ 0 0 0 5345976 1387076 0  2  0  0  0  0  0  0  0  0  0  259  285  204  1 21 79
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  277  520  251  1 21 78
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  252  358  208  1 23 76
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  244  373  250  1 24 75
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  245  261  189  1 25 75
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  249  299  197  1 26 73
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  246  264  198  1 28 72
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  246  271  198  1 28 71
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  247  297  199  1 30 69
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  257  250  214  1 33 66
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  248  265  191  1 32 67
+ 0 0 0 5345976 1387072 0  0  0  0  0  0  0  0  0  0  0  251  262  198  1 34 65
+ 0 0 0 5345976 1387068 0  1  0  0  0  0  0  0  0  0  0  248  366  208  2 35 63
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  247  269  195  1 37 62
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  245  274  200  3 37 60
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  336  202  1 38 60
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  258  197  1 39 60
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  278  196  1 40 59
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  304  200  1 42 57
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  252  267  199  1 44 55
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  243  261  190  1 43 56
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  257  269  199  1 46 53
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  254  277  209  1 45 53
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  251  268  202  1 47 52
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  248  286  189  1 48 50
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  242  303  192  0 47 52
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  236  260  184  0 44 55
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  241  277  192  1 43 56
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  238  307  199  0 39 60
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  238  267  196  0 29 71
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  228  257  180  1 26 73
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  239  298  199  0 17 83
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  234  253  185  0 12 87
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  244  295  195  1  9 90
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  240  261  196  3  6 91
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  254  293  221  0  5 95
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  247  199  0  5 95
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  257  265  205  0  4 95
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  260  303  213  1  6 94
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  257  262  206  1  9 90
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  266  192  1 10 89
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  251  307  206  1 11 88
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  247  254  200  1 12 87
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  253  371  256  1 14 85
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  248  288  198  1 16 84
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  251  334  207  1 17 83
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  242  257  194  1 17 83
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  250  268  198  1 20 80
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  291  205  1 20 79
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  256  285  212  1 22 78
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  248  259  199  1 22 78
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  247  297  196  1 23 76
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  245  254  191  1 25 74
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  248  268  198  1 26 73
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  244  287  197  5 26 69
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  245  303  197  1 29 70
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  243  250  183  1 29 70
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  248  263  202  1 31 68
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  245  301  195  1 31 68
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  245  270  197  1 33 66
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  247  262  192  1 34 66
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  301  204  1 36 63
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 1 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  252  281  213  1 38 61
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  256  268  208  1 40 59
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  249  259  193  1 40 59
+ 0 0 0 5345976 1387068 0  0  0  0  0  0  0  0  0  0  0  247  311  194  1 40 58
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  245  268  189  1 41 58
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  254  285  203  1 42 57
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  247  295  196  1 46 52
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  246  271  190  1 45 54
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  248  263  190  1 45 54
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  246  302  194  1 46 53
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  243  288  189  1 47 51
+ 0 0 0 5345996 1387088 0  0  0  0  0  0  0  0  0  0  0  251  278  201  0 45 55
+ 0 0 0 5345996 1387088 0  1  0  0  0  0  0  0  0  0  0  240  267  192  6 44 50
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  248  295  222  0 42 57
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  249  256  203  1 37 63
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  241  276  204  0 33 67
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  229  297  196  1 21 78
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  233  295  193  0 16 84
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  238  259  190  0 13 87
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  243  301  199  0  9 91
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  238  262  191  0  7 92
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  251  372  263  1  6 94
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  252  198  0  4 96
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  302  210  0  5 95
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  247  263  200  0  5 95
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  265  307  212  1  9 90
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  273  282  225  1 11 88
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  266  253  214  1 12 88
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  251  256  198  1 13 87
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  260  298  215  1 14 85
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  256  254  198  1 15 84
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  266  196  1 16 83
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  243  257  199  4 18 78
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  248  306  205  1 19 80
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  244  254  188  1 20 79
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  251  274  204  1 21 78
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  247  292  195  1 22 77
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  244  266  197  1 22 77
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  246  257  191  1 26 74
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  249  295  207  1 26 74
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  252  240  205  1 28 71
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  252  272  204  1 29 71
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  243  250  194  1 30 69
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  311  199  1 32 67
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  247  261  199  1 32 67
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  278  203  1 34 65
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  247  293  199  1 34 65
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  321  199  1 36 63
+ 0 0 0 5345996 1387084 0  0  0  0  0  0  0  0  0  0  0  250  259  197  1 39 60
+ 0 0 0 5345988 1387076 6 134 0  0  0  0  0  0  0  0  0  250  417  208  2 38 60
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  243  262  183  1 39 60
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  252  276  204  3 39 58
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  245  293  188  1 39 60
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  260  285  212  1 43 56
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  250  257  199  1 43 56
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  249  287  199  1 44 55
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  249  290  192  1 43 56
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  248  263  192  1 44 54
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  245  259  191  1 44 55
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  245  310  192  1 46 53
+ 0 0 0 5345988 1387076 0  0  0  0  0  0  0  0  0  0  0  239  262  189  0 41 58
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  241  373  243  1 39 61
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  239  331  196  0 39 61
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  243  270  198  1 33 67
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  232  263  191  0 24 75
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  234  278  193  1 18 82
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  241  328  212  0 11 89
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  241  263  204  0  8 92
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  246  255  197  0  9 91
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  248  300  204  0  6 94
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  251  257  194  0  4 96
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  248  319  204  4  5 91
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  250  292  202  0  4 95
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  259  264  203  1  7 92
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  267  257  204  1 10 90
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  259  281  209  1 11 88
+ kthr      memory            page            disk          faults      cpu
+ r b w   swap  free  re  mf pi po fr de sr cd s0 s1 s2   in   sy   cs us sy id
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  252  284  198  1 12 87
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  248  266  203  1 12 87
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  248  255  193  1 14 86
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  257  301  214  1 15 85
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  252  248  210  0 18 82
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  249  271  206  1 18 81
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  249  357  209  1 20 80
+ 0 0 0 5345988 1387072 0  0  0  0  0  0  0  0  0  0  0  250  288  205  1 19 80
+q^C
+[lab5]/#pgrep -l mail
+  608 sendmail
+  605 sendmail
+[lab5]/#ps -e | grep mail
+   608 ?          15:00 sendmail
+   605 ?           0:15 sendmail
+[lab5]/#man -s3head signal
+Reformatting page.  Please Wait... done
+
+Headers                                           signal.h(3HEAD)
+
+NAME
+     signal.h, signal - base signals
+
+SYNOPSIS
+     #include <signal.h>
+
+DESCRIPTION
+     A signal is an asynchronous notification of an event. A sig-
+     nal  is said to be generated for (or sent to) a process when
+     the event associated with that signal first occurs. Examples
+     of such events include hardware faults, timer expiration and
+     terminal activity, as well as the invocation of the  kill(2)
+     or  sigsend(2)  functions.   In some circumstances, the same
+     event generates signals for multiple  processes.  A  process
+     may  request  a  detailed  notification of the source of the
+     signal  and  the  reason   why   it   was   generated.   See
+     siginfo.h(3HEAD).
+
+     Signals can be generated  synchronously  or  asynchronously.
+     Events directly caused by the execution of code by a thread,
+     such as a reference to an unmapped, protected, or bad memory
+     can  generate  SIGSEGV or SIGBUS; a floating point exception
+     can  generate  SIGFPE;  and  the  execution  of  an  illegal
+     instruction can generate SIGILL. Such events are referred to
+     as traps; signals generated by traps are said to be synchro-
+     nously  generated.  Synchronously generated signals are ini-
+     tiated by a specific thread and are delivered to and handled
+     by that thread.
+
+     Signals may also be generated by calling kill(), sigqueue(),
+     or  sigsend().  Events  such as keyboard interrupts generate
+     signals, such as SIGINT, which are sent to the  target  pro-
+     cess.  Such  events  are  referred to as interrupts; signals
+     generated by interrupts are said to be  asynchronously  gen-
+     erated. Asynchronously generated signals are not directed to
+     a particular thread but are handled by an  arbitrary  thread
+     that meets either of the following conditions:
+
+       o  The thread is blocked in a  call  to  sigwait(2)  whose
+          argument includes the type of signal generated.
+
+       o  The thread has a signal mask that does not include  the
+          type of signal generated. See pthread_sigmask(3C). Each
+          process can specify a system  action  to  be  taken  in
+          response to each signal sent to it, called the signal's
+          disposition. All  threads  in  the  process  share  the
+          disposition.  The  set  of  system signal actions for a
+          process is initialized from that of its parent. Once an
+          action  is  installed for a specific signal, it usually
+          remains installed until another disposition  is  expli-
+          citly  requested by a call to either  sigaction(), sig-
+          nal() or  sigset(), or until the process  execs().  See
+
+SunOS 5.10          Last change: 20 Oct 2003                    1
+
+Headers                                           signal.h(3HEAD)
+
+          sigaction(2) and  signal(3C). When a process execs, all
+          signals whose disposition has been  set  to  catch  the
+          signal will be set to SIG_DFL. Alternatively, a process
+          may request that the  system  automatically  reset  the
+          disposition  of  a signal to  SIG_DFL after it has been
+          caught. See sigaction(2) and signal(3C).
+
+  SIGNAL DELIVERY
+     A signal is said to be delivered to a process when a  thread
+     within  the  process  takes  the appropriate action for  the
+     disposition of the signal.  Delivery  of  a  signal  can  be
+     blocked.  There  are  two methods for handling delivery of a
+     signal in a  multithreaded  application.  The  first  method
+     specifies a signal handler function to execute when the sig-
+     nal is received by the process. See sigaction(2). The second
+     method  uses  sigwait(2)  to  create  a thread to handle the
+     receipt of the signal. The sigaction() function can be  used
+     for both synchronously and asynchronously generated signals.
+     The sigwait() function will  work  only  for  asynchronously
+     generated  signals,  as  synchronously generated signals are
+     sent to the thread that  caused  the  event.  The  sigwait()
+     function  is  the  recommended  for use with a multithreaded
+     application.
+
+  SIGNAL MASK
+     Each thread has a signal mask  that defines the set of  sig-
+     nals  currently blocked from delivery to it. The signal mask
+     of the main thread is inherited from the signal mask of  the
+     thread  that created it in the parent process. The selection
+     of the thread  within  the  process  that  is  to  take  the
+     appropriate  action for the signal is based on the method of
+     signal generation and the signal masks of the threads in the
+     receiving process. Signals that are generated by action of a
+     particular thread such as hardware faults are  delivered  to
+     the  thread  that caused the signal. See pthread_sigmask(3C)
+     or sigprocmask(2). See alarm(2)  for  current  semantics  of
+     delivery of SIGALRM. Signals that are directed to a particu-
+     lar thread   are  delivered  to  the  targeted  thread.  See
+     pthread_kill(3C).  If  the  selected  thread has blocked the
+     signal, it  remains  pending  on  the  thread  until  it  is
+     unblocked.   For  all other types of signal generation  (for
+     example, kill(2), sigsend(2), terminal activity,  and  other
+     external  events  not ascribable to a particular thread) one
+     of the threads that does not  have  the  signal  blocked  is
+     selected  to  process  the signal. If all the threads within
+     the process block the signal, it remains pending on the pro-
+     cess  until  a  thread  in  the  process unblocks it. If the
+     action associated with a signal is set to ignore the  signal
+     then  both currently pending and subsequently generated sig-
+     nals of this type are discarded immediately  for  this  pro-
+     cess.
+
+SunOS 5.10          Last change: 20 Oct 2003                    2
+
+Headers                                           signal.h(3HEAD)
+
+     The determination of which action is taken in response to  a
+     signal   is  made  at  the time the signal is delivered to a
+     thread within the process, allowing for  any  changes  since
+     the  time of generation.   This determination is independent
+     of the means by which the signal was originally generated.
+
+     The signals currently defined by <signal.h> are as follows:
+
+     Name             Value   Default    Event
+     SIGHUP           1       Exit       Hangup (see termio(7I))
+     SIGINT           2       Exit       Interrupt (see termio(7I))
+     SIGQUIT          3       Core       Quit (see termio(7I))
+     SIGILL           4       Core       Illegal Instruction
+     SIGTRAP          5       Core       Trace or Breakpoint Trap
+     SIGABRT          6       Core       Abort
+     SIGEMT           7       Core       Emulation Trap
+     SIGFPE           8       Core       Arithmetic Exception
+     SIGKILL          9       Exit       Killed
+     SIGBUS           10      Core       Bus Error
+     SIGSEGV          11      Core       Segmentation Fault
+     SIGSYS           12      Core       Bad System Call
+     SIGPIPE          13      Exit       Broken Pipe
+     SIGALRM          14      Exit       Alarm Clock
+     SIGTERM          15      Exit       Terminated
+     SIGUSR1          16      Exit       User Signal 1
+     SIGUSR2          17      Exit       User Signal 2
+     SIGCHLD          18      Ignore     Child Status Changed
+     SIGPWR           19      Ignore     Power Fail or Restart
+     SIGWINCH         20      Ignore     Window Size Change
+     SIGURG           21      Ignore     Urgent Socket Condition
+     SIGPOLL          22      Exit       Pollable Event (see streamio(7I))
+     SIGSTOP          23      Stop       Stopped (signal)
+     SIGTSTP          24      Stop       Stopped (user) (see termio(7I))
+     SIGCONT          25      Ignore     Continued
+     SIGTTIN          26      Stop       Stopped (tty input) (see termio(7I))
+     SIGTTOU          27      Stop       Stopped (tty output) (see termio(7I))
+     SIGVTALRM        28      Exit       Virtual Timer Expired
+     SIGPROF          29      Exit       Profiling Timer Expired
+     SIGXCPU          30      Core       CPU   time   limit   exceeded    (see
+                                         getrlimit(2))
+     SIGXFSZ          31      Core       File   size   limit   exceeded   (see
+                                         getrlimit(2))
+     SIGWAITING       32      Ignore     Reserved
+     SIGLWP           33      Ignore     Reserved
+     SIGFREEZE        34      Ignore     Check point Freeze
+     SIGTHAW          35      Ignore     Check point Thaw
+[lab5]/#
+695   /usr/dt/bin/dtlogin -daemon
+  4248  /usr/dt/bin/dtlogin -daemon
+    4272  /bin/ksh /usr/dt/bin/Xsession
+      4378  /usr/dt/bin/sdt_shell -c       unset DT;      DISPLAY=192.168.230.1
+        4390  -ksh -c       unset DT;      DISPLAY=192.168.230.135:0;        /u
+          4409  /usr/dt/bin/dtsession
+            4417  /usr/dt/bin/dtterm -session dtoeaO8b
+              4537  /bin/ksh
+                4727  bash
+[lab5]/#bash
+[lab5]/#export EDITOR=vi
+[lab5]/#env
+MANPATH=/usr/dt/man:/usr/man:/usr/openwin/share/man
+DTSOURCEPROFILE=true
+TERM=dtterm
+SHELL=/bin/ksh
+WINDOWID=39845988
+DTHELPSEARCHPATH=//.dt/help/root-192.168.230.135-0/%H://.dt/help/root-192.168.23
+0.135-0/%H.sdl://.dt/help/root-192.168.230.135-0/%H.hv://.dt/help/%H://.dt/help/
+%H.sdl://.dt/help/%H.hv:/usr/dt/appconfig/help/%L/%H:/usr/dt/appconfig/help/%L/%
+H.sdl:/usr/dt/appconfig/help/%L/%H.hv:/usr/dt/appconfig/help/C/%H:/usr/dt/appcon
+fig/help/C/%H.sdl:/usr/dt/appconfig/help/C/%H.hv
+USER=root
+DTDEVROOT=
+XFORCE_INTERNET=True
+OPENWINHOME=/usr/openwin
+DTXSERVERLOCATION=remote
+XMBINDDIR=/usr/dt/lib/bindings
+SESSION_SVR=lab5
+HELPPATH=/usr/openwin/lib/locale:/usr/openwin/lib/help
+MAIL=/var/mail/root
+PATH=/usr/sbin:/usr/bin:/usr/dt/bin:/usr/openwin/bin:/usr/ucb
+TERMINAL_EMULATOR=dtterm
+PWD=/
+EDITOR=vi
+DTAPPSEARCHPATH=//.dt/appmanager:/usr/dt/appconfig/appmanager/%L:/usr/dt/appconf
+ig/appmanager/C
+LANG=C
+TZ=America/Costa_Rica
+XFILESEARCHPATH=/usr/openwin/lib/locale/%L/%T/%N%S:/usr/openwin/lib/%T/%N%S
+PS1=[lab5]$PWD#
+SHLVL=1
+HOME=/
+DTSCREENSAVERLIST=StartDtscreenSwarm StartDtscreenQix     StartDtscreenFlame Sta
+rtDtscreenHop StartDtscreenImage StartDtscreenLife     StartDtscreenRotor StartD
+tscreenPyro StartDtscreenWorm StartDtscreenBlank
+LOGNAME=root
+AB_CARDCATALOG=/usr/dt/share/answerbooks/C/ab_cardcatalog
+DTDATABASESEARCHPATH=//.dt/types,/usr/dt/appconfig/types/%L,/usr/dt/appconfig/ty
+pes/C
+XMICONSEARCHPATH=//.dt/icons/%B%M.pm://.dt/icons/%B%M.bm://.dt/icons/%B:/usr/dt/
+appconfig/icons/%L/%B%M.pm:/usr/dt/appconfig/icons/%L/%B%M.bm:/usr/dt/appconfig/
+icons/%L/%B:/usr/dt/appconfig/icons/C/%B%M.pm:/usr/dt/appconfig/icons/C/%B%M.bm:
+/usr/dt/appconfig/icons/C/%B
+DTUSERSESSION=root-192.168.230.135-0
+DISPLAY=192.168.230.135:0.0
+XMICONBMSEARCHPATH=//.dt/icons/%B%M.bm://.dt/icons/%B%M.pm://.dt/icons/%B:/usr/d
+t/appconfig/icons/%L/%B%M.bm:/usr/dt/appconfig/icons/%L/%B%M.pm:/usr/dt/appconfi
+g/icons/%L/%B:/usr/dt/appconfig/icons/C/%B%M.bm:/usr/dt/appconfig/icons/C/%B%M.p
+m:/usr/dt/appconfig/icons/C/%B
+dtstart_sessionlogfile=/dev/null
+_=/usr/bin/env
+[lab5]/#env EDITOR
+env: No such file or directory
+[lab5]/#EDITOR=vi
+[lab5]/#export EDITOR
+[lab5]/#env
+MANPATH=/usr/dt/man:/usr/man:/usr/openwin/share/man
+DTSOURCEPROFILE=true
+TERM=dtterm
+SHELL=/bin/ksh
+WINDOWID=39845988
+DTHELPSEARCHPATH=//.dt/help/root-192.168.230.135-0/%H://.dt/help/root-192.168.23
+0.135-0/%H.sdl://.dt/help/root-192.168.230.135-0/%H.hv://.dt/help/%H://.dt/help/
+%H.sdl://.dt/help/%H.hv:/usr/dt/appconfig/help/%L/%H:/usr/dt/appconfig/help/%L/%
+H.sdl:/usr/dt/appconfig/help/%L/%H.hv:/usr/dt/appconfig/help/C/%H:/usr/dt/appcon
+fig/help/C/%H.sdl:/usr/dt/appconfig/help/C/%H.hv
+USER=root
+DTDEVROOT=
+XFORCE_INTERNET=True
+OPENWINHOME=/usr/openwin
+DTXSERVERLOCATION=remote
+XMBINDDIR=/usr/dt/lib/bindings
+SESSION_SVR=lab5
+HELPPATH=/usr/openwin/lib/locale:/usr/openwin/lib/help
+MAIL=/var/mail/root
+PATH=/usr/sbin:/usr/bin:/usr/dt/bin:/usr/openwin/bin:/usr/ucb
+TERMINAL_EMULATOR=dtterm
+PWD=/
+EDITOR=vi
+DTAPPSEARCHPATH=//.dt/appmanager:/usr/dt/appconfig/appmanager/%L:/usr/dt/appconf
+ig/appmanager/C
+LANG=C
+TZ=America/Costa_Rica
+XFILESEARCHPATH=/usr/openwin/lib/locale/%L/%T/%N%S:/usr/openwin/lib/%T/%N%S
+PS1=[lab5]$PWD#
+SHLVL=1
+HOME=/
+DTSCREENSAVERLIST=StartDtscreenSwarm StartDtscreenQix     StartDtscreenFlame Sta
+rtDtscreenHop StartDtscreenImage StartDtscreenLife     StartDtscreenRotor StartD
+tscreenPyro StartDtscreenWorm StartDtscreenBlank
+LOGNAME=root
+AB_CARDCATALOG=/usr/dt/share/answerbooks/C/ab_cardcatalog
+DTDATABASESEARCHPATH=//.dt/types,/usr/dt/appconfig/types/%L,/usr/dt/appconfig/ty
+pes/C
+XMICONSEARCHPATH=//.dt/icons/%B%M.pm://.dt/icons/%B%M.bm://.dt/icons/%B:/usr/dt/
+appconfig/icons/%L/%B%M.pm:/usr/dt/appconfig/icons/%L/%B%M.bm:/usr/dt/appconfig/
+icons/%L/%B:/usr/dt/appconfig/icons/C/%B%M.pm:/usr/dt/appconfig/icons/C/%B%M.bm:
+/usr/dt/appconfig/icons/C/%B
+DTUSERSESSION=root-192.168.230.135-0
+DISPLAY=192.168.230.135:0.0
+XMICONBMSEARCHPATH=//.dt/icons/%B%M.bm://.dt/icons/%B%M.pm://.dt/icons/%B:/usr/d
+t/appconfig/icons/%L/%B%M.bm:/usr/dt/appconfig/icons/%L/%B%M.pm:/usr/dt/appconfi
+g/icons/%L/%B:/usr/dt/appconfig/icons/C/%B%M.bm:/usr/dt/appconfig/icons/C/%B%M.p
+m:/usr/dt/appconfig/icons/C/%B
+dtstart_sessionlogfile=/dev/null
+_=/usr/bin/env
+[lab5]/#env
+MANPATH=/usr/dt/man:/usr/man:/usr/openwin/share/man
+DTSOURCEPROFILE=true
+TERM=dtterm
+SHELL=/bin/ksh
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+#
+# The rtc command is run to adjust the real time clock if and when
+# daylight savings time changes.
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+#
+# The rtc command is run to adjust the real time clock if and when
+# daylight savings time changes.
+#
+1 2 * * * [ -x /usr/sbin/rtc ] && /usr/sbin/rtc -c > /dev/null 2>&1
+#10 3 * * * /usr/lib/krb5/kprop_script ___slave_kdcs___
+11 9 * * * /usr/bin/echo "It works!" > /dev/pts/6
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"/tmp/crontab51a47k" 15 lines, 532 characters 
+[lab5]/#date
+Sat Aug 20 09:10:39 CST 2011
+[lab5]/#date
+Sat Aug 20 09:10:56 CST 2011
+[lab5]/#It works!
+
+[lab5]/#[lab5]/#bash
+/kernel/drv/hid
+/kernel/drv/hubd
+/kernel/drv/ohci
+/kernel/drv/ohci.conf
+/kernel/drv/scsa2usb
+/kernel/drv/uhci
+/kernel/drv/uhci.conf
+/kernel/drv/usb_ac
+/kernel/drv/usb_ac.conf
+/kernel/drv/usb_as
+/kernel/drv/usb_mid
+/kernel/drv/usbprn
+/kernel/drv/scsa2usb.conf
+/kernel/drv/usbsacm
+/kernel/drv/daplt
+/kernel/drv/daplt.conf
+/kernel/drv/usbser_edge
+/kernel/drv/ugen
+/kernel/drv/usbsksp
+/kernel/drv/usbsprl
+/kernel/drv/audiovia823x
+/kernel/drv/audiovia823x.conf
+/kernel/drv/audiohd
+/kernel/drv/audiohd.conf
+/kernel/drv/av1394
+/kernel/drv/cadp
+/kernel/drv/cadp.conf
+/kernel/drv/xsvc
+/kernel/drv/xsvc.conf
+/kernel/drv/xge
+/kernel/drv/ce
+/kernel/drv/chxge
+/kernel/drv/cpqhpc
+/kernel/drv/cpqhpc.conf
+/kernel/drv/dca
+/kernel/drv/dca.conf
+/kernel/drv/zfs
+/kernel/drv/zfs.conf
+/kernel/drv/dtrace
+/kernel/drv/dtrace.conf
+/kernel/drv/fasttrap
+/kernel/drv/fasttrap.conf
+/kernel/drv/fbt
+/kernel/drv/fbt.conf
+/kernel/drv/lockstat
+/kernel/drv/lockstat.conf
+/kernel/drv/profile
+/kernel/drv/profile.conf
+/kernel/drv/sdt
+/kernel/drv/sdt.conf
+/kernel/drv/systrace
+/kernel/drv/systrace.conf
+/kernel/drv/fp
+/kernel/drv/fp.conf
+/kernel/drv/emlxs
+/kernel/drv/emlxs.conf
+/kernel/drv/symhisl
+/kernel/drv/symhisl.conf
+/kernel/drv/lsimega
+/kernel/drv/lsimega.conf
+/kernel/drv/lx_audio
+/kernel/drv/lx_audio.conf
+/kernel/drv/lx_ptm
+/kernel/drv/lx_ptm.conf
+/kernel/drv/lx_systrace
+/kernel/drv/lx_systrace.conf
+/kernel/drv/fcip
+/kernel/drv/fcip.conf
+/kernel/drv/fcp
+/kernel/drv/fcp.conf
+/kernel/drv/fcsm
+/kernel/drv/fcsm.conf
+/kernel/drv/mega_sas
+/kernel/drv/mega_sas.conf
+/kernel/drv/fm
+/kernel/drv/fm.conf
+/kernel/drv/bofi
+/kernel/drv/bofi.conf
+/kernel/drv/dcam1394
+/kernel/drv/mpt_sas
+/kernel/drv/mpt_sas.conf
+/kernel/drv/mr_sas
+/kernel/drv/mr_sas.conf
+/kernel/drv/nca
+/kernel/drv/marvell88sx
+/kernel/drv/nca.conf
+/kernel/drv/nge
+/kernel/drv/nge.conf
+/kernel/drv/ntxn
+/kernel/drv/ntxn.conf
+/kernel/drv/nv_sata
+/kernel/drv/nv_sata.conf
+/kernel/drv/pcic
+/kernel/drv/pcic.conf
+/kernel/drv/pcs
+/kernel/drv/pem
+/kernel/drv/pem.conf
+/kernel/drv/pcelx
+/kernel/drv/pcmem
+/kernel/drv/pcram
+/kernel/drv/pcser
+/kernel/drv/glm
+/kernel/drv/glm.conf
+/kernel/drv/asy
+/kernel/drv/asy.conf
+/kernel/drv/cmdk
+/kernel/drv/cmdk.conf
+/kernel/drv/ecpp
+/kernel/drv/ecpp.conf
+/kernel/drv/objmgr
+/kernel/drv/objmgr.conf
+/kernel/drv/pcata
+/kernel/drv/qlc
+/kernel/drv/qlc.conf
+/kernel/drv/rds
+/kernel/drv/rds.conf
+/kernel/drv/rdsib
+/kernel/drv/rdsib.conf
+/kernel/drv/rge
+/kernel/drv/rpcib
+/kernel/drv/rpcib.conf
+/kernel/drv/rtls
+/kernel/drv/rtls.conf
+/kernel/drv/scsa1394
+/kernel/drv/ses
+/kernel/drv/ses.conf
+/kernel/drv/si3124
+/kernel/drv/smp
+/kernel/drv/smp.conf
+/kernel/exec
+/kernel/exec/amd64
+/kernel/exec/amd64/elfexec
+/kernel/exec/amd64/intpexec
+/kernel/exec/elfexec
+/kernel/exec/intpexec
+/kernel/fs
+/kernel/fs/amd64
+/kernel/fs/amd64/autofs
+/kernel/fs/amd64/cachefs
+/kernel/fs/amd64/ctfs
+/kernel/fs/amd64/dcfs
+/kernel/fs/amd64/devfs
+/kernel/fs/amd64/fifofs
+/kernel/fs/amd64/hsfs
+/kernel/fs/amd64/lofs
+/kernel/fs/amd64/mntfs
+/kernel/fs/amd64/namefs
+/kernel/fs/amd64/objfs
+/kernel/fs/amd64/procfs
+/kernel/fs/amd64/sharefs
+/kernel/fs/amd64/sockfs
+/kernel/fs/amd64/specfs
+/kernel/fs/amd64/tmpfs
+/kernel/fs/amd64/ufs
+/kernel/fs/amd64/nfs
+/kernel/fs/amd64/udfs
+/kernel/fs/amd64/zfs
+/kernel/fs/amd64/lx_afs
+/kernel/fs/amd64/lx_proc
+/kernel/fs/autofs
+/kernel/fs/cachefs
+/kernel/fs/ctfs
+/kernel/fs/dcfs
+/kernel/fs/devfs
+/kernel/fs/fifofs
+/kernel/fs/hsfs
+/kernel/fs/lofs
+/kernel/fs/mntfs
+/kernel/fs/namefs
+/kernel/fs/objfs
+/kernel/fs/procfs
+/kernel/fs/sharefs
+/kernel/fs/sockfs
+/kernel/fs/specfs
+/kernel/fs/tmpfs
+/kernel/fs/ufs
+/kernel/fs/nfs
+/kernel/fs/udfs
+/kernel/fs/zfs
+/kernel/fs/lx_afs
+/kernel/fs/lx_proc
+/kernel/ipp
+/kernel/ipp/amd64
+/kernel/ipp/amd64/ipgpc
+/kernel/ipp/amd64/dlcosmk
+/kernel/ipp/amd64/dscpmk
+/kernel/ipp/amd64/flowacct
+/kernel/ipp/amd64/tokenmt
+/kernel/ipp/amd64/tswtclmt
+/kernel/ipp/ipgpc
+/kernel/ipp/dlcosmk
+/kernel/ipp/dscpmk
+/kernel/ipp/flowacct
+/kernel/ipp/tokenmt
+/kernel/ipp/tswtclmt
+/kernel/mac
+/kernel/mac/amd64
+/kernel/mac/amd64/mac_ether
+/kernel/mac/amd64/mac_ib
+/kernel/mac/mac_ether
+/kernel/mac/mac_ib
+/kernel/misc
+/kernel/misc/amd64
+/kernel/misc/amd64/des
+/kernel/misc/amd64/acpica
+/kernel/misc/amd64/busra
+/kernel/misc/amd64/cardbus
+/kernel/misc/amd64/cmlb
+/kernel/misc/amd64/consconfig
+/kernel/misc/amd64/ctf
+/kernel/misc/amd64/dls
+/kernel/misc/amd64/fssnap_if
+/kernel/misc/amd64/gld
+/kernel/misc/amd64/hook
+/kernel/misc/amd64/hpcsvc
+/kernel/misc/amd64/iommulib
+/kernel/misc/amd64/ipc
+/kernel/misc/amd64/kbtrans
+/kernel/misc/amd64/kcf
+/kernel/misc/amd64/kmdbmod
+/kernel/misc/amd64/krtld
+/kernel/misc/amd64/mac
+/kernel/misc/amd64/neti
+/kernel/misc/amd64/pcicfg
+/kernel/misc/amd64/pcihp
+/kernel/misc/amd64/pcmcia
+/kernel/misc/amd64/rpcsec
+/kernel/misc/amd64/sata
+/kernel/misc/amd64/scsi
+/kernel/misc/amd64/strplumb
+/kernel/misc/amd64/tem
+/kernel/misc/amd64/tlimod
+/kernel/misc/amd64/md5
+/kernel/misc/amd64/sha1
+/kernel/misc/amd64/phx
+/kernel/misc/amd64/sha2
+/kernel/misc/amd64/ibcm
+/kernel/misc/amd64/ibdm
+/kernel/misc/amd64/ibmf
+/kernel/misc/amd64/ibtl
+/kernel/misc/amd64/s1394
+/kernel/misc/amd64/amsrc1
+/kernel/misc/amd64/amsrc2
+/kernel/misc/amd64/audiosup
+/kernel/misc/amd64/diaudio
+/kernel/misc/amd64/mixer
+/kernel/misc/amd64/klmmod
+/kernel/misc/amd64/klmops
+/kernel/misc/amd64/nfs_dlboot
+/kernel/misc/amd64/kgssapi
+/kernel/misc/amd64/rpcsec_gss
+/kernel/misc/amd64/md_hotspares
+/kernel/misc/amd64/md_mirror
+/kernel/misc/amd64/md_notify
+/kernel/misc/amd64/md_raid
+/kernel/misc/amd64/md_sp
+/kernel/misc/amd64/md_stripe
+/kernel/misc/amd64/md_trans
+/kernel/misc/amd64/hidparser
+/kernel/misc/amd64/usba
+/kernel/misc/amd64/usba10
+/kernel/misc/amd64/usbser
+/kernel/misc/amd64/usbs49_fw
+/kernel/misc/amd64/vlan
+/kernel/misc/amd64/fctl
+/kernel/misc/amd64/nfssrv
+/kernel/misc/amd64/dadk
+/kernel/misc/amd64/gda
+/kernel/misc/amd64/snlb
+/kernel/misc/amd64/strategy
+/kernel/misc/amd64/sysinit
+/kernel/misc/amd64/rsmops
+/kernel/misc/amd64/sbp2
+/kernel/misc/des
+/kernel/misc/acpica
+/kernel/misc/busra
+/kernel/misc/cardbus
+/kernel/misc/cmlb
+/kernel/misc/consconfig
+/kernel/misc/ctf
+/kernel/misc/dls
+/kernel/misc/fssnap_if
+/kernel/misc/gld
+/kernel/misc/hook
+/kernel/misc/hpcsvc
+/kernel/misc/i2o_msg
+/kernel/misc/iommulib
+/kernel/misc/ipc
+/kernel/misc/kbtrans
+/kernel/misc/kcf
+/kernel/misc/kmdbmod
+/kernel/misc/krtld
+/kernel/misc/mac
+/kernel/misc/neti
+/kernel/misc/pcicfg
+/kernel/misc/pcihp
+/kernel/misc/pcmcia
+/kernel/misc/rpcsec
+/kernel/misc/sata
+/kernel/misc/scsi
+/kernel/misc/strplumb
+/kernel/misc/tem
+/kernel/misc/tlimod
+/kernel/misc/md5
+/kernel/misc/sha1
+/kernel/misc/sha2
+/kernel/misc/ibcm
+/kernel/misc/ibdm
+/kernel/misc/ibmf
+/kernel/misc/ibtl
+/kernel/misc/s1394
+/kernel/misc/amsrc1
+/kernel/misc/amsrc2
+/kernel/misc/audiosup
+/kernel/misc/diaudio
+/kernel/misc/mixer
+/kernel/misc/klmmod
+/kernel/misc/klmops
+/kernel/misc/nfs_dlboot
+/kernel/misc/kgss
+/kernel/misc/kgss/amd64
+/kernel/misc/kgss/amd64/kmech_krb5
+/kernel/misc/kgss/kmech_krb5
+/kernel/misc/kgssapi
+/kernel/misc/rpcsec_gss
+/kernel/misc/md_hotspares
+/kernel/misc/md_mirror
+/kernel/misc/md_notify
+/kernel/misc/md_raid
+/kernel/misc/md_sp
+/kernel/misc/md_stripe
+/kernel/misc/md_trans
+/kernel/misc/hidparser
+/kernel/misc/usba
+/kernel/misc/usba10
+/kernel/misc/phx
+/kernel/misc/usbser
+/kernel/misc/usbs49_fw
+/kernel/misc/vlan
+/kernel/misc/fctl
+/kernel/misc/nfssrv
+/kernel/misc/dadk
+/kernel/misc/gda
+/kernel/misc/snlb
+/kernel/misc/strategy
+/kernel/misc/sysinit
+/kernel/misc/rsmops
+/kernel/misc/sbp2
+/kernel/sched
+/kernel/sched/amd64
+/kernel/sched/amd64/TS
+/kernel/sched/amd64/TS_DPTBL
+/kernel/sched/TS
+/kernel/sched/TS_DPTBL
+/kernel/strmod
+/kernel/strmod/amd64
+/kernel/strmod/amd64/6to4tun
+/kernel/strmod/amd64/atun
+/kernel/strmod/amd64/bufmod
+/kernel/strmod/amd64/connld
+/kernel/strmod/amd64/dedump
+/kernel/strmod/amd64/drcompat
+/kernel/strmod/amd64/ldterm
+/kernel/strmod/amd64/pckt
+/kernel/strmod/amd64/pfmod
+/kernel/strmod/amd64/pipemod
+/kernel/strmod/amd64/ptem
+/kernel/strmod/amd64/redirmod
+/kernel/strmod/amd64/rpcmod
+/kernel/strmod/amd64/timod
+/kernel/strmod/amd64/tirdwr
+/kernel/strmod/amd64/ttcompat
+/kernel/strmod/amd64/tun
+/kernel/strmod/amd64/arp
+/kernel/strmod/amd64/icmp
+/kernel/strmod/amd64/ip
+/kernel/strmod/amd64/ipsecah
+/kernel/strmod/amd64/ipsecesp
+/kernel/strmod/amd64/keysock
+/kernel/strmod/amd64/rts
+/kernel/strmod/amd64/tcp
+/kernel/strmod/amd64/udp
+/kernel/strmod/amd64/sdpib
+/kernel/strmod/amd64/usb_ah
+/kernel/strmod/amd64/usbkbm
+/kernel/strmod/amd64/usbms
+/kernel/strmod/amd64/ldlinux
+/kernel/strmod/amd64/nca
+/kernel/strmod/6to4tun
+/kernel/strmod/atun
+/kernel/strmod/bufmod
+/kernel/strmod/connld
+/kernel/strmod/dedump
+/kernel/strmod/drcompat
+/kernel/strmod/ldterm
+/kernel/strmod/pckt
+/kernel/strmod/pfmod
+/kernel/strmod/pipemod
+/kernel/strmod/ptem
+/kernel/strmod/redirmod
+/kernel/strmod/rpcmod
+/kernel/strmod/timod
+/kernel/strmod/tirdwr
+/kernel/strmod/ttcompat
+/kernel/strmod/tun
+/kernel/strmod/arp
+/kernel/strmod/icmp
+/kernel/strmod/ip
+/kernel/strmod/ipsecah
+/kernel/strmod/ipsecesp
+/kernel/strmod/keysock
+/kernel/strmod/rts
+/kernel/strmod/tcp
+/kernel/strmod/udp
+/kernel/strmod/sdpib
+/kernel/strmod/usb_ah
+/kernel/strmod/usbkbm
+/kernel/strmod/usbms
+/kernel/strmod/hwc
+/kernel/strmod/ldlinux
+/kernel/strmod/nca
+/kernel/sys
+/kernel/sys/amd64
+/kernel/sys/amd64/c2audit
+/kernel/sys/amd64/doorfs
+/kernel/sys/amd64/inst_sync
+/kernel/sys/amd64/kaio
+/kernel/sys/amd64/msgsys
+/kernel/sys/amd64/pipe
+/kernel/sys/amd64/portfs
+/kernel/sys/amd64/pset
+/kernel/sys/amd64/semsys
+/kernel/sys/amd64/shmsys
+/kernel/sys/amd64/autofs
+/kernel/sys/amd64/rpcmod
+/kernel/sys/amd64/nfs
+/kernel/sys/c2audit
+/kernel/sys/doorfs
+/kernel/sys/inst_sync
+/kernel/sys/kaio
+/kernel/sys/msgsys
+/kernel/sys/pipe
+/kernel/sys/portfs
+/kernel/sys/pset
+/kernel/sys/semsys
+/kernel/sys/shmsys
+/kernel/sys/autofs
+/kernel/sys/rpcmod
+/kernel/sys/nfs
+/kernel/genunix
+/kernel/mach
+/kernel/mach/amd64
+/kernel/mach/amd64/pcplusmp
+/kernel/mach/pcplusmp
+/kernel/kmdb
+/kernel/kmdb/amd64
+/kernel/kmdb/amd64/zfs
+/kernel/kmdb/amd64/arp
+/kernel/kmdb/amd64/audiosup
+/kernel/kmdb/amd64/cpc
+/kernel/kmdb/amd64/crypto
+/kernel/kmdb/amd64/genunix
+/kernel/kmdb/amd64/hook
+/kernel/kmdb/amd64/ip
+/kernel/kmdb/amd64/ipc
+/kernel/kmdb/amd64/ipp
+/kernel/kmdb/amd64/krtld
+/kernel/kmdb/amd64/lofs
+/kernel/kmdb/amd64/logindmux
+/kernel/kmdb/amd64/md
+/kernel/kmdb/amd64/mdb_ds
+/kernel/kmdb/amd64/mpt
+/kernel/kmdb/amd64/mpt_sas
+/kernel/kmdb/amd64/mpxio
+/kernel/kmdb/amd64/nca
+/kernel/kmdb/amd64/neti
+/kernel/kmdb/amd64/nfs
+/kernel/kmdb/amd64/ptm
+/kernel/kmdb/amd64/random
+/kernel/kmdb/amd64/s1394
+/kernel/kmdb/amd64/sctp
+/kernel/kmdb/amd64/specfs
+/kernel/kmdb/amd64/sppp
+/kernel/kmdb/amd64/ufs
+/kernel/kmdb/amd64/ufs_log
+/kernel/kmdb/amd64/uhci
+/kernel/kmdb/amd64/usba
+/kernel/kmdb/zfs
+/kernel/kmdb/arp
+/kernel/kmdb/audiosup
+/kernel/kmdb/cpc
+/kernel/kmdb/crypto
+/kernel/kmdb/genunix
+/kernel/kmdb/hook
+/kernel/kmdb/ip
+/kernel/kmdb/ipc
+/kernel/kmdb/ipp
+/kernel/kmdb/krtld
+/kernel/kmdb/lofs
+/kernel/kmdb/logindmux
+/kernel/kmdb/md
+/kernel/kmdb/mdb_ds
+/kernel/kmdb/mpt
+/kernel/kmdb/mpt_sas
+/kernel/kmdb/mpxio
+/kernel/kmdb/nca
+/kernel/kmdb/neti
+/kernel/kmdb/nfs
+/kernel/kmdb/ptm
+/kernel/kmdb/random
+/kernel/kmdb/s1394
+/kernel/kmdb/sctp
+/kernel/kmdb/specfs
+/kernel/kmdb/sppp
+/kernel/kmdb/ufs
+/kernel/kmdb/ufs_log
+/kernel/kmdb/uhci
+/kernel/kmdb/usba
+/kernel/dtrace
+/kernel/dtrace/amd64
+/kernel/dtrace/amd64/fasttrap
+/kernel/dtrace/amd64/fbt
+/kernel/dtrace/amd64/lockstat
+/kernel/dtrace/amd64/profile
+/kernel/dtrace/amd64/sdt
+/kernel/dtrace/amd64/systrace
+/kernel/dtrace/amd64/lx_systrace
+/kernel/dtrace/fasttrap
+/kernel/dtrace/fbt
+/kernel/dtrace/lockstat
+/kernel/dtrace/profile
+/kernel/dtrace/sdt
+/kernel/dtrace/systrace
+/kernel/dtrace/lx_systrace
+/kernel/brand
+/kernel/brand/amd64
+/kernel/brand/amd64/lx_brand
+/kernel/brand/lx_brand
+/net
+/export
+/export/home
+/export/home/user4
+/export/home/user4/.profile
+/export/home/user4/local.cshrc
+/export/home/user4/local.login
+/export/home/user4/local.profile
+/export/home/user3
+/export/home/user3/.profile
+/export/home/user3/local.cshrc
+/export/home/user3/local.login
+/export/home/user3/local.profile
+/export/home/locked1
+/export/home/locked1/.profile
+/export/home/locked1/local.cshrc
+/export/home/locked1/local.login
+/export/home/locked1/local.profile
+/export/home/cleared1
+/export/home/cleared1/.profile
+/export/home/cleared1/local.cshrc
+/export/home/cleared1/local.login
+/export/home/cleared1/local.profile
+/export/home/user5
+/export/home/user5/.profile
+/export/home/user5/local.cshrc
+/export/home/user5/local.login
+/export/home/user5/local.profile
+/home
+/vol
+/vol/dev
+/vol/dev/aliases
+/vol/dev/aliases/cdrom0
+/vol/dev/dsk
+/vol/dev/dsk/c1t0d0
+/vol/dev/rdsk
+/vol/dev/rdsk/c1t0d0
+/vol/dev/rdsk/c1t0d0/nomedia
+/vol/rmt
+/vol/dsk
+/vol/rdsk
+/.sunw
+/.sunw/pkcs11_softtoken
+/.sunw/pkcs11_softtoken/objstore_info
+/.sunw/pkcs11_softtoken/public
+/.sunw/pkcs11_softtoken/private
+/.dt
+/.dt/sessions
+/.dt/sessions/lastsession
+/.dt/sessions/dtperf
+/.dt/sessions/home
+/.dt/sessions/home/dt.session
+/.dt/sessions/home/dt5daG8b
+/.dt/sessions/home/dtoeaO8b
+/.dt/sessions/home/dt.settings
+/.dt/sessions/home/dt.resources
+/.dt/sessions/dtwmfp.session
+/.dt/sessions/home.old
+/.dt/sessions/home.old/dt.session
+/.dt/sessions/home.old/dtEjaibc
+/.dt/sessions/home.old/dt2jaqcc
+/.dt/sessions/home.old/dt.settings
+/.dt/sessions/home.old/dt.resources
+/.dt/types
+/.dt/types/fp_dynamic
+/.dt/tmp
+/.dt/startlog
+/.dt/sessionlogs
+/.dt/sessionlogs/lab5_DISPLAY=:0
+/.dt/sessionlogs/lab5_DISPLAY=192.168.230.135:0
+/.dt/sessionlogs/lab5_DISPLAY=192.168.230.135:1
+/.dt/icons
+/.dt/appmanager
+/.dt/help
+/.dt/help/root-lab5-0
+/.dt/help/root-lab5-0/browser.hv
+/.dt/help/root-lab5-0/browser01.ht
+/.dt/help/root-lab5-0/browser00.ht
+/.dt/help/root-192.168.230.135-1
+/.dt/help/root-192.168.230.135-1/browser.hv
+/.dt/help/root-192.168.230.135-1/browser01.ht
+/.dt/help/root-192.168.230.135-1/browser00.ht
+/.dt/Trash
+/.dt/Trash/.trashinfo
+/.dt/Desktop
+/.dt/startlog.old
+/.dt/palettes
+/.dt/startlog.older
+/.dt/errorlog
+/.dt/errorlog.old
+/.dt/errorlog.older
+/.dtprofile
+/.gconf
+/.gconfd
+/.gconfd/saved_state
+/.Xdefaults
+/.Xauthority
+/TT_DB
+/TT_DB/file_table.rec
+/TT_DB/file_table.ind
+/TT_DB/file_table.var
+/TT_DB/file_object_map.rec
+/TT_DB/file_object_map.ind
+/TT_DB/property_table.rec
+/TT_DB/property_table.ind
+/TT_DB/property_table.var
+/TT_DB/access_table.rec
+/TT_DB/access_table.ind
+/.softwareupdate
+/.softwareupdate/2c9bdc3b
+/.softwareupdate/2c9bdc3b/disableNotification
+/cdrom
+/cdrom/vboxadditions_3.2.10_66523
+/cdrom/cdrom0
+/cdrom/sol_10_1009_x86
+/.gnome
+/.TTauthority
+/.gnome2
+/.gnome2/accels
+/.gnome2_private
+/dirprueba
+/dirprueba/hola
+/dirprueba/hola2
+/.profile
+/.sh_history
+/.vboxclient-clipboard.pid
+/.bash_history
+/.ssh
+/.ssh/known_hosts
+/morespace
+/dir0
+/modulo1
+/Mail
+/.smc.properties
+/192.168.230.135
+/.vboxclient-display.pid
+/.vboxclient-seamless.pid
+[lab5]/#tty
+/dev/pts/7
+[lab5]/#date
+Sat Aug 20 08:54:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:55:36 CST 2011
+[lab5]/#at -q x 09:01
+at> echo "Test Complete" > /dev/pts/7
+at>     ^C[lab5]/#
+[lab5]/#ls
+192.168.230.135  dir0             mnt              system
+Mail             dirprueba        modulo1          tmp
+TT_DB            etc              morespace        usr
+bin              export           net              var
+boot             home             opt              vol
+cdrom            kernel           platform
+dev              lib              proc
+devices          lost+found       sbin
+[lab5]/#date
+Sat Aug 20 08:58:07 CST 2011
+[lab5]/#date
+Sat Aug 20 08:58:08 CST 2011
+[lab5]/#date
+Sat Aug 20 08:58:09 CST 2011
+[lab5]/#date
+Sat Aug 20 08:58:15 CST 2011
+[lab5]/#date
+Sat Aug 20 08:58:26 CST 2011
+[lab5]/#at -q x 09:01
+at> echo "Test Complete" > /dev/pts/7
+at> <EOT>
+commands will be executed using /bin/ksh
+job 1313852460.x at Sat Aug 20 09:01:00 2011
+[lab5]/#date
+Sat Aug 20 08:59:30 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:40 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:40 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:41 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:42 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:42 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:42 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:49 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:50 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:50 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:50 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:50 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:51 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:51 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:51 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:51 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:51 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:52 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:52 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:52 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:52 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:52 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:53 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:54 CST 2011
+[lab5]/#date
+Sat Aug 20 08:59:54 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:00 CST 2011
+[lab5]/#atq
+ Rank     Execution Date     Owner      Job            Queue   Job Name
+  1st   Aug 20, 2011 09:01   root       1313852460.x     x     stdin
+[lab5]/#date
+Sat Aug 20 09:00:43 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:49 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:51 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:52 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:52 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:53 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:54 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:54 CST 2011
+[lab5]/#date
+Sat Aug 20 09:00:55 CST 2011
+[lab5]/#Test Complete
+
+[lab5]/#
+[lab5]/#bash
+[lab5]/#crontab -l
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+#
+# The rtc command is run to adjust the real time clock if and when 
+# daylight savings time changes.
+#
+1 2 * * * [ -x /usr/sbin/rtc ] && /usr/sbin/rtc -c > /dev/null 2>&1
+#10 3 * * * /usr/lib/krb5/kprop_script ___slave_kdcs___
+[lab5]/#/usr/d
+demo/ dict/ dt/   
+[lab5]/#/usr/dt/
+app-defaults/ backdrops/    classes/      dthelp/       include/      man/          share/        
+appconfig/    bin/          config/       examples/     lib/          palettes/     
+[lab5]/#/usr/dt/bin/   
+Display all 145 possibilities? (y or n)
+[lab5]/#/usr/dt/bin/sdtp
+sdtpagecounter  sdtpdasync      sdtperfmeter    sdtprocess      sdtprodreg      
+[lab5]/#/usr/dt/bin/sdtprocess &
+[1] 4487
+[lab5]/#prstat
+   PID USERNAME  SIZE   RSS STATE  PRI NICE      TIME  CPU PROCESS/NLWP       
+  4669 root     1652K 1016K run     30    0   0:00:05 8.2% find/1
+  4417 root     8012K 4660K run     47    0   0:00:07 4.0% dtterm/1
+  4454 root      113M   54M sleep   59    0   0:00:31 1.0% java/44
+   806 noaccess  191M  128M sleep   59    0   0:09:53 0.4% java/19
+   146 root     6044K 2924K sleep   59    0   0:00:16 0.3% nscd/31
+  4514 root     3824K 3004K cpu0    49    0   0:00:00 0.3% prstat/1
+  2213 root      137M   67M sleep   59    0   0:00:28 0.3% java/28
+  4674 root     1808K 1048K sleep   49    0   0:00:00 0.2% ps/1
+   700 root       44M   19M sleep   59    0   0:02:01 0.1% Xorg/1
+  4418 root     7576K 4044K sleep   59    0   0:00:03 0.1% sdtperfmeter/1
+  4423 root     2284K 1336K sleep   59    0   0:00:02 0.1% rpc.rstatd/1
+   819 root       11M 7128K sleep   59    0   0:01:33 0.1% dtgreet/1
+  4487 root     8956K 5352K sleep   49    0   0:00:00 0.1% sdtprocess/1
+  4675 root     1412K  732K sleep   49    0   0:00:00 0.0% tail/1
+  4673 root     1532K  952K run     39    0   0:00:00 0.0% sh/1
+  4415 root       10M 7164K sleep   59    0   0:00:02 0.0% dtwm/5
+   279 root     3360K 1340K sleep   59    0   0:00:39 0.0% VBoxService/6
+  4628 root     2936K 1724K sleep   59    0   0:00:00 0.0% bash/1
+   605 root     8380K 1728K sleep   59    0   0:00:15 0.0% sendmail/1
+   377 root     6008K 3188K sleep   59    0   0:00:09 0.0% inetd/4
+     7 root       12M 9936K sleep   59    0   0:00:24 0.0% svc.startd/15
+   695 root     5744K 1836K sleep   59    0   0:00:04 0.0% dtlogin/1
+   394 root     1440K  688K sleep   59    0   0:00:00 0.0% utmpd/1
+  3958 root     2864K 1944K sleep   59    0   0:00:00 0.0% remotedprovider/4
+   600 root     9544K 5964K sleep   59    0   0:00:03 0.0% snmpd/1
+   485 root     2384K 1104K sleep   59    0   0:00:02 0.0% in.routed/1
+  3959 root     3416K 2140K sleep   59    0   0:00:00 0.0% remotedprovider/4
+   579 root       13M 8792K sleep   59    0   0:00:37 0.0% fmd/19
+     9 root     8488K 7184K sleep   59    0   0:00:48 0.0% svc.configd/17
+  4408 root     5480K 3120K sleep   59    0   0:00:00 0.0% ttsession/1
+  4343 root     6868K 2204K sleep   59    0   0:00:00 0.0% VBoxClient/2
+   983 root     1424K  880K sleep   59    0   0:00:00 0.0% rpc-ttdbserverd/1
+   696 root     2560K  824K sleep   59    0   0:00:00 0.0% fbconsole/1
+   PID USERNAME  SIZE   RSS STATE  PRI NICE      TIME  CPU PROCESS/NLWP       
+  4417 root     8368K 4996K run     59    0   0:00:17 1.3% dtterm/1
+  4454 root      113M   54M run     59    0   0:00:44 1.3% java/44
+  2213 root      137M   67M sleep   59    0   0:00:35 0.7% java/28
+   806 noaccess  191M  128M sleep   59    0   0:10:00 0.3% java/19
+   146 root     6048K 2932K sleep   59    0   0:00:21 0.3% nscd/31
+  4514 root     3840K 3012K cpu0    59    0   0:00:05 0.3% prstat/1
+   700 root       44M   19M sleep   59    0   0:02:03 0.2% Xorg/1
+  4418 root     7576K 4044K sleep   59    0   0:00:05 0.1% sdtperfmeter/1
+   819 root       11M 7128K sleep   59    0   0:01:35 0.1% dtgreet/1
+  4487 root       11M 7316K sleep   59    0   0:00:02 0.1% sdtprocess/1
+  4423 root     2284K 1336K sleep   59    0   0:00:04 0.1% rpc.rstatd/1
+  4415 root       10M 7164K sleep   59    0   0:00:02 0.1% dtwm/5
+   279 root     3360K 1340K sleep   59    0   0:00:40 0.0% VBoxService/6
+   377 root     6008K 3188K sleep   59    0   0:00:09 0.0% inetd/4
+     7 root       12M 9936K sleep   59    0   0:00:24 0.0% svc.startd/15
+   605 root     8380K 2012K sleep   59    0   0:00:15 0.0% sendmail/1
+   600 root     9544K 5964K sleep   59    0   0:00:03 0.0% snmpd/1
+   394 root     1440K  688K sleep   59    0   0:00:00 0.0% utmpd/1
+  4335 root     7148K 2780K sleep   59    0   0:00:00 0.0% VBoxClient/2
+   695 root     5744K 1836K sleep   59    0   0:00:04 0.0% dtlogin/1
+   579 root       13M 8796K sleep   59    0  39:26:34 0.0% fmd/19
+Total: 71 processes, 309 lwps, load averages: 0.23, 0.21, 0.20
+You have new mail in /var/mail/root
+[lab5]/#
+You have new mail in /var/mail/root
+[lab5]/#tail /var/mail/root
+Content-Length: 116
+
+Your "cron" job on lab5
+/usr/bin/echo "It works!" /dev/pts/6
+
+produced the following output:
+
+It works! /dev/pts/6
+
+
+[1]+  Done                    /usr/dt/bin/sdtprocess
+[lab5]/#

@@ -1,0 +1,1996 @@
+
+       fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+WARNING - This disk may be in use by an application that has
+          modified the fdisk table. Ensure that this disk is
+          not currently in use before proceeding to use fdisk.
+format> quit
+[lab5]/dev/dsk#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   5.1G   924K   5.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   5.1G   692K   5.1G     1%    /tmp
+swap                   5.1G    24K   5.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/dev/dsk#fstyp -v /dev/dsk/c0d0s0 | grep minfree
+minfree 3%      maxbpg  2048    optim   time
+[lab5]/dev/dsk#df -k /dev/dsk/c0d0s0
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477298 1523023    24%    /
+[lab5]/dev/dsk#df -kh /dev/dsk/c0d0s0
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+[lab5]/dev/dsk#prtvtoc c0d0p0
+* c0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524
+       4      4    00   20643525  10249470  30892994
+       5      0    00   30892995  10859940  41752934
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/dsk#prtvtoc c0d0p1
+prtvtoc: /dev/rdsk/c0d0p1: Invalid VTOC
+[lab5]/dev/dsk#format
+Searching for disks...\done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 0 
+`\0' is not an integer.
+Specify disk (enter its number): 0       
+selecting c0d0
+Controller working list found
+[disk formatted, defect list found]
+Warning: Current Disk has mounted partitions.
+/dev/dsk/c0d0s0 is currently mounted on /. Please see umount(1M).
+/dev/dsk/c0d0s1 is currently used by swap. Please see swap(1M).
+/dev/dsk/c0d0s3 is currently mounted on /var. Please see umount(1M).
+/dev/dsk/c0d0s4 is currently mounted on /usr. Please see umount(1M).
+/dev/dsk/c0d0s5 is currently mounted on /opt. Please see umount(1M).
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        show       - translate a disk address
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk cylinders available: 2607 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       3 -  264        2.01GB    (262/0/0)   4209030
+  1       swap    wu     265 -  774        3.91GB    (510/0/0)   8193150
+  2     backup    wm       0 - 2606       19.97GB    (2607/0/0) 41881455
+  3        var    wm     775 - 1284        3.91GB    (510/0/0)   8193150
+  4        usr    wm    1285 - 1922        4.89GB    (638/0/0)  10249470
+  5 unassigned    wm    1923 - 2598        5.18GB    (676/0/0)  10859940
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm    2599 - 2606       62.75MB    (8/0/0)      128520
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 alternates    wu       1 -    2       15.69MB    (2/0/0)       32130
+
+partition> modify
+Cannot modify disk partitions while it has mounted partitions.
+
+partition> name
+Enter table name (remember quotes): ^[^C
+partition> 0
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       3 -  264        2.01GB    (262/0/0)   4209030
+
+Enter partition id tag[root]: ^C
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        show       - translate a disk address
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/dsk#fdisk c1t0d0p0
+fdisk: c1t0d0p0 must be a raw device.
+[lab5]/dev/dsk#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 0
+selecting c0d0
+Controller working list found
+[disk formatted, defect list found]
+Warning: Current Disk has mounted partitions.
+/dev/dsk/c0d0s0 is currently mounted on /. Please see umount(1M).
+/dev/dsk/c0d0s1 is currently used by swap. Please see swap(1M).
+/dev/dsk/c0d0s3 is currently mounted on /var. Please see umount(1M).
+/dev/dsk/c0d0s4 is currently mounted on /usr. Please see umount(1M).
+/dev/dsk/c0d0s5 is currently mounted on /opt. Please see umount(1M).
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        show       - translate a disk address
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/dev/dsk#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 3
+selecting c2t2d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/dev/dsk#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/dsk#prtvtoc c1t0d0p0
+prtvtoc: /dev/rdsk/c1t0d0p0: Device busy
+[lab5]/dev/dsk#prtvtoc c2t0d0p0
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/dsk#prtvtoc c2t0d0  
+prtvtoc: c2t0d0: No such file or directory
+[lab5]/dev/dsk#prtvtoc c2t0d0p0
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/dsk#prtvtoc c1t0d0p0
+prtvtoc: /dev/rdsk/c1t0d0p0: Device busy
+[lab5]/dev/dsk#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+WARNING - This disk may be in use by an application that has
+          modified the fdisk table. Ensure that this disk is
+          not currently in use before proceeding to use fdisk.
+format> quit
+[lab5]/dev/dsk#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> fdisk 
+No fdisk table exists. The default partition for the disk is:
+
+  a 100% "SOLARIS System" partition
+
+Type "y" to accept the default partition,  otherwise type "n" to edit the
+ partition table.
+y
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> modify
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 1
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       0               0         (0/0/0)           0
+  1       swap    wu       0               0         (0/0/0)           0
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm       0               0         (0/0/0)           0
+  4 unassigned    wm       0               0         (0/0/0)           0
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6        usr    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 alternates    wm       0               0         (0/0/0)           0
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? y
+Free Hog partition[6]? 4
+Enter size of partition '0' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '1' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '3' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '5' [0b, 0c, 0.00mb, 0.00gb]: 
+Enter size of partition '6' [0b, 0c, 0.00mb, 0.00gb]: 
+Enter size of partition '7' [0b, 0c, 0.00mb, 0.00gb]: 
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1       swap    wu     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6        usr    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 alternates    wm       0               0         (0/0/0)           0
+
+Okay to make this the current partition table[yes]? y
+Enter table name (remember quotes): Prueba
+
+Ready to label disk, continue? test
+`test' is not expected.
+Ready to label disk, continue? 
+Ready to label disk, continue? 
+Ready to label disk, continue? 
+Ready to label disk, continue? 
+Ready to label disk, continue? 
+Ready to label disk, continue?   
+Ready to label disk, continue? 
+Ready to label disk, continue? y
+
+partition> p
+Current partition table (Prueba):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1 unassigned    wm     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> p
+Current partition table (Prueba):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1 unassigned    wm     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/dsk#prtvtoc c2t0d0p0
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1304 cylinders
+*    1302 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     16065     16064
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      0    00      16065   5253255   5269319
+       1      0    00    5269320   5253255  10522574
+       2      5    01          0  20916630  20916629
+       3      0    00   10522575   5253255  15775829
+       4      0    00   15775830   5140800  20916629
+       8      1    01          0     16065     16064
+[lab5]/dev/dsk#df -k c2t0d0s0
+df: operation not applicable for FSType nfs
+[lab5]/dev/dsk#ls    
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/dsk#df -k /dev/dsk/c2t0d0s0
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c2t0d0s0    2573474       9 2521923     0%    
+[lab5]/dev/dsk#df -k /dev/dsk/c2t0d0s1
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c2t0d0s1    2605874       9 2553675     0%    
+[lab5]/dev/dsk#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   5.1G   924K   5.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   5.1G   692K   5.1G     1%    /tmp
+swap                   5.1G    24K   5.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/dev/dsk#fstyp /dev/rdsk/c2t0d0s0
+ufs
+[lab5]/dev/dsk#fstyp /dev/rdsk/c2t0d0s1
+ufs
+[lab5]/dev/dsk#fstyp -v /dev/rdsk/c2t0d0s1 | grep minfree
+minfree 2%      maxbpg  2048    optim   time
+[lab5]/dev/dsk#fstyp -v /dev/rdsk/c2t0d0s2 | grep minfree
+Unknown_fstyp (no matches)
+[lab5]/dev/dsk#fstyp -v /dev/rdsk/c2t0d0s0 | grep minfree
+minfree 2%      maxbpg  2048    optim   time
+[lab5]/dev/dsk#tunefs -m 4 /dev/rds
+rds   rdsk/ 
+[lab5]/dev/dsk#tunefs -m 4 /dev/rdsk/c2t0d0s0
+minimum percentage of free space changes from 2% to 4%
+[lab5]/dev/dsk#tunefs -m 3 /dev/rdsk/c2t0d0s0
+minimum percentage of free space changes from 4% to 3%
+[lab5]/dev/dsk#tunefs -m 3 /dev/rdsk/c2t0d0s1
+minimum percentage of free space changes from 2% to 3%
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477298 1523023    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5362580     924 5361656     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70370 3923351     2%    /var
+swap                 5362348     692 5361656     1%    /tmp
+swap                 5361680      24 5361656     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+[lab5]/dev/dsk#df -k /dev/dsk/c2t0d0s1
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c2t0d0s1    2605874       9 2527617     0%    
+[lab5]/dev/dsk#df -k /dev/dsk/c2t0d0s0
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c2t0d0s0    2573474       9 2496189     0%    
+[lab5]/dev/dsk#df newfs /dev/rdsk/c2t0d0s3
+df: (newfs     ) not a block device, directory or mounted resource
+df: (/dev/rdsk/c2t0d0s3) not a block device, directory or mounted resource
+[lab5]/dev/dsk#newfs /dev/rdsk/c2t0d0s3
+newfs: construct a new file system /dev/rdsk/c2t0d0s3: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s3:     5253254 sectors in 856 cylinders of 48 tracks, 128 sectors
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/dev/dsk#newfs /dev/rdsk/c2t0d0s4
+newfs: construct a new file system /dev/rdsk/c2t0d0s4: (y/n)? y
+Warning: 1728 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s4:     5140800 sectors in 837 cylinders of 48 tracks, 128 sectors
+        2510.2MB in 53 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4232608, 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632,
+ 5020064, 5118496
+[lab5]/dev/dsk#fschk
+bash: fschk: command not found
+[lab5]/dev/dsk#fsck /dev/rdsk/c2t0d0s3
+** /dev/rdsk/c2t0d0s3
+** Last Mounted on 
+** Phase 1 - Check Blocks and Sizes
+** Phase 2 - Check Pathnames
+** Phase 3a - Check Connectivity
+** Phase 3b - Verify Shadows/ACLs
+** Phase 4 - Check Reference Counts
+** Phase 5 - Check Cylinder Groups
+2 files, 9 used, 2573465 free (17 frags, 321681 blocks, 0.0% fragmentation)
+[lab5]/dev/dsk#dd if=/dev/zero of=/dev/rdsk/c2t0d0s3 count=32 bs=512
+32+0 records in
+32+0 records out
+[lab5]/dev/dsk#fsck /dev/rdsk/c2t0d0s3
+** /dev/rdsk/c2t0d0s3
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH MKFS? n
+
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH NEWFS? n
+
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED.
+
+USE GENERIC SUPERBLOCK FROM MKFS? n
+
+
+USE GENERIC SUPERBLOCK FROM NEWFS? n
+
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED. YOU MUST USE THE -o b OPTION
+TO FSCK TO SPECIFY THE LOCATION OF A VALID ALTERNATE SUPERBLOCK TO
+SUPPLY NEEDED INFORMATION; SEE fsck(1M).
+[lab5]/dev/dsk#fsck -o b=32 /dev/rdsk/c2t0d0s3
+Alternate super block location: 32.
+** /dev/rdsk/c2t0d0s3
+** Last Mounted on 
+** Phase 1 - Check Blocks and Sizes
+** Phase 2 - Check Pathnames
+** Phase 3a - Check Connectivity
+** Phase 3b - Verify Shadows/ACLs
+** Phase 4 - Check Reference Counts
+** Phase 5 - Check Cylinder Groups
+
+UPDATE STANDARD SUPERBLOCK? y
+
+2 files, 9 used, 2573465 free (17 frags, 321681 blocks, 0.0% fragmentation)
+
+***** FILE SYSTEM WAS MODIFIED *****
+[lab5]/dev/dsk#fsck /dev/rdsk/c2t0d0s3
+** /dev/rdsk/c2t0d0s3
+** Last Mounted on 
+** Phase 1 - Check Blocks and Sizes
+** Phase 2 - Check Pathnames
+** Phase 3a - Check Connectivity
+** Phase 3b - Verify Shadows/ACLs
+** Phase 4 - Check Reference Counts
+** Phase 5 - Check Cylinder Groups
+2 files, 9 used, 2573465 free (17 frags, 321681 blocks, 0.0% fragmentation)
+[lab5]/dev/dsk#zpool status
+no pools available
+[lab5]/dev/dsk#zpool status -x
+no pools available
+[lab5]/dev/dsk#zpool
+missing command
+usage: zpool command args ...
+where 'command' is one of the following:
+
+        create [-fn] [-o property=value] ... 
+            [-O file-system-property=value] ... 
+            [-m mountpoint] [-R root] <pool> <vdev> ...
+        destroy [-f] <pool>
+
+        add [-fn] <pool> <vdev> ...
+        remove <pool> <device> ...
+
+        list [-H] [-o property[,...]] [pool] ...
+        iostat [-v] [pool] ... [interval [count]]
+        status [-vx] [pool] ...
+
+        online <pool> <device> ...
+        offline [-t] <pool> <device> ...
+        clear <pool> [device]
+
+        attach [-f] <pool> <device> <new-device>
+        detach <pool> <device>
+        replace [-f] <pool> <device> [new-device]
+
+        scrub [-s] <pool> ...
+
+        import [-d dir] [-D]
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] -a
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] <pool | id> [newpool]
+        export [-f] <pool> ...
+        upgrade
+        upgrade -v
+        upgrade [-V version] <-a | pool ...>
+
+        history [-il] [<pool>] ...
+        get <"all" | property[,...]> <pool> ...
+        set <property=value> <pool> 
+[lab5]/dev/dsk#zlist\
+>       
+[lab5]/dev/dsk#zlist
+bash: zlist: command not found
+[lab5]/dev/dsk#zpool status *
+cannot open 'c0d0p0': pool name is reserved
+cannot open 'c0d0p1': pool name is reserved
+cannot open 'c0d0p2': pool name is reserved
+cannot open 'c0d0p3': pool name is reserved
+cannot open 'c0d0p4': pool name is reserved
+cannot open 'c0d0s0': pool name is reserved
+cannot open 'c0d0s1': pool name is reserved
+cannot open 'c0d0s10': pool name is reserved
+cannot open 'c0d0s11': pool name is reserved
+cannot open 'c0d0s12': pool name is reserved
+cannot open 'c0d0s13': pool name is reserved
+cannot open 'c0d0s14': pool name is reserved
+cannot open 'c0d0s15': pool name is reserved
+cannot open 'c0d0s2': pool name is reserved
+cannot open 'c0d0s3': pool name is reserved
+cannot open 'c0d0s4': pool name is reserved
+cannot open 'c0d0s5': pool name is reserved
+cannot open 'c0d0s6': pool name is reserved
+cannot open 'c0d0s7': pool name is reserved
+cannot open 'c0d0s8': pool name is reserved
+cannot open 'c0d0s9': pool name is reserved
+cannot open 'c1t0d0p0': pool name is reserved
+cannot open 'c1t0d0p1': pool name is reserved
+cannot open 'c1t0d0p2': pool name is reserved
+cannot open 'c1t0d0p3': pool name is reserved
+cannot open 'c1t0d0p4': pool name is reserved
+cannot open 'c1t0d0s0': pool name is reserved
+cannot open 'c1t0d0s1': pool name is reserved
+cannot open 'c1t0d0s10': pool name is reserved
+cannot open 'c1t0d0s11': pool name is reserved
+cannot open 'c1t0d0s12': pool name is reserved
+cannot open 'c1t0d0s13': pool name is reserved
+cannot open 'c1t0d0s14': pool name is reserved
+cannot open 'c1t0d0s15': pool name is reserved
+cannot open 'c1t0d0s2': pool name is reserved
+cannot open 'c1t0d0s3': pool name is reserved
+cannot open 'c1t0d0s4': pool name is reserved
+cannot open 'c1t0d0s5': pool name is reserved
+cannot open 'c1t0d0s6': pool name is reserved
+cannot open 'c1t0d0s7': pool name is reserved
+cannot open 'c1t0d0s8': pool name is reserved
+cannot open 'c1t0d0s9': pool name is reserved
+cannot open 'c2t0d0p0': pool name is reserved
+cannot open 'c2t0d0p1': pool name is reserved
+cannot open 'c2t0d0p2': pool name is reserved
+cannot open 'c2t0d0p3': pool name is reserved
+cannot open 'c2t0d0p4': pool name is reserved
+cannot open 'c2t0d0s0': pool name is reserved
+cannot open 'c2t0d0s1': pool name is reserved
+cannot open 'c2t0d0s10': pool name is reserved
+cannot open 'c2t0d0s11': pool name is reserved
+cannot open 'c2t0d0s12': pool name is reserved
+cannot open 'c2t0d0s13': pool name is reserved
+cannot open 'c2t0d0s14': pool name is reserved
+cannot open 'c2t0d0s15': pool name is reserved
+cannot open 'c2t0d0s2': pool name is reserved
+cannot open 'c2t0d0s3': pool name is reserved
+cannot open 'c2t0d0s4': pool name is reserved
+cannot open 'c2t0d0s5': pool name is reserved
+cannot open 'c2t0d0s6': pool name is reserved
+cannot open 'c2t0d0s7': pool name is reserved
+cannot open 'c2t0d0s8': pool name is reserved
+cannot open 'c2t0d0s9': pool name is reserved
+cannot open 'c2t1d0p0': pool name is reserved
+cannot open 'c2t1d0p1': pool name is reserved
+cannot open 'c2t1d0p2': pool name is reserved
+cannot open 'c2t1d0p3': pool name is reserved
+cannot open 'c2t1d0p4': pool name is reserved
+cannot open 'c2t1d0s0': pool name is reserved
+cannot open 'c2t1d0s1': pool name is reserved
+cannot open 'c2t1d0s10': pool name is reserved
+cannot open 'c2t1d0s11': pool name is reserved
+cannot open 'c2t1d0s12': pool name is reserved
+cannot open 'c2t1d0s13': pool name is reserved
+cannot open 'c2t1d0s14': pool name is reserved
+cannot open 'c2t1d0s15': pool name is reserved
+cannot open 'c2t1d0s2': pool name is reserved
+cannot open 'c2t1d0s3': pool name is reserved
+cannot open 'c2t1d0s4': pool name is reserved
+cannot open 'c2t1d0s5': pool name is reserved
+cannot open 'c2t1d0s6': pool name is reserved
+cannot open 'c2t1d0s7': pool name is reserved
+cannot open 'c2t1d0s8': pool name is reserved
+cannot open 'c2t1d0s9': pool name is reserved
+cannot open 'c2t2d0p0': pool name is reserved
+cannot open 'c2t2d0p1': pool name is reserved
+cannot open 'c2t2d0p2': pool name is reserved
+cannot open 'c2t2d0p3': pool name is reserved
+cannot open 'c2t2d0p4': pool name is reserved
+cannot open 'c2t2d0s0': pool name is reserved
+cannot open 'c2t2d0s1': pool name is reserved
+cannot open 'c2t2d0s10': pool name is reserved
+cannot open 'c2t2d0s11': pool name is reserved
+cannot open 'c2t2d0s12': pool name is reserved
+cannot open 'c2t2d0s13': pool name is reserved
+cannot open 'c2t2d0s14': pool name is reserved
+cannot open 'c2t2d0s15': pool name is reserved
+cannot open 'c2t2d0s2': pool name is reserved
+cannot open 'c2t2d0s3': pool name is reserved
+cannot open 'c2t2d0s4': pool name is reserved
+cannot open 'c2t2d0s5': pool name is reserved
+cannot open 'c2t2d0s6': pool name is reserved
+cannot open 'c2t2d0s7': pool name is reserved
+cannot open 'c2t2d0s8': pool name is reserved
+cannot open 'c2t2d0s9': pool name is reserved
+[lab5]/dev/dsk#zpool list
+no pools available
+[lab5]/dev/dsk#zfs list
+no datasets available
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477298 1523023    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5362572     924 5361648     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70370 3923351     2%    /var
+swap                 5362340     692 5361648     1%    /tmp
+swap                 5361672      24 5361648     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+[lab5]/dev/dsk#df -F ufs -h
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/dsk#prtvtoc c2t1d0p0
+* c2t1d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/dsk#zpool create firstpool c2dt0d0 c2t1d0 c2t2d0
+cannot open 'c2dt0d0': no such device in /dev/dsk
+must be a full path or shorthand device name
+[lab5]/dev/dsk#zpool create firstpool c2t0d0 c2t1d0 c2t2d0
+invalid vdev specification
+use '-f' to override the following errors:
+/dev/dsk/c2t0d0s0 contains a ufs filesystem.
+/dev/dsk/c2t0d0s1 contains a ufs filesystem.
+/dev/dsk/c2t0d0s3 contains a ufs filesystem.
+/dev/dsk/c2t0d0s4 contains a ufs filesystem.
+[lab5]/dev/dsk#zpool create firstpool mirror c2t0d0 c2t1d0       
+invalid vdev specification
+use '-f' to override the following errors:
+/dev/dsk/c2t0d0s0 contains a ufs filesystem.
+/dev/dsk/c2t0d0s1 contains a ufs filesystem.
+/dev/dsk/c2t0d0s3 contains a ufs filesystem.
+/dev/dsk/c2t0d0s4 contains a ufs filesystem.
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477298 1523023    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5362540     924 5361616     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70370 3923351     2%    /var
+swap                 5362308     692 5361616     1%    /tmp
+swap                 5361640      24 5361616     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+[lab5]/dev/dsk#zpool -f create firstpool mirror c2t0d0 c2t1d0
+unrecognized command '-f'
+usage: zpool command args ...
+where 'command' is one of the following:
+
+        create [-fn] [-o property=value] ... 
+            [-O file-system-property=value] ... 
+            [-m mountpoint] [-R root] <pool> <vdev> ...
+        destroy [-f] <pool>
+
+        add [-fn] <pool> <vdev> ...
+        remove <pool> <device> ...
+
+        list [-H] [-o property[,...]] [pool] ...
+        iostat [-v] [pool] ... [interval [count]]
+        status [-vx] [pool] ...
+
+        online <pool> <device> ...
+        offline [-t] <pool> <device> ...
+        clear <pool> [device]
+
+        attach [-f] <pool> <device> <new-device>
+        detach <pool> <device>
+        replace [-f] <pool> <device> [new-device]
+
+        scrub [-s] <pool> ...
+
+        import [-d dir] [-D]
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] -a
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] <pool | id> [newpool]
+        export [-f] <pool> ...
+        upgrade
+        upgrade -v
+        upgrade [-V version] <-a | pool ...>
+
+        history [-il] [<pool>] ...
+        get <"all" | property[,...]> <pool> ...
+        set <property=value> <pool> 
+[lab5]/dev/dsk#zpool create -f firstpool mirror c2t0d0 c2t1d0
+[lab5]/dev/dsk#zpool list
+NAME        SIZE   USED  AVAIL    CAP  HEALTH  ALTROOT
+firstpool  9.94G  76.5K  9.94G     0%  ONLINE  -
+[lab5]/dev/dsk#zpool create firstpool raidz c2t0d0 c2t1d0 c2t2d0
+invalid vdev specification
+use '-f' to override the following errors:
+/dev/dsk/c2t0d0s0 is part of active ZFS pool firstpool. Please see zpool(1M).
+[lab5]/dev/dsk#zpool create -f firstpool raidz c2t0d0 c2t1d0 c2t2d0
+invalid vdev specification
+the following errors must be manually repaired:
+/dev/dsk/c2t0d0s0 is part of active ZFS pool firstpool. Please see zpool(1M).
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477301 1523020    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5357676     924 5356752     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70372 3923349     2%    /var
+swap                 5357444     692 5356752     1%    /tmp
+swap                 5356776      24 5356752     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+firstpool            10257408      21 10257336     1%    /firstpool
+[lab5]/dev/dsk#zpool status -x
+all pools are healthy
+[lab5]/dev/dsk#zpool status -v
+  pool: firstpool
+ state: ONLINE
+ scrub: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        firstpool   ONLINE       0     0     0
+          mirror    ONLINE       0     0     0
+            c2t0d0  ONLINE       0     0     0
+            c2t1d0  ONLINE       0     0     0
+
+errors: No known data errors
+[lab5]/dev/dsk#zfs list
+NAME        USED  AVAIL  REFER  MOUNTPOINT
+firstpool    72K  9.78G    21K  /firstpool
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477301 1523020    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5357676     924 5356752     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70372 3923349     2%    /var
+swap                 5357444     692 5356752     1%    /tmp
+swap                 5356776      24 5356752     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+firstpool            10257408      21 10257336     1%    /firstpool
+[lab5]/dev/dsk#zpool list -o name,used,available
+NAME        USED  AVAIL
+firstpool  76.5K  9.94G
+[lab5]/dev/dsk#zpool list                       
+NAME        SIZE   USED  AVAIL    CAP  HEALTH  ALTROOT
+firstpool  9.94G  76.5K  9.94G     0%  ONLINE  -
+[lab5]/dev/dsk#zfs mount
+firstpool                       /firstpool
+[lab5]/dev/dsk#ls -ld firstpool
+firstpool: No such file or directory
+[lab5]/dev/dsk#ls -ld /firstpool
+drwxr-xr-x   2 root     root           2 Aug 17 14:07 /firstpool
+[lab5]/dev/dsk#zpool destroy firstpool
+[lab5]/dev/dsk#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   5.1G   924K   5.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   5.1G   692K   5.1G     1%    /tmp
+swap                   5.1G    24K   5.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/dev/dsk#zpool list
+no pools available
+[lab5]/dev/dsk#zpool create mypool raidz c2t0d0 c2t1d0 c2t2d0
+[lab5]/dev/dsk#zfs list
+NAME     USED  AVAIL  REFER  MOUNTPOINT
+mypool  89.9K  19.5G  28.0K  /mypool
+[lab5]/dev/dsk#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477165 1523156    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5357344     924 5356420     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70372 3923349     2%    /var
+swap                 5357112     692 5356420     1%    /tmp
+swap                 5356444      24 5356420     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+mypool               20451816      28 20451726     1%    /mypool
+[lab5]/dev/dsk#zfs create mypool/fs1/fs2
+cannot create 'mypool/fs1/fs2': parent does not exist
+[lab5]/dev/dsk#mkdir /mypool/fs1
+[lab5]/dev/dsk#cd 
+[lab5]/#ls
+TT_DB       cdrom       dirprueba   home        lost+found  net         proc        tmp         vol
+bin         dev         etc         kernel      mnt         opt         sbin        usr
+boot        devices     export      lib         mypool      platform    system      var
+[lab5]/#zfs create mypool/fs1/fs2
+cannot create 'mypool/fs1/fs2': parent does not exist
+[lab5]/#touch /mypool/fs1/file1
+[lab5]/#zfs create mypool/fs1    
+cannot mount '/mypool/fs1': directory is not empty
+filesystem successfully created, but not mounted
+[lab5]/#df -k
+Filesystem            kbytes    used   avail capacity  Mounted on
+/dev/dsk/c0d0s0      2062186  477165 1523156    24%    /
+/devices                   0       0       0     0%    /devices
+ctfs                       0       0       0     0%    /system/contract
+proc                       0       0       0     0%    /proc
+mnttab                     0       0       0     0%    /etc/mnttab
+swap                 5357072     924 5356148     1%    /etc/svc/volatile
+objfs                      0       0       0     0%    /system/object
+sharefs                    0       0       0     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4      5046597 2872037 2124095    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                     5046597 2872037 2124095    58%    /lib/libc.so.1
+fd                         0       0       0     0%    /dev/fd
+/dev/dsk/c0d0s3      4034061   70372 3923349     2%    /var
+swap                 5356840     692 5356148     1%    /tmp
+swap                 5356172      24 5356148     1%    /var/run
+/dev/dsk/c0d0s5      5347368   10380 5283515     1%    /opt
+mypool               20451816      31 20451683     1%    /mypool
+[lab5]/#zfs list
+NAME         USED  AVAIL  REFER  MOUNTPOINT
+mypool       133K  19.5G  30.6K  /mypool
+mypool/fs1  28.0K  19.5G  28.0K  /mypool/fs1
+[lab5]/#zfs mount
+mypool                          /mypool
+[lab5]/#zfs destroy mypool/fs1
+[lab5]/#rm /mypool/fs1/file1 
+[lab5]/#zfs create mypool/fs1
+[lab5]/#zfs mount
+mypool                          /mypool
+mypool/fs1                      /mypool/fs1
+[lab5]/#zfs list
+NAME         USED  AVAIL  REFER  MOUNTPOINT
+mypool       133K  19.5G  30.6K  /mypool
+mypool/fs1  28.0K  19.5G  28.0K  /mypool/fs1
+[lab5]/#zfs rename mypool/fs1 mypool/fs2
+[lab5]/#zfs list
+NAME         USED  AVAIL  REFER  MOUNTPOINT
+mypool       133K  19.5G  30.6K  /mypool
+mypool/fs2  28.0K  19.5G  28.0K  /mypool/fs2
+[lab5]/#zfs mount
+mypool                          /mypool
+mypool/fs2                      /mypool/fs2
+[lab5]/#ls /mypool/    
+fs2
+[lab5]/#zfs destroy /mypool/fs2
+cannot open '/mypool/fs2': invalid dataset name
+[lab5]/#zfs destroy mypool/fs2
+[lab5]/#zpool list
+NAME     SIZE   USED  AVAIL    CAP  HEALTH  ALTROOT
+mypool  29.8G   150K  29.7G     0%  ONLINE  -
+[lab5]/#zpool mount
+unrecognized command 'mount'
+usage: zpool command args ...
+where 'command' is one of the following:
+
+        create [-fn] [-o property=value] ... 
+            [-O file-system-property=value] ... 
+            [-m mountpoint] [-R root] <pool> <vdev> ...
+        destroy [-f] <pool>
+
+        add [-fn] <pool> <vdev> ...
+        remove <pool> <device> ...
+
+        list [-H] [-o property[,...]] [pool] ...
+        iostat [-v] [pool] ... [interval [count]]
+        status [-vx] [pool] ...
+
+        online <pool> <device> ...
+        offline [-t] <pool> <device> ...
+        clear <pool> [device]
+
+        attach [-f] <pool> <device> <new-device>
+        detach <pool> <device>
+        replace [-f] <pool> <device> [new-device]
+
+        scrub [-s] <pool> ...
+
+        import [-d dir] [-D]
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] -a
+        import [-o mntopts] [-o property=value] ... 
+            [-d dir | -c cachefile] [-D] [-f] [-R root] <pool | id> [newpool]
+        export [-f] <pool> ...
+        upgrade
+        upgrade -v
+        upgrade [-V version] <-a | pool ...>
+
+        history [-il] [<pool>] ...
+        get <"all" | property[,...]> <pool> ...
+        set <property=value> <pool> 
+[lab5]/#zfs list               
+NAME     USED  AVAIL  REFER  MOUNTPOINT
+mypool  93.9K  19.5G  28.0K  /mypool
+[lab5]/#zfs mount
+mypool                          /mypool
+[lab5]/#ls /mypool/
+[lab5]/#zfs create mypool/cmp
+[lab5]/#zpool list
+NAME     SIZE   USED  AVAIL    CAP  HEALTH  ALTROOT
+mypool  29.8G   210K  29.7G     0%  ONLINE  -
+[lab5]/#zfs list  
+NAME         USED  AVAIL  REFER  MOUNTPOINT
+mypool       134K  19.5G  28.0K  /mypool
+mypool/cmp  28.0K  19.5G  28.0K  /mypool/cmp
+[lab5]/#tar cfk /mypool/cmp/archive.tar 409600 /usr/lib/
+
+^C[lab5]/#
+[lab5]/#ls /mypool/cmp/archive.tar 
+/mypool/cmp/archive.tar
+[lab5]/#ls /mypool/cmp/            
+archive.tar
+[lab5]/#more /mypool/cmp/archive.tar 
+/usr/lib//000075500000000000002000000000001162151530500123765ustar00rootbin00001460000004
+/usr/lib//amd64/000075500000000000002000000000001162150720000133045ustar00rootbin00001460000004
+/usr/lib//amd64/ld.so.1000077700000000000000000000000001162150531600202442../../../lib/amd64/ld.so.1ustar00rootroot00001460000004
+/usr/lib//amd64/libshare.so.1000075500000000000002000004470301125344334100156200ustar00rootbin00001460000004
+¸"¸¹¸¹ÐPådd ;àþÿÿà? ·p·Ð·(      °¹P     º       ¸       »à      `»
+À¼H
+ ½x
+¨
+p¾è
+P¿(
+   0Àh
+
+      `ÁÐ
+°PÌ@hÐÌ`ÍÐÍø Î0`Î`ÏðÏÐÀÑÀÒH ÔÕÈ@×H×p Ø¨Ø°ÚPÛP`ÛxÛ ÀÛÈÐÛðÝ0ÝXPÝ`ÞÀpÞèÞ8 Þ`@ßßÀ`à à(pá`°á âÈÐâà0ã@ã8 åx0å@å¨ åØÀåÐæ8
+[lab5]/#ls -lh mypool/cmp/archive.tar 
+-rw-r--r--   1 root     root        400M Aug 17 14:35 mypool/cmp/archive.tar
+[lab5]/#zfs get all mypool/cmp/
+cannot open 'mypool/cmp/': invalid dataset name
+[lab5]/#zfs get all mypool/cmp 
+NAME        PROPERTY              VALUE                  SOURCE
+mypool/cmp  type                  filesystem             -
+mypool/cmp  creation              Wed Aug 17 14:32 2011  -
+mypool/cmp  used                  400M                   -
+mypool/cmp  available             19.1G                  -
+mypool/cmp  referenced            400M                   -
+mypool/cmp  compressratio         1.00x                  -
+mypool/cmp  mounted               yes                    -
+mypool/cmp  quota                 none                   default
+mypool/cmp  reservation           none                   default
+mypool/cmp  recordsize            128K                   default
+mypool/cmp  mountpoint            /mypool/cmp            default
+mypool/cmp  sharenfs              off                    default
+mypool/cmp  checksum              on                     default
+mypool/cmp  compression           off                    default
+mypool/cmp  atime                 on                     default
+mypool/cmp  devices               on                     default
+mypool/cmp  exec                  on                     default
+mypool/cmp  setuid                on                     default
+mypool/cmp  readonly              off                    default
+mypool/cmp  zoned                 off                    default
+mypool/cmp  snapdir               hidden                 default
+mypool/cmp  aclmode               groupmask              default
+mypool/cmp  aclinherit            restricted             default
+mypool/cmp  canmount              on                     default
+mypool/cmp  shareiscsi            off                    default
+mypool/cmp  xattr                 on                     default
+mypool/cmp  copies                1                      default
+mypool/cmp  version               4                      -
+mypool/cmp  utf8only              off                    -
+mypool/cmp  normalization         none                   -
+mypool/cmp  casesensitivity       sensitive              -
+mypool/cmp  vscan                 off                    default
+mypool/cmp  nbmand                off                    default
+mypool/cmp  sharesmb              off                    default
+mypool/cmp  refquota              none                   default
+mypool/cmp  refreservation        none                   default
+mypool/cmp  primarycache          all                    default
+mypool/cmp  secondarycache        all                    default
+mypool/cmp  usedbysnapshots       0                      -
+mypool/cmp  usedbydataset         400M                   -
+mypool/cmp  usedbychildren        0                      -
+mypool/cmp  usedbyrefreservation  0                      -
+[lab5]/#zfs get all mypool    
+NAME    PROPERTY              VALUE                  SOURCE
+mypool  type                  filesystem             -
+mypool  creation              Wed Aug 17 14:18 2011  -
+mypool  used                  400M                   -
+mypool  available             19.1G                  -
+mypool  referenced            30.6K                  -
+mypool  compressratio         1.00x                  -
+mypool  mounted               yes                    -
+mypool  quota                 none                   default
+mypool  reservation           none                   default
+mypool  recordsize            128K                   default
+mypool  mountpoint            /mypool                default
+mypool  sharenfs              off                    default
+mypool  checksum              on                     default
+mypool  compression           off                    default
+mypool  atime                 on                     default
+mypool  devices               on                     default
+mypool  exec                  on                     default
+mypool  setuid                on                     default
+mypool  readonly              off                    default
+mypool  zoned                 off                    default
+mypool  snapdir               hidden                 default
+mypool  aclmode               groupmask              default
+mypool  aclinherit            restricted             default
+mypool  canmount              on                     default
+mypool  shareiscsi            off                    default
+mypool  xattr                 on                     default
+mypool  copies                1                      default
+mypool  version               4                      -
+mypool  utf8only              off                    -
+mypool  normalization         none                   -
+mypool  casesensitivity       sensitive              -
+mypool  vscan                 off                    default
+mypool  nbmand                off                    default
+mypool  sharesmb              off                    default
+mypool  refquota              none                   default
+mypool  refreservation        none                   default
+mypool  primarycache          all                    default
+mypool  secondarycache        all                    default
+mypool  usedbysnapshots       0                      -
+mypool  usedbydataset         30.6K                  -
+mypool  usedbychildren        400M                   -
+mypool  usedbyrefreservation  0                      -
+[lab5]/#zfs get used,compression,compressratio
+NAME        PROPERTY       VALUE     SOURCE
+mypool      used           400M      -
+mypool      compression    off       default
+mypool      compressratio  1.00x     -
+mypool/cmp  used           400M      -
+mypool/cmp  compression    off       default
+mypool/cmp  compressratio  1.00x     -
+[lab5]/#zfs get used,compression,compressratio mypool/cmp/
+cannot open 'mypool/cmp/': invalid dataset name
+[lab5]/#zfs get used,compression,compressratio mypool/cmp 
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           400M      -
+mypool/cmp  compression    off       default
+mypool/cmp  compressratio  1.00x     -
+[lab5]/#zfs set compression=on mypool/cmp 
+[lab5]/#zfs get used,compression,compressratio mypool/cmp
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           400M      -
+mypool/cmp  compression    on        local
+mypool/cmp  compressratio  1.00x     -
+[lab5]/#cd /mypool/cmp/
+[lab5]/mypool/cmp#ls
+archive.tar
+[lab5]/mypool/cmp#cp archive.tar archive1.tar 
+[lab5]/mypool/cmp#ls -lh
+total 1195030
+-rw-r--r--   1 root     root        400M Aug 17 14:35 archive.tar
+-rw-r--r--   1 root     root        400M Aug 17 14:42 archive1.tar
+[lab5]/mypool/cmp#du -h *
+ 400M   archive.tar
+ 184M   archive1.tar
+[lab5]/mypool/cmp#zfs get used,compression,compressratio }      
+cannot open '}': invalid dataset name
+[lab5]/mypool/cmp#zfs get used,compression,compressratio *
+cannot open 'archive.tar': dataset does not exist
+cannot open 'archive1.tar': dataset does not exist
+[lab5]/mypool/cmp#zfs get used,compression,compressratio /mypool/cmp 
+cannot open '/mypool/cmp': invalid dataset name
+[lab5]/mypool/cmp#zfs get used,compression,compressratio mypool/cmp
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           584M      -
+mypool/cmp  compression    on        local
+mypool/cmp  compressratio  1.19x     -
+[lab5]/mypool/cmp#zfs set compression=off mypool/cmp
+[lab5]/mypool/cmp#zfs get used,compression,compressratio mypool/cmp
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           584M      -
+mypool/cmp  compression    off       local
+mypool/cmp  compressratio  1.19x     -
+[lab5]/mypool/cmp#ls
+archive.tar   archive1.tar
+[lab5]/mypool/cmp#cp archive1.tar archive2.tar
+[lab5]/mypool/cmp#ls -lh
+total 1655477
+-rw-r--r--   1 root     root        400M Aug 17 14:35 archive.tar
+-rw-r--r--   1 root     root        400M Aug 17 14:42 archive1.tar
+-rw-r--r--   1 root     root        400M Aug 17 14:47 archive2.tar
+[lab5]/mypool/cmp#du -h *
+ 400M   archive.tar
+ 184M   archive1.tar
+ 225M   archive2.tar
+[lab5]/mypool/cmp#zfs get used,compression,compressratio mypool/cmp
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           983M      -
+mypool/cmp  compression    off       local
+mypool/cmp  compressratio  1.11x     -
+[lab5]/mypool/cmp#zfs inherit compression mypool/cmp
+[lab5]/mypool/cmp#zfs get used,compression,compressratio mypool/cmp
+NAME        PROPERTY       VALUE     SOURCE
+mypool/cmp  used           983M      -
+mypool/cmp  compression    off       default
+mypool/cmp  compressratio  1.11x     -
+[lab5]/mypool/cmp#cd
+[lab5]/#zfs create mypool/cmp/a
+[lab5]/#zfs create mypool/cmp/a/b
+[lab5]/#zfs get -r compression mypool/cmp
+NAME            PROPERTY     VALUE     SOURCE
+mypool/cmp      compression  off       default
+mypool/cmp/a    compression  off       default
+mypool/cmp/a/b  compression  off       default
+[lab5]/#zfs set compression=on mypool/cmp
+[lab5]/#zfs get -r compression mypool/cmp
+NAME            PROPERTY     VALUE     SOURCE
+mypool/cmp      compression  on        local
+mypool/cmp/a    compression  on        inherited from mypool/cmp
+mypool/cmp/a/b  compression  on        inherited from mypool/cmp
+[lab5]/#zfs set compression=off mypool/cmp/a
+[lab5]/#zfs get -r compression mypool/cmp
+NAME            PROPERTY     VALUE     SOURCE
+mypool/cmp      compression  on        local
+mypool/cmp/a    compression  off       local
+mypool/cmp/a/b  compression  off       inherited from mypool/cmp/a
+[lab5]/#zfs inherit compression mypool/cmp
+[lab5]/#zfs get -r compression mypool/cmp
+NAME            PROPERTY     VALUE     SOURCE
+mypool/cmp      compression  off       default
+mypool/cmp/a    compression  off       local
+mypool/cmp/a/b  compression  off       inherited from mypool/cmp/a
+[lab5]/#cd /
+[lab5]/#zfs destroy /r mypool/cmp 
+too many arguments
+usage:
+        destroy [-rRf] <filesystem|volume|snapshot>
+
+For the property list, run: zfs set|get
+
+For the delegated permission list, run: zfs allow|unallow
+[lab5]/#zfs destroy -r mypool/cmp
+[lab5]/#zpool destroy mypool
+[lab5]/#zpool list
+no pools available
+[lab5]/#zfs list
+no datasets available
+[lab5]/#
+[lab5]/#telnet 192.168.230.127
+Trying 192.168.230.127...
+Connected to 192.168.230.127.
+Escape character is '^]'.
+login: root
+Password: 
+Last login: Sat Aug 13 13:50:53 from 192.168.230.136
+Sun Microsystems Inc.   SunOS 5.10      Generic January 2005
+[lab6]/#exit
+Connection to 192.168.230.127 closed by foreign host.
+[lab5]/#ssh root@192.168.230.127
+The authenticity of host '192.168.230.127 (192.168.230.127)' can't be establishe
+d.
+RSA key fingerprint is 04:9e:49:a6:52:60:f9:67:fc:36:37:31:43:0f:83:8e.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.230.127' (RSA) to the list of known hosts.
+Password: 
+Last login: Wed Aug 17 07:15:46 2011 from 192.168.230.128
+Sun Microsystems Inc.   SunOS 5.10      Generic January 2005
+[lab6]/#exit
+Connection to 192.168.230.127 closed.
+[lab5]/#ping 192.168.230.127
+192.168.230.127 is alive
+[lab5]/#sfdas
+/bin/ksh: sfdas:  not found
+[lab5]/#bash^?
+/bin/ksh: bash^?:  not found
+[lab5]/#bash
+[lab5]/#ping 192.168.230.127
+192.168.230.127 is alive
+[lab5]/#ftp 192.168.230.127
+Connected to 192.168.230.127.
+220 lab6 FTP server ready.
+Name (192.168.230.127:root): root
+331 Password required for root.
+Password:
+230 User root logged in.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> bye
+221-You have transferred 0 bytes in 0 files.
+221-Total traffic for this session was 217 bytes in 0 transfers.
+221-Thank you for using the FTP service on lab6.
+221 Goodbye.
+[lab5]/#sftp 192.168.230.127
+Connecting to 192.168.230.127...
+Password: 
+sftp> bye
+[lab5]/#ls
+TT_DB       dev         hola        lost+found  platform    tmp
+bin         devices     home        mnt         proc        usr
+boot        etc         kernel      net         sbin        var
+cdrom       export      lib         opt         system      vol
+[lab5]/#cd ho
+hola  home/ 
+[lab5]/#cd home/
+[lab5]/home#ls
+[lab5]/home#touch hola
+touch: cannot create hola: Operation not applicable
+[lab5]/home#cd ..
+[lab5]/#ls
+TT_DB       dev         hola        lost+found  platform    tmp
+bin         devices     home        mnt         proc        usr
+boot        etc         kernel      net         sbin        var
+cdrom       export      lib         opt         system      vol
+[lab5]/#mkdir prueba
+[lab5]/#cd pr
+proc/   prueba/ 
+[lab5]/#cd prueba/
+[lab5]/prueba#ls
+[lab5]/prueba#touch hola
+[lab5]/prueba#ls
+hola
+[lab5]/prueba#touch hola2
+[lab5]/prueba#cd ..
+[lab5]/#ls
+TT_DB       devices     kernel      opt         system
+bin         etc         lib         platform    tmp
+boot        export      lost+found  proc        usr
+cdrom       hola        mnt         prueba      var
+dev         home        net         sbin        vol
+[lab5]/#scp -r prueba/ root@192.168.230.127:/
+Password: 
+hola                 100% |*****************************|     0       00:00    
+hola2                100% |*****************************|     0       00:00    
+[lab5]/#scp -r prueba/ root@192.168.230.127:/
+Password: 
+hola                 100% |*****************************|     0       00:00    
+hola2                100% |*****************************|     0       00:00    
+[lab5]/#mount -v
+/dev/dsk/c0d0s0 on / type ufs read/write/setuid/devices/intr/largefiles/logging/xattr/onerror=panic/dev=1980000 on Sat Aug 13 13:42:58 2
+011
+/devices on /devices type devfs read/write/setuid/devices/dev=47c0000 on Sat Aug 13 13:42:34 2011
+ctfs on /system/contract type ctfs read/write/setuid/devices/dev=4800001 on Sat Aug 13 13:42:34 2011
+proc on /proc type proc read/write/setuid/devices/dev=4840000 on Sat Aug 13 13:42:34 2011
+mnttab on /etc/mnttab type mntfs read/write/setuid/devices/dev=4880001 on Sat Aug 13 13:42:34 2011
+swap on /etc/svc/volatile type tmpfs read/write/setuid/devices/xattr/dev=48c0001 on Sat Aug 13 13:42:34 2011
+objfs on /system/object type objfs read/write/setuid/devices/dev=4900001 on Sat Aug 13 13:42:34 2011
+sharefs on /etc/dfs/sharetab type sharefs read/write/setuid/devices/dev=4940001 on Sat Aug 13 13:42:34 2011
+/dev/dsk/c0d0s4 on /usr type ufs read/write/setuid/devices/intr/largefiles/logging/xattr/onerror=panic/dev=1980004 on Sat Aug 13 13:42:5
+9 2011
+/usr/lib/libc/libc_hwcap1.so.1 on /lib/libc.so.1 type lofs read/write/setuid/devices/dev=1980004 on Sat Aug 13 13:42:40 2011
+fd on /dev/fd type fd read/write/setuid/devices/dev=4ac0001 on Sat Aug 13 13:42:59 2011
+/dev/dsk/c0d0s3 on /var type ufs read/write/setuid/devices/intr/largefiles/logging/xattr/onerror=panic/dev=1980003 on Sat Aug 13 13:43:0
+5 2011
+swap on /tmp type tmpfs read/write/setuid/devices/xattr/dev=48c0002 on Sat Aug 13 13:43:05 2011
+swap on /var/run type tmpfs read/write/setuid/devices/xattr/dev=48c0003 on Sat Aug 13 13:43:06 2011
+/dev/dsk/c0d0s5 on /opt type ufs read/write/setuid/devices/intr/largefiles/logging/xattr/onerror=panic/dev=1980005 on Sat Aug 13 13:43:2
+0 2011
+[lab5]/#mount -p
+/dev/dsk/c0d0s0 - / ufs - no rw,intr,largefiles,logging,xattr,onerror=panic
+/devices - /devices devfs - no 
+ctfs - /system/contract ctfs - no 
+proc - /proc proc - no 
+mnttab - /etc/mnttab mntfs - no 
+swap - /etc/svc/volatile tmpfs - no xattr
+objfs - /system/object objfs - no 
+sharefs - /etc/dfs/sharetab sharefs - no 
+/dev/dsk/c0d0s4 - /usr ufs - no rw,intr,largefiles,logging,xattr,onerror=panic
+/usr/lib/libc/libc_hwcap1.so.1 - /lib/libc.so.1 lofs - no 
+fd - /dev/fd fd - no rw
+/dev/dsk/c0d0s3 - /var ufs - no rw,intr,largefiles,logging,xattr,onerror=panic
+swap - /tmp tmpfs - no xattr
+swap - /var/run tmpfs - no xattr
+/dev/dsk/c0d0s5 - /opt ufs - no rw,intr,largefiles,logging,xattr,onerror=panic
+[lab5]/#scp -r prueba/ root@192.168.230.127:/
+Password: 
+Password: 
+prueba: No such file or directory
+[lab5]/#ping 192.168.230.127
+192.168.230.127 is alive
+[lab5]/#cd /dev
+dev/     devices/ 
+[lab5]/#cd /dev
+dev/     devices/ 
+[lab5]/#cd /dev/
+Display all 242 possibilities? (y or n)
+[lab5]/#cd /dev/rs
+rsm   rsr0  
+[lab5]/#ls        
+TT_DB       cdrom       dirprueba   home        lost+found  opt         sbin        usr
+bin         dev         etc         kernel      mnt         platform    system      var
+boot        devices     export      lib         net         proc        tmp         vol
+[lab5]/#cd dev
+[lab5]/dev#ls
+agpgart       icmp6         lp1           pool          ptyq3         ptyre         sysmsg        ttypf         ttyra
+allkmem       ip            md            poolctl       ptyq4         ptyrf         systty        ttyq0         ttyrb
+arp           ip6           mem           power_button  ptyq5         ramdiskctl    tcp           ttyq1         ttyrc
+bl            ipauth        mouse         ppm           ptyq6         random        tcp6          ttyq2         ttyrd
+brand         ipf           msglog        printers      ptyq7         rawip         term          ttyq3         ttyre
+ce            ipl           nca           ptmajor       ptyq8         rawip6        text-0        ttyq4         ttyrf
+cfg           iplookup      null          ptmx          ptyq9         rds           ticlts        ttyq5         ucode
+conslog       ipnat         nvidia0       pts           ptyqa         rdsk          ticots        ttyq6         udp
+console       ipscan        nvidia1       ptyp0         ptyqb         rmt           ticotsord     ttyq7         udp6
+cpu           ipsecah       nvidia10      ptyp1         ptyqc         rsm           tnfctl        ttyq8         urandom
+crypto        ipsecesp      nvidia11      ptyp2         ptyqd         rsr0          tnfmap        ttyq9         usb
+cryptoadm     ipstate       nvidia12      ptyp3         ptyqe         rts           tty           ttyqa         vboxguest
+dsk           ipsync        nvidia13      ptyp4         ptyqf         sad           ttyp0         ttyqb         vni
+dtrace        kbd           nvidia14      ptyp5         ptyr0         sctp          ttyp1         ttyqc         volctl
+dtremote      kdmouse       nvidia15      ptyp6         ptyr1         sctp6         ttyp2         ttyqd         vt00
+dump          keysock       nvidia2       ptyp7         ptyr2         sdp           ttyp3         ttyqe         winlock
+e1000g        kmdb          nvidia3       ptyp8         ptyr3         smbios        ttyp4         ttyqf         wscons
+e1000g0       kmem          nvidia4       ptyp9         ptyr4         spdsock       ttyp5         ttyr0         xsvc
+ecpp0         kssl          nvidia5       ptypa         ptyr5         sppp          ttyp6         ttyr1         zero
+fb            kstat         nvidia6       ptypb         ptyr6         sppptun       ttyp7         ttyr2         zfs
+fb0           ksyms         nvidia7       ptypc         ptyr7         sr0           ttyp8         ttyr3
+fbs           llc1          nvidia8       ptypd         ptyr8         stderr        ttyp9         ttyr4
+fd            llc2          nvidia9       ptype         ptyr9         stdin         ttypa         ttyr5
+fm            lockstat      nvidiactl     ptypf         ptyra         stdout        ttypb         ttyr6
+fssnapctl     lofictl       openprom      ptyq0         ptyrb         swap          ttypc         ttyr7
+ibd           log           physmem       ptyq1         ptyrc         syscon        ttypd         ttyr8
+icmp          logindmux     poll          ptyq2         ptyrd         sysevent      ttype         ttyr9
+[lab5]/dev#cd rs
+rsm   rsr0  
+[lab5]/dev#cd rs
+rsm   rsr0  
+[lab5]/dev#cd rds
+rds   rdsk/ 
+[lab5]/dev#cd rdsk/
+[lab5]/dev/rdsk#ls
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/rdsk#prtvtoc c0d0p0 
+* c0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524
+       4      4    00   20643525  10249470  30892994
+       5      0    00   30892995  10859940  41752934
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c0d0p1 
+prtvtoc: /dev/rdsk/c0d0p1: Invalid VTOC
+[lab5]/dev/rdsk#prtvtoc c0d0s0
+* c0d0s0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224   /
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524   /var
+       4      4    00   20643525  10249470  30892994   /usr
+       5      0    00   30892995  10859940  41752934   /opt
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c0d0s1
+* c0d0s1 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224   /
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524   /var
+       4      4    00   20643525  10249470  30892994   /usr
+       5      0    00   30892995  10859940  41752934   /opt
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c0d0s2
+* c0d0s2 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224   /
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524   /var
+       4      4    00   20643525  10249470  30892994   /usr
+       5      0    00   30892995  10859940  41752934   /opt
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c0d0s3
+* c0d0s3 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224   /
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524   /var
+       4      4    00   20643525  10249470  30892994   /usr
+       5      0    00   30892995  10859940  41752934   /opt
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#ls    
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p3   c2t0d0s15  c2t1d0p0   c2t1d0s12  c2t1d0s7   c2t2d0s1   c2t2d0s4
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p4   c2t0d0s2   c2t1d0p1   c2t1d0s13  c2t1d0s8   c2t2d0s10  c2t2d0s5
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0s0   c2t0d0s3   c2t1d0p2   c2t1d0s14  c2t1d0s9   c2t2d0s11  c2t2d0s6
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s1   c2t0d0s4   c2t1d0p3   c2t1d0s15  c2t2d0p0   c2t2d0s12  c2t2d0s7
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s10  c2t0d0s5   c2t1d0p4   c2t1d0s2   c2t2d0p1   c2t2d0s13  c2t2d0s8
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s11  c2t0d0s6   c2t1d0s0   c2t1d0s3   c2t2d0p2   c2t2d0s14  c2t2d0s9
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0p0   c2t0d0s12  c2t0d0s7   c2t1d0s1   c2t1d0s4   c2t2d0p3   c2t2d0s15
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p1   c2t0d0s13  c2t0d0s8   c2t1d0s10  c2t1d0s5   c2t2d0p4   c2t2d0s2
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p2   c2t0d0s14  c2t0d0s9   c2t1d0s11  c2t1d0s6   c2t2d0s0   c2t2d0s3
+[lab5]/dev/rdsk#prtvtoc c1t0d0p0
+prtvtoc: /dev/rdsk/c1t0d0p0: Device busy
+[lab5]/dev/rdsk#prtvtoc c1t0d0p1
+prtvtoc: /dev/rdsk/c1t0d0p1: Device busy
+[lab5]/dev/rdsk#prtvtoc c1t0d0p2
+prtvtoc: /dev/rdsk/c1t0d0p2: Device busy
+[lab5]/dev/rdsk#prtvtoc c1t0d0p3
+prtvtoc: /dev/rdsk/c1t0d0p3: Device busy
+[lab5]/dev/rdsk#prtvtoc c1t0d0p0
+prtvtoc: /dev/rdsk/c1t0d0p0: Device busy
+[lab5]/dev/rdsk#prtvtoc c2t0d0p0
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#fdisk c2t0d0 
+fdisk: Cannot stat device c2t0d0.
+[lab5]/dev/rdsk#fdisk c2t0d0 
+fdisk: Cannot stat device c2t0d0.
+[lab5]/dev/rdsk#fdisk c2t0d0s0
+fdisk: Cannot open device c2t0d0s0.
+[lab5]/dev/rdsk#newfs c2t
+c2t0d0p0   c2t0d0s1   c2t0d0s15  c2t0d0s7   c2t1d0p3   c2t1d0s12  c2t1d0s4   c2t2d0p0   c2t2d0s1   c2t2d0s15  c2t2d0s7   
+c2t0d0p1   c2t0d0s10  c2t0d0s2   c2t0d0s8   c2t1d0p4   c2t1d0s13  c2t1d0s5   c2t2d0p1   c2t2d0s10  c2t2d0s2   c2t2d0s8   
+c2t0d0p2   c2t0d0s11  c2t0d0s3   c2t0d0s9   c2t1d0s0   c2t1d0s14  c2t1d0s6   c2t2d0p2   c2t2d0s11  c2t2d0s3   c2t2d0s9   
+c2t0d0p3   c2t0d0s12  c2t0d0s4   c2t1d0p0   c2t1d0s1   c2t1d0s15  c2t1d0s7   c2t2d0p3   c2t2d0s12  c2t2d0s4   
+c2t0d0p4   c2t0d0s13  c2t0d0s5   c2t1d0p1   c2t1d0s10  c2t1d0s2   c2t1d0s8   c2t2d0p4   c2t2d0s13  c2t2d0s5   
+c2t0d0s0   c2t0d0s14  c2t0d0s6   c2t1d0p2   c2t1d0s11  c2t1d0s3   c2t1d0s9   c2t2d0s0   c2t2d0s14  c2t2d0s6   
+[lab5]/dev/rdsk#newfs c2t0d0
+c2t0d0p0   c2t0d0p2   c2t0d0p4   c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t0d0s3   c2t0d0s5   c2t0d0s7   c2t0d0s9   
+c2t0d0p1   c2t0d0p3   c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t0d0s2   c2t0d0s4   c2t0d0s6   c2t0d0s8   
+[lab5]/dev/rdsk#newfs c2t0d0s
+c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t0d0s2   c2t0d0s4   c2t0d0s6   c2t0d0s8   
+c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t0d0s3   c2t0d0s5   c2t0d0s7   c2t0d0s9   
+[lab5]/dev/rdsk#newfs c2t0d0s
+c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t0d0s2   c2t0d0s4   c2t0d0s6   c2t0d0s8   
+c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t0d0s3   c2t0d0s5   c2t0d0s7   c2t0d0s9   
+[lab5]/dev/rdsk#newfs c2t0d0s0 
+newfs: construct a new file system /dev/rdsk/c2t0d0s0: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s0:     5253254 sectors in 856 cylinders of 48 tracks, 128 sectors
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/dev/rdsk#newfs -i 16384 c2t0d0s1 
+newfs: construct a new file system /dev/rdsk/c2t0d0s1: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s1:     5253254 sectors in 856 cylinders of 48 tracks, 128 sectors
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 2944 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/dev/rdsk#df -k c2t0d0s0
+df: (c2t0d0s0  ) not a block device, directory or mounted resource
+[lab5]/dev/rdsk#df -k c2t0d0s0
+df: (c2t0d0s0  ) not a block device, directory or mounted resource
+[lab5]/dev/rdsk#                  
+[lab5]/dev/rdsk#
+

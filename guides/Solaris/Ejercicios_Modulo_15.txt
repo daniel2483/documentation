@@ -1,0 +1,14 @@
+lab5]/#grep METACLUSTER /var/sadm/system/admin/
+.clustertoc   .platform     CLUSTER       INST_RELEASE  services/     
+[lab5]/#grep METACLUSTER /var/sadm/system/admin/.clustertoc 
+METACLUSTER=SUNWCXall
+METACLUSTER=SUNWCall
+METACLUSTER=SUNWCprog
+METACLUSTER=SUNWCuser
+METACLUSTER=SUNWCreq
+METACLUSTER=SUNWCrnet
+METACLUSTER=SUNWCmreq
+[lab5]/#
+[lab5]/#cat /var/sadm/system/admin/CLUSTER 
+CLUSTER=SUNWCreq
+[lab5]/#

@@ -1,0 +1,794 @@
+UNWgttfe                         SUNWtgnome-tsoljdslabel
+SUNWgxfnt                         SUNWtgnome-tsoljdsselmgr
+SUNWgzip                          SUNWtgnome-tstripe
+SUNWgzipS                         SUNWtgnome-xagent
+SUNWhacx                          SUNWthunderbird
+SUNWhadis                         SUNWthunderbirdl10n-de-DE
+SUNWhadma                         SUNWthunderbirdl10n-es-ES
+SUNWhbrg                          SUNWthunderbirdl10n-extra
+SUNWhdab                          SUNWthunderbirdl10n-fr-FR
+SUNWhdbas                         SUNWthunderbirdl10n-it-IT
+SUNWhdcl                          SUNWthunderbirdl10n-ja-JP
+SUNWhddst                         SUNWthunderbirdl10n-ko-KR
+SUNWhddte                         SUNWthunderbirdl10n-pl-PL
+SUNWhdezt                         SUNWthunderbirdl10n-pt-BR
+SUNWhdft                          SUNWthunderbirdl10n-ru-RU
+SUNWhdhcm                         SUNWthunderbirdl10n-sv-SE
+SUNWhdhe                          SUNWthunderbirdl10n-zh-CN
+SUNWhdhev                         SUNWthunderbirdl10n-zh-TW
+SUNWhdhez                         SUNWtiu8
+SUNWhdicn                         SUNWtleu
+SUNWhdim                          SUNWtls
+SUNWhdt                           SUNWtlsd
+SUNWhdwm                          SUNWtlsu
+SUNWhea                           SUNWtltk
+SUNWhepmw                         SUNWtltkd
+SUNWhermon                        SUNWtltkm
+SUNWhfdl                          SUNWtnamd
+SUNWhimoz                         SUNWtnamr
+SUNWhiu8                          SUNWtnetc
+SUNWhkdcl                         SUNWtnetd
+SUNWhkdt                          SUNWtnetr
+SUNWhkeue                         SUNWtnfc
+SUNWhkezt                         SUNWtnfd
+SUNWhkfnt                         SUNWtoo
+SUNWhkleu                         SUNWtsg
+SUNWhklvmg                        SUNWtsmc
+SUNWhkmga                         SUNWtsr
+SUNWhkplt                         SUNWtsu
+SUNWhkrmui                        SUNWtxfnt
+SUNWhksmc                         SUNWtxplt
+SUNWhkswupcl                      SUNWuacm
+SUNWhkttf                         SUNWucbt
+SUNWhkxe                          SUNWudaplr
+SUNWhkxwsvr                       SUNWudapltr
+SUNWhladm                         SUNWudapltu
+SUNWhleu                          SUNWudaplu
+SUNWhleu2                         SUNWudct
+SUNWhleue                         SUNWudf
+SUNWhlvma                         SUNWudfr
+SUNWhlvmg                         SUNWuedg
+SUNWhmcon                         SUNWugen
+SUNWhmctg                         SUNWugenu
+SUNWhmga                          SUNWuiu8
+SUNWhmoz                          SUNWuium
+SUNWhorte                         SUNWuksp
+SUNWhos                           SUNWukspfw
+SUNWhpdas                         SUNWulcf
+SUNWhpijs                         SUNWupdatemgrr
+SUNWhpijsS                        SUNWupdatemgru
+SUNWhpprou                        SUNWuprl
+SUNWhrmui                         SUNWusb
+SUNWhsadl                         SUNWusbccid
+SUNWhscgu                         SUNWusbccidS
+SUNWhsfw                          SUNWusbs
+SUNWhsmc                          SUNWusbu
+SUNWhswupcl                       SUNWuxlcf
+SUNWhtltk                         SUNWvia823x
+SUNWhttf                          SUNWvld
+SUNWhttfe                         SUNWvldu
+SUNWhudc                          SUNWvncviewer
+SUNWhufnt                         SUNWvolr
+SUNWhupdatemgru                   SUNWvolu
+SUNWhwbc                          SUNWvts
+SUNWhwdev                         SUNWvtsmn
+SUNWhwsr2                         SUNWvtsr
+SUNWhwsrv                         SUNWvtss
+SUNWhxe                           SUNWvtsts
+SUNWhxfnt                         SUNWwbapi
+SUNWhxge                          SUNWwbcor
+SUNWhxman                         SUNWwbcou
+SUNWhxplt                         SUNWwbdev
+SUNWhxwsvr                        SUNWwbdoc
+SUNWhzfsg                         SUNWwbmc
+SUNWi13cs                         SUNWwbpro
+SUNWi13rf                         SUNWwbsup
+SUNWi15cs                         SUNWwebminr
+SUNWi15rf                         SUNWwebminu
+SUNWi1cs                          SUNWweudt
+SUNWi1of                          SUNWweuos
+SUNWi2cs                          SUNWweuow
+SUNWi2rf                          SUNWwgetS
+SUNWi4rf                          SUNWwgetr
+SUNWi5cs                          SUNWwgetu
+SUNWi5rf                          SUNWwsr2
+SUNWi7cs                          SUNWwsrv
+SUNWi7rf                          SUNWxcu4
+SUNWi8rf                          SUNWxcu4t
+SUNWi9cs                          SUNWxcu6
+SUNWi9rf                          SUNWxcursor-themes
+SUNWib                            SUNWxf86
+SUNWibrg                          SUNWxge
+SUNWibsdp                         SUNWxi18n
+SUNWibsdpib                       SUNWxildh
+SUNWibsdpu                        SUNWxilh
+SUNWicu                           SUNWxilow
+SUNWicud                          SUNWxilrl
+SUNWidcl                          SUNWxim
+SUNWidhcm                         SUNWxorg-cfg
+SUNWidnd                          SUNWxorg-client-docs
+SUNWidnl                          SUNWxorg-client-programs
+SUNWidnu                          SUNWxorg-clientlibs
+SUNWifdl                          SUNWxorg-compatlinks
+SUNWigb                           SUNWxorg-devel-docs
+SUNWiiimr                         SUNWxorg-doc
+SUNWiiimu                         SUNWxorg-graphics-ddx
+SUNWiladm                         SUNWxorg-headers
+SUNWilvma                         SUNWxorg-mesa
+SUNWilvmg                         SUNWxorg-server
+SUNWimagick                       SUNWxorg-tsol-module
+SUNWimagickS                      SUNWxorg-xkb
+SUNWimcon                         SUNWxscreensaver-hacks
+SUNWimctg                         SUNWxscreensaver-hacks-gl
+SUNWimgp                          SUNWxsvc
+SUNWindt                          SUNWxvmpv
+SUNWinfnt                         SUNWxvnc
+SUNWiniu8                         SUNWxwacx
+SUNWinleu                         SUNWxwcft
+SUNWinplt                         SUNWxwcsl
+SUNWinst                          SUNWxwdem
+SUNWinstall-patch-utils-root      SUNWxwdim
+SUNWintgige                       SUNWxwdv
+SUNWinttf                         SUNWxwdxm
+SUNWio-tools                      SUNWxwfa
+SUNWiorte                         SUNWxwfnt
+SUNWipc                           SUNWxwfs
+SUNWipdas                         SUNWxwhl
+SUNWipfh                          SUNWxwice
+SUNWipfr                          SUNWxwinc
+SUNWipfu                          SUNWxwman
+SUNWipmi                          SUNWxwmod
+SUNWipmiS                         SUNWxwoft
+SUNWipmir                         SUNWxwopt
+SUNWipoib                         SUNWxwpft
+SUNWippcore                       SUNWxwplr
+SUNWipplr                         SUNWxwpls
+SUNWipplu                         SUNWxwplt
+SUNWipprou                        SUNWxwpmn
+SUNWiqdoc                         SUNWxwrtl
+SUNWiqfs                          SUNWxwscf
+SUNWiqjx                          SUNWxwslb
+SUNWiqr                           SUNWxwsrc
+SUNWiqu                           SUNWxwsrv
+SUNWiquc                          SUNWxwssu
+SUNWiqum                          SUNWxwsvr
+SUNWirmui                         SUNWxwts
+SUNWisadl                         SUNWxwxft
+SUNWiscgu                         SUNWxwxst
+SUNWiscsir                        SUNWypr
+SUNWiscsitgtr                     SUNWypu
+SUNWiscsitgtu                     SUNWzebraS
+SUNWiscsiu                        SUNWzebrar
+SUNWisfw                          SUNWzebrau
+SUNWislcc                         SUNWzfsgr
+SUNWisolc                         SUNWzfsgu
+SUNWiswupcl                       SUNWzfskr
+SUNWitbas                         SUNWzfsr
+SUNWitdis                         SUNWzfsu
+SUNWitdma                         SUNWzip
+SUNWitdst                         SUNWzipS
+SUNWitdte                         SUNWzlib
+SUNWithe                          SUNWzlibS
+SUNWithed                         SUNWzoner
+SUNWithev                         SUNWzoneu
+SUNWithez                         SUNWzsh
+SUNWitim                          SUNWzshS
+SUNWitiso1                        SYMhisl
+SUNWitltk                         locale
+SUNWitlu
+[lab5]/cdrom/cdrom0/Solaris_10/Product#ls -lh *doc
+SUNWasjdoc:
+total 308
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         518 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root        147K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Jan  2  2008 reloc
+
+SUNWdoc:
+total 78
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root        5.2K Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         27K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 reloc
+
+SUNWiqdoc:
+total 79
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         623 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         32K Sep 16  2009 pkgmap
+dr-xr-xr-x   3 root     root        2.0K Sep 16  2009 reloc
+
+SUNWjatodoc:
+total 199
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         579 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         92K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Jan  2  2008 reloc
+
+SUNWjdoc:
+total 23
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         563 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root        4.2K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Jan  2  2008 reloc
+
+SUNWjhdoc:
+total 86
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         487 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         36K Sep 16  2009 pkgmap
+dr-xr-xr-x   3 root     root        2.0K Sep 16  2009 reloc
+
+SUNWsfdoc:
+total 6
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         410 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         273 Sep 16  2009 pkgmap
+
+SUNWsmdoc:
+total 67
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         524 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         26K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Jan  2  2008 reloc
+
+SUNWwbdoc:
+total 240
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         479 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root        113K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Jan  2  2008 reloc
+
+SUNWxorg-doc:
+total 26
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root         749 Sep 16  2009 pkginfo
+-r--r--r--   1 root     root        5.7K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 reloc
+[lab5]/cdrom/cdrom0/Solaris_10/Product#ls -lh *Wdoc
+total 78
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 archive
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 install
+-r--r--r--   1 root     root        5.2K Sep 16  2009 pkginfo
+-r--r--r--   1 root     root         27K Sep 16  2009 pkgmap
+dr-xr-xr-x   2 root     root        2.0K Sep 16  2009 reloc
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgrm SUNWdoc
+
+The following package is currently installed:
+   SUNWdoc  Documentation Tools
+            (i386) 11.10.0,REV=2005.01.21.16.34
+
+Do you want to remove this package? [y,n,?,q] y
+
+## Removing installed package instance <SUNWdoc>
+
+This package contains scripts which will be executed with super-user
+permission during the process of removing this package.
+
+Do you want to continue with the removal of this package [y,n,?,q] y
+## Verifying package <SUNWdoc> dependencies in global zone
+WARNING:
+    The <SUNWuium> package depends on the package currently
+    being removed.
+WARNING:
+    The <SUNWman> package depends on the package currently
+    being removed.
+WARNING:
+    The <SUNWopenssl-man> package depends on the package
+    currently being removed.
+WARNING:
+    The <SUNWperl584man> package depends on the package
+    currently being removed.
+WARNING:
+    The <SUNWpl5m> package depends on the package currently
+    being removed.
+Dependency checking failed.
+
+Do you want to continue with the removal of this package [y,n,?,q] y
+## Processing package information.
+## Executing preremove script.
+## Removing pathnames in class <none>
+/usr/share/man <shared pathname not removed>
+/usr/share/lib/tmac/vgrind
+/usr/share/lib/tmac/v
+/usr/share/lib/tmac/tz.map
+/usr/share/lib/tmac/tmac.vgrind
+/usr/share/lib/tmac/tmac.bib
+/usr/share/lib/tmac/thesis.me
+/usr/share/lib/tmac/tbl.me
+/usr/share/lib/tmac/sh.me
+/usr/share/lib/tmac/s
+/usr/share/lib/tmac/refer.me
+/usr/share/lib/tmac/null.me
+/usr/share/lib/tmac/ms.toc
+/usr/share/lib/tmac/ms.ths
+/usr/share/lib/tmac/ms.tbl
+/usr/share/lib/tmac/ms.ref
+/usr/share/lib/tmac/ms.eqn
+/usr/share/lib/tmac/ms.cov
+/usr/share/lib/tmac/ms.acc
+/usr/share/lib/tmac/mmt
+/usr/share/lib/tmac/mmn
+/usr/share/lib/tmac/m
+/usr/share/lib/tmac/local.me
+/usr/share/lib/tmac/index.me
+/usr/share/lib/tmac/footnote.me
+/usr/share/lib/tmac/float.me
+/usr/share/lib/tmac/eqn.me
+/usr/share/lib/tmac/e
+/usr/share/lib/tmac/deltext.me
+/usr/share/lib/tmac/chars.me
+/usr/share/lib/tmac/bib
+/usr/share/lib/tmac/ansun.tbl
+/usr/share/lib/tmac/ansun
+/usr/share/lib/tmac/an
+/usr/share/lib/tmac/acm.me
+/usr/share/lib/tmac
+/usr/share/lib/sgml/locale/C/transpec/roff.sdata
+/usr/share/lib/sgml/locale/C/transpec/roff.cmap
+/usr/share/lib/sgml/locale/C/transpec/docbook-to-man.ts
+/usr/share/lib/sgml/locale/C/transpec
+/usr/share/lib/sgml/locale/C/entities/warn.eps
+/usr/share/lib/sgml/locale/C/entities/synref.gml
+/usr/share/lib/sgml/locale/C/entities/sun_iso.gml
+/usr/share/lib/sgml/locale/C/entities/iso-tech.gml
+/usr/share/lib/sgml/locale/C/entities/iso-pub.gml
+/usr/share/lib/sgml/locale/C/entities/iso-num.gml
+/usr/share/lib/sgml/locale/C/entities/iso-lat2.gml
+/usr/share/lib/sgml/locale/C/entities/iso-lat1.gml
+/usr/share/lib/sgml/locale/C/entities/iso-grk4.gml
+/usr/share/lib/sgml/locale/C/entities/iso-grk3.gml
+/usr/share/lib/sgml/locale/C/entities/iso-grk2.gml
+/usr/share/lib/sgml/locale/C/entities/iso-grk1.gml
+/usr/share/lib/sgml/locale/C/entities/iso-dia.gml
+/usr/share/lib/sgml/locale/C/entities/iso-cyr2.gml
+/usr/share/lib/sgml/locale/C/entities/iso-cyr1.gml
+/usr/share/lib/sgml/locale/C/entities/iso-box.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amsr.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amso.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amsn.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amsc.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amsb.gml
+/usr/share/lib/sgml/locale/C/entities/iso-amsa.gml
+/usr/share/lib/sgml/locale/C/entities/html-latin.sgml
+/usr/share/lib/sgml/locale/C/entities/ereview.gml
+/usr/share/lib/sgml/locale/C/entities/core.gml
+/usr/share/lib/sgml/locale/C/entities/caution.eps
+/usr/share/lib/sgml/locale/C/entities/capref.gml
+/usr/share/lib/sgml/locale/C/entities/cals-tbl.elm
+/usr/share/lib/sgml/locale/C/entities/basic.dcl
+/usr/share/lib/sgml/locale/C/entities/atilogo.eps
+/usr/share/lib/sgml/locale/C/entities/ati-tbl.elm
+/usr/share/lib/sgml/locale/C/entities/ati-num.gml
+/usr/share/lib/sgml/locale/C/entities/ati-math.elm
+/usr/share/lib/sgml/locale/C/entities/ati-graph.gml
+/usr/share/lib/sgml/locale/C/entities/ati-eqn1.gml
+/usr/share/lib/sgml/locale/C/entities/ati-dflt.dcl
+/usr/share/lib/sgml/locale/C/entities/allisoents.gml
+/usr/share/lib/sgml/locale/C/entities/aap-shortref.gml
+/usr/share/lib/sgml/locale/C/entities
+/usr/share/lib/sgml/locale/C/dtds/solbookv2/solbook.dtd
+/usr/share/lib/sgml/locale/C/dtds/solbookv2/solbook.dcl
+/usr/share/lib/sgml/locale/C/dtds/solbookv2
+/usr/share/lib/sgml/locale/C/dtds/solbookv1/solbook.dtd
+/usr/share/lib/sgml/locale/C/dtds/solbookv1
+/usr/share/lib/sgml/locale/C/dtds/docbook/docbook.dtd
+/usr/share/lib/sgml/locale/C/dtds/docbook
+/usr/share/lib/sgml/locale/C/dtds/catalog
+/usr/share/lib/sgml/locale/C/dtds
+/usr/share/lib/sgml/locale/C
+/usr/share/lib/sgml/locale
+/usr/share/lib/sgml
+/usr/share/lib/pub/iso
+/usr/share/lib/pub/greek
+/usr/share/lib/pub/eqnchar
+/usr/share/lib/pub/ascii
+/usr/share/lib/pub <shared pathname not removed>
+/usr/share/lib/nterm/tab.tn300
+/usr/share/lib/nterm/tab.lp
+/usr/share/lib/nterm/tab.X
+/usr/share/lib/nterm/tab.8510
+/usr/share/lib/nterm/tab.832
+/usr/share/lib/nterm/tab.450-12
+/usr/share/lib/nterm/tab.450
+/usr/share/lib/nterm/tab.4000a
+/usr/share/lib/nterm/tab.4000A
+/usr/share/lib/nterm/tab.382
+/usr/share/lib/nterm/tab.37
+/usr/share/lib/nterm/tab.300s-12
+/usr/share/lib/nterm/tab.300s
+/usr/share/lib/nterm/tab.300S-12
+/usr/share/lib/nterm/tab.300S
+/usr/share/lib/nterm/tab.300-12
+/usr/share/lib/nterm/tab.300
+/usr/share/lib/nterm/tab.2631-e
+/usr/share/lib/nterm/tab.2631-c
+/usr/share/lib/nterm/tab.2631
+/usr/share/lib/nterm
+/usr/share/lib <shared pathname not removed>
+/usr/share <shared pathname not removed>
+/usr/man <shared pathname not removed>
+/usr/lib/vgrindefs
+/usr/lib/vfontedpr
+/usr/lib/tmac
+/usr/lib/sgml/sgml2roff
+/usr/lib/sgml/nsgmls
+/usr/lib/sgml/instant
+/usr/lib/sgml
+/usr/lib/refer/papers/runinv
+/usr/lib/refer/papers/Rv7man
+/usr/lib/refer/papers/Rbstjissue
+/usr/lib/refer/papers
+/usr/lib/refer/mkey
+/usr/lib/refer/inv
+/usr/lib/refer/hunt
+/usr/lib/refer
+/usr/lib/makewhatis
+/usr/lib/getNAME
+/usr/lib/font/makedev
+/usr/lib/font/devpost/charlib/~
+/usr/lib/font/devpost/charlib/sq
+/usr/lib/font/devpost/charlib/rh
+/usr/lib/font/devpost/charlib/rf
+/usr/lib/font/devpost/charlib/rc
+/usr/lib/font/devpost/charlib/ob
+/usr/lib/font/devpost/charlib/lh
+/usr/lib/font/devpost/charlib/lf
+/usr/lib/font/devpost/charlib/lc
+/usr/lib/font/devpost/charlib/ff
+/usr/lib/font/devpost/charlib/ci
+/usr/lib/font/devpost/charlib/bx
+/usr/lib/font/devpost/charlib/Sl
+/usr/lib/font/devpost/charlib/README
+/usr/lib/font/devpost/charlib/OLD_LH.map
+/usr/lib/font/devpost/charlib/OLD_LH
+/usr/lib/font/devpost/charlib/Lb.map
+/usr/lib/font/devpost/charlib/Lb
+/usr/lib/font/devpost/charlib/LH.map
+/usr/lib/font/devpost/charlib/LH
+/usr/lib/font/devpost/charlib/L1.map
+/usr/lib/font/devpost/charlib/L1
+/usr/lib/font/devpost/charlib/Fl
+/usr/lib/font/devpost/charlib/Fi
+/usr/lib/font/devpost/charlib/BRACKETS_NOTE
+/usr/lib/font/devpost/charlib/34
+/usr/lib/font/devpost/charlib/14
+/usr/lib/font/devpost/charlib/12
+/usr/lib/font/devpost/charlib
+/usr/lib/font/devpost/ZI.out
+/usr/lib/font/devpost/ZI.name
+/usr/lib/font/devpost/ZI
+/usr/lib/font/devpost/ZD.out
+/usr/lib/font/devpost/ZD.name
+/usr/lib/font/devpost/ZD
+/usr/lib/font/devpost/VX.out
+/usr/lib/font/devpost/VX.name
+/usr/lib/font/devpost/VX
+/usr/lib/font/devpost/VR.out
+/usr/lib/font/devpost/VR.name
+/usr/lib/font/devpost/VR
+/usr/lib/font/devpost/VI.out
+/usr/lib/font/devpost/VI.name
+/usr/lib/font/devpost/VI
+/usr/lib/font/devpost/VB.out
+/usr/lib/font/devpost/VB.name
+/usr/lib/font/devpost/VB
+/usr/lib/font/devpost/S1.out
+/usr/lib/font/devpost/S1.name
+/usr/lib/font/devpost/S1
+/usr/lib/font/devpost/S.out
+/usr/lib/font/devpost/S.name
+/usr/lib/font/devpost/S
+/usr/lib/font/devpost/R.out
+/usr/lib/font/devpost/R.name
+/usr/lib/font/devpost/R
+/usr/lib/font/devpost/PX.out
+/usr/lib/font/devpost/PX.name
+/usr/lib/font/devpost/PX
+/usr/lib/font/devpost/PI.out
+/usr/lib/font/devpost/PI.name
+/usr/lib/font/devpost/PI
+/usr/lib/font/devpost/PB.out
+/usr/lib/font/devpost/PB.name
+/usr/lib/font/devpost/PB
+/usr/lib/font/devpost/PA.out
+/usr/lib/font/devpost/PA.name
+/usr/lib/font/devpost/PA
+/usr/lib/font/devpost/NX.out
+/usr/lib/font/devpost/NX.name
+/usr/lib/font/devpost/NX
+/usr/lib/font/devpost/NR.out
+/usr/lib/font/devpost/NR.name
+/usr/lib/font/devpost/NR
+/usr/lib/font/devpost/NI.out
+/usr/lib/font/devpost/NI.name
+/usr/lib/font/devpost/NI
+/usr/lib/font/devpost/NB.out
+/usr/lib/font/devpost/NB.name
+/usr/lib/font/devpost/NB
+/usr/lib/font/devpost/KX.out
+/usr/lib/font/devpost/KX.name
+/usr/lib/font/devpost/KX
+/usr/lib/font/devpost/KR.out
+/usr/lib/font/devpost/KR.name
+/usr/lib/font/devpost/KR
+/usr/lib/font/devpost/KI.out
+/usr/lib/font/devpost/KI.name
+/usr/lib/font/devpost/KI
+/usr/lib/font/devpost/KB.out
+/usr/lib/font/devpost/KB.name
+/usr/lib/font/devpost/KB
+/usr/lib/font/devpost/I.out
+/usr/lib/font/devpost/I.name
+/usr/lib/font/devpost/I
+/usr/lib/font/devpost/Hx.out
+/usr/lib/font/devpost/Hx.name
+/usr/lib/font/devpost/Hx
+/usr/lib/font/devpost/Hr.out
+/usr/lib/font/devpost/Hr.name
+/usr/lib/font/devpost/Hr
+/usr/lib/font/devpost/Hi.out
+/usr/lib/font/devpost/Hi.name
+/usr/lib/font/devpost/Hi
+/usr/lib/font/devpost/Hb.out
+/usr/lib/font/devpost/Hb.name
+/usr/lib/font/devpost/Hb
+/usr/lib/font/devpost/HX.out
+/usr/lib/font/devpost/HX.name
+/usr/lib/font/devpost/HX
+/usr/lib/font/devpost/HM.out
+/usr/lib/font/devpost/HL.out
+/usr/lib/font/devpost/HK.out
+/usr/lib/font/devpost/HI.out
+/usr/lib/font/devpost/HI.name
+/usr/lib/font/devpost/HI
+/usr/lib/font/devpost/HB.out
+/usr/lib/font/devpost/HB.name
+/usr/lib/font/devpost/HB
+/usr/lib/font/devpost/H.out
+/usr/lib/font/devpost/H.name
+/usr/lib/font/devpost/H
+/usr/lib/font/devpost/GR.out
+/usr/lib/font/devpost/GR.name
+/usr/lib/font/devpost/GR
+/usr/lib/font/devpost/GI.out
+/usr/lib/font/devpost/G.out
+/usr/lib/font/devpost/DESC.out
+/usr/lib/font/devpost/DESC
+/usr/lib/font/devpost/CX.out
+/usr/lib/font/devpost/CX.name
+/usr/lib/font/devpost/CX
+/usr/lib/font/devpost/CW.out
+/usr/lib/font/devpost/CW.name
+/usr/lib/font/devpost/CW
+/usr/lib/font/devpost/CO.out
+/usr/lib/font/devpost/CO.name
+/usr/lib/font/devpost/CO
+/usr/lib/font/devpost/CI.out
+/usr/lib/font/devpost/CI.name
+/usr/lib/font/devpost/CI
+/usr/lib/font/devpost/CB.out
+/usr/lib/font/devpost/CB.name
+/usr/lib/font/devpost/CB
+/usr/lib/font/devpost/BI.out
+/usr/lib/font/devpost/BI.name
+/usr/lib/font/devpost/BI
+/usr/lib/font/devpost/B.out
+/usr/lib/font/devpost/B.name
+/usr/lib/font/devpost/B
+/usr/lib/font/devpost/AX.out
+/usr/lib/font/devpost/AX.name
+/usr/lib/font/devpost/AX
+/usr/lib/font/devpost/AR.out
+/usr/lib/font/devpost/AR.name
+/usr/lib/font/devpost/AR
+/usr/lib/font/devpost/AI.out
+/usr/lib/font/devpost/AI.name
+/usr/lib/font/devpost/AI
+/usr/lib/font/devpost/AB.out
+/usr/lib/font/devpost/AB.name
+/usr/lib/font/devpost/AB
+/usr/lib/font/devpost
+/usr/lib/font/devaps/version
+/usr/lib/font/devaps/TX.out
+/usr/lib/font/devaps/TX.add
+/usr/lib/font/devaps/TB.out
+/usr/lib/font/devaps/SM.out
+/usr/lib/font/devaps/SM.add
+/usr/lib/font/devaps/SC.out
+/usr/lib/font/devaps/SC.add
+/usr/lib/font/devaps/S1.out
+/usr/lib/font/devaps/S1.add
+/usr/lib/font/devaps/S.out
+/usr/lib/font/devaps/S.add
+/usr/lib/font/devaps/R.out
+/usr/lib/font/devaps/R.add
+/usr/lib/font/devaps/PX.out
+/usr/lib/font/devaps/PX.add
+/usr/lib/font/devaps/PO.out
+/usr/lib/font/devaps/PO.add
+/usr/lib/font/devaps/PI.out
+/usr/lib/font/devaps/PB.out
+/usr/lib/font/devaps/PA.out
+/usr/lib/font/devaps/MX.out
+/usr/lib/font/devaps/MR.out
+/usr/lib/font/devaps/MI.out
+/usr/lib/font/devaps/MB.out
+/usr/lib/font/devaps/I.out
+/usr/lib/font/devaps/I.add
+/usr/lib/font/devaps/HX.out
+/usr/lib/font/devaps/HX.add
+/usr/lib/font/devaps/HM.out
+/usr/lib/font/devaps/HL.out
+/usr/lib/font/devaps/HK.out
+/usr/lib/font/devaps/HK.add
+/usr/lib/font/devaps/HI.out
+/usr/lib/font/devaps/HI.add
+/usr/lib/font/devaps/HB.out
+/usr/lib/font/devaps/H.out
+/usr/lib/font/devaps/GS.out
+/usr/lib/font/devaps/GS.add
+/usr/lib/font/devaps/GR.out
+/usr/lib/font/devaps/GR.add
+/usr/lib/font/devaps/GI.out
+/usr/lib/font/devaps/GI.add
+/usr/lib/font/devaps/GB.out
+/usr/lib/font/devaps/GB.add
+/usr/lib/font/devaps/G.out
+/usr/lib/font/devaps/DESC.out
+/usr/lib/font/devaps/CX.out
+/usr/lib/font/devaps/CX.add
+/usr/lib/font/devaps/CW.out
+/usr/lib/font/devaps/CW.add
+/usr/lib/font/devaps/CT.out
+/usr/lib/font/devaps/CT.add
+/usr/lib/font/devaps/CI.out
+/usr/lib/font/devaps/CE.out
+/usr/lib/font/devaps/C.out
+/usr/lib/font/devaps/BI.out
+/usr/lib/font/devaps/B.out
+/usr/lib/font/devaps/B.add
+/usr/lib/font/devaps
+/usr/lib/font
+/usr/lib <shared pathname not removed>
+/usr/bin/whatis
+/usr/bin/vgrind
+/usr/bin/ul
+/usr/bin/troff
+/usr/bin/tbl
+/usr/bin/ta
+/usr/bin/sortbib
+/usr/bin/soelim
+/usr/bin/roffbib
+/usr/bin/refer
+/usr/bin/nroff
+/usr/bin/neqn
+/usr/bin/man
+/usr/bin/lookbib
+/usr/bin/indxbib
+/usr/bin/eqn
+/usr/bin/diffmk
+/usr/bin/deroff
+/usr/bin/daps
+/usr/bin/checknr
+/usr/bin/checkeq
+/usr/bin/catman
+/usr/bin/apropos
+/usr/bin/addbib
+/usr/bin <shared pathname not removed>
+/usr <shared pathname not removed>
+## Updating system information.
+
+Removal of <SUNWdoc> was successful.
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgdd -d /cdrom/cdrom0/Solaris_10/
+Docs/    Misc/    Patches/ Product/ Tools/   
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgdd -d /cdrom/cdrom0/Solaris_10/P
+Patches/ Product/ 
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgdd -d /cdrom/cdrom0/Solaris_10/Product/ -s spool SUNWdoc
+bash: pkgdd: command not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgadd -d /cdrom/cdrom0/Solaris_10/Product/ -s spool SUNWdoc 
+Transferring <SUNWdoc> package instance
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo -l SUNWdoc
+ERROR: information for "SUNWdoc" was not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo -l SUNWdoc
+ERROR: information for "SUNWdoc" was not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#man pkginfo
+bash: /usr/bin/man: No such file or directory
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo -d spool SUNWdoc
+system      SUNWdoc Documentation Tools
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo /var/spool/pkg/ -l SUNWdoc
+ERROR: information for "/var/spool/pkg/" was not found
+ERROR: information for "-l" was not found
+ERROR: information for "SUNWdoc" was not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo /var/spool/pkg -l SUNWdoc
+ERROR: information for "/var/spool/pkg" was not found
+ERROR: information for "-l" was not found
+ERROR: information for "SUNWdoc" was not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo -d /var/spool/pkg -l SUNWdoc
+   PKGINST:  SUNWdoc
+      NAME:  Documentation Tools
+  CATEGORY:  system
+      ARCH:  i386
+   VERSION:  11.10.0,REV=2005.01.21.16.34
+   BASEDIR:  /
+    VENDOR:  Sun Microsystems, Inc.
+      DESC:  utilities and fonts for development, display, and production of documentation such as manual pages (nroff/troff)
+    PSTAMP:  on10ptchfeatx20090902230759
+   HOTLINE:  Please contact your local service provider
+    STATUS:  spooled
+     FILES:      395 spooled pathnames
+                   6 linked files
+                  25 directories
+                  32 executables
+                   6 package information files
+                6360 blocks used (approx)
+
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgadd SUNWdoc
+
+Processing package instance <SUNWdoc> from </var/spool/pkg>
+
+Documentation Tools(i386) 11.10.0,REV=2005.01.21.16.34
+Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+Use is subject to license terms.
+Using </> as the package base directory.
+## Processing package information.
+## Processing system information.
+   8 package pathnames are already properly installed.
+## Verifying package dependencies.
+## Verifying disk space requirements.
+## Checking for conflicts with packages already installed.
+## Checking for setuid/setgid programs.
+
+This package contains scripts which will be executed with super-user
+permission during the process of installing this package.
+
+Do you want to continue with the installation of <SUNWdoc> [y,n,?] y
+
+Installing Documentation Tools as <SUNWdoc>
+
+## Installing part 1 of 1.
+6245 blocks
+## Executing postinstall script.
+
+Installation of <SUNWdoc> was successful.
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkinfo -l SUNWdoc
+bash: pkinfo: command not found
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkginfo -l SUNWdoc
+   PKGINST:  SUNWdoc
+      NAME:  Documentation Tools
+  CATEGORY:  system
+      ARCH:  i386
+   VERSION:  11.10.0,REV=2005.01.21.16.34
+   BASEDIR:  /
+    VENDOR:  Sun Microsystems, Inc.
+      DESC:  utilities and fonts for development, display, and production of documentation such as manual pages (nroff/troff)
+    PSTAMP:  on10ptchfeatx20090902230759
+  INSTDATE:  Aug 18 2011 13:10
+   HOTLINE:  Please contact your local service provider
+    STATUS:  completely installed
+     FILES:      389 installed pathnames
+                   8 shared pathnames
+                   6 linked files
+                  25 directories
+                  32 executables
+                6360 blocks used (approx)
+
+[lab5]/cdrom/cdrom0/Solaris_10/Product#pkgrm -s spool SUNWdoc
+
+The following package is currently spooled:
+   SUNWdoc  Documentation Tools
+            (i386) 11.10.0,REV=2005.01.21.16.34
+
+Do you want to remove this package? [y,n,?,q] y
+
+Removing spooled package instance <SUNWdoc>
+[lab5]/cdrom/cdrom0/Solaris_10/Product#

@@ -1,0 +1,512 @@
+
+
+[lab5]/#bash
+[lab5]/#prtconf -v | grep /platform/i86pc/kernel/
+            value='/platform/i86pc/kernel/amd64/unix'
+[lab5]/#
+[lab5]/#bash
+[lab5]/#prtconf -v | grep /platform/i86pc/kernel/
+            value='/platform/i86pc/kernel/amd64/unix'
+[lab5]/#
+[lab5]/#bash
+[lab5]/#prtconf -v | grep /platform/i86pc/kernel/
+            value='/platform/i86pc/kernel/amd64/unix'
+[lab5]/#
+[lab5]/#bash
+[lab5]/#prtconf -v | grep /platform/i86pc/kernel/
+            value='/platform/i86pc/kernel/amd64/unix'
+[lab5]/#
+[lab5]/#bash
+[lab5]/#uname -m
+i86pc
+[lab5]/#uname -i
+i86pc
+[lab5]/#more /etc/sys
+sysdef       sysevent/    syslog.conf  syslog.pid   system       
+[lab5]/#more /etc/sys
+sysdef       sysevent/    syslog.conf  syslog.pid   system       
+[lab5]/#more /etc/system 
+*ident  "@(#)system     1.18    97/06/27 SMI" /* SVR4 1.5 */
+*
+* SYSTEM SPECIFICATION FILE
+*
+
+* moddir:
+*
+*       Set the search path for modules.  This has a format similar to the
+*       csh path variable. If the module isn't found in the first directory
+*       it tries the second and so on. The default is /kernel /usr/kernel
+*
+*       Example:
+*               moddir: /kernel /usr/kernel /other/modules
+
+
+
+* root device and root filesystem configuration:
+*
+*       The following may be used to override the defaults provided by
+*       the boot program:
+*
+*       rootfs:         Set the filesystem type of the root.
+*
+*       rootdev:        Set the root device.  This should be a fully
+*                       expanded physical pathname.  The default is the
+*                       physical pathname of the device where the boot
+*                       program resides.  The physical pathname is
+*                       highly platform and configuration dependent.
+*
+*       Example:
+*               rootfs:ufs
+*               rootdev:/sbus@1,f8000000/esp@0,800000/sd@3,0:a
+*
+*       (Swap device configuration should be specified in /etc/vfstab.)
+
+
+
+* exclude:
+*
+*       Modules appearing in the moddir path which are NOT to be loaded,
+*       even if referenced. Note that `exclude' accepts either a module name,
+*       or a filename which includes the directory.
+*
+*       Examples:
+*               exclude: win
+*               exclude: sys/shmsys
+
+
+
+* forceload:
+*
+*       Cause these modules to be loaded at boot time, (just before mounting
+*       the root filesystem) rather than at first reference. Note that
+*       forceload expects a filename which includes the directory. Also
+*       note that loading a module does not necessarily imply that it will
+*       be installed.
+*
+*       Example:
+*               forceload: drv/foo
+
+
+
+* set:
+*
+*       Set an integer variable in the kernel or a module to a new value.
+*       This facility should be used with caution.  See system(4).
+*
+*       Examples:
+*
+*       To set variables in 'unix':
+*
+*               set nautopush=32
+*               set maxusers=40
+*
+*       To set a variable named 'debug' in the module named 'test_module'
+*
+*               set test_module:debug = 0x13
+
+[lab5]/#get pagsize
+bash: get: command not found
+[lab5]/#get pgsize
+bash: get: command not found
+[lab5]/#get maxusers
+bash: get: command not found
+[lab5]/#who -r
+   .       run-level 3  Aug 19 09:32     3      0  S
+[lab5]/#ls -l /etc/rc*      
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc0 -> ../sbin/rc0
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc1 -> ../sbin/rc1
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc2 -> ../sbin/rc2
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc3 -> ../sbin/rc3
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc5 -> ../sbin/rc5
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rc6 -> ../sbin/rc6
+lrwxrwxrwx   1 root     root          11 Aug 13 08:31 /etc/rcS -> ../sbin/rcS
+
+/etc/rc0.d:
+total 40
+-rwxr--r--   5 root     sys          824 Aug 16  2006 K05appserv
+-rwxr--r--   6 root     sys          344 Jan 21  2005 K06mipagent
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 K15imq
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 K16apache
+-rwxr--r--   6 root     sys          474 Jan 21  2005 K27boot.server
+-rwxr--r--   5 root     sys         2329 Jan 21  2005 K34ncalogd
+-rwxr--r--   5 root     sys         1718 Jan 21  2005 K50pppd
+-rwxr--r--   5 root     sys          359 Jan 21  2005 K52llc2
+-rwxr--r--   4 root     sys         1151 Jan  9  2005 K62lu
+
+/etc/rc1.d:
+total 40
+-rwxr--r--   5 root     sys          824 Aug 16  2006 K05appserv
+-rwxr--r--   6 root     sys          344 Jan 21  2005 K06mipagent
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 K15imq
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 K16apache
+-rwxr--r--   6 root     sys          474 Jan 21  2005 K27boot.server
+-rwxr--r--   5 root     sys         2329 Jan 21  2005 K34ncalogd
+-rwxr--r--   5 root     sys         1718 Jan 21  2005 K50pppd
+-rwxr--r--   5 root     sys          359 Jan 21  2005 K52llc2
+-rwxr--r--   4 root     sys         1151 Jan  9  2005 S10lu
+
+/etc/rc2.d:
+total 70
+-rwxr--r--   5 root     sys          824 Aug 16  2006 K05appserv
+-rwxr--r--   6 root     sys          344 Jan 21  2005 K06mipagent
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 K15imq
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 K16apache
+-rwxr--r--   6 root     sys          474 Jan 21  2005 K27boot.server
+-rw-r--r--   1 root     sys         1598 Jan 21  2005 README
+-rwxr--r--   4 root     sys         1151 Jan  9  2005 S10lu
+-rwxr--r--   2 root     sys          805 Sep  3  2009 S20sysetup
+-rwxr--r--   5 root     sys          359 Jan 21  2005 S40llc2
+-rwxr--r--   2 root     sys         2304 Jan 21  2005 S42ncakmod
+-rwxr--r--   5 root     sys         1718 Jan 21  2005 S47pppd
+-rwxr--r--   2 root     sys          327 Jan 21  2005 S70uucp
+-rwxr-xr-x   2 root     other       1558 Jan  9  2005 S72autoinstall
+-rwxr--r--   2 root     sys         1262 Sep  3  2009 S73cachefs.daemon
+-rwxr--r--   2 root     sys         1028 Jan 21  2005 S81dodatadm.udaplt
+-rwxr--r--   2 root     sys          256 Sep  3  2009 S89PRESERVE
+-rwxr--r--   5 root     sys         2329 Jan 21  2005 S94ncalogd
+-rwxr--r--   2 root     sys          733 Sep  3  2009 S98deallocate
+
+/etc/rc3.d:
+total 28
+-rw-r--r--   1 root     sys         1285 Jan 21  2005 README
+-rwxr--r--   6 root     sys          474 Jan 21  2005 S16boot.server
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 S50apache
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 S52imq
+-rwxr--r--   6 root     sys          344 Jan 21  2005 S80mipagent
+-rwxr--r--   5 root     sys          824 Aug 16  2006 S84appserv
+
+/etc/rcS.d:
+total 40
+-rwxr--r--   6 root     sys          344 Jan 21  2005 K06mipagent
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 K15imq
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 K16apache
+-rwxr--r--   6 root     sys          474 Jan 21  2005 K27boot.server
+-rwxr--r--   5 root     sys         2329 Jan 21  2005 K34ncalogd
+-rwxr--r--   5 root     sys         1718 Jan 21  2005 K50pppd
+-rwxr--r--   5 root     sys          359 Jan 21  2005 K52llc2
+-rw-r--r--   1 root     sys         1807 Jan 21  2005 README
+-rwxr--r--   1 root     sys          151 Jan  6  2005 S50sk98sol
+
+/etc/rcm:
+total 2
+drwxr-xr-x   2 root     sys          512 Aug 13 08:31 scripts
+[lab5]/#ls -l /etc/rc2.d/
+total 70
+-rwxr--r--   5 root     sys          824 Aug 16  2006 K05appserv
+-rwxr--r--   6 root     sys          344 Jan 21  2005 K06mipagent
+-rwxr--r--   6 root     sys         5840 Jun 18  2006 K15imq
+-rwxr--r--   6 root     sys         2452 Jun  5  2009 K16apache
+-rwxr--r--   6 root     sys          474 Jan 21  2005 K27boot.server
+-rw-r--r--   1 root     sys         1598 Jan 21  2005 README
+-rwxr--r--   4 root     sys         1151 Jan  9  2005 S10lu
+-rwxr--r--   2 root     sys          805 Sep  3  2009 S20sysetup
+-rwxr--r--   5 root     sys          359 Jan 21  2005 S40llc2
+-rwxr--r--   2 root     sys         2304 Jan 21  2005 S42ncakmod
+-rwxr--r--   5 root     sys         1718 Jan 21  2005 S47pppd
+-rwxr--r--   2 root     sys          327 Jan 21  2005 S70uucp
+-rwxr-xr-x   2 root     other       1558 Jan  9  2005 S72autoinstall
+-rwxr--r--   2 root     sys         1262 Sep  3  2009 S73cachefs.daemon
+-rwxr--r--   2 root     sys         1028 Jan 21  2005 S81dodatadm.udaplt
+-rwxr--r--   2 root     sys          256 Sep  3  2009 S89PRESERVE
+-rwxr--r--   5 root     sys         2329 Jan 21  2005 S94ncalogd
+-rwxr--r--   2 root     sys          733 Sep  3  2009 S98deallocate
+[lab5]/#ls
+192.168.230.135  dev              home             morespace        system
+Mail             devices          kernel           net              tmp
+TT_DB            dir0             lib              opt              usr
+bin              dirprueba        lost+found       platform         var
+boot             etc              mnt              proc             vol
+cdrom            export           modulo1          sbin
+[lab5]/#cd /opt/
+SA200S10_REVC.1.zip   SUNWits/              VirtualBoxAdditions/  packages/
+SA200S10_revC.1_1009/ SUNWmlib/             lost+found/           ses/
+[lab5]/#cd /opt/ses/lab/
+packages/ patches/  sim/      smf/      
+[lab5]/#cd /opt/ses/lab/
+packages/ patches/  sim/      smf/      
+[lab5]/#cd /opt/ses/lab/smf/banner-
+bash: cd: /opt/ses/lab/smf/banner-: No such file or directory
+[lab5]/#cd /opt/ses/lab/smf/       
+[lab5]/opt/ses/lab/smf#ls
+banner-rc       banner-smf      banner-smf.xml
+[lab5]/opt/ses/lab/smf#ls -lh
+total 6
+-rwx--x--x   1 root     root         347 Oct  6  2009 banner-rc
+-rwx--x--x   1 root     root         341 Oct  6  2009 banner-smf
+-rwx--x--x   1 root     root         989 Oct  6  2009 banner-smf.xml
+[lab5]/opt/ses/lab/smf#cd /usr/           
+[lab5]/usr#mkdir /local/svc/method
+mkdir: Failed to make directory "/local/svc/method"; No such file or directory
+[lab5]/usr#mkdir -r /local/svc/method
+mkdir: illegal option -- r
+mkdir: usage: mkdir [-m mode] [-p] dirname ...
+[lab5]/usr#mkdir -R /local/svc/method
+mkdir: illegal option -- R
+mkdir: usage: mkdir [-m mode] [-p] dirname ...
+[lab5]/usr#mkdir -d /local/svc/method
+mkdir: illegal option -- d
+mkdir: usage: mkdir [-m mode] [-p] dirname ...
+[lab5]/usr#mkdir local
+[lab5]/usr#cd lo
+local/      lost+found/ 
+[lab5]/usr#cd lo
+local/      lost+found/ 
+[lab5]/usr#cd lo
+local/      lost+found/ 
+[lab5]/usr#cd local/
+[lab5]/usr/local#ls
+[lab5]/usr/local#mkdir svc
+[lab5]/usr/local#cd svc/
+[lab5]/usr/local/svc#ls
+[lab5]/usr/local/svc#mkdir method
+[lab5]/usr/local/svc#ls
+method
+[lab5]/usr/local/svc#cd -
+/usr/local
+[lab5]/usr/local#cd svc/method/
+[lab5]/usr/local/svc/method#cp /opt/ses/lab/
+packages/ patches/  sim/      smf/      
+[lab5]/usr/local/svc/method#cp /opt/ses/lab/smf/banner-smf ./
+[lab5]/usr/local/svc/method#ls
+banner-smf
+[lab5]/usr/local/svc/method#cd /var/svc/manifest/s
+site/   system/ 
+[lab5]/usr/local/svc/method#cd /var/svc/manifest/s
+site/   system/ 
+[lab5]/usr/local/svc/method#cp /opt/ses/lab/smf/banner-smf.xml /var/svc/manifest/site/
+[lab5]/usr/local/svc/method#svcs site/banner-smf
+svcs: Pattern 'site/banner-smf' doesn't match any instances
+STATE          STIME    FMRI
+[lab5]/usr/local/svc/method#svcs import /var/
+adm/        cc-ccr/     imq/        log/        nfs/        run/        snmp/       uucp/
+apache/     crash/      inet/       lost+found/ nis/        sadm/       spool/      webconsole/
+apache2/    cron/       krb5/       lp/         ntp/        saf/        statmon/    yp/
+audit/      dmi/        ld/         mail/       opt/        samba/      svc/        
+cacao/      dt/         ldap/       mysql/      postgres/   scn/        tmp/        
+cache/      fm/         lib/        news/       preserve/   sma_snmp/   tsol/       
+[lab5]/usr/local/svc/method#svcs import /var/svc/manifest/site/banner-smf.xml 
+svcs: Pattern 'import' doesn't match any instances
+svcs: Pattern '/var/svc/manifest/site/banner-smf.xml' doesn't match any instances
+STATE          STIME    FMRI
+[lab5]/usr/local/svc/method#svccfg import /var/svc/manifest/site/banner-smf.xml 
+[lab5]/usr/local/svc/method#svcs site/banner-smf
+STATE          STIME    FMRI
+online         12:38:21 svc:/site/banner-smf:default
+[lab5]/usr/local/svc/method#svcadm -v disable site/banner-smf
+svc:/site/banner-smf:default disabled.
+[lab5]/usr/local/svc/method#svcs site/banner-smf
+STATE          STIME    FMRI
+disabled       12:40:22 svc:/site/banner-smf:default
+[lab5]/usr/local/svc/method#svcadm -v enable site/banner-smf
+svc:/site/banner-smf:default enabled.
+[lab5]/usr/local/svc/method#man mkdir
+Reformatting page.  Please Wait... done
+
+User Commands                                            mkdir(1)
+
+NAME
+     mkdir - make directories
+
+SYNOPSIS
+     mkdir [-m mode] [-p] dir...
+
+DESCRIPTION
+     The mkdir command creates the named directories in mode  777
+     (possibly altered by the file mode creation mask umask(1)).
+
+     Standard entries in a directory  (for  instance,  the  files
+     ".", for the directory itself, and "..", for its parent) are
+     made automatically. mkdir cannot  create  these  entries  by
+     name.  Creation  of a directory requires write permission in
+     the parent directory.
+
+     The owner-ID and group-ID of the new directories are set  to
+     the  process's effective user-ID and group-ID, respectively.
+     mkdir calls the mkdir(2) system call.
+
+  setgid and mkdir
+     To change the setgid bit on a newly created  directory,  you
+     must use chmod g+s or chmod g-s after executing mkdir.
+
+     The setgid bit setting is inherited from the  parent  direc-
+     tory.
+
+OPTIONS
+     The following options are supported:
+
+     -m mode         This option allows users to specify the mode
+                     to  be used for new directories. Choices for
+                     modes can be found in chmod(1).
+
+     -p              With  this  option,  mkdir  creates  dir  by
+                     creating  all the non-existing parent direc-
+                     tories first. The mode given to intermediate
+                     directories  will  be the difference between
+                     777 and the bits set in the file mode  crea-
+                     tion  mask. The difference, however, must be
+                     at least 300 (write and  execute  permission
+                     for the user).
+
+OPERANDS
+     The following operand is supported:
+
+SunOS 5.10           Last change: 1 Feb 1995                    1
+
+User Commands                                            mkdir(1)
+
+     dir      A path name of a directory to be created.
+[lab5]/usr/local/svc/method#svcs site/banner-smf
+STATE          STIME    FMRI
+online         12:43:20 svc:/site/banner-smf:default
+[lab5]/usr/local/svc/method#
+
+[lab5]/#bash
+[lab5]/#svcs banner-rc
+svcs: Pattern 'banner-rc' doesn't match any instances
+STATE          STIME    FMRI
+[lab5]/#cd etc/init.d/
+[lab5]/etc/init.d#ls
+PRESERVE         boot.server      imq              mipagent         sendmail
+README           cachefs.daemon   init.dmi         mkdtab           slpd
+acct             deallocate       init.sma         ncakmod          swupboots
+acctadm          devlinks         init.snmpdx      ncalogd          sysetup
+apache           dhcp             init.wbem        nfs.server       ufs_quota
+appserv          dodatadm.udaplt  ldap.client      nscd             uucp
+autoinstall      drvconfig        llc2             pcmcia           volmgt
+banner-rc        dtlogin          lu               pppd
+[lab5]/etc/init.d#svcs site/banner-rc
+svcs: Pattern 'site/banner-rc' doesn't match any instances
+STATE          STIME    FMRI
+[lab5]/etc/init.d#./banner-rc start
+[lab5]/etc/init.d#./banner-rc stop 
+[lab5]/etc/init.d#./banner-rc start
+[lab5]/etc/init.d#svcs
+STATE          STIME    FMRI
+legacy_run     13:12:26 lrc:/etc/rcS_d/S50sk98sol
+legacy_run     13:13:13 lrc:/etc/rc2_d/S10lu
+legacy_run     13:13:13 lrc:/etc/rc2_d/S20sysetup
+legacy_run     13:13:13 lrc:/etc/rc2_d/S40llc2
+legacy_run     13:13:14 lrc:/etc/rc2_d/S42ncakmod
+legacy_run     13:13:14 lrc:/etc/rc2_d/S47pppd
+legacy_run     13:13:14 lrc:/etc/rc2_d/S70uucp
+legacy_run     13:13:14 lrc:/etc/rc2_d/S72autoinstall
+legacy_run     13:13:14 lrc:/etc/rc2_d/S73cachefs_daemon
+legacy_run     13:13:15 lrc:/etc/rc2_d/S81dodatadm_udaplt
+legacy_run     13:13:15 lrc:/etc/rc2_d/S89PRESERVE
+legacy_run     13:13:15 lrc:/etc/rc2_d/S94ncalogd
+legacy_run     13:13:16 lrc:/etc/rc2_d/S98deallocate
+legacy_run     13:13:17 lrc:/etc/rc3_d/S16boot_server
+legacy_run     13:13:18 lrc:/etc/rc3_d/S50apache
+legacy_run     13:13:19 lrc:/etc/rc3_d/S52imq
+legacy_run     13:13:19 lrc:/etc/rc3_d/S80mipagent
+legacy_run     13:13:19 lrc:/etc/rc3_d/S84appserv
+online         13:11:44 svc:/system/svc/restarter:default
+online         13:11:47 svc:/network/pfil:default
+online         13:11:47 svc:/network/loopback:default
+online         13:11:48 svc:/network/tnctl:default
+online         13:11:48 svc:/system/filesystem/root:default
+online         13:11:54 svc:/system/installupdates:default
+online         13:11:54 svc:/system/scheduler:default
+online         13:11:56 svc:/system/boot-archive:default
+online         13:11:59 svc:/network/physical:default
+online         13:11:59 svc:/milestone/name-services:default
+online         13:12:06 svc:/system/filesystem/usr:default
+online         13:12:08 svc:/system/identity:node
+online         13:12:11 svc:/system/keymap:default
+online         13:12:13 svc:/system/device/local:default
+online         13:12:14 svc:/platform/i86pc/eeprom:default
+online         13:12:15 svc:/system/filesystem/minimal:default
+online         13:12:16 svc:/system/coreadm:default
+online         13:12:16 svc:/system/pkgserv:default
+online         13:12:17 svc:/system/rmtmpfiles:default
+online         13:12:17 svc:/system/identity:domain
+online         13:12:17 svc:/system/resource-mgmt:default
+online         13:12:17 svc:/system/sysevent:default
+online         13:12:17 svc:/system/cryptosvc:default
+online         13:12:18 svc:/system/name-service-cache:default
+online         13:12:21 svc:/system/device/fc-fabric:default
+online         13:12:21 svc:/system/picl:default
+online         13:12:21 svc:/network/ipsec/ipsecalgs:default
+online         13:12:22 svc:/milestone/devices:default
+online         13:12:22 svc:/network/ipsec/policy:default
+online         13:12:22 svc:/milestone/network:default
+online         13:12:24 svc:/network/initial:default
+online         13:12:25 svc:/system/manifest-import:default
+online         13:12:25 svc:/system/patchchk:default
+online         13:12:26 svc:/application/print/ppd-cache-update:default
+online         13:12:26 svc:/network/service:default
+online         13:12:26 svc:/network/iscsi/initiator:default
+online         13:12:26 svc:/milestone/single-user:default
+online         13:12:27 svc:/system/filesystem/local:default
+online         13:12:27 svc:/network/shares/group:zfs
+online         13:12:27 svc:/network/shares/group:default
+online         13:12:28 svc:/system/boot-archive-update:default
+online         13:12:28 svc:/system/sysidtool:net
+online         13:12:28 svc:/system/cron:default
+online         13:12:29 svc:/system/virtualbox/vboxservice:default
+online         13:12:31 svc:/application/font/fc-cache:default
+online         13:12:35 svc:/application/opengl/ogl-select:default
+online         13:12:48 svc:/network/routing-setup:default
+online         13:12:48 svc:/network/rpc/bind:default
+online         13:12:48 svc:/network/nfs/mapid:default
+online         13:12:49 svc:/system/sysidtool:system
+online         13:12:49 svc:/network/nfs/cbd:default
+online         13:12:50 svc:/network/nfs/status:default
+online         13:12:50 svc:/platform/i86pc/kdmconfig:default
+online         13:12:50 svc:/milestone/sysconfig:default
+online         13:12:50 svc:/system/sac:default
+online         13:12:51 svc:/network/inetd:default
+online         13:12:51 svc:/network/nfs/nlockmgr:default
+online         13:12:52 svc:/system/utmp:default
+online         13:12:52 svc:/system/console-login:default
+online         13:12:52 svc:/system/postrun:default
+online         13:12:53 svc:/application/stosreg:default
+online         13:12:53 svc:/application/management/wbem:default
+online         13:12:54 svc:/network/routing/route:default
+online         13:13:06 svc:/network/rpc/gss:default
+online         13:13:07 svc:/network/nfs/client:default
+online         13:13:07 svc:/network/rpc/meta:default
+online         13:13:07 svc:/application/x11/xfs:default
+online         13:13:07 svc:/system/filesystem/autofs:default
+online         13:13:08 svc:/network/ssh:default
+online         13:13:08 svc:/application/font/stfsloader:default
+online         13:13:08 svc:/network/rpc/rstat:default
+online         13:13:08 svc:/network/rpc/cde-calendar-manager:default
+online         13:13:08 svc:/network/rpc/cde-ttdbserver:tcp
+online         13:13:08 svc:/network/rpc/mdcomm:default
+online         13:13:08 svc:/network/rpc/metamed:default
+online         13:13:08 svc:/system/dumpadm:default
+online         13:13:09 svc:/system/system-log:default
+online         13:13:09 svc:/system/fmd:default
+online         13:13:09 svc:/network/rpc/metamh:default
+online         13:13:09 svc:/network/rpc/smserver:default
+online         13:13:10 svc:/network/rpc/rusers:default
+online         13:13:11 svc:/network/security/ktkt_warn:default
+online         13:13:11 svc:/application/management/sma:default
+online         13:13:11 svc:/network/nfs/rquota:default
+online         13:13:11 svc:/network/cde-spc:default
+online         13:13:11 svc:/network/smtp:sendmail
+online         13:13:11 svc:/application/management/seaport:default
+online         13:13:11 svc:/network/stdiscover:default
+online         13:13:12 svc:/network/stlisten:default
+online         13:13:12 svc:/network/telnet:default
+online         13:13:12 svc:/network/ftp:default
+online         13:13:12 svc:/application/management/snmpdx:default
+online         13:13:12 svc:/network/finger:default
+online         13:13:12 svc:/network/login:rlogin
+online         13:13:13 svc:/network/shell:default
+online         13:13:13 svc:/network/rpc-100235_1/rpc_ticotsord:default
+online         13:13:13 svc:/system/filesystem/volfs:default
+online         13:13:13 svc:/application/management/dmi:default
+online         13:13:16 svc:/milestone/multi-user:default
+online         13:13:17 svc:/application/graphical-login/cde-login:default
+online         13:13:17 svc:/application/cde-printinfo:default
+online         13:13:20 svc:/milestone/multi-user-server:default
+online         13:13:21 svc:/system/zones:default
+online         13:13:21 svc:/system/basicreg:default
+online         13:13:34 svc:/system/webconsole:console
+offline        13:12:00 svc:/application/print/ipp-listener:default
+offline        13:12:56 svc:/application/print/rfc1179:default
+[lab5]/etc/init.d#./banner-rc stop
+[lab5]/etc/init.d#
+

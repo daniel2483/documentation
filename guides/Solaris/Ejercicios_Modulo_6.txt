@@ -1,0 +1,1915 @@
+[lab5]/#bash  
+[lab5]/#cd etc/       
+[lab5]/etc#ls
+TIMEZONE              gimp                  netconfig             saf
+X11                   gnome-vfs-2.0         netmasks              sasl
+acct                  gnome-vfs-mime-magic  networks              scrollkeeper.conf
+aggregation.conf      gnopernicus-1.0       nfs                   sdp.conf
+aliases               group                 nfssec.conf           security
+amd64                 grpck                 nodename              services
+apache                gss                   nscd.conf             setmnt
+apache2               gtk                   nsswitch.conf         sfw
+apoc                  gtk-2.0               nsswitch.dns          sgml
+auto_home             halt                  nsswitch.files        shadow
+auto_master           hba.conf              nsswitch.ldap         shutdown
+autopush              hostname.e1000g0      nsswitch.nis          skel
+bonobo-activation     hosts                 nsswitch.nisplus      sma
+bootrc                iiim                  openwin               smartcard
+bootsign              ima.conf              opt                   smc
+cacao                 imq                   orbitrc               snmp
+certs                 inet                  pam.conf              sock2path
+cfgadm                inetd.conf            pam.conf-winbind      sound
+chroot                init                  pango                 ssh
+clri                  init.d                passwd                sulogin
+coreadm.conf          initpipe              patch                 sunvts
+cron                  inittab               path_to_inst          svc
+cron.d                install               path_to_inst.old      swap
+crypto                ioctl.syscon          pgsql                 swapadd
+dacf.conf             ipf                   ppp                   sysdef
+dat                   iscsi                 printers.conf         sysevent
+datemsk               iu.ap                 product-info          syslog.conf
+dcopy                 killall               profile               syslog.pid
+default               krb5                  project               system
+dev                   labelit               protocols             tar
+device.tab            lib                   prtconf               telinit
+devices               link                  prtvtoc               termcap
+devlink.tab           llc2                  publickey             tm
+dfs                   log                   pwck                  ttydefs
+dgroup.tab            logadm.conf           quagga                ttysrch
+dhcp                  logindevperm          rc0                   uadmin
+dmi                   lp                    rc0.d                 umount
+driver_aliases        lu                    rc1                   umountall
+driver_classes        lvm                   rc1.d                 unlink
+dumpadm.conf          mach                  rc2                   usb
+dumpdates             magic                 rc2.d                 user_attr
+esd.conf              mail                  rc3                   utmppipe
+fddi.cfg              mailcap               rc3.d                 utmpx
+ff                    mime.types            rc5                   uucp
+flash                 minor_perm            rc6                   vfstab
+fm                    mkfs                  rcS                   volcopy
+fmthard               mknod                 rcS.d                 vold.conf
+fonts                 mnttab                rcm                   wall
+format                motd                  reboot                webconsole
+format.dat            mount                 release               webmin
+fs                    mountall              remote                wgetrc
+fsck                  mpapi.conf            rmmount.conf          whodo
+fsdb                  mvdir                 rmt                   wtmpx
+fstyp                 name_to_major         rndc.key              xml
+ftpd                  name_to_sysnum        rpc                   xpdfrc
+fuser                 nca                   rpcsec                zfs
+gconf                 ncheck                rpld.conf             zones
+getty                 net                   rtc_config
+[lab5]/etc#cd mnttab 
+bash: cd: mnttab: Not a directory
+[lab5]/etc#more mnttab 
+/dev/dsk/c0d0s0 /       ufs     rw,intr,largefiles,logging,xattr,onerror=panic,dev=1980000      131
+3264578
+/devices        /devices        devfs   dev=47c0000     1313264554
+ctfs    /system/contract        ctfs    dev=4800001     1313264554
+proc    /proc   proc    dev=4840000     1313264554
+mnttab  /etc/mnttab     mntfs   dev=4880001     1313264554
+swap    /etc/svc/volatile       tmpfs   xattr,dev=48c0001       1313264554
+objfs   /system/object  objfs   dev=4900001     1313264554
+sharefs /etc/dfs/sharetab       sharefs dev=4940001     1313264554
+/dev/dsk/c0d0s4 /usr    ufs     rw,intr,largefiles,logging,xattr,onerror=panic,dev=1980004      131
+3264579
+/usr/lib/libc/libc_hwcap1.so.1  /lib/libc.so.1  lofs    dev=1980004     1313264560
+fd      /dev/fd fd      rw,dev=4ac0001  1313264579
+/dev/dsk/c0d0s3 /var    ufs     rw,intr,largefiles,logging,xattr,onerror=panic,dev=1980003      131
+3264585
+swap    /tmp    tmpfs   xattr,dev=48c0002       1313264585
+swap    /var/run        tmpfs   xattr,dev=48c0003       1313264586
+/dev/dsk/c0d0s5 /opt    ufs     rw,intr,largefiles,logging,xattr,onerror=panic,dev=1980005      131
+3264600
+-hosts  /net    autofs  nosuid,indirect,ignore,nobrowse,dev=4b80001     1313264641
+auto_home       /home   autofs  indirect,ignore,nobrowse,dev=4b80002    1313264641
+lab5:vold(pid588)       /vol    nfs     ignore,noquota,dev=4b40001      1313264643
+[lab5]/etc#more vfstab 
+#device         device          mount           FS      fsck    mount   mount
+#to mount       to fsck         point           type    pass    at boot options
+#
+fd      -       /dev/fd fd      -       no      -
+/proc   -       /proc   proc    -       no      -
+/dev/dsk/c0d0s1 -       -       swap    -       no      -
+/dev/dsk/c0d0s0 /dev/rdsk/c0d0s0        /       ufs     1       no      -
+/dev/dsk/c0d0s4 /dev/rdsk/c0d0s4        /usr    ufs     1       no      -
+/dev/dsk/c0d0s3 /dev/rdsk/c0d0s3        /var    ufs     1       no      -
+/dev/dsk/c0d0s5 /dev/rdsk/c0d0s5        /opt    ufs     2       yes     -
+/devices        -       /devices        devfs   -       no      -
+sharefs -       /etc/dfs/sharetab       sharefs -       no      -
+ctfs    -       /system/contract        ctfs    -       no      -
+objfs   -       /system/object  objfs   -       no      -
+swap    -       /tmp    tmpfs   -       yes     -
+[lab5]/etc#
+[lab5]/#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   924K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/#mount
+/ on /dev/dsk/c0d0s0 read/write/setuid/devices/intr/largefiles/logging/xattr/one
+/devices on /devices read/write/setuid/devices/dev=47c0000 on Sat Aug 13 13:42:3
+/system/contract on ctfs read/write/setuid/devices/dev=4800001 on Sat Aug 13 13:
+/proc on proc read/write/setuid/devices/dev=4840000 on Sat Aug 13 13:42:34 2011
+/etc/mnttab on mnttab read/write/setuid/devices/dev=4880001 on Sat Aug 13 13:42:
+/etc/svc/volatile on swap read/write/setuid/devices/xattr/dev=48c0001 on Sat Aug
+/system/object on objfs read/write/setuid/devices/dev=4900001 on Sat Aug 13 13:4
+/etc/dfs/sharetab on sharefs read/write/setuid/devices/dev=4940001 on Sat Aug 13
+/usr on /dev/dsk/c0d0s4 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/lib/libc.so.1 on /usr/lib/libc/libc_hwcap1.so.1 read/write/setuid/devices/dev=1
+/dev/fd on fd read/write/setuid/devices/dev=4ac0001 on Sat Aug 13 13:42:59 2011
+/var on /dev/dsk/c0d0s3 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/tmp on swap read/write/setuid/devices/xattr/dev=48c0002 on Sat Aug 13 13:43:05 
+/var/run on swap read/write/setuid/devices/xattr/dev=48c0003 on Sat Aug 13 13:43
+/opt on /dev/dsk/c0d0s5 read/write/setuid/devices/intr/largefiles/logging/xattr/
+[lab5]/#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   924K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/#fuser /etc/svc/volatile
+/etc/svc/volatile: 
+[lab5]/#^[  
+[lab5]/#bash
+[lab5]/#fuser /etc/svc/volatile
+/etc/svc/volatile: 
+[lab5]/#fuser -ck /etc/svc/volatile
+/etc/svc/volatile:      566o     375o     345o     341o     339o       9o
+[lab5]/#cd /etc/
+[lab5]/etc#ls
+TIMEZONE              dumpadm.conf          initpipe              netmasks      
+X11                   dumpdates             inittab               networks      
+acct                  esd.conf              install               nfs           
+aggregation.conf      fddi.cfg              ioctl.syscon          nfssec.conf   
+aliases               ff                    ipf                   nodename      
+amd64                 flash                 iscsi                 nscd.conf     
+apache                fm                    iu.ap                 nsswitch.conf 
+apache2               fmthard               killall               nsswitch.dns  
+apoc                  fonts                 krb5                  nsswitch.files
+auto_home             format                labelit               nsswitch.ldap 
+auto_master           format.dat            lib                   nsswitch.nis  
+autopush              fs                    link                  nsswitch.nispl
+bonobo-activation     fsck                  llc2                  openwin       
+bootrc                fsdb                  log                   opt           
+bootsign              fstyp                 logadm.conf           orbitrc       
+cacao                 ftpd                  logindevperm          pam.conf      
+certs                 fuser                 lp                    pam.conf-winbi
+cfgadm                gconf                 lu                    pango         
+chroot                getty                 lvm                   passwd        
+clri                  gimp                  mach                  patch         
+coreadm.conf          gnome-vfs-2.0         magic                 path_to_inst  
+cron                  gnome-vfs-mime-magic  mail                  path_to_inst.o
+cron.d                gnopernicus-1.0       mailcap               pgsql         
+crypto                group                 mime.types            ppp           
+dacf.conf             grpck                 minor_perm            printers.conf 
+dat                   gss                   mkfs                  product-info  
+datemsk               gtk                   mknod                 profile       
+dcopy                 gtk-2.0               mnttab                project       
+default               halt                  motd                  protocols     
+dev                   hba.conf              mount                 prtconf       
+device.tab            hostname.e1000g0      mountall              prtvtoc       
+devices               hosts                 mpapi.conf            publickey     
+devlink.tab           iiim                  mvdir                 pwck          
+dfs                   ima.conf              name_to_major         quagga        
+dgroup.tab            imq                   name_to_sysnum        rc0           
+dhcp                  inet                  nca                   rc0.d         
+dmi                   inetd.conf            ncheck                rc1           
+driver_aliases        init                  net                   rc1.d         
+driver_classes        init.d                netconfig             rc2           
+[lab5]/etc#more shadow 
+root:zxKpAgsJ/puUo:6445::::::
+daemon:NP:6445::::::
+bin:NP:6445::::::
+sys:NP:6445::::::
+adm:NP:6445::::::
+lp:NP:6445::::::
+uucp:NP:6445::::::
+nuucp:NP:6445::::::
+smmsp:NP:6445::::::
+listen:*LK*:::::::
+gdm:*LK*:::::::
+webservd:*LK*:::::::
+postgres:NP:::::::
+svctag:*LK*:6445::::::
+nobody:*LK*:6445::::::
+noaccess:*LK*:6445::::::
+nobody4:*LK*:6445::::::
+[lab5]/etc#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/etc#prtvtoc /dev
+dev/     devices/ 
+[lab5]/etc#prtvtoc /dev
+dev/     devices/ 
+[lab5]/etc#prtvtoc /dev/dsk/c
+Display all 105 possibilities? (y or n)
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p2   c2t0d0s14  c2t
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p3   c2t0d0s15  c2t
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0p4   c2t0d0s2   c2t
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s0   c2t0d0s3   c2t
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s1   c2t0d0s4   c2t
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s10  c2t0d0s5   c2t
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0     c2t0d0s11  c2t0d0s6   c2t
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p0   c2t0d0s12  c2t0d0s8   c2t
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p1   c2t0d0s13  c2t0d0s9   c2t
+[lab5]/etc#prtvtoc /dev/dsk/c2t0d0p1
+* /dev/dsk/c2t0d0p1 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#prtvtoc /dev/dsk/c2t1d0p1
+* /dev/dsk/c2t1d0p1 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#prtvtoc /dev/dsk/c2t2d0p1
+* /dev/dsk/c2t2d0p1 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#prtvtoc /dev/dsk/c2t3d0p1
+prtvtoc: /dev/dsk/c2t3d0p1: No such file or directory
+[lab5]/etc#prtvtoc /dev/dsk/c2t0d0p1
+* /dev/dsk/c2t0d0p1 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#ls /dev/dsk/        
+c0d0p0     c0d0s12    c0d0s7     c1t0d0s1   c1t0d0s4   c2t0d0p2   c2t0d0s14  c2t
+c0d0p1     c0d0s13    c0d0s8     c1t0d0s10  c1t0d0s5   c2t0d0p3   c2t0d0s15  c2t
+c0d0p2     c0d0s14    c0d0s9     c1t0d0s11  c1t0d0s6   c2t0d0p4   c2t0d0s2   c2t
+c0d0p3     c0d0s15    c1t0d0p0   c1t0d0s12  c1t0d0s7   c2t0d0s0   c2t0d0s3   c2t
+c0d0p4     c0d0s2     c1t0d0p1   c1t0d0s13  c1t0d0s8   c2t0d0s1   c2t0d0s4   c2t
+c0d0s0     c0d0s3     c1t0d0p2   c1t0d0s14  c1t0d0s9   c2t0d0s10  c2t0d0s5   c2t
+c0d0s1     c0d0s4     c1t0d0p3   c1t0d0s15  c2t0d0     c2t0d0s11  c2t0d0s6   c2t
+c0d0s10    c0d0s5     c1t0d0p4   c1t0d0s2   c2t0d0p0   c2t0d0s12  c2t0d0s8   c2t
+c0d0s11    c0d0s6     c1t0d0s0   c1t0d0s3   c2t0d0p1   c2t0d0s13  c2t0d0s9   c2t
+[lab5]/etc#prtvtoc /dev/dsk/c2t0d0p0
+* /dev/dsk/c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#prtvtoc /dev/dsk/c2t1d0p0
+* /dev/dsk/c2t1d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*          34       222       255
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      4    00        256  20954846  20955101
+       8     11    00   20955102     16384  20971485
+[lab5]/etc#prtvtoc /dev/dsk/c2t2d0p0
+* /dev/dsk/c2t2d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+* 20971519 sectors
+* 20971452 accessible sectors
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+             Total disk size is 1305 cylinders
+             Cylinder size is 16065 (512 byte) blocks
+
+                                               Cylinders
+      Partition   Status    Type          Start   End   Length    %
+      =========   ======    ============  =====   ===   ======   ===
+          1                 EFI               0  1305    1306    100
+
+
+
+
+
+SELECT ONE OF THE FOLLOWING:
+   1. Create a partition
+   2. Specify the active partition
+   3. Delete a partition
+   4. Change between Solaris and Solaris2 Partition IDs
+   5. Exit (update disk configuration and exit)
+   6. Cancel (exit without updating disk configuration)
+Specify the partition number to delete (or enter 0 to exit): ^[^Cformat> 0   
+`0' is not expected.
+format> quit    
+[lab5]/etc#format retry the operation.
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk sectors available: 20955101 + 16384 (reserved sectors)
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm               256       9.99GB         20955101    
+  1 unassigned    wm                 0          0              0    
+  2 unassigned    wm                 0          0              0    
+  3 unassigned    wm                 0          0              0    
+  4 unassigned    wm                 0          0              0    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955102       8.00MB         20971485    
+
+partition> modify
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 0
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm               256       9.99GB         20955101    
+  1 unassigned    wm                 0          0              0    
+  2 unassigned    wm                 0          0              0    
+  3 unassigned    wm                 0          0              0    
+  4 unassigned    wm                 0          0              0    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955102       8.00MB         20971485    
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? yes
+Free Hog partition[6]? 4
+Enter size of partition 0 [20954846b, 20954879e, 10231mb, 9gb, 0tb]: 2.5gb
+Enter size of partition 1 [0b, 5242913e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 2 [0b, 10485793e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 3 [0b, 15728673e, 0mb, 0gb, 0tb]:  
+Enter size of partition 5 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Enter size of partition 6 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Enter size of partition 7 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+Ready to label disk, continue? Modulo6
+`Modulo6' is not expected.
+Ready to label disk, continue? modulo6 
+`modulo6' is not expected.
+Ready to label disk, continue? 
+Ready to label disk, continue? prueba
+`prueba' is not expected.
+Ready to label disk, continue? 
+Ready to label disk, continue? y
+
+partition> print
+Current partition table (original):
+Total disk sectors available: 20955101 + 16384 (reserved sectors)
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/etc#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk sectors available: 20955101 + 16384 (reserved sectors)
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+partition> modify  
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 0
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? yes
+Free Hog partition[6]? 4
+Enter size of partition 0 [5242880b, 5242913e, 2560mb, 2gb, 0tb]: 2.5gb
+Enter size of partition 1 [5242880b, 10485793e, 2560mb, 2gb, 0tb]: 2.5gb
+Enter size of partition 2 [5242880b, 15728673e, 2560mb, 2gb, 0tb]: 2.5gb
+Enter size of partition 3 [0b, 15728673e, 0mb, 0gb, 0tb]: 
+Enter size of partition 5 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Enter size of partition 6 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Enter size of partition 7 [0b, 15728673e, 0mb, 0gb, 0tb]: 0
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+Ready to label disk, continue? y   
+
+partition> modify  
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 1
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                 0          0              0    
+  1        usr    wm                 0          0              0    
+  2        usr    wm                 0          0              0    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm                 0          0              0    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm                 0          0              0    
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? yes
+Free Hog partition[6]? 4
+Enter size of partition 0 [0b, 33e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 1 [0b, 5242913e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 2 [0b, 10485793e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 3 [0b, 15728673e, 0mb, 0gb, 0tb]: 2.49gb
+Enter size of partition 5 [0b, 20950581e, 0mb, 0gb, 0tb]: 0gb
+Enter size of partition 6 [0b, 20950581e, 0mb, 0gb, 0tb]: 0gb
+Enter size of partition 7 [0b, 20950581e, 0mb, 0gb, 0tb]: 0gb
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3        usr    wm          15728674       2.49GB         20950581    
+  4        usr    wm          20950582       2.21MB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+Ready to label disk, continue? y
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/etc#zfs pool
+unrecognized command 'pool'
+usage: zfs command args ...
+where 'command' is one of the following:
+
+        create [-p] [-o property=value] ... <filesystem>
+        create [-ps] [-b blocksize] [-o property=value] ... -V <size> <volume>
+        destroy [-rRf] <filesystem|volume|snapshot>
+
+        snapshot [-r] [-o property=value] ... <filesystem@snapname|volume@snapna
+        rollback [-rRf] <snapshot>
+        clone [-p] [-o property=value] ... <snapshot> <filesystem|volume>
+        promote <clone-filesystem>
+        rename <filesystem|volume|snapshot> <filesystem|volume|snapshot>
+        rename -p <filesystem|volume> <filesystem|volume>
+        rename -r <snapshot> <snapshot>
+        list [-rH][-d max] [-o property[,...]] [-t type[,...]] [-s property] ...
+            [-S property] ... [filesystem|volume|snapshot] ...
+
+        set <property=value> <filesystem|volume|snapshot> ...
+        get [-rHp] [-d max] [-o field[,...]] [-s source[,...]]
+            <"all" | property[,...]> [filesystem|volume|snapshot] ...
+        inherit [-r] <property> <filesystem|volume|snapshot> ...
+        upgrade [-v]
+        upgrade [-r] [-V version] <-a | filesystem ...>
+        userspace [-hniHp] [-o field[,...]] [-sS field] ... [-t type[,...]]
+            <filesystem|snapshot>
+        groupspace [-hniHpU] [-o field[,...]] [-sS field] ... [-t type[,...]]
+            <filesystem|snapshot>
+
+        mount
+        mount [-vO] [-o opts] <-a | filesystem>
+        unmount [-f] <-a | filesystem|mountpoint>
+        share <-a | filesystem>
+        unshare [-f] <-a | filesystem|mountpoint>
+
+        send [-R] [-[iI] snapshot] <snapshot>
+        receive [-vnF] <filesystem|volume|snapshot>
+        receive [-vnF] -d <filesystem>
+
+        allow [-ldug] <"everyone"|user|group>[,...] <perm|@setname>[,...]
+            <filesystem|volume>
+        allow [-ld] -e <perm|@setname>[,...] <filesystem|volume>
+        allow -c <perm|@setname>[,...] <filesystem|volume>
+        allow -s @setname <perm|@setname>[,...] <filesystem|volume>
+
+        unallow [-rldug] <"everyone"|user|group>[,...]
+            [<perm|@setname>[,...]] <filesystem|volume>
+        unallow [-rld] -e [<perm|@setname>[,...]] <filesystem|volume>
+        unallow [-r] -c [<perm|@setname>[,...]] <filesystem|volume>
+        unallow [-r] -s @setname [<perm|@setname>[,...]] <filesystem|volume>
+
+Each dataset is of the form: pool/[dataset/]*dataset[@name]
+
+For the property list, run: zfs set|get
+
+For the delegated permission list, run: zfs allow|unallow
+[lab5]/etc#zfs list
+no datasets available
+[lab5]/etc#zpool list
+no pools available
+[lab5]/etc#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+             Total disk size is 1305 cylinders
+             Cylinder size is 16065 (512 byte) blocks
+
+                                               Cylinders
+      Partition   Status    Type          Start   End   Length    %
+      =========   ======    ============  =====   ===   ======   ===
+          1       Active    Solaris2          1  1304    1304    100
+
+
+
+
+
+SELECT ONE OF THE FOLLOWING:
+   1. Create a partition
+   2. Specify the active partition
+   3. Delete a partition
+   4. Change between Solaris and Solaris2 Partition IDs
+   5. Exit (update disk configuration and exit)
+   6. Cancel (exit without updating disk configuration)
+Enter Selection: 5
+
+
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk sectors available: 20955101 + 16384 (reserved sectors)
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3        usr    wm          15728674       2.49GB         20950581    
+  4        usr    wm          20950582       2.21MB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+partition> modify
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 1
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                 0          0              0    
+  1        usr    wm                 0          0              0    
+  2        usr    wm                 0          0              0    
+  3        usr    wm                 0          0              0    
+  4        usr    wm                 0          0              0    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm                 0          0              0    
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? yes
+Free Hog partition[6]? 4
+Enter size of partition 0 [0b, 33e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 1 [0b, 5242913e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 2 [0b, 10485793e, 0mb, 0gb, 0tb]: 2.5gb
+Enter size of partition 3 [0b, 15728673e, 0mb, 0gb, 0tb]: 
+Enter size of partition 5 [0b, 15728673e, 0mb, 0gb, 0tb]: 
+Enter size of partition 6 [0b, 15728673e, 0mb, 0gb, 0tb]: 
+Enter size of partition 7 [0b, 15728673e, 0mb, 0gb, 0tb]: 
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm                34       2.50GB         5242913    
+  1        usr    wm           5242914       2.50GB         10485793    
+  2        usr    wm          10485794       2.50GB         15728673    
+  3 unassigned    wm                 0          0              0    
+  4        usr    wm          15728674       2.49GB         20955100    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955101       8.00MB         20971484    
+
+Ready to label disk, continue? yes
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/etc#mount
+/ on /dev/dsk/c0d0s0 read/write/setuid/devices/intr/largefiles/logging/xattr/one
+/devices on /devices read/write/setuid/devices/dev=47c0000 on Sat Aug 13 13:42:3
+/system/contract on ctfs read/write/setuid/devices/dev=4800001 on Sat Aug 13 13:
+/proc on proc read/write/setuid/devices/dev=4840000 on Sat Aug 13 13:42:34 2011
+/etc/mnttab on mnttab read/write/setuid/devices/dev=4880001 on Sat Aug 13 13:42:
+/etc/svc/volatile on swap read/write/setuid/devices/xattr/dev=48c0001 on Sat Aug
+/system/object on objfs read/write/setuid/devices/dev=4900001 on Sat Aug 13 13:4
+/etc/dfs/sharetab on sharefs read/write/setuid/devices/dev=4940001 on Sat Aug 13
+/usr on /dev/dsk/c0d0s4 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/lib/libc.so.1 on /usr/lib/libc/libc_hwcap1.so.1 read/write/setuid/devices/dev=1
+/dev/fd on fd read/write/setuid/devices/dev=4ac0001 on Sat Aug 13 13:42:59 2011
+/var on /dev/dsk/c0d0s3 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/tmp on swap read/write/setuid/devices/xattr/dev=48c0002 on Sat Aug 13 13:43:05 
+/var/run on swap read/write/setuid/devices/xattr/dev=48c0003 on Sat Aug 13 13:43
+/opt on /dev/dsk/c0d0s5 read/write/setuid/devices/intr/largefiles/logging/xattr/
+[lab5]/etc#mkdir /morespace
+[lab5]/etc#fsck /dev
+dev/     devices/ 
+[lab5]/etc#fsck /dev
+dev/     devices/ 
+[lab5]/etc#fsck /dev
+dev/     devices/ 
+[lab5]/etc#fsck /dev/rds 
+rds   rdsk/ 
+[lab5]/etc#fsck /dev/rds
+rds   rdsk/ 
+[lab5]/etc#fsck /dev/rdsk/c2t0d0
+c2t0d0     c2t0d0p1   c2t0d0p3   c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t
+c2t0d0p0   c2t0d0p2   c2t0d0p4   c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t
+[lab5]/etc#fsck /dev/rdsk/c2t0d0p0
+** /dev/rdsk/c2t0d0p0
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH MKFS? y   
+
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED.
+
+USE GENERIC SUPERBLOCK FROM MKFS? y
+
+
+USE GENERIC SUPERBLOCK FROM NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED. YOU MUST USE THE -o b OPTION
+TO FSCK TO SPECIFY THE LOCATION OF A VALID ALTERNATE SUPERBLOCK TO
+SUPPLY NEEDED INFORMATION; SEE fsck(1M).
+[lab5]/etc#fsck /dev/rdsk/c2t0d0p0
+** /dev/rdsk/c2t0d0p0
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH MKFS? n
+
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED.
+
+USE GENERIC SUPERBLOCK FROM MKFS? y
+
+
+USE GENERIC SUPERBLOCK FROM NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED. YOU MUST USE THE -o b OPTION
+TO FSCK TO SPECIFY THE LOCATION OF A VALID ALTERNATE SUPERBLOCK TO
+SUPPLY NEEDED INFORMATION; SEE fsck(1M).
+[lab5]/etc#fsck -o /dev/rdsk/c2t0d0p0
+ufs usage: fsck [-F ufs] [-m] [-n] [-V] [-v] [-y] [-o p,b=#,w,f] [special ....]
+ufs usage: fsck [-F ufs] [-m] [-n] [-V] [-v] [-y] [-o p,b=#,w,f] [special ....]
+ufs usage: fsck [-F ufs] [-m] [-n] [-V] [-v] [-y] [-o p,b=#,w,f] [special ....]
+[lab5]/etc#fsck /dev/rdsk/c2t0d0p0
+** /dev/rdsk/c2t0d0p0
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH MKFS? n
+
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED.
+
+USE GENERIC SUPERBLOCK FROM MKFS? y
+
+
+USE GENERIC SUPERBLOCK FROM NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED. YOU MUST USE THE -o b OPTION
+TO FSCK TO SPECIFY THE LOCATION OF A VALID ALTERNATE SUPERBLOCK TO
+SUPPLY NEEDED INFORMATION; SEE fsck(1M).
+[lab5]/etc#fsck /dev/rdsk/c2t1d0p0
+** /dev/rdsk/c2t1d0p0
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+             Total disk size is 1305 cylinders
+             Cylinder size is 16065 (512 byte) blocks
+
+                                               Cylinders
+      Partition   Status    Type          Start   End   Length    %
+      =========   ======    ============  =====   ===   ======   ===
+          1                 Solaris2          1  1304    1304    100
+
+
+
+
+
+SELECT ONE OF THE FOLLOWING:
+   1. Create a partition
+   2. Specify the active partition
+   3. Delete a partition
+   4. Change between Solaris and Solaris2 Partition IDs
+   5. Exit (update disk configuration and exit)
+   6. Cancel (exit without updating disk configuration)
+Enter Selection: 5
+
+
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk sectors available: 20955101 + 16384 (reserved sectors)
+
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm               256       9.99GB         20955101    
+  1 unassigned    wm                 0          0              0    
+  2 unassigned    wm                 0          0              0    
+  3 unassigned    wm                 0          0              0    
+  4 unassigned    wm                 0          0              0    
+  5 unassigned    wm                 0          0              0    
+  6 unassigned    wm                 0          0              0    
+  8   reserved    wm          20955102       8.00MB         20971485    
+
+partition> 0
+Part      Tag    Flag     First Sector        Size        Last Sector
+  0        usr    wm               256       9.99GB         20955101    
+
+Enter partition id tag[usr]: 2
+`2' not expected.
+Enter partition id tag[usr]: ^C
+partition> quit
+
+
+FORMAT MENU:
+             Total disk size is 1305 cylinders
+             Cylinder size is 16065 (512 byte) blocks
+
+                                               Cylinders
+      Partition   Status    Type          Start   End   Length    %
+      =========   ======    ============  =====   ===   ======   ===
+          1       Active    Solaris2          1  1304    1304    100
+
+
+
+
+
+SELECT ONE OF THE FOLLOWING:
+   1. Create a partition
+   2. Specify the active partition
+   3. Delete a partition
+   4. Change between Solaris and Solaris2 Partition IDs
+   5. Exit (update disk configuration and exit)
+   6. Cancel (exit without updating disk configuration)
+Enter Selection: 5
+
+
+format> quit
+[lab5]/etc#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> partition
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> print
+Current partition table (original):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       0               0         (0/0/0)           0
+  1 unassigned    wm       0               0         (0/0/0)           0
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm       0               0         (0/0/0)           0
+  4 unassigned    wm       0               0         (0/0/0)           0
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> modify
+Select partitioning base:
+        0. Current partition table (original)
+        1. All Free Hog
+Choose base (enter number) [0]? 1
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       0               0         (0/0/0)           0
+  1       swap    wu       0               0         (0/0/0)           0
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm       0               0         (0/0/0)           0
+  4 unassigned    wm       0               0         (0/0/0)           0
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6        usr    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 alternates    wm       0               0         (0/0/0)           0
+
+Do you wish to continue creating a new partition
+table based on above table[yes]? yes
+Free Hog partition[6]? 4
+Enter size of partition '0' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '1' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '3' [0b, 0c, 0.00mb, 0.00gb]: 2.5gb
+Enter size of partition '5' [0b, 0c, 0.00mb, 0.00gb]: 
+Enter size of partition '6' [0b, 0c, 0.00mb, 0.00gb]: 
+Enter size of partition '7' [0b, 0c, 0.00mb, 0.00gb]: 
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0       root    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1       swap    wu     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6        usr    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 alternates    wm       0               0         (0/0/0)           0
+
+Okay to make this the current partition table[yes]? yes
+Enter table name (remember quotes): prueba_mod_6
+
+Ready to label disk, continue? y
+
+partition> p
+Current partition table (prueba_mod_6):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1 unassigned    wm     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/etc#ls
+TIMEZONE              dumpadm.conf          initpipe              netmasks      
+X11                   dumpdates             inittab               networks      
+acct                  esd.conf              install               nfs           
+aggregation.conf      fddi.cfg              ioctl.syscon          nfssec.conf   
+aliases               ff                    ipf                   nodename      
+amd64                 flash                 iscsi                 nscd.conf     
+apache                fm                    iu.ap                 nsswitch.conf 
+apache2               fmthard               killall               nsswitch.dns  
+apoc                  fonts                 krb5                  nsswitch.files
+auto_home             format                labelit               nsswitch.ldap 
+auto_master           format.dat            lib                   nsswitch.nis  
+autopush              fs                    link                  nsswitch.nispl
+bonobo-activation     fsck                  llc2                  openwin       
+bootrc                fsdb                  log                   opt           
+bootsign              fstyp                 logadm.conf           orbitrc       
+cacao                 ftpd                  logindevperm          pam.conf      
+certs                 fuser                 lp                    pam.conf-winbi
+cfgadm                gconf                 lu                    pango         
+chroot                getty                 lvm                   passwd        
+clri                  gimp                  mach                  patch         
+coreadm.conf          gnome-vfs-2.0         magic                 path_to_inst  
+cron                  gnome-vfs-mime-magic  mail                  path_to_inst.o
+cron.d                gnopernicus-1.0       mailcap               pgsql         
+crypto                group                 mime.types            ppp           
+dacf.conf             grpck                 minor_perm            printers.conf 
+dat                   gss                   mkfs                  product-info  
+datemsk               gtk                   mknod                 profile       
+dcopy                 gtk-2.0               mnttab                project       
+default               halt                  motd                  protocols     
+dev                   hba.conf              mount                 prtconf       
+device.tab            hostname.e1000g0      mountall              prtvtoc       
+devices               hosts                 mpapi.conf            publickey     
+devlink.tab           iiim                  mvdir                 pwck          
+dfs                   ima.conf              name_to_major         quagga        
+dgroup.tab            imq                   name_to_sysnum        rc0           
+dhcp                  inet                  nca                   rc0.d         
+dmi                   inetd.conf            ncheck                rc1           
+driver_aliases        init                  net                   rc1.d         
+driver_classes        init.d                netconfig             rc2           
+[lab5]/etc#fsck /dev
+dev/     devices/ 
+[lab5]/etc#fsck /dev/
+Display all 242 possibilities? (y or n)
+.devfsadm_daemon.lock  kmdb                   ptyp3                  rds        
+.devfsadm_dev.lock     kmem                   ptyp4                  rdsk/      
+.devfsadm_synch_door   kssl                   ptyp5                  rmt/       
+.devlink_db            kstat                  ptyp6                  rsm        
+.devlink_db_lock       ksyms                  ptyp7                  rsr0       
+.zone_reg_door         llc1                   ptyp8                  rts        
+agpgart                llc2                   ptyp9                  sad/       
+allkmem                lockstat               ptypa                  sctp       
+arp                    lofictl                ptypb                  sctp6      
+bl                     log                    ptypc                  sdp        
+brand/                 logindmux              ptypd                  smbios     
+ce                     lp1                    ptype                  spdsock    
+cfg/                   md/                    ptypf                  sppp       
+conslog                mem                    ptyq0                  sppptun    
+console                mouse                  ptyq1                  sr0        
+cpu/                   msglog                 ptyq2                  stderr     
+crypto                 nca                    ptyq3                  stdin      
+cryptoadm              null                   ptyq4                  stdout     
+dsk/                   nvidia0                ptyq5                  swap/      
+dtrace/                nvidia1                ptyq6                  syscon     
+dtremote               nvidia10               ptyq7                  sysevent   
+dump                   nvidia11               ptyq8                  sysmsg     
+e1000g                 nvidia12               ptyq9                  systty     
+e1000g0                nvidia13               ptyqa                  tcp        
+ecpp0                  nvidia14               ptyqb                  tcp6       
+fb                     nvidia15               ptyqc                  term/      
+fb0                    nvidia2                ptyqd                  text-0     
+fbs/                   nvidia3                ptyqe                  ticlts     
+fd/                    nvidia4                ptyqf                  ticots     
+fm                     nvidia5                ptyr0                  ticotsord  
+fssnapctl              nvidia6                ptyr1                  tnfctl     
+ibd                    nvidia7                ptyr2                  tnfmap     
+icmp                   nvidia8                ptyr3                  tty        
+icmp6                  nvidia9                ptyr4                  ttyp0      
+ip                     nvidiactl              ptyr5                  ttyp1      
+ip6                    openprom               ptyr6                  ttyp2      
+ipauth                 physmem                ptyr7                  ttyp3      
+ipf                    poll                   ptyr8                  ttyp4      
+ipl                    pool                   ptyr9                  ttyp5      
+iplookup               poolctl                ptyra                  ttyp6      
+ipnat                  power_button           ptyrb                  ttyp7      
+ipscan                 ppm                    ptyrc                  ttyp8      
+ipsecah                printers/              ptyrd                  ttyp9      
+ipsecesp               ptmajor                ptyre                  ttypa      
+ipstate                ptmx                   ptyrf                  ttypb      
+ipsync                 pts/                   ramdiskctl             ttypc      
+kbd                    ptyp0                  random                 ttypd      
+kdmouse                ptyp1                  rawip                  ttype      
+keysock                ptyp2                  rawip6                 ttypf      
+[lab5]/etc#fsck /dev/rds
+rds   rdsk/ 
+[lab5]/etc#fsck /dev/rdsk/c2t
+c2t0d0p0   c2t0d0s1   c2t0d0s15  c2t0d0s7   c2t1d0p2   c2t1d0s11  c2t1d0s3   c2t
+c2t0d0p1   c2t0d0s10  c2t0d0s2   c2t0d0s8   c2t1d0p3   c2t1d0s12  c2t1d0s4   c2t
+c2t0d0p2   c2t0d0s11  c2t0d0s3   c2t0d0s9   c2t1d0p4   c2t1d0s13  c2t1d0s5   c2t
+c2t0d0p3   c2t0d0s12  c2t0d0s4   c2t1d0     c2t1d0s0   c2t1d0s14  c2t1d0s6   c2t
+c2t0d0p4   c2t0d0s13  c2t0d0s5   c2t1d0p0   c2t1d0s1   c2t1d0s15  c2t1d0s8   c2t
+c2t0d0s0   c2t0d0s14  c2t0d0s6   c2t1d0p1   c2t1d0s10  c2t1d0s2   c2t1d0s9   c2t
+[lab5]/etc#fsck /dev/rdsk/c2t0d0p0 
+** /dev/rdsk/c2t0d0p0
+BAD SUPERBLOCK AT BLOCK 16: MAGIC NUMBER WRONG
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH MKFS? y
+
+
+LOOK FOR ALTERNATE SUPERBLOCKS WITH NEWFS? y
+
+ycalcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED.
+
+USE GENERIC SUPERBLOCK FROM MKFS? 
+
+
+USE GENERIC SUPERBLOCK FROM NEWFS? y
+
+calcsb: short read of superblock from newfs
+SEARCH FOR ALTERNATE SUPERBLOCKS FAILED. YOU MUST USE THE -o b OPTION
+TO FSCK TO SPECIFY THE LOCATION OF A VALID ALTERNATE SUPERBLOCK TO
+SUPPLY NEEDED INFORMATION; SEE fsck(1M).
+[lab5]/etc#y
+bash: y: command not found
+[lab5]/etc#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/etc#newfs /dev/
+Display all 242 possibilities? (y or n)
+[lab5]/etc#newfs /dev/rds  
+rds   rdsk/ 
+[lab5]/etc#newfs /dev/rdsk/c2t0d0
+c2t0d0p0   c2t0d0p2   c2t0d0p4   c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t
+c2t0d0p1   c2t0d0p3   c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t0d0s2   c2t
+[lab5]/etc#newfs /dev/rdsk/c2t0d0s0 
+newfs: construct a new file system /dev/rdsk/c2t0d0s0: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s0:     5253254 sectors in 856 cylinders of 48 tracks, 128 secto
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/etc#newfs /dev/rdsk/c2t0d0s1 
+newfs: construct a new file system /dev/rdsk/c2t0d0s1: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s1:     5253254 sectors in 856 cylinders of 48 tracks, 128 secto
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/etc#newfs /dev/rdsk/c2t0d0s2
+newfs: construct a new file system /dev/rdsk/c2t0d0s2: (y/n)? n
+[lab5]/etc#newfs /dev/rdsk/c2t0d0s3
+newfs: construct a new file system /dev/rdsk/c2t0d0s3: (y/n)? y
+Warning: 6010 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s3:     5253254 sectors in 856 cylinders of 48 tracks, 128 secto
+        2565.1MB in 54 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632, 5020064,
+ 5118496, 5216928
+[lab5]/etc#newfs /dev/rdsk/c2t0d0s4
+newfs: construct a new file system /dev/rdsk/c2t0d0s4: (y/n)? y
+Warning: 1728 sector(s) in last cylinder unallocated
+/dev/rdsk/c2t0d0s4:     5140800 sectors in 837 cylinders of 48 tracks, 128 secto
+        2510.2MB in 53 cyl groups (16 c/g, 48.00MB/g, 7744 i/g)
+super-block backups (for fsck -F ufs -o b=#) at:
+ 32, 98464, 196896, 295328, 393760, 492192, 590624, 689056, 787488, 885920,
+ 4232608, 4331040, 4429472, 4527904, 4626336, 4724768, 4823200, 4921632,
+ 5020064, 5118496
+[lab5]/etc#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+        esto es una prueba
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"file1" 1 line, 20 characters 
+[lab5]/morespace#ls
+file1       lost+found
+[lab5]/morespace#more file1 
+        esto es una prueba
+[lab5]/morespace#ls -lh
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:10 file1
+drwx------   2 root     root        8.0K Aug 18 09:03 lost+found
+[lab5]/morespace#ls -lhu
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:10 file1
+drwx------   2 root     root        8.0K Aug 18 09:03 lost+found
+[lab5]/morespace#ls -u
+file1       lost+found
+[lab5]/morespace#ls -lu
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:10 file1
+drwx------   2 root     root        8192 Aug 18 09:03 lost+found
+[lab5]/morespace#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): p
+`p' is not an integer.
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+Warning: Current Disk has mounted partitions.
+/dev/dsk/c2t0d0s4 is currently mounted on /morespace. Please see umount(1M).
+p
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> p
+`pp' is not expected.
+format> p
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> p
+Current partition table (original):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1 unassigned    wm     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> quit
+[lab5]/morespace#ls
+file1       lost+found
+[lab5]/morespace#cat file1 
+        esto es una prueba
+[lab5]/morespace#ls -lu
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:18 file1
+drwx------   2 root     root        8192 Aug 18 09:03 lost+found
+[lab5]/morespace#cd ..
+[lab5]/#ls
+TT_DB       cdrom       dirprueba   home        lost+found  net         proc    
+bin         dev         etc         kernel      mnt         opt         sbin    
+boot        devices     export      lib         morespace   platform    system  
+[lab5]/#umount /morespace/
+[lab5]/#mount -o noatime /dev/dsk/c2t0d0s4 /morespace/
+[lab5]/#cd morespace/
+[lab5]/morespace#ls
+file1       lost+found
+[lab5]/morespace#cat file1 
+        esto es una prueba
+[lab5]/morespace#ls -lh
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:10 file1
+drwx------   2 root     root        8.0K Aug 18 09:03 lost+found
+[lab5]/morespace#format
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1302 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <VBOX-HARDDISK-1.0-10.00GB>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): 1
+selecting c2t0d0
+[disk formatted]
+Warning: Current Disk has mounted partitions.
+/dev/dsk/c2t0d0s4 is currently mounted on /morespace. Please see umount(1M).
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> p 
+
+
+PARTITION MENU:
+        0      - change `0' partition
+        1      - change `1' partition
+        2      - change `2' partition
+        3      - change `3' partition
+        4      - change `4' partition
+        5      - change `5' partition
+        6      - change `6' partition
+        7      - change `7' partition
+        select - select a predefined table
+        modify - modify a predefined partition table
+        name   - name the current table
+        print  - display the current table
+        label  - write partition map and label to the disk
+        !<cmd> - execute <cmd>, then return
+        quit
+partition> p
+Current partition table (original):
+Total disk cylinders available: 1302 + 2 (reserved cylinders)
+
+Part      Tag    Flag     Cylinders        Size            Blocks
+  0 unassigned    wm       1 -  327        2.50GB    (327/0/0)   5253255
+  1 unassigned    wm     328 -  654        2.50GB    (327/0/0)   5253255
+  2     backup    wu       0 - 1301        9.97GB    (1302/0/0) 20916630
+  3 unassigned    wm     655 -  981        2.50GB    (327/0/0)   5253255
+  4 unassigned    wm     982 - 1301        2.45GB    (320/0/0)   5140800
+  5 unassigned    wm       0               0         (0/0/0)           0
+  6 unassigned    wm       0               0         (0/0/0)           0
+  7 unassigned    wm       0               0         (0/0/0)           0
+  8       boot    wu       0 -    0        7.84MB    (1/0/0)       16065
+  9 unassigned    wm       0               0         (0/0/0)           0
+
+partition> quit
+
+
+FORMAT MENU:
+        disk       - select a disk
+        type       - select (define) a disk type
+        partition  - select (define) a partition table
+        current    - describe the current disk
+        format     - format and analyze the disk
+        fdisk      - run the fdisk program
+        repair     - repair a defective sector
+        label      - write label to the disk
+        analyze    - surface analysis
+        defect     - defect list management
+        backup     - search for backup labels
+        verify     - read and display labels
+        save       - save new disk/partition definitions
+        inquiry    - show vendor, product and revision
+        volname    - set 8-character volume name
+        !<cmd>     - execute <cmd>, then return
+        quit
+format> q
+[lab5]/morespace#ls
+file1       lost+found
+[lab5]/morespace#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+/dev/dsk/c2t0d0s4      2.4G   2.5M   2.4G     1%    /morespace
+[lab5]/morespace#ls
+file1       lost+found
+[lab5]/morespace#ls -lu
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:18 file1
+drwx------   2 root     root        8192 Aug 18 09:03 lost+found
+[lab5]/morespace#cat file
+cat: cannot open file
+[lab5]/morespace#cat file1
+        esto es una prueba
+[lab5]/morespace#ls -lu
+total 18
+-rw-r--r--   1 root     root          20 Aug 18 09:18 file1
+drwx------   2 root     root        8192 Aug 18 09:03 lost+found
+[lab5]/morespace#mount
+/ on /dev/dsk/c0d0s0 read/write/setuid/devices/intr/largefiles/logging/xattr/one
+/devices on /devices read/write/setuid/devices/dev=47c0000 on Sat Aug 13 13:42:3
+/system/contract on ctfs read/write/setuid/devices/dev=4800001 on Sat Aug 13 13:
+/proc on proc read/write/setuid/devices/dev=4840000 on Sat Aug 13 13:42:34 2011
+/etc/mnttab on mnttab read/write/setuid/devices/dev=4880001 on Sat Aug 13 13:42:
+/etc/svc/volatile on swap read/write/setuid/devices/xattr/dev=48c0001 on Sat Aug
+/system/object on objfs read/write/setuid/devices/dev=4900001 on Sat Aug 13 13:4
+/etc/dfs/sharetab on sharefs read/write/setuid/devices/dev=4940001 on Sat Aug 13
+/usr on /dev/dsk/c0d0s4 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/lib/libc.so.1 on /usr/lib/libc/libc_hwcap1.so.1 read/write/setuid/devices/dev=1
+/dev/fd on fd read/write/setuid/devices/dev=4ac0001 on Sat Aug 13 13:42:59 2011
+/var on /dev/dsk/c0d0s3 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/tmp on swap read/write/setuid/devices/xattr/dev=48c0002 on Sat Aug 13 13:43:05 
+/var/run on swap read/write/setuid/devices/xattr/dev=48c0003 on Sat Aug 13 13:43
+/opt on /dev/dsk/c0d0s5 read/write/setuid/devices/intr/largefiles/logging/xattr/
+/morespace on /dev/dsk/c2t0d0s4 read/write/setuid/devices/intr/largefiles/loggin:23:53 2011
+[lab5]/morespace#mkdir /dir0
+[lab5]/morespace#mount /dev
+dev/     devices/ 
+[lab5]/morespace#mount /dev/dsk/c2t0d0s
+c2t0d0s0   c2t0d0s10  c2t0d0s12  c2t0d0s14  c2t0d0s2   c2t0d0s4   c2t0d0s6   c2t
+c2t0d0s1   c2t0d0s11  c2t0d0s13  c2t0d0s15  c2t0d0s3   c2t0d0s5   c2t0d0s7   c2t
+[lab5]/morespace#mount /dev/dsk/c2t0d0s0 /dir
+dir0/      dirprueba/ 
+[lab5]/morespace#mount /dev/dsk/c2t0d0s0 /dir0/
+[lab5]/morespace#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+/dev/dsk/c2t0d0s4      2.4G   2.5M   2.4G     1%    /morespace
+/dev/dsk/c2t0d0s0      2.5G   2.5M   2.4G     1%    /dir0
+[lab5]/morespace#cd /dir0/
+[lab5]/dir0#mkdir dir1 
+[lab5]/dir0#ls
+dir1        lost+found
+[lab5]/dir0#cd ..
+[lab5]/#mount /dev/dsk/c2t0d0s1 /dir0/dir1/
+[lab5]/#umount /dir0/
+umount: /dir0 busy
+[lab5]/#umount /dir0/dir1/
+umount: /dir0/dir1 busy
+[lab5]/#fuser -cu /dir0/dir1/
+/dir0/dir1/:     4094c(root)
+[lab5]/#umount -f /dir0/dir1/
+[lab5]/#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+/dev/dsk/c2t0d0s4      2.4G   2.5M   2.4G     1%    /morespace
+/dev/dsk/c2t0d0s0      2.5G   2.5M   2.4G     1%    /dir0
+[lab5]/#bash
+[lab5]/#umount dir
+dir0/      dirprueba/ 
+[lab5]/#umount dir
+dir0/      dirprueba/ 
+[lab5]/#umount dir0/
+[lab5]/#umount morespace/
+[lab5]/#df -kh
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d0s0        2.0G   466M   1.5G    24%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   4.1G   928K   4.1G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/dev/dsk/c0d0s4        4.8G   2.7G   2.0G    58%    /usr
+/usr/lib/libc/libc_hwcap1.so.1
+                       4.8G   2.7G   2.0G    58%    /lib/libc.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+/dev/dsk/c0d0s3        3.8G    69M   3.7G     2%    /var
+swap                   4.1G   696K   4.1G     1%    /tmp
+swap                   4.1G    24K   4.1G     1%    /var/run
+/dev/dsk/c0d0s5        5.1G    10M   5.0G     1%    /opt
+[lab5]/#
+

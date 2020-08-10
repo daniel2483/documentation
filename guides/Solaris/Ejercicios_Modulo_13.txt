@@ -1,0 +1,1389 @@
+kbd                                      wrjpgcom
+kbdcomp                                  xargs
+kdestroy                                 xgettext
+keylogin                                 ximian-connector-setup
+keylogout                                xml-i18n-toolize
+keytool                                  xml2-config
+kill                                     xmlcatalog
+kinit                                    xmllint
+klist                                    xslt-config
+kmfcfg                                   xsltproc
+kpasswd                                  xstr
+krb5-config                              yelp
+ksh                                      yes
+kstat                                    ypcat
+ktutil                                   ypmatch
+last                                     yppasswd
+lastcomm                                 ypwhich
+ldapadd                                  zcat
+ldapdelete                               zenity
+ldaplist                                 zip
+ldapmodify                               zipcloak
+ldapmodrdn                               zipgrep
+ldapsearch                               zipinfo
+ldd                                      zipnote
+less                                     zipsplit
+lessecho                                 zonename
+lesskey                                  zsh
+[lab5]/bin#ls -h c
+c: No such file or directory
+[lab5]/bin#ls -h c*
+cachefspack             checknr                 cktime                  createdb
+cachefsstat             chgrp                   ckuid                   createlang
+cal                     chkey                   ckyorn                  createuser
+calendar                chmod                   clean_pending.pl        crle
+cancel                  chown                   clear                   crontab
+captoinfo               chrtbl                  clusterdb               crypt
+cat                     cjpeg                   cmp                     csh
+catman                  ckdate                  col                     csplit
+cd                      ckgid                   colltbl                 ct
+cdda2wav                ckint                   comm                    ctags
+cddb-slave2-properties  ckitem                  command                 ctrun
+cdrecord                ckkeywd                 compress                ctstat
+cdrw                    ckpath                  coreadm                 ctwatch
+charmap                 ckrange                 cp                      cu
+chat                    ckstr                   cpio                    cut
+checkeq                 cksum                   cputrack
+[lab5]/bin#useradd -g 10 -G class1 -s /bin/csh user4
+[lab5]/bin#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user3:x:100:10::/home/user3:/bin/ksh
+user4:x:101:10::/home/user4:/bin/csh
+[lab5]/bin#cd /home/
+[lab5]/home#ls
+[lab5]/home#cd ../export/
+[lab5]/export#ls
+home
+[lab5]/export#cd home/
+[lab5]/export/home#ls
+user1
+[lab5]/export/home#rmdir user1/
+rmdir: directory "user1/": Directory not empty
+[lab5]/export/home#rmdir -r user1/
+rmdir: illegal option -- r
+Usage: rmdir [-ps] dirname ...
+[lab5]/export/home#rm -r user1/
+[lab5]/export/home#cd ..
+[lab5]/export#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user3:x:100:10::/home/user3:/bin/ksh
+user4:x:101:10::/home/user4:/bin/csh
+[lab5]/export#userdel -r user3
+UX: userdel: ERROR: Unable to find status about home directory: No such file or directory.
+[lab5]/export#userdel user3
+[lab5]/export#userdel user4  
+[lab5]/export#useradd -g 10 -s /bin/bash -m user4
+UX: useradd: ERROR: Unable to create the home directory: Operation not applicable.
+[lab5]/export#useradd -g 10 -m -s /bin/bash user4
+UX: useradd: ERROR: Unable to create the home directory: Operation not applicable.
+[lab5]/export#useradd -g 10 -d /export/home/user4 -m -s /bin/bash user4
+64 blocks
+[lab5]/export#useradd -g 10 -G class1 -d /export/home/user3 -m -s /bin/ksh user3
+64 blocks
+[lab5]/export#useradd -g 10 -d /export/home/locked1 -m -s /bin/ksh locked1
+64 blocks
+[lab5]/export#userdel -r locked1
+[lab5]/export#useradd -g 10 -d /export/home/locked1 -m -s /bin/bash locked1
+64 blocks
+[lab5]/export#useradd -g 10 -d /export/home/cleared1 -m -s /bin/bash cleared1
+64 blocks
+[lab5]/export#passwd user3
+New Password: 
+Re-enter new Password: 
+passwd: password successfully changed for user3
+[lab5]/export#passwd user4
+New Password: 
+Re-enter new Password: 
+passwd: password successfully changed for user4
+[lab5]/export#passwd user5
+passwd: User unknown: user5
+Permission denied
+[lab5]/export#useradd -g 10 -d /export/home/user5 -m -s /bin/bash user5
+64 blocks
+[lab5]/export#passwd user5
+New Password: 
+Re-enter new Password: 
+passwd: password successfully changed for user5
+[lab5]/export#man passwd
+Reformatting page.  Please Wait... done
+
+User Commands                                           passwd(1)
+
+NAME
+     passwd - change login password and password attributes
+
+SYNOPSIS
+     passwd  [-r files |  -r ldap |  -r nis |  -r nisplus]
+      [name]
+
+     passwd  [-r files] [-egh] [name]
+
+     passwd  [-r files] -s [-a]
+
+     passwd  [-r files] -s [name]
+
+     passwd  [-r files] [-d |  -l |  -u |  -N] [-f] [-n min]
+      [-w warn] [-x max] name
+
+     passwd   -r ldap [-egh] [name]
+
+     passwd [-r ldap ] -s [-a]
+
+     passwd [-r ldap ] -s [name]
+
+     passwd -r ldap [-d | -l | -u | -N] [-f] [-n min] [-w warn] [-x max] name
+
+     passwd   -r nis [-egh] [name]
+
+     passwd   -r nisplus [-egh] [-D domainname] [name]
+
+     passwd   -r nisplus -s [-a]
+
+     passwd   -r nisplus [-D domainname] -s [name]
+
+     passwd   -r nisplus [-l |  -u |  -N] [-f] [-n min] [-w warn]
+      [-x max] [-D domainname] name
+
+DESCRIPTION
+     The passwd command changes the password  or  lists  password
+     attributes   associated   with   the   user's   login  name.
+
+SunOS 5.10           Last change: 3 Jun 2009                    1
+
+User Commands                                           passwd(1)
+
+     Additionally, privileged users can use passwd to install  or
+     change  passwords  and  attributes associated with any login
+     name.
+
+     When used to change a password, passwd prompts everyone  for
+     their  old  password,  if  any.  It then prompts for the new
+     password twice. When the old  password  is  entered,  passwd
+     checks  to  see  if  it  has  aged sufficiently. If aging is
+     insufficient,  passwd  terminates;  see  pwconv(1M),   nist-
+     bladm(1), and shadow(4) for additional information.
+
+     The pwconv command  creates  and  updates  /etc/shadow  with
+     information  from  /etc/passwd.  pwconv  relies on a special
+     value of 'x' in the  password  field  of  /etc/passwd.  This
+     value  of  'x'  indicates  that the password for the user is
+     already in /etc/shadow and should not be modified.
+
+     If aging is sufficient, a check is made to ensure  that  the
+     new  password  meets construction requirements. When the new
+     password is entered a second time, the two copies of the new
+     password  are compared. If the two copies are not identical,
+     the cycle of prompting for the new password is repeated for,
+     at most, two more times.
+
+     Passwords must be constructed to meet the following require-
+     ments:
+
+         o    Each  password  must  have  PASSLENGTH  characters,
+              where  PASSLENGTH is defined in /etc/default/passwd
+              and is set to 6. Setting PASSLENGTH  to  more  than
+              eight      characters      requires     configuring
+              policy.conf(4)  with  an  algorithm  that  supports
+              greater than eight characters.
+
+         o    Each password must meet the  configured  complexity
+              constraints specified in /etc/default/passwd.
+
+         o    Each password must not be a member of  the  config-
+              ured      dictionary      as      specified      in
+              /etc/default/passwd.
+
+         o    For accounts in name services which  support  pass-
+              word history checking, if prior password history is
+              defined, new passwords must not be contained in the
+              prior password history.
+
+SunOS 5.10           Last change: 3 Jun 2009                    2
+
+User Commands                                           passwd(1)
+
+     If all requirements are met, by default, the passwd  command
+     consults  /etc/nsswitch.conf  to  determine in which reposi-
+     tories to perform password update. It  searches  the  passwd
+     and  passwd_compat entries. The sources (repositories) asso-
+     ciated with these entries are updated. However, the password
+     update configurations supported are limited to the following
+     cases. Failure to comply with  the  configurations  prevents
+     users from logging onto the system. The password update con-
+     figurations are:
+
+         o    passwd: files
+
+         o    passwd: files ldap
+
+         o    passwd: files nis
+
+         o    passwd: files nisplus
+
+         o    passwd: compat (==> files nis)
+
+         o    passwd: compat (==> files ldap)
+
+              passwd_compat: ldap
+
+         o    passwd: compat (==> files nisplus)
+
+              passwd_compat: nisplus
+
+     Network administrators, who own the NIS+ password table, can
+     change any password attributes. The administrator configured
+     for updating LDAP shadow information  can  also  change  any
+     password attributes. See ldapclient(1M).
+
+     When a user has a password stored in one of  the  name  ser-
+     vices  as  well  as  a local files entry, the passwd command
+     updates both. It is possible to have different passwords  in
+     the  name  service  and  local files entry. Use passwd -r to
+     change a specific password repository.
+
+     In the files case, superusers (for instance, real and effec-
+     tive  uid  equal to 0, see id(1M) and su(1M)) can change any
+     password. Hence, passwd does not prompt privileged users for
+     the  old password. Privileged users are not forced to comply
+     with password aging and password construction  requirements.
+     A  privileged  user can create a null password by entering a
+     carriage return in response to the prompt for  a  new  pass-
+     word.  (This  differs  from  passwd  -d because the password
+     prompt is still displayed.) If NIS is in  effect,  superuser
+     on  the  root  master  can change any password without being
+
+SunOS 5.10           Last change: 3 Jun 2009                    3
+
+User Commands                                           passwd(1)
+
+     prompted for the old NIS passwd, and is not forced to comply
+     with password construction requirements.
+
+     If LDAP is in effect, superuser on any  Native  LDAP  client
+     system  can  change  any password without being prompted for
+     the old LDAP password, and is  not  forced  to  comply  with
+     password construction requirements.
+
+     Normally, passwd entered with no arguments changes the pass-
+     word  of  the  current  user.  When  a user logs in and then
+     invokes su(1M) to become superuser or another  user,  passwd
+     changes  the  original  user's password, not the password of
+     the superuser or the new user.
+
+     Any user can use the -s option to show  password  attributes
+     for  his  or her own login name, provided they are using the
+     -r nisplus argument. Otherwise,  the  -s  argument  is  res-
+     tricted to the superuser.
+
+     The format of the display is:
+
+       name status mm/dd/yy min max warn
+
+     or, if password aging information is not present,
+
+       name status
+
+     where
+
+     name                The login ID of the user.
+
+     status              The password status of name.
+
+                         The status field can take the  following
+                         values:
+
+                         PS           This account  has  a  pass-
+                                      word.
+
+SunOS 5.10           Last change: 3 Jun 2009                    4
+
+User Commands                                           passwd(1)
+
+                         NL           This account is a no  login
+                                      account. See Security.
+
+                         LK           This  account   is   locked
+                                      account. See Security.
+
+                         NP           This account has  no  pass-
+                                      word  and is therefore open
+                                      without authentication.
+
+     mm/dd/yy            The date password was last  changed  for
+                         name.   All  password  aging  dates  are
+                         determined  using  Greenwich  Mean  Time
+                         (Universal   Time)   and  therefore  can
+                         differ by as much as a day in other time
+                         zones.
+
+     min                 The  minimum  number  of  days  required
+                         between   password   changes  for  name.
+                         MINWEEKS is found in /etc/default/passwd
+                         and is set to NULL.
+
+     max                 The maximum number of days the  password
+                         is  valid for name. MAXWEEKS is found in
+                         /etc/default/passwd and is set to NULL.
+
+     warn                The  number  of  days  relative  to  max
+                         before the password expires and the name
+                         are warned.
+
+  Security
+     passwd uses pam(3PAM) for password change. It calls PAM with
+     a  service name passwd and uses service module type auth for
+     authentication and password for password change.
+
+     Locking an account (-l option) does not allow  its  use  for
+     password  based  login  or delayed execution (such as at(1),
+     batch(1), or cron(1M)). The -N option can be used to  disal-
+     low  password based login, while continuing to allow delayed
+     execution.
+
+OPTIONS
+
+SunOS 5.10           Last change: 3 Jun 2009                    5
+
+User Commands                                           passwd(1)
+
+     The following options are supported:
+
+     -a                  Shows  password   attributes   for   all
+                         entries.  Use  only  with the -s option.
+                         name  must  not  be  provided.  For  the
+                         nisplus  repository, this shows only the
+                         entries in the NIS+  password  table  in
+                         the  local  domain  that  the invoker is
+                         authorized to read. For  the  files  and
+                         ldap  repository,  this is restricted to
+                         the superuser.
+
+     -D domainname       Consults  the  passwd.org_dir  table  in
+                         domainname. If this option is not speci-
+                         fied, the default domainname returned by
+                         nis_local_directory(3NSL) are used. This
+                         domain name is the same as that returned
+                         by domainname(1M).
+
+     -e                  Changes the login shell. For  the  files
+                         repository,  this  only  works  for  the
+                         superuser. Normal users can  change  the
+                         ldap,  nis, or nisplus repositories. The
+                         choice  of  shell  is  limited  by   the
+                         requirements of getusershell(3C). If the
+                         user currently has a shell that  is  not
+                         allowed  by  getusershell, only root can
+                         change it.
+
+     -g                  Changes the gecos (finger)  information.
+                         For  the  files  repository,  this  only
+                         works for the  superuser.  Normal  users
+                         can  change  the  ldap,  nis, or nisplus
+                         repositories.
+
+     -h                  Changes the home directory.
+
+     -r                  Specifies the  repository  to  which  an
+                         operation   is  applied.  The  supported
+                         repositories are files,  ldap,  nis,  or
+                         nisplus.
+
+     -s name             Shows password attributes for the  login
+                         name.  For  the nisplus repository, this
+                         works  for  everyone.  However  for  the
+                         files  repository,  this  only works for
+
+SunOS 5.10           Last change: 3 Jun 2009                    6
+
+User Commands                                           passwd(1)
+
+                         the superuser. It does not work  at  all
+                         for  the  nis  and ldap repository which
+                         does not support password aging.
+
+  Privileged User Options
+     Only a privileged user can use the following options:
+[lab5]/export#man moduser
+No manual entry for moduser.
+[lab5]/export#man modify 
+No manual entry for modify.
+[lab5]/export#man usermod
+Reformatting page.  Please Wait... done
+
+System Administration Commands                        usermod(1M)
+
+NAME
+     usermod - modify a user's login information on the system
+
+SYNOPSIS
+     usermod [-u uid [-o]] [-g group] [-G group [, group...]]
+          [-d dir [-m]] [-s shell] [-c comment] [-l new_name]
+          [-f inactive] [-e expire]
+          [-A authorization [, authorization]]
+          [-P profile [, profile]] [-R role [, role]]
+          [-K key=value] login
+
+DESCRIPTION
+     The usermod utility modifies a user's  login  definition  on
+     the system. It changes the definition of the specified login
+     and makes the appropriate login-related system file and file
+     system changes.
+
+     The system file entries created with  this  command  have  a
+     limit  of 512 characters per line. Specifying long arguments
+     to several options might exceed this limit.
+
+OPTIONS
+     The following options are supported:
+
+     -A authorization
+
+         One or more comma separated authorizations as defined in
+         auth_attr(4).  Only  a user or role who has grant rights
+         to the authorization can assign it to an  account.  This
+         replaces  any  existing  authorization  setting.  If  no
+         authorization list is specified, the existing setting is
+         removed.
+
+     -c comment
+
+         Specify a  comment  string.  comment  can  be  any  text
+         string.  It  is  generally  a  short  description of the
+         login, and is currently used as the field for the user's
+         full  name.  This  information  is  stored in the user's
+         /etc/passwd entry.
+
+     -d dir
+
+         Specify the new home directory of the user. It  defaults
+         to  base_dir/login, where base_dir is the base directory
+         for new login home directories, and  login  is  the  new
+         login.
+
+SunOS 5.10          Last change: 22 Feb 2008                    1
+
+System Administration Commands                        usermod(1M)
+
+     -e expire
+
+         Specify the expiration date  for  a  login.  After  this
+         date,  no  user  will  be able to access this login. The
+         expire option argument is a date entered  using  one  of
+         the   date   formats   included  in  the  template  file
+         /etc/datemsk. See getdate(3C).
+
+         For example, you may enter 10/6/90 or October 6, 1990. A
+         value of `` '' defeats the status of the expired date.
+
+     -f inactive
+
+         Specify the maximum number of days allowed between  uses
+         of  a login ID before that login ID is declared invalid.
+         Normal values  are  positive  integers.  A  value  of  0
+         defeats the status.
+
+     -g group
+
+         Specify an existing group's  integer  ID  or  character-
+         string  name.  It  redefines  the  user's  primary group
+         membership.
+
+     -G group
+
+         Specify an existing group's integer "ID" "," or  charac-
+         ter  string  name. It redefines the user's supplementary
+         group membership. Duplicates between group with  the  -g
+         and  -G  options  are ignored. No more than NGROUPS_UMAX
+         groups may be specified as defined in <param.h>.
+
+     -K key=value
+
+         Replace existing or  add  to  a  user's  key=value  pair
+         attributes.  Multiple  -K options can be used to replace
+         or add multiple key=value pairs. However, keys must  not
+         be  repeated. The generic -K option with the appropriate
+         key can be used instead  of  the  specific  implied  key
+         options (-A, -P, -R, -p). See user_attr(4) for a list of
+         valid keys. Values for these keys are usually  found  in
+         man  pages  or  other sources related to those keys. For
+         example, see project(4) for guidance on values  for  the
+         project key. Use the command ppriv(1) with the -v and -l
+         options for a list of values for  the  keys  defaultpriv
+         and limitpriv.
+
+         The keyword type can be specified with the value role or
+
+SunOS 5.10          Last change: 22 Feb 2008                    2
+
+System Administration Commands                        usermod(1M)
+
+         the  value  normal.   When  using  the  value  role, the
+         account changes from a normal user to a role; using  the
+         value normal keeps the account a normal user.
+
+         As a role account, no roles (-R or roles=value)  can  be
+         present.
+
+     -l new_logname
+
+         Specify the new login name for the user.  See  passwd(4)
+         for the requirements for usernames.
+
+     -m
+
+         Move the user's home  directory  to  the  new  directory
+         specified  with  the -d option. If the directory already
+         exists, it must have permissions  read/write/execute  by
+         group, where group is the user's primary group.
+
+     -o
+
+         This option allows the specified UID  to  be  duplicated
+         (non-unique).
+
+     -P profile
+
+         One or more comma-separated rights profiles  defined  in
+         prof_attr(4). This replaces any existing profile setting
+         in user_attr(4). If an empty profile list is  specified,
+         the existing setting is removed.
+
+     -R role
+
+         One or more  comma-separated  roles  (see  roleadd(1M)).
+         This replaces any existing role setting. If no role list
+         is specified, the existing setting is removed.
+
+     -s shell
+
+         Specify the full pathname of the program that is used as
+         the  user's shell on login. The value of shell must be a
+         valid executable file.
+
+     -u uid
+
+SunOS 5.10          Last change: 22 Feb 2008                    3
+
+System Administration Commands                        usermod(1M)
+
+         Specify a new UID for  the  user.  It  must  be  a  non-
+         negative  decimal integer less than MAXUID as defined in
+         <param.h>. The  UID  associated  with  the  user's  home
+         directory  is not modified with this option; a user will
+         not have access to their home directory until the UID is
+         manually reassigned using chown(1).
+
+OPERANDS
+     The following operands are supported:
+
+     login
+
+         An existing login name to be modified.
+
+EXAMPLES
+     Example 1 Assigning Privileges to a User
+
+     The following command adds the privilege that  affects  high
+     resolution  times  to  a  user's initial, inheritable set of
+     privileges.
+
+       # usermod -K defaultpriv=basic,proc_clock_highres jdoe
+
+     This command results in the following entry in user_attr:
+
+       jdoe::::type=normal;defaultpriv=basic,proc_clock_highres
+
+     Example 2 Removing a Privilege from a User's Limit Set
+
+     The following command removes the privilege that allows  the
+     specified  user  to  create hard links to directories and to
+     unlink directories.
+
+       # usermod -K limitpriv=all,!sys_linkdir jdoe
+
+     This command results in the following entry in user_attr:
+
+SunOS 5.10          Last change: 22 Feb 2008                    4
+
+System Administration Commands                        usermod(1M)
+
+       jdoe::::type=normal;defaultpriv=basic,limitpriv=all,!sys_linkdir
+
+     Example 3 Removing a Privilege from a User's Basic Set
+
+     The following command removes the privilege that allows  the
+     specified  user to examine processes outside the user's ses-
+     sion.
+
+       # usermod -K defaultpriv=basic,!proc_session jdoe
+
+     This command results in the following entry in user_attr:
+
+       jdoe::::type=normal;defaultpriv=basic,!proc_session;limitpriv=all
+
+     Example 4 Assigning a Role to a User
+
+     The following command assigns a role to  a  user.  The  role
+     must have been created prior to this command, either through
+     use  of  the  Solaris  Management  Console  GUI  or  through
+     roleadd(1M).
+
+       # usermod -R mailadm jdoe
+
+     This command results in the following entry in user_attr:
+
+       jdoe::::type=normal;roles=mailadm;defaultpriv=basic;limitpriv=all
+
+     Example 5 Removing All Profiles from a User
+
+     The following command removes all profiles that were granted
+     to a user directly. The user will still have any rights pro-
+     files that are granted by means of the PROFS_GRANTED key  in
+     policy.conf(4).
+
+       # usermod -P "" jdoe
+
+SunOS 5.10          Last change: 22 Feb 2008                    5
+
+System Administration Commands                        usermod(1M)
+
+EXIT STATUS
+     In case of an error, usermod prints  an  error  message  and
+     exits with one of the following values:
+
+     2
+
+         The command syntax was invalid. A usage message for  the
+         usermod command is displayed.
+
+     3
+
+         An invalid argument was provided to an option.
+
+     4
+
+         The uid given with the -u option is already in use.
+
+     5
+
+         The password files contain an error. pwconv(1M)  can  be
+         used to correct possible errors. See passwd(4).
+
+     6
+
+         The login to be modified does not exist, the group  does
+         not exist, or the login shell does not exist.
+
+     8
+
+         The login to be modified is in use.
+
+     9
+
+         The new_logname is already in use.
+
+     10
+
+         Cannot update the  /etc/group  or  /etc/user_attr  file.
+         Other update requests will be implemented.
+
+     11
+
+         Insufficient  space  to  move  the  home  directory  (-m
+         option). Other update requests will be implemented.
+
+SunOS 5.10          Last change: 22 Feb 2008                    6
+
+System Administration Commands                        usermod(1M)
+
+     12
+
+         Unable to complete the move of the home directory to the
+         new home directory.
+
+FILES
+     /etc/group
+
+         system file containing group definitions
+
+     /etc/datemsk
+
+         system file of date formats
+
+     /etc/passwd
+
+         system password file
+
+     /etc/shadow
+
+         system file containing users'  encrypted  passwords  and
+         related information
+
+     /etc/user_attr
+
+         system file containing additional user and  role  attri-
+         butes
+
+ATTRIBUTES
+     See attributes(5) for descriptions of the  following  attri-
+     butes:
+
+     ____________________________________________________________
+    |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
+    |_____________________________|_____________________________|
+    | Availability                | SUNWcsu                     |
+    |_____________________________|_____________________________|
+    | Interface Stability         | Committed                   |
+    |_____________________________|_____________________________|
+
+SEE ALSO
+     chown(1), passwd(1), users(1B), groupadd(1M),  groupdel(1M),
+     groupmod(1M),     logins(1M),    pwconv(1M),    roleadd(1M),
+
+SunOS 5.10          Last change: 22 Feb 2008                    7
+
+System Administration Commands                        usermod(1M)
+
+     roledel(1M),    rolemod(1M),    useradd(1M),    userdel(1M),
+     getdate(3C),    auth_attr(4),   passwd(4),   policy.conf(4),
+     prof_attr(4), user_attr(4), attributes(5)
+
+NOTES
+     The usermod utility modifies passwd definitions only in  the
+     local  /etc/passwd  and  /etc/shadow  files.  If  a  network
+     nameservice such as NIS or NIS+ is being used to  supplement
+     the  local  files  with  additional  entries, usermod cannot
+     change information supplied by the network nameservice. How-
+     ever  usermod  will  verify  the uniqueness of user name and
+     user ID against the external nameservice.
+
+     The usermod utility uses the  /etc/datemsk  file,  available
+     with SUNWaccr, for date formatting.
+
+SunOS 5.10          Last change: 22 Feb 2008                    8
+
+[lab5]/export#
+
+
+     -e                  Changes the login shell. For  the  files
+                         repository,  this  only  works  for  the
+                         superuser. Normal users can  change  the
+                         ldap,  nis, or nisplus repositories. The
+                         choice  of  shell  is  limited  by   the
+                         requirements of getusershell(3C). If the
+                         user currently has a shell that  is  not
+                         allowed  by  getusershell, only root can
+                         change it.
+
+     -g                  Changes the gecos (finger)  information.
+                         For  the  files  repository,  this  only
+                         works for the  superuser.  Normal  users
+                         can  change  the  ldap,  nis, or nisplus
+                         repositories.
+
+     -h                  Changes the home directory.
+
+     -r                  Specifies the  repository  to  which  an
+                         operation   is  applied.  The  supported
+                         repositories are files,  ldap,  nis,  or
+                         nisplus.
+
+     -s name             Shows password attributes for the  login
+                         name.  For  the nisplus repository, this
+                         works  for  everyone.  However  for  the
+                         files  repository,  this  only works for
+
+SunOS 5.10           Last change: 3 Jun 2009                    6
+
+User Commands                                           passwd(1)
+
+                         the superuser. It does not work  at  all
+                         for  the  nis  and ldap repository which
+                         does not support password aging.
+
+  Privileged User Options
+     Only a privileged user can use the following options:
+
+     -d                  Deletes password for  name  and  unlocks
+                         the  account.  The  login  name  is  not
+                         prompted for password. It is only appli-
+                         cable to the files and ldap repository.
+
+     -f                  Forces the user to  change  password  at
+                         the  next login by expiring the password
+                         for name.
+
+     -l                  Locks password entry for name.  See  the
+                         -d   or  -u  option  for  unlocking  the
+                         account.
+
+     -N                  Makes the  password  entry  for  name  a
+                         value that cannot be used for login, but
+                         does not lock the account.  See  the  -d
+                         option for removing the value, or to set
+                         a password to allow logins.
+
+DISABLE=1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"solregis" [New file] 1 line, 10 characters 
+[lab5]/etc/default#ls
+autofs         dhcpagent      inetinit       kbd            lu             nfs            passwd         su             telnetd
+cron           fs             init           keyserv        metassist.xml  nfslogd        rpc.nisd       syslogd        utmpd
+devfsadm       ftp            ipsec          login          mpathd         nss            solregis       tar            yppasswdd
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:100:10::/export/home/user4:/bin/bash
+user3:x:101:10::/export/home/user3:/bin/ksh
+locked1:x:102:10::/export/home/locked1:/bin/bash
+cleared1:x:103:10::/export/home/cleared1:/bin/bash
+user5:x:104:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#usermod -u 1003 user3
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:100:10::/export/home/user4:/bin/bash
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:102:10::/export/home/locked1:/bin/bash
+cleared1:x:103:10::/export/home/cleared1:/bin/bash
+user5:x:104:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#usermod -u 1004 user4
+[lab5]/etc/default#usermod -u 1005 user4
+[lab5]/etc/default#usermod -u 2001 locked1
+[lab5]/etc/default#usermod -u 2002 cleared1
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1005:10::/export/home/user4:/bin/bash
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:104:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#usermod -u 1004 user4
+[lab5]/etc/default#usermod -u 1005 user5
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1004:10::/export/home/user4:/bin/bash
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:1005:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#cat passwd
+#ident  "@(#)passwd.dfl 1.7     04/04/22 SMI"
+#
+# Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+MAXWEEKS=
+MINWEEKS=
+PASSLENGTH=6
+
+# NAMECHECK enables/disables login name checking.
+# The default is to do login name checking.
+# Specifying a value of "NO" will disable login name checking.
+#
+#NAMECHECK=NO
+
+# HISTORY sets the number of prior password changes to keep and
+# check for a user when changing passwords.  Setting the HISTORY
+# value to zero (0), or removing/commenting out the flag will
+# cause all users' prior password history to be discarded at the
+# next password change by any user.  No password history will
+# be checked if the flag is not present or has zero value.
+# The maximum value of HISTORY is 26.
+#
+# This flag is only enforced for user accounts defined in the
+# local passwd(4)/shadow(4) files.
+#
+#HISTORY=0
+#
+# Password complexity tunables.  The values listed are the defaults
+# which are compatible with previous releases of passwd.
+# See passwd(1) and pam_authtok_check(5) for use warnings and
+# discussion of the use of these options.
+#
+#MINDIFF=3
+#MINALPHA=2
+#MINNONALPHA=1
+#MINUPPER=0
+#MINLOWER=0
+#MAXREPEATS=0
+#MINSPECIAL=0
+#MINDIGIT=0
+#WHITESPACE=YES
+#
+# 
+# passwd performs dictionary lookups if DICTIONLIST or DICTIONDBDIR
+# is defined. If the password database does not yet exist, it is
+# created by passwd. See passwd(1), pam_authtok_check(5) and
+# mkdict(1) for more information.
+#
+#DICTIONLIST=
+#DICTIONDBDIR=/var/passwd
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1004:10::/export/home/user4:/bin/bash
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:1005:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#usermod -s /bin/c
+cachefspack             charmap                 ckitem                  col                     crontab
+cachefsstat             chat                    ckkeywd                 colltbl                 crypt
+cal                     checkeq                 ckpath                  comm                    csh
+calendar                checknr                 ckrange                 command                 csplit
+cancel                  chgrp                   ckstr                   compress                ct
+captoinfo               chkey                   cksum                   coreadm                 ctags
+cat                     chmod                   cktime                  cp                      ctrun
+catman                  chown                   ckuid                   cpio                    ctstat
+cd                      chrtbl                  ckyorn                  cputrack                ctwatch
+cdda2wav                cjpeg                   clean_pending.pl        createdb                cu
+cddb-slave2-properties  ckdate                  clear                   createlang              cut
+cdrecord                ckgid                   clusterdb               createuser              
+cdrw                    ckint                   cmp                     crle                    
+[lab5]/etc/default#usermod -s /bin/c
+cachefspack             charmap                 ckitem                  col                     crontab
+cachefsstat             chat                    ckkeywd                 colltbl                 crypt
+cal                     checkeq                 ckpath                  comm                    csh
+calendar                checknr                 ckrange                 command                 csplit
+cancel                  chgrp                   ckstr                   compress                ct
+captoinfo               chkey                   cksum                   coreadm                 ctags
+cat                     chmod                   cktime                  cp                      ctrun
+catman                  chown                   ckuid                   cpio                    ctstat
+cd                      chrtbl                  ckyorn                  cputrack                ctwatch
+cdda2wav                cjpeg                   clean_pending.pl        createdb                cu
+cddb-slave2-properties  ckdate                  clear                   createlang              cut
+cdrecord                ckgid                   clusterdb               createuser              
+cdrw                    ckint                   cmp                     crle                    
+[lab5]/etc/default#usermod -s /bin/cs
+csh     csplit  
+[lab5]/etc/default#usermod -s /bin/cs
+csh     csplit  
+[lab5]/etc/default#usermod -s /bin/csh user4
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1004:10::/export/home/user4:/bin/csh
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:1005:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#cat /etc/shadow 
+root:zxKpAgsJ/puUo:6445::::::
+daemon:NP:6445::::::
+bin:NP:6445::::::
+sys:NP:6445::::::
+adm:NP:6445::::::
+lp:NP:6445::::::
+uucp:NP:6445::::::
+nuucp:NP:6445::::::
+smmsp:NP:6445::::::
+listen:*LK*:::::::
+gdm:*LK*:::::::
+webservd:*LK*:::::::
+postgres:NP:::::::
+svctag:*LK*:6445::::::
+nobody:*LK*:6445::::::
+noaccess:*LK*:6445::::::
+nobody4:*LK*:6445::::::
+user4:/Lr49vCJzw1kc:15206::::::
+user3:2JteMZKryJu1Y:15206::::::
+locked1:*LK*JGZ13rD.HB.Xs:15206::::::
+cleared1:BeRWEsizYbgmc:0::::::
+user5:qcTYKc8mILXNI:15206::::::
+[lab5]/etc/default#su cleared1
+[lab5]/etc/default#exit
+exit
+[lab5]/etc/default#passwd -uf cleared1
+passwd: password information changed for cleared1
+[lab5]/etc/default#cat /etc/shadow 
+root:zxKpAgsJ/puUo:6445::::::
+daemon:NP:6445::::::
+bin:NP:6445::::::
+sys:NP:6445::::::
+adm:NP:6445::::::
+lp:NP:6445::::::
+uucp:NP:6445::::::
+nuucp:NP:6445::::::
+smmsp:NP:6445::::::
+listen:*LK*:::::::
+gdm:*LK*:::::::
+webservd:*LK*:::::::
+postgres:NP:::::::
+svctag:*LK*:6445::::::
+nobody:*LK*:6445::::::
+noaccess:*LK*:6445::::::
+nobody4:*LK*:6445::::::
+user4:/Lr49vCJzw1kc:15206::::::
+user3:2JteMZKryJu1Y:15206::::::
+locked1:*LK*JGZ13rD.HB.Xs:15206::::::
+cleared1:BeRWEsizYbgmc:0::::::
+user5:qcTYKc8mILXNI:15206::::::
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3
+class2::102:
+[lab5]/etc/default#usermod -g class1 user4
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3
+class2::102:
+[lab5]/etc/default#usermod -G class1 user4
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3
+class2::102:
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3
+class2::102:
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3
+class2::102:
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1004:101::/export/home/user4:/bin/csh
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:1005:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#usermod -g 10 -G class1 user4
+[lab5]/etc/default#cat /etc/group 
+root::0:
+other::1:root
+bin::2:root,daemon
+sys::3:root,bin,adm
+adm::4:root,daemon
+uucp::5:root
+mail::6:root
+tty::7:root,adm
+lp::8:root,adm
+nuucp::9:root
+staff::10:
+daemon::12:root
+sysadmin::14:
+smmsp::25:
+gdm::50:
+webservd::80:
+postgres::90:
+nobody::60001:
+noaccess::60002:
+nogroup::65534:
+class1::101:user3,user4
+class2::102:
+[lab5]/etc/default#cat /etc/passwd 
+root:x:0:0:Super-User:/:/bin/ksh
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/usr/spool/lp:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+smmsp:x:25:25:SendMail Message Submission Program:/:
+listen:x:37:4:Network Admin:/usr/net/nls:
+gdm:x:50:50:GDM Reserved UID:/:
+webservd:x:80:80:WebServer Reserved UID:/:
+postgres:x:90:90:PostgreSQL Reserved UID:/:/usr/bin/pfksh
+svctag:x:95:12:Service Tag UID:/:
+nobody:x:60001:60001:NFS Anonymous Access User:/:
+noaccess:x:60002:60002:No Access User:/:
+nobody4:x:65534:65534:SunOS 4.x NFS Anonymous Access User:/:
+user4:x:1004:10::/export/home/user4:/bin/csh
+user3:x:1003:10::/export/home/user3:/bin/ksh
+locked1:x:2001:10::/export/home/locked1:/bin/bash
+cleared1:x:2002:10::/export/home/cleared1:/bin/bash
+user5:x:1005:10::/export/home/user5:/bin/bash
+[lab5]/etc/default#
+

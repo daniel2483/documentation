@@ -1,0 +1,151 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): ^D
+[lab5]/dev/rdsk#prtvtoc
+Usage:  prtvtoc [ -fhs ] [ -t fstab ] [ -m mnttab ] rawdisk ...
+[lab5]/dev/rdsk#prtvtoc c0d0        
+prtvtoc: c0d0: No such file or directory
+[lab5]/dev/rdsk#prtvtoc c2t0d0      
+prtvtoc: c2t0d0: No such file or directory
+[lab5]/dev/rdsk#cd ../dsk/
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s13    c0d0s9     c1t0d0s12  c1t0d0s8   c2t0d0s11  c2t0d0s7   c2t1d0s10  c2t1d0s6   c2t2d0s1   c2t2d0s5
+c0d0p1     c0d0s14    c1t0d0p0   c1t0d0s13  c1t0d0s9   c2t0d0s12  c2t0d0s8   c2t1d0s11  c2t1d0s7   c2t2d0s10  c2t2d0s6
+c0d0p2     c0d0s15    c1t0d0p1   c1t0d0s14  c2t0d0p0   c2t0d0s13  c2t0d0s9   c2t1d0s12  c2t1d0s8   c2t2d0s11  c2t2d0s7
+c0d0p3     c0d0s2     c1t0d0p2   c1t0d0s15  c2t0d0p1   c2t0d0s14  c2t1d0p0   c2t1d0s13  c2t1d0s9   c2t2d0s12  c2t2d0s8
+c0d0p4     c0d0s3     c1t0d0p3   c1t0d0s2   c2t0d0p2   c2t0d0s15  c2t1d0p1   c2t1d0s14  c2t2d0p0   c2t2d0s13  c2t2d0s9
+c0d0s0     c0d0s4     c1t0d0p4   c1t0d0s3   c2t0d0p3   c2t0d0s2   c2t1d0p2   c2t1d0s15  c2t2d0p1   c2t2d0s14
+c0d0s1     c0d0s5     c1t0d0s0   c1t0d0s4   c2t0d0p4   c2t0d0s3   c2t1d0p3   c2t1d0s2   c2t2d0p2   c2t2d0s15
+c0d0s10    c0d0s6     c1t0d0s1   c1t0d0s5   c2t0d0s0   c2t0d0s4   c2t1d0p4   c2t1d0s3   c2t2d0p3   c2t2d0s2
+c0d0s11    c0d0s7     c1t0d0s10  c1t0d0s6   c2t0d0s1   c2t0d0s5   c2t1d0s0   c2t1d0s4   c2t2d0p4   c2t2d0s3
+c0d0s12    c0d0s8     c1t0d0s11  c1t0d0s7   c2t0d0s10  c2t0d0s6   c2t1d0s1   c2t1d0s5   c2t2d0s0   c2t2d0s4
+[lab5]/dev/dsk#prtvtoc c2t0d0
+prtvtoc: c2t0d0: No such file or directory
+[lab5]/dev/dsk#cd ../rdsk/
+[lab5]/dev/rdsk#ls
+c0d0p0     c0d0s13    c0d0s9     c1t0d0s12  c1t0d0s8   c2t0d0s11  c2t0d0s7   c2t1d0s10  c2t1d0s6   c2t2d0s1   c2t2d0s5
+c0d0p1     c0d0s14    c1t0d0p0   c1t0d0s13  c1t0d0s9   c2t0d0s12  c2t0d0s8   c2t1d0s11  c2t1d0s7   c2t2d0s10  c2t2d0s6
+c0d0p2     c0d0s15    c1t0d0p1   c1t0d0s14  c2t0d0p0   c2t0d0s13  c2t0d0s9   c2t1d0s12  c2t1d0s8   c2t2d0s11  c2t2d0s7
+c0d0p3     c0d0s2     c1t0d0p2   c1t0d0s15  c2t0d0p1   c2t0d0s14  c2t1d0p0   c2t1d0s13  c2t1d0s9   c2t2d0s12  c2t2d0s8
+c0d0p4     c0d0s3     c1t0d0p3   c1t0d0s2   c2t0d0p2   c2t0d0s15  c2t1d0p1   c2t1d0s14  c2t2d0p0   c2t2d0s13  c2t2d0s9
+c0d0s0     c0d0s4     c1t0d0p4   c1t0d0s3   c2t0d0p3   c2t0d0s2   c2t1d0p2   c2t1d0s15  c2t2d0p1   c2t2d0s14
+c0d0s1     c0d0s5     c1t0d0s0   c1t0d0s4   c2t0d0p4   c2t0d0s3   c2t1d0p3   c2t1d0s2   c2t2d0p2   c2t2d0s15
+c0d0s10    c0d0s6     c1t0d0s1   c1t0d0s5   c2t0d0s0   c2t0d0s4   c2t1d0p4   c2t1d0s3   c2t2d0p3   c2t2d0s2
+c0d0s11    c0d0s7     c1t0d0s10  c1t0d0s6   c2t0d0s1   c2t0d0s5   c2t1d0s0   c2t1d0s4   c2t2d0p4   c2t2d0s3
+c0d0s12    c0d0s8     c1t0d0s11  c1t0d0s7   c2t0d0s10  c2t0d0s6   c2t1d0s1   c2t1d0s5   c2t2d0s0   c2t2d0s4
+[lab5]/dev/rdsk#prtvtoc c0d0p0 
+* c0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524
+       4      4    00   20643525  10249470  30892994
+       5      0    00   30892995  10859940  41752934
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c2t0d0p0 
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#prtvtoc c2t1d0p0 
+* c2t1d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#prtvtoc c2t2d0p0
+* c2t2d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#
+
+

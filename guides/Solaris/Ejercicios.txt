@@ -1,0 +1,757 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0d0 <DEFAULT cyl 2607 alt 2 hd 255 sec 63>
+          /pci@0,0/pci-ide@1,1/ide@0/cmdk@0,0
+       1. c2t0d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+       2. c2t1d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@1,0
+       3. c2t2d0 <DEFAULT cyl 1303 alt 2 hd 255 sec 63>
+          /pci@0,0/pci1000,8000@14/sd@2,0
+Specify disk (enter its number): ^D
+[lab5]/dev/rdsk#prtvtoc
+Usage:  prtvtoc [ -fhs ] [ -t fstab ] [ -m mnttab ] rawdisk ...
+[lab5]/dev/rdsk#prtvtoc c0d0        
+prtvtoc: c0d0: No such file or directory
+[lab5]/dev/rdsk#prtvtoc c2t0d0      
+prtvtoc: c2t0d0: No such file or directory
+[lab5]/dev/rdsk#cd ../dsk/
+[lab5]/dev/dsk#ls
+c0d0p0     c0d0s13    c0d0s9     c1t0d0s12  c1t0d0s8   c2t0d0s11  c2t0d0s7   c2t1d0s10  c2t1d0s6   c2t2d0s1   c2t2d0s5
+c0d0p1     c0d0s14    c1t0d0p0   c1t0d0s13  c1t0d0s9   c2t0d0s12  c2t0d0s8   c2t1d0s11  c2t1d0s7   c2t2d0s10  c2t2d0s6
+c0d0p2     c0d0s15    c1t0d0p1   c1t0d0s14  c2t0d0p0   c2t0d0s13  c2t0d0s9   c2t1d0s12  c2t1d0s8   c2t2d0s11  c2t2d0s7
+c0d0p3     c0d0s2     c1t0d0p2   c1t0d0s15  c2t0d0p1   c2t0d0s14  c2t1d0p0   c2t1d0s13  c2t1d0s9   c2t2d0s12  c2t2d0s8
+c0d0p4     c0d0s3     c1t0d0p3   c1t0d0s2   c2t0d0p2   c2t0d0s15  c2t1d0p1   c2t1d0s14  c2t2d0p0   c2t2d0s13  c2t2d0s9
+c0d0s0     c0d0s4     c1t0d0p4   c1t0d0s3   c2t0d0p3   c2t0d0s2   c2t1d0p2   c2t1d0s15  c2t2d0p1   c2t2d0s14
+c0d0s1     c0d0s5     c1t0d0s0   c1t0d0s4   c2t0d0p4   c2t0d0s3   c2t1d0p3   c2t1d0s2   c2t2d0p2   c2t2d0s15
+c0d0s10    c0d0s6     c1t0d0s1   c1t0d0s5   c2t0d0s0   c2t0d0s4   c2t1d0p4   c2t1d0s3   c2t2d0p3   c2t2d0s2
+c0d0s11    c0d0s7     c1t0d0s10  c1t0d0s6   c2t0d0s1   c2t0d0s5   c2t1d0s0   c2t1d0s4   c2t2d0p4   c2t2d0s3
+c0d0s12    c0d0s8     c1t0d0s11  c1t0d0s7   c2t0d0s10  c2t0d0s6   c2t1d0s1   c2t1d0s5   c2t2d0s0   c2t2d0s4
+[lab5]/dev/dsk#prtvtoc c2t0d0
+prtvtoc: c2t0d0: No such file or directory
+[lab5]/dev/dsk#cd ../rdsk/
+[lab5]/dev/rdsk#ls
+c0d0p0     c0d0s13    c0d0s9     c1t0d0s12  c1t0d0s8   c2t0d0s11  c2t0d0s7   c2t1d0s10  c2t1d0s6   c2t2d0s1   c2t2d0s5
+c0d0p1     c0d0s14    c1t0d0p0   c1t0d0s13  c1t0d0s9   c2t0d0s12  c2t0d0s8   c2t1d0s11  c2t1d0s7   c2t2d0s10  c2t2d0s6
+c0d0p2     c0d0s15    c1t0d0p1   c1t0d0s14  c2t0d0p0   c2t0d0s13  c2t0d0s9   c2t1d0s12  c2t1d0s8   c2t2d0s11  c2t2d0s7
+c0d0p3     c0d0s2     c1t0d0p2   c1t0d0s15  c2t0d0p1   c2t0d0s14  c2t1d0p0   c2t1d0s13  c2t1d0s9   c2t2d0s12  c2t2d0s8
+c0d0p4     c0d0s3     c1t0d0p3   c1t0d0s2   c2t0d0p2   c2t0d0s15  c2t1d0p1   c2t1d0s14  c2t2d0p0   c2t2d0s13  c2t2d0s9
+c0d0s0     c0d0s4     c1t0d0p4   c1t0d0s3   c2t0d0p3   c2t0d0s2   c2t1d0p2   c2t1d0s15  c2t2d0p1   c2t2d0s14
+c0d0s1     c0d0s5     c1t0d0s0   c1t0d0s4   c2t0d0p4   c2t0d0s3   c2t1d0p3   c2t1d0s2   c2t2d0p2   c2t2d0s15
+c0d0s10    c0d0s6     c1t0d0s1   c1t0d0s5   c2t0d0s0   c2t0d0s4   c2t1d0p4   c2t1d0s3   c2t2d0p3   c2t2d0s2
+c0d0s11    c0d0s7     c1t0d0s10  c1t0d0s6   c2t0d0s1   c2t0d0s5   c2t1d0s0   c2t1d0s4   c2t2d0p4   c2t2d0s3
+c0d0s12    c0d0s8     c1t0d0s11  c1t0d0s7   c2t0d0s10  c2t0d0s6   c2t1d0s1   c2t1d0s5   c2t2d0s0   c2t2d0s4
+[lab5]/dev/rdsk#prtvtoc c0d0p0 
+* c0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    2609 cylinders
+*    2607 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*           0     48195     48194
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       0      2    00      48195   4209030   4257224
+       1      3    01    4257225   8193150  12450374
+       2      5    00          0  41881455  41881454
+       3      7    00   12450375   8193150  20643524
+       4      4    00   20643525  10249470  30892994
+       5      0    00   30892995  10859940  41752934
+       7      0    00   41752935    128520  41881454
+       8      1    01          0     16065     16064
+       9      9    01      16065     32130     48194
+[lab5]/dev/rdsk#prtvtoc c2t0d0p0 
+* c2t0d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#prtvtoc c2t1d0p0 
+* c2t1d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#prtvtoc c2t2d0p0
+* c2t2d0p0 partition map
+*
+* Dimensions:
+*     512 bytes/sector
+*      63 sectors/track
+*     255 tracks/cylinder
+*   16065 sectors/cylinder
+*    1305 cylinders
+*    1303 accessible cylinders
+*
+* Flags:
+*   1: unmountable
+*  10: read-only
+*
+* Unallocated space:
+*       First     Sector    Last
+*       Sector     Count    Sector 
+*       16065  20916630  20932694
+*
+*                          First     Sector    Last
+* Partition  Tag  Flags    Sector     Count    Sector  Mount Directory
+       2      5    01          0  20932695  20932694
+       8      1    01          0     16065     16064
+[lab5]/dev/rdsk#
+[lab5]/#ifconfig
+usage: ifconfig <interface> | -a[ 4 | 6 | D ][ u | d ][ Z ]
+        [ <addr_family> ]
+        [ <address>[/<prefix_length>] [ <dest_address> ] ]
+        [ set [ <address>][/<prefix_length>] ] [ <address>/<prefix_length>] ]
+        [ destination <dest_address> ]
+        [ addif <address>[/<prefix_length>]  [ <dest_address> ] ]
+        [ removeif <address>[/<prefix_length>] ]
+        [ arp | -arp ]
+        [ auto-revarp ]
+        [ broadcast <broad_addr> ]
+        [ index <if_index> ]
+        [ metric <n> ] [ mtu <n> ]
+        [ netmask <mask> ]
+        [ plumb ] [ unplumb ]
+        [ preferred | -preferred ]
+        [ private | -private ]
+        [ local | -local ]
+        [ router | -router ]
+        [ subnet <subnet_address>]
+        [ trailers | -trailers ]
+        [ token <address>/<prefix_length> ]
+        [ tsrc <tunnel_src_address> ]
+        [ tdst <tunnel_dest_address> ]
+        [ auth_algs <tunnel_AH_authentication_algorithm> ]
+        [ encr_algs <tunnel_ESP_encryption_algorithm> ]
+        [ encr_auth_algs <tunnel_ESP_authentication_algorithm> ]
+        [ up ] [ down ]
+        [ xmit | -xmit ]
+        [ modlist ]
+[lab5]/#ifconfig
+usage: ifconfig <interface> | -a[ 4 | 6 | D ][ u | d ][ Z ]
+        [ <addr_family> ]
+        [ <address>[/<prefix_length>] [ <dest_address> ] ]
+        [ set [ <address>][/<prefix_length>] ] [ <address>/<prefix_length>] ]
+        [ destination <dest_address> ]
+        [ addif <address>[/<prefix_length>]  [ <dest_address> ] ]
+        [ removeif <address>[/<prefix_length>] ]
+        [ arp | -arp ]
+        [ auto-revarp ]
+        [ broadcast <broad_addr> ]
+        [ index <if_index> ]
+        [ metric <n> ] [ mtu <n> ]
+        [ netmask <mask> ]
+        [ plumb ] [ unplumb ]
+        [ preferred | -preferred ]
+        [ private | -private ]
+        [ local | -local ]
+        [ router | -router ]
+        [ subnet <subnet_address>]
+        [ trailers | -trailers ]
+        [ token <address>/<prefix_length> ]
+        [ tsrc <tunnel_src_address> ]
+        [ tdst <tunnel_dest_address> ]
+        [ auth_algs <tunnel_AH_authentication_algorithm> ]
+        [ encr_algs <tunnel_ESP_encryption_algorithm> ]
+        [ encr_auth_algs <tunnel_ESP_authentication_algorithm> ]
+        [ up ] [ down ]
+        [ xmit | -xmit ]
+        [ modlist ]
+        [ modinsert <module_name@position> ]
+        [ modremove <module_name@position> ]
+        [ group <groupname>] | [ group ""]
+        [ deprecated | -deprecated ]
+        [ standby | -standby ]
+        [ failover | -failover ]
+        [ zone <zonename> | -zone ]
+        [ usesrc <interface> ]
+        [ all-zones ]
+or
+        ifconfig <interface> |  -a[ 4 | 6 | D ] [ u | d ]
+        auto-dhcp | dhcp
+        [ wait <time> | forever ]
+        [ primary ]
+        start | drop | ping | release | status | inform
+[lab5]/#ifconfig -a
+lo0: flags=2001000849<UP,LOOPBACK,RUNNING,MULTICAST,IPv4,VIRTUAL> mtu 8232 index 1
+        inet 127.0.0.1 netmask ff000000 
+e1000g0: flags=1000843<UP,BROADCAST,RUNNING,MULTICAST,IPv4> mtu 1500 index 2
+        inet 192.168.230.128 netmask ffffff00 broadcast 192.168.230.255
+        ether 8:0:27:a5:12:2 
+[lab5]/#ping sys41
+ping: unknown host sys41
+[lab5]/#cd /etc/
+[lab5]/etc#ls
+TIMEZONE              gimp                  netconfig             saf
+X11                   gnome-vfs-2.0         netmasks              sasl
+acct                  gnome-vfs-mime-magic  networks              scrollkeeper.conf
+aggregation.conf      gnopernicus-1.0       nfs                   sdp.conf
+aliases               group                 nfssec.conf           security
+amd64                 grpck                 nodename              services
+apache                gss                   nscd.conf             setmnt
+apache2               gtk                   nsswitch.conf         sfw
+apoc                  gtk-2.0               nsswitch.dns          sgml
+auto_home             halt                  nsswitch.files        shadow
+auto_master           hba.conf              nsswitch.ldap         shutdown
+autopush              hostname.e1000g0      nsswitch.nis          skel
+bonobo-activation     hosts                 nsswitch.nisplus      sma
+bootrc                iiim                  openwin               smartcard
+bootsign              ima.conf              opt                   smc
+cacao                 imq                   orbitrc               snmp
+certs                 inet                  pam.conf              sock2path
+cfgadm                inetd.conf            pam.conf-winbind      sound
+chroot                init                  pango                 ssh
+clri                  init.d                passwd                sulogin
+coreadm.conf          initpipe              patch                 sunvts
+cron                  inittab               path_to_inst          svc
+cron.d                install               path_to_inst.old      swap
+crypto                ioctl.syscon          pgsql                 swapadd
+dacf.conf             ipf                   ppp                   sysdef
+dat                   iscsi                 printers.conf         sysevent
+datemsk               iu.ap                 product-info          syslog.conf
+dcopy                 killall               profile               syslog.pid
+default               krb5                  project               system
+dev                   labelit               protocols             tar
+device.tab            lib                   prtconf               telinit
+devices               link                  prtvtoc               termcap
+devlink.tab           llc2                  publickey             tm
+dfs                   log                   pwck                  ttydefs
+dgroup.tab            logadm.conf           quagga                ttysrch
+dhcp                  logindevperm          rc0                   uadmin
+dmi                   lp                    rc0.d                 umount
+driver_aliases        lu                    rc1                   umountall
+driver_classes        lvm                   rc1.d                 unlink
+dumpadm.conf          mach                  rc2                   usb
+dumpdates             magic                 rc2.d                 user_attr
+esd.conf              mail                  rc3                   utmppipe
+fddi.cfg              mailcap               rc3.d                 utmpx
+ff                    mime.types            rc5                   uucp
+flash                 minor_perm            rc6                   vfstab
+fm                    mkfs                  rcS                   volcopy
+fmthard               mknod                 rcS.d                 vold.conf
+fonts                 mnttab                rcm                   wall
+format                motd                  reboot                webconsole
+format.dat            mount                 release               webmin
+fs                    mountall              remote                wgetrc
+fsck                  mpapi.conf            rmmount.conf          whodo
+fsdb                  mvdir                 rmt                   wtmpx
+fstyp                 name_to_major         rndc.key              xml
+ftpd                  name_to_sysnum        rpc                   xpdfrc
+fuser                 nca                   rpcsec                zfs
+gconf                 ncheck                rpld.conf             zones
+getty                 net                   rtc_config
+[lab5]/etc#ls
+TIMEZONE              gimp                  netconfig             saf
+X11                   gnome-vfs-2.0         netmasks              sasl
+acct                  gnome-vfs-mime-magic  networks              scrollkeeper.conf
+aggregation.conf      gnopernicus-1.0       nfs                   sdp.conf
+aliases               group                 nfssec.conf           security
+amd64                 grpck                 nodename              services
+apache                gss                   nscd.conf             setmnt
+apache2               gtk                   nsswitch.conf         sfw
+apoc                  gtk-2.0               nsswitch.dns          sgml
+auto_home             halt                  nsswitch.files        shadow
+auto_master           hba.conf              nsswitch.ldap         shutdown
+autopush              hostname.e1000g0      nsswitch.nis          skel
+bonobo-activation     hosts                 nsswitch.nisplus      sma
+bootrc                iiim                  openwin               smartcard
+bootsign              ima.conf              opt                   smc
+cacao                 imq                   orbitrc               snmp
+certs                 inet                  pam.conf              sock2path
+cfgadm                inetd.conf            pam.conf-winbind      sound
+chroot                init                  pango                 ssh
+clri                  init.d                passwd                sulogin
+coreadm.conf          initpipe              patch                 sunvts
+cron                  inittab               path_to_inst          svc
+cron.d                install               path_to_inst.old      swap
+crypto                ioctl.syscon          pgsql                 swapadd
+dacf.conf             ipf                   ppp                   sysdef
+dat                   iscsi                 printers.conf         sysevent
+datemsk               iu.ap                 product-info          syslog.conf
+dcopy                 killall               profile               syslog.pid
+default               krb5                  project               system
+dev                   labelit               protocols             tar
+device.tab            lib                   prtconf               telinit
+devices               link                  prtvtoc               termcap
+devlink.tab           llc2                  publickey             tm
+dfs                   log                   pwck                  ttydefs
+dgroup.tab            logadm.conf           quagga                ttysrch
+dhcp                  logindevperm          rc0                   uadmin
+dmi                   lp                    rc0.d                 umount
+driver_aliases        lu                    rc1                   umountall
+driver_classes        lvm                   rc1.d                 unlink
+dumpadm.conf          mach                  rc2                   usb
+dumpdates             magic                 rc2.d                 user_attr
+esd.conf              mail                  rc3                   utmppipe
+fddi.cfg              mailcap               rc3.d                 utmpx
+ff                    mime.types            rc5                   uucp
+flash                 minor_perm            rc6                   vfstab
+fm                    mkfs                  rcS                   volcopy
+fmthard               mknod                 rcS.d                 vold.conf
+fonts                 mnttab                rcm                   wall
+format                motd                  reboot                webconsole
+format.dat            mount                 release               webmin
+fs                    mountall              remote                wgetrc
+fsck                  mpapi.conf            rmmount.conf          whodo
+fsdb                  mvdir                 rmt                   wtmpx
+fstyp                 name_to_major         rndc.key              xml
+ftpd                  name_to_sysnum        rpc                   xpdfrc
+fuser                 nca                   rpcsec                zfs
+gconf                 ncheck                rpld.conf             zones
+getty                 net                   rtc_config
+[lab5]/etc#ls -lh inode
+inode: No such file or directory
+[lab5]/etc#cd inet             
+[lab5]/etc/inet#ls\
+>  
+[lab5]/etc/inet#ls
+datemsk.ndpd             ipsecalgs                ntp4.client
+hosts                    ipsecinit.sample         ntp4.server
+ike                      mipagent.conf-sample     protocols
+inetd.conf               mipagent.conf.fa-sample  secret
+ipaddrsel.conf           mipagent.conf.ha-sample  services
+ipnodes                  netmasks                 slp.conf.example
+ipqosconf.1.sample       networks                 sock2path
+ipqosconf.2.sample       ntp.client               wanboot.conf.sample
+ipqosconf.3.sample       ntp.server
+[lab5]/etc/inet#cat ipnodes 
+#
+# Internet host table
+#
+::1     localhost
+127.0.0.1       localhost
+192.168.230.128 lab5    loghost lab5.grupocesa.com
+[lab5]/etc/inet#ls -lh
+total 148
+-r--r--r--   1 root     sys           22 Aug  8  2007 datemsk.ndpd
+-r--r--r--   1 root     sys          110 Aug 13 13:13 hosts
+drwxr-xr-x   4 root     sys          512 Aug 13 08:31 ike
+-r--r--r--   1 root     sys         1.1K Aug 13 08:38 inetd.conf
+-r--r--r--   1 root     sys          545 Sep  3  2009 ipaddrsel.conf
+lrwxrwxrwx   1 root     root           7 Aug 13 08:31 ipnodes -> ./hosts
+-r--r--r--   1 root     sys         2.4K Jan 21  2005 ipqosconf.1.sample
+-r--r--r--   1 root     sys         3.0K Jan 21  2005 ipqosconf.2.sample
+-r--r--r--   1 root     sys         1.1K Jan 21  2005 ipqosconf.3.sample
+-r--r--r--   1 root     sys         1.1K May 15  2006 ipsecalgs
+-r--r--r--   1 root     sys         2.3K Aug  8  2007 ipsecinit.sample
+-rw-------   1 root     sys         6.1K Jan 21  2005 mipagent.conf-sample
+-rw-------   1 root     sys         6.1K Jan 21  2005 mipagent.conf.fa-sample
+-rw-------   1 root     sys         5.3K Jan 21  2005 mipagent.conf.ha-sample
+-r--r--r--   1 root     sys          384 Aug 13 08:47 netmasks
+-r--r--r--   1 root     sys          372 Sep  3  2009 networks
+-rw-r--r--   1 root     sys          291 Jan 21  2005 ntp.client
+-rw-r--r--   1 root     sys         2.7K Jan 21  2005 ntp.server
+-rw-r--r--   1 root     sys         3.5K Jul  2  2009 ntp4.client
+-rw-r--r--   1 root     sys         4.0K Jul  2  2009 ntp4.server
+-r--r--r--   1 root     sys         1.9K Sep  3  2009 protocols
+drwx------   3 root     sys          512 Aug 13 08:31 secret
+-r--r--r--   1 root     sys         4.3K Aug 13 08:47 services
+-rw-r--r--   1 root     sys         5.6K Jan 21  2005 slp.conf.example
+-r--r--r--   1 root     sys          647 Aug 13 08:47 sock2path
+-r--r--r--   1 root     sys         3.2K Jan 21  2005 wanboot.conf.sample
+[lab5]/etc/inet#ls
+datemsk.ndpd             ipsecalgs                ntp4.client
+hosts                    ipsecinit.sample         ntp4.server
+ike                      mipagent.conf-sample     protocols
+inetd.conf               mipagent.conf.fa-sample  secret
+ipaddrsel.conf           mipagent.conf.ha-sample  services
+ipnodes                  netmasks                 slp.conf.example
+ipqosconf.1.sample       networks                 sock2path
+ipqosconf.2.sample       ntp.client               wanboot.conf.sample
+ipqosconf.3.sample       ntp.server
+[lab5]/etc/inet#cat hosts 
+#
+# Internet host table
+#
+::1     localhost
+127.0.0.1       localhost
+192.168.230.128 lab5    loghost lab5.grupocesa.com
+[lab5]/etc/inet#cat /etc/nodename 
+lab5
+[lab5]/etc/inet#ping lab5
+lab5 is alive
+[lab5]/etc/inet#ifconfig -a
+lo0: flags=2001000849<UP,LOOPBACK,RUNNING,MULTICAST,IPv4,VIRTUAL> mtu 8232 index 1
+        inet 127.0.0.1 netmask ff000000 
+e1000g0: flags=1000843<UP,BROADCAST,RUNNING,MULTICAST,IPv4> mtu 1500 index 2
+        inet 192.168.230.128 netmask ffffff00 broadcast 192.168.230.255
+        ether 8:0:27:a5:12:2 
+[lab5]/etc/inet#snoop lab5 lab6
+snoop: could not resolve lab6
+[lab5]/etc/inet#snoop lab5 192.168.230.127
+Using device e1000g0 (promiscuous mode)
+192.168.230.127 -> lab5         ICMP Echo request (ID: 2116 Sequence number: 0)
+        lab5 -> 192.168.230.127 ICMP Echo reply (ID: 2116 Sequence number: 0)
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 \377\372\30\0DTTERM\377\360\377\372#\000192.
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 login: 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 r
+192.168.230.127 -> lab5         TELNET R port=32943 r
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 o
+192.168.230.127 -> lab5         TELNET R port=32943 o
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 o
+192.168.230.127 -> lab5         TELNET R port=32943 o
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 t
+192.168.230.127 -> lab5         TELNET R port=32943 t
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 Password: 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 r
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 o
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 o
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 t
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 Last login: Sat Aug 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 [lab6]/#
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 e
+192.168.230.127 -> lab5         TELNET R port=32943 e
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 x
+192.168.230.127 -> lab5         TELNET R port=32943 x
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 i
+192.168.230.127 -> lab5         TELNET R port=32943 i
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 t
+192.168.230.127 -> lab5         TELNET R port=32943 t
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+        lab5 -> 192.168.230.127 TELNET C port=32943 
+192.168.230.127 -> lab5         TELNET R port=32943 
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Syn Seq=1440256721 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,no
+p,nop,sackOK>
+192.168.230.127 -> lab5         TCP D=32944 S=22 Syn Ack=1440256722 Seq=1516365364 Len=0 Win=49640 Options=<mss 1460,
+nop,wscale 0,nop,nop,sackOK>
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516365365 Seq=1440256722 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440256722 Seq=1516365365 Len=22 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516365387 Seq=1440256722 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516365387 Seq=1440256722 Len=22 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Ack=1440256744 Seq=1516365387 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516365387 Seq=1440256744 Len=464 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Ack=1440257208 Seq=1516365387 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257208 Seq=1516365387 Len=568 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516365955 Seq=1440257208 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516365955 Seq=1440257208 Len=24 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257232 Seq=1516365955 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516366003 Seq=1440257232 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257232 Seq=1516366003 Len=472 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516366475 Seq=1440257232 Len=416 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257648 Seq=1516366475 Len=736 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367211 Seq=1440257648 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367211 Seq=1440257648 Len=16 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Ack=1440257664 Seq=1516367211 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367211 Seq=1440257664 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257712 Seq=1516367211 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367259 Seq=1440257712 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257776 Seq=1516367259 Len=112 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367371 Seq=1440257776 Len=96 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257872 Seq=1516367371 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367435 Seq=1440257872 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367435 Seq=1440257872 Len=80 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440257952 Seq=1516367435 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367467 Seq=1440257952 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Ack=1440258016 Seq=1516367467 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258016 Seq=1516367467 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367515 Seq=1440258016 Len=464 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258480 Seq=1516367515 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367579 Seq=1440258480 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258480 Seq=1516367579 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258480 Seq=1516367627 Len=96 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367723 Seq=1440258480 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258480 Seq=1516367723 Len=96 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258480 Seq=1516367819 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367867 Seq=1440258480 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367867 Seq=1440258480 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258528 Seq=1516367867 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367915 Seq=1440258528 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367915 Seq=1440258528 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258576 Seq=1516367915 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516367963 Seq=1440258576 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516367963 Seq=1440258576 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258624 Seq=1516367963 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516368011 Seq=1440258624 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516368011 Seq=1440258624 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258672 Seq=1516368011 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516368059 Seq=1440258672 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516368059 Seq=1440258672 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258720 Seq=1516368059 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258720 Seq=1516368107 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Push Ack=1440258720 Seq=1516368171 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516368171 Seq=1440258720 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Push Ack=1516368235 Seq=1440258720 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Fin Ack=1516368235 Seq=1440258752 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Ack=1440258753 Seq=1516368235 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32944 S=22 Fin Ack=1440258753 Seq=1516368235 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32944 Ack=1516368236 Seq=1440258753 Len=0 Win=49640
+        lab5 -> 192.168.230.127 ICMP Echo request (ID: 2333 Sequence number: 0)
+192.168.230.127 -> lab5         ICMP Echo reply (ID: 2333 Sequence number: 0)
+192.168.230.127 -> lab5         ICMP Echo request (ID: 2150 Sequence number: 0)
+        lab5 -> 192.168.230.127 ICMP Echo reply (ID: 2150 Sequence number: 0)
+        lab5 -> 192.168.230.127 ICMP Echo request (ID: 2337 Sequence number: 0)
+192.168.230.127 -> lab5         ICMP Echo reply (ID: 2337 Sequence number: 0)
+        lab5 -> 192.168.230.127 FTP C port=32945 
+192.168.230.127 -> lab5         FTP R port=32945 
+        lab5 -> 192.168.230.127 FTP C port=32945 
+192.168.230.127 -> lab5         FTP R port=32945 220 lab6 FTP server 
+        lab5 -> 192.168.230.127 FTP C port=32945 
+        lab5 -> 192.168.230.127 FTP C port=32945 USER root\r\n
+192.168.230.127 -> lab5         FTP R port=32945 
+192.168.230.127 -> lab5         FTP R port=32945 331 Password require
+        lab5 -> 192.168.230.127 FTP C port=32945 
+        lab5 -> 192.168.230.127 FTP C port=32945 PASS root\r\n
+192.168.230.127 -> lab5         FTP R port=32945 
+192.168.230.127 -> lab5         FTP R port=32945 230 User root logged
+        lab5 -> 192.168.230.127 FTP C port=32945 SYST\r\n
+192.168.230.127 -> lab5         FTP R port=32945 215 UNIX Type: L8 Ve
+        lab5 -> 192.168.230.127 FTP C port=32945 TYPE I\r\n
+192.168.230.127 -> lab5         FTP R port=32945 200 Type set to I.\r\n
+        lab5 -> 192.168.230.127 FTP C port=32945 
+        lab5 -> 192.168.230.127 FTP C port=32945 QUIT\r\n
+192.168.230.127 -> lab5         FTP R port=32945 221-You have transfe
+192.168.230.127 -> lab5         FTP R port=32945 221-Total traffic fo
+        lab5 -> 192.168.230.127 FTP C port=32945 
+        lab5 -> 192.168.230.127 FTP C port=32945 
+192.168.230.127 -> lab5         FTP R port=32945 
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Syn Seq=1780502226 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,no
+p,nop,sackOK>
+192.168.230.127 -> lab5         TCP D=32946 S=22 Syn Ack=1780502227 Seq=1856990333 Len=0 Win=49640 Options=<mss 1460,
+nop,wscale 0,nop,nop,sackOK>
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856990334 Seq=1780502227 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780502227 Seq=1856990334 Len=22 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856990356 Seq=1780502227 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856990356 Seq=1780502227 Len=22 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Ack=1780502249 Seq=1856990356 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856990356 Seq=1780502249 Len=464 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Ack=1780502713 Seq=1856990356 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780502713 Seq=1856990356 Len=568 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856990924 Seq=1780502713 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856990924 Seq=1780502713 Len=24 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780502737 Seq=1856990924 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856990972 Seq=1780502737 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780502737 Seq=1856990972 Len=472 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856991444 Seq=1780502737 Len=416 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503153 Seq=1856991444 Len=736 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992180 Seq=1780503153 Len=16 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Ack=1780503169 Seq=1856992180 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992180 Seq=1780503169 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503217 Seq=1856992180 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992228 Seq=1780503217 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503281 Seq=1856992228 Len=112 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992340 Seq=1780503281 Len=96 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503377 Seq=1856992340 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856992404 Seq=1780503377 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992404 Seq=1780503377 Len=80 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503457 Seq=1856992404 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992436 Seq=1780503457 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503521 Seq=1856992436 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992484 Seq=1780503521 Len=128 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503649 Seq=1856992484 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856992548 Seq=1780503649 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503649 Seq=1856992548 Len=80 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992628 Seq=1780503649 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503697 Seq=1856992628 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992676 Seq=1780503697 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503745 Seq=1856992676 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856992740 Seq=1780503745 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992740 Seq=1780503745 Len=32 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503777 Seq=1856992740 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856992804 Seq=1780503777 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Push Ack=1780503777 Seq=1856992804 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Push Ack=1856992868 Seq=1780503777 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Fin Ack=1856992868 Seq=1780503809 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Ack=1780503810 Seq=1856992868 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32946 S=22 Fin Ack=1780503810 Seq=1856992868 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32946 Ack=1856992869 Seq=1780503810 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Syn Seq=1834645379 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,nop,nop,sackOK>
+192.168.230.127 -> lab5         TCP D=32947 S=22 Syn Ack=1834645380 Seq=1911222338 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,nop,nop,sackOK>
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911222339 Seq=1834645380 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834645380 Seq=1911222339 Len=22 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911222361 Seq=1834645380 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911222361 Seq=1834645380 Len=22 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Ack=1834645402 Seq=1911222361 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911222361 Seq=1834645402 Len=464 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Ack=1834645866 Seq=1911222361 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834645866 Seq=1911222361 Len=568 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911222929 Seq=1834645866 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911222929 Seq=1834645866 Len=24 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834645890 Seq=1911222929 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911222977 Seq=1834645890 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834645890 Seq=1911222977 Len=472 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911223449 Seq=1834645890 Len=416 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646306 Seq=1911223449 Len=736 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224185 Seq=1834646306 Len=16 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Ack=1834646322 Seq=1911224185 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224185 Seq=1834646322 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646370 Seq=1911224185 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224233 Seq=1834646370 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646434 Seq=1911224233 Len=112 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224345 Seq=1834646434 Len=96 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646530 Seq=1911224345 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911224409 Seq=1834646530 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224409 Seq=1834646530 Len=80 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646610 Seq=1911224409 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224441 Seq=1834646610 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646674 Seq=1911224441 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224489 Seq=1834646674 Len=128 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646802 Seq=1911224489 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911224553 Seq=1834646802 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646802 Seq=1911224553 Len=96 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224649 Seq=1834646802 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646866 Seq=1911224649 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224697 Seq=1834646866 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646914 Seq=1911224697 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224745 Seq=1834646914 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834646962 Seq=1911224745 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224793 Seq=1834646962 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834647010 Seq=1911224793 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224841 Seq=1834647010 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834647058 Seq=1911224841 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224889 Seq=1834647058 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834647106 Seq=1911224889 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911224937 Seq=1834647106 Len=32 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Push Ack=1834647138 Seq=1911224937 Len=128 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Push Ack=1911225065 Seq=1834647138 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Fin Ack=1911225065 Seq=1834647170 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Ack=1834647171 Seq=1911225065 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32947 S=22 Fin Ack=1834647171 Seq=1911225065 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32947 Ack=1911225066 Seq=1834647171 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Syn Seq=1849592877 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,nop,nop,sackOK>
+192.168.230.127 -> lab5         TCP D=32948 S=22 Syn Ack=1849592878 Seq=1926095046 Len=0 Win=49640 Options=<mss 1460,nop,wscale 0,nop,nop,sackOK>
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926095047 Seq=1849592878 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849592878 Seq=1926095047 Len=22 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926095069 Seq=1849592878 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926095069 Seq=1849592878 Len=22 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Ack=1849592900 Seq=1926095069 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926095069 Seq=1849592900 Len=464 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Ack=1849593364 Seq=1926095069 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593364 Seq=1926095069 Len=568 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926095637 Seq=1849593364 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926095637 Seq=1849593364 Len=24 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593388 Seq=1926095637 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926095685 Seq=1849593388 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593388 Seq=1926095685 Len=472 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926096157 Seq=1849593388 Len=416 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593804 Seq=1926096157 Len=736 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926096893 Seq=1849593804 Len=16 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Ack=1849593820 Seq=1926096893 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926096893 Seq=1849593820 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593868 Seq=1926096893 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926096941 Seq=1849593868 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849593932 Seq=1926096941 Len=112 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097053 Seq=1849593932 Len=96 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594028 Seq=1926097053 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926097117 Seq=1849594028 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097117 Seq=1849594028 Len=80 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594108 Seq=1926097117 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097149 Seq=1849594108 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594172 Seq=1926097149 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097197 Seq=1849594172 Len=128 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594300 Seq=1926097197 Len=64 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926097261 Seq=1849594300 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594300 Seq=1926097261 Len=96 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097357 Seq=1849594300 Len=64 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594364 Seq=1926097357 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097405 Seq=1849594364 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594412 Seq=1926097405 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097453 Seq=1849594412 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594460 Seq=1926097453 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097501 Seq=1849594460 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594508 Seq=1926097501 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097549 Seq=1849594508 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594556 Seq=1926097549 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097597 Seq=1849594556 Len=48 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594604 Seq=1926097597 Len=48 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097645 Seq=1849594604 Len=32 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Push Ack=1849594636 Seq=1926097645 Len=128 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Push Ack=1926097773 Seq=1849594636 Len=32 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Fin Ack=1926097773 Seq=1849594668 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Ack=1849594669 Seq=1926097773 Len=0 Win=49640
+192.168.230.127 -> lab5         TCP D=32948 S=22 Fin Ack=1849594669 Seq=1926097773 Len=0 Win=49640
+        lab5 -> 192.168.230.127 TCP D=22 S=32948 Ack=1926097774 Seq=1849594669 Len=0 Win=49640
