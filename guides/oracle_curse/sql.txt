@@ -1,0 +1,210 @@
+SQL> select TABLESPACE_NAME,BLOCK_SIZE,LOGGING from dba_tablespaces;
+
+TABLESPACE_NAME                BLOCK_SIZE LOGGING
+------------------------------ ---------- ---------
+SYSTEM                               8192 LOGGING
+UNDOTBS01                            8192 LOGGING
+TEMP                                 8192 NOLOGGING
+CWMLITE                              8192 LOGGING
+DRSYS                                8192 LOGGING
+INDX                                 8192 LOGGING
+ODM                                  8192 LOGGING
+TOOLS                                8192 LOGGING
+USERS                                8192 LOGGING
+XDB                                  8192 LOGGING
+CDM_DATA                             8192 LOGGING
+
+TABLESPACE_NAME                BLOCK_SIZE LOGGING
+------------------------------ ---------- ---------
+CDM_INDEX                            8192 LOGGING
+
+12 rows selected.
+
+SQL> describe dba_tablespaces;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TABLESPACE_NAME                           NOT NULL VARCHAR2(30)
+ BLOCK_SIZE                                NOT NULL NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                               NOT NULL NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ MIN_EXTLEN                                         NUMBER
+ STATUS                                             VARCHAR2(9)
+ CONTENTS                                           VARCHAR2(9)
+ LOGGING                                            VARCHAR2(9)
+ FORCE_LOGGING                                      VARCHAR2(3)
+ EXTENT_MANAGEMENT                                  VARCHAR2(10)
+ ALLOCATION_TYPE                                    VARCHAR2(9)
+ PLUGGED_IN                                         VARCHAR2(3)
+ SEGMENT_SPACE_MANAGEMENT                           VARCHAR2(6)
+ DEF_TAB_COMPRESSION                                VARCHAR2(8)
+
+SQL> select STATUS,CONTENTS,FORCE_LOGGING,EXTENT_MANAGEMENT from dba_tablespaces;
+
+STATUS    CONTENTS  FOR EXTENT_MAN
+--------- --------- --- ----------
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    UNDO      NO  LOCAL
+ONLINE    TEMPORARY NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+ONLINE    PERMANENT NO  LOCAL
+
+STATUS    CONTENTS  FOR EXTENT_MAN
+--------- --------- --- ----------
+ONLINE    PERMANENT NO  LOCAL
+
+12 rows selected.
+
+SQL> select TABLESPACE_NAME,ALLOCATION_TYPE,PLUGGED_IN,SEGMENT_SPACE_MANAGEMENT from dba_tablespaces;
+
+TABLESPACE_NAME                ALLOCATIO PLU SEGMEN
+------------------------------ --------- --- ------
+SYSTEM                         SYSTEM    NO  MANUAL
+UNDOTBS01                      SYSTEM    NO  MANUAL
+TEMP                           UNIFORM   NO  MANUAL
+CWMLITE                        SYSTEM    NO  AUTO
+DRSYS                          SYSTEM    NO  AUTO
+INDX                           SYSTEM    NO  AUTO
+ODM                            SYSTEM    NO  AUTO
+TOOLS                          SYSTEM    NO  AUTO
+USERS                          SYSTEM    NO  AUTO
+XDB                            SYSTEM    NO  AUTO
+CDM_DATA                       UNIFORM   NO  AUTO
+
+TABLESPACE_NAME                ALLOCATIO PLU SEGMEN
+------------------------------ --------- --- ------
+CDM_INDEX                      UNIFORM   NO  AUTO
+
+12 rows selected.
+
+
+SQL> select TABLESPACE_NAME,DEF_TAB_COMPRESSION,BLOCK_SIZE from dba_tablespaces;       
+
+TABLESPACE_NAME                DEF_TAB_ BLOCK_SIZE
+------------------------------ -------- ----------
+SYSTEM                         DISABLED       8192
+UNDOTBS01                      DISABLED       8192
+TEMP                           DISABLED       8192
+CWMLITE                        DISABLED       8192
+DRSYS                          DISABLED       8192
+INDX                           DISABLED       8192
+ODM                            DISABLED       8192
+TOOLS                          DISABLED       8192
+USERS                          DISABLED       8192
+XDB                            DISABLED       8192
+CDM_DATA                       DISABLED       8192
+
+TABLESPACE_NAME                DEF_TAB_ BLOCK_SIZE
+------------------------------ -------- ----------
+CDM_INDEX                      DISABLED       8192
+
+12 rows selected.
+
+
+!!Ver el espacio libre que queda en un tablespace(MB)
+
+SQL> SELECT tablespace_name,ROUND(sum(bytes)/1024/1024,0) FROM dba_free_space WHERE tablespace_name NOT LIKE 'TEMP%' GROUP BY tablespace_name;
+
+TABLESPACE_NAME                ROUND(SUM(BYTES)/1024/1024,0)
+------------------------------ -----------------------------
+CDM_DATA                                                7978
+CDM_INDEX                                               5999
+CWMLITE                                                    2
+DRSYS                                                     10
+INDX                                                      25
+ODM                                                       11
+SYSTEM                                                    11
+TOOLS                                                     10
+UNDOTBS01                                               1122
+USERS                                                     24
+XDB                                                        3
+
+11 rows selected.
+
+!!Ver el espacio total en un tablespace(MB)
+
+SQL> SELECT tablespace_name,ROUND(sum(bytes)/1024/1024,0) FROM dba_data_files b WHERE tablespace_name NOT LIKE 'TEMP%' GROUP BY b.tablespace_name;
+
+TABLESPACE_NAME                ROUND(SUM(BYTES)/1024/1024,0)
+------------------------------ -----------------------------
+CDM_DATA                                               12000
+CDM_INDEX                                               6000
+CWMLITE                                                   20
+DRSYS                                                     20
+INDX                                                      25
+ODM                                                       20
+SYSTEM                                                   430
+TOOLS                                                     10
+UNDOTBS01                                               1400
+USERS                                                     25
+XDB                                                       47
+
+11 rows selected.
+
+!!VER EL TAMAÑO DE LOS TABLESPACE Y EL ESPACIO UTILIZADO
+
+SQL> SELECT tablespace_name, round(BYTES/1024/1024,0) tamaqo, round(user_BYTES/1024/1024,0) tamaqo_Usado FROM dba_data_files b WHERE tablespace_name NOT LIKE 'TEMP%';
+
+TABLESPACE_NAME                    TAMAQO TAMAQO_USADO
+------------------------------ ---------- ------------
+SYSTEM                                430          430
+UNDOTBS01                            1400         1400
+CWMLITE                                20           20
+DRSYS                                  20           20
+INDX                                   25           25
+ODM                                    20           20
+TOOLS                                  10           10
+USERS                                  25           25
+XDB                                    47           47
+CDM_DATA                            12000        12000
+CDM_INDEX                            6000         6000
+
+11 rows selected.
+
+!! BASE DE DATOS RATEPRD
+SQL>  SELECT tablespace_name,ROUND(sum(bytes)/1024/1024,0) FROM dba_free_space WHERE tablespace_name NOT LIKE 'TEMP%' GROUP BY tablespace_name;   
+                                                                                                                                                  
+TABLESPACE_NAME                ROUND(SUM(BYTES)/1024/1024,0)                                                                                      
+------------------------------ -----------------------------                                                                                      
+CWMLITE                                                   11                                                                                      
+DRSYS                                                     10                                                                                      
+INDX                                                      25                                                                                      
+ODM                                                       11                                                                                      
+RATING_DATA                                             6957                                                                                      
+RATING_INDEX                                            2969                                                                                      
+SYSTEM                                                     3                                                                                      
+TOOLS                                                     10                                                                                      
+UNDOTBS01                                                389                                                                                      
+USERS                                                     25                                                                                      
+XDB                                                        0                                                                                      
+                                                                                                                                                  
+11 rows selected.                                                                                                                                 
+                                                                                                                                                  
+SQL> SELECT tablespace_name,ROUND(sum(bytes)/1024/1024,0) FROM dba_data_files b WHERE tablespace_name NOT LIKE 'TEMP%' GROUP BY b.tablespace_name;
+                                                                                                                                                  
+TABLESPACE_NAME                ROUND(SUM(BYTES)/1024/1024,0)                                                                                      
+------------------------------ -----------------------------                                                                                      
+CWMLITE                                                   20                                                                                      
+DRSYS                                                     20                                                                                      
+INDX                                                      25                                                                                      
+ODM                                                       20                                                                                      
+RATING_DATA                                             7000                                                                                      
+RATING_INDEX                                            3000                                                                                      
+SYSTEM                                                   410                                                                                      
+TOOLS                                                     10                                                                                      
+UNDOTBS01                                                400                                                                                      
+USERS                                                     25                                                                                      
+XDB                                                       38                                                                                      
+                                                                                                                                                  
+11 rows selected.                                                                                                                                 
+                                                                                                                                                  
+SQL>
+
