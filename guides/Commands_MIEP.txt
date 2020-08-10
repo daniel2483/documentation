@@ -1,0 +1,47 @@
+db1$hastatus -sum
+
+-- SYSTEM STATE
+-- System               State                Frozen              
+
+A  db1                  RUNNING              0                    
+A  db2                  RUNNING              0                    
+
+-- GROUP STATE
+-- Group           System               Probed     AutoDisabled    State          
+
+B  MIEP_MultiNIC   db1                  Y          N               ONLINE         
+B  MIEP_MultiNIC   db2                  Y          N               ONLINE         
+B  MIEP_MultiNIC_OM db1                  Y          N               ONLINE         
+B  MIEP_MultiNIC_OM db2                  Y          N               ONLINE         
+B  MIEPorasg       db1                  Y          N               ONLINE         
+B  MIEPorasg       db2                  Y          N               OFFLINE        
+B  MIEPsnmpsg      db1                  Y          N               ONLINE         
+B  MIEPsnmpsg      db2                  Y          N               OFFLINE        
+B  MIEPvvrgrp      db1                  Y          N               ONLINE         
+B  MIEPvvrgrp      db2                  Y          N               ONLINE         
+db1$
+
+
+Para detener VCS
+
+hastop –local 
+
+
+hastop -all –force 
+
+
+hacf -verify /etc/VRTSvcs/conf/config 
+
+
+hastart –force 
+
+
+The hagrp command is used to manage the start and stop of service groups. To start the MIEPorasg service group on system sunHa01_DB1, type the following command: 
+
+# hagrp -online MIEPorasg -sys sunHa01_DB1 
+
+To stop service group MIEPorasg running on system sunHa01_DB1, type the following command: 
+
+# hagrp -offline MIEPorasg -sys sunHa01_DB1 
+
+A service group can never be started if the system is disabled 
