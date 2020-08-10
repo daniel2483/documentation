@@ -1,0 +1,3 @@
+Para modulos de perl instalados
+
+sed -n -e "/head2/p" /usr/local/lib/perl/5.10.0/perllocal.pod | cut -dL -f2 | sort

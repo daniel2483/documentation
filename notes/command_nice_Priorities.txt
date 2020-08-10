@@ -1,0 +1,128 @@
+emmb:/# man nice
+Reformatting page.  Please Wait... done
+
+User Commands                                             nice(1)
+
+NAME
+     nice - invoke a command with an altered scheduling priority
+
+SYNOPSIS
+     /usr/bin/nice [-increment |  -n increment]   command  [argu-
+     ment...]
+
+     /usr/xpg4/bin/nice  [-increment  |  -n increment]    command
+     [argument...]
+
+  csh Builtin
+     nice [-increment | +increment]  [command]
+
+DESCRIPTION
+     The nice utility invokes command, requesting that it be  run
+     with a different system scheduling priority. The priocntl(1)
+     command is a more general interface to scheduler functions.
+
+     The invoking process (generally the user's shell) must be in
+     a scheduling class that supports nice.
+
+     If the C shell (see csh(1)) is used, the full  path  of  the
+     command  must be specified. Otherwise, the csh built-in ver-
+     sion of nice will be invoked. See csh Builtin below.
+
+  /usr/bin/nice
+     If nice  executes  commands  with  arguments,  it  uses  the
+     default shell /usr/bin/sh (see sh(1)).
+
+  /usr/xpg4/bin/nice
+     If  nice  executes  commands   with   arguments,   it   uses
+     /usr/xpg4/bin/sh (see ksh(1)).
+
+  csh Builtin
+     nice is also a csh built-in command with behavior  different
+     from the utility versions.  See csh(1) for description.
+
+OPTIONS
+     The following options are supported:
+
+     -increment | -n increment
+
+         increment is a positive or negative decimal integer that
+         has  the  same effect on the execution of the utility as
+         if the utility had called the nice() function  with  the
+         numeric  value  of  the  increment  option-argument. See
+         nice(2). nice() errors, other than EINVAL, are  ignored.
+         If not specified, an increment of 10 is assumed.
+
+         The super-user may run  commands  with  priority  higher
+         than normal by using a negative increment such as -10. A
+         negative increment assigned by an unprivileged  user  is
+
+SunOS 5.10          Last change: 23 Jan 2004                    1
+
+User Commands                                             nice(1)
+
+         ignored.
+
+OPERANDS
+     The following operands are supported:
+
+     command         The name of a command that is to be invoked.
+                     If command names any of the special built-in
+                     utilities   (see   shell_builtins(1)),   the
+                     results are undefined.
+
+     argument        Any string to be  supplied  as  an  argument
+                     when invoking command.
+
+ENVIRONMENT VARIABLES
+     See environ(5) for descriptions of the following environment
+     variables  that  affect the execution of nice: LANG, LC_ALL,
+     LC_CTYPE, LC_MESSAGES, PATH, and NLSPATH.
+
+EXIT STATUS
+     If command is invoked, the exit status of nice will  be  the
+     exit  status  of command. Otherwise, nice will exit with one
+     of the following values:
+
+     1-125    An error occurred.
+
+     126      command was found but could not be invoked.
+
+     127      command could not be found.
+
+ATTRIBUTES
+     See attributes(5) for descriptions of the  following  attri-
+     butes:
+
+  /usr/bin/nice
+
+SunOS 5.10          Last change: 23 Jan 2004                    2
+
+User Commands                                             nice(1)
+
+     ____________________________________________________________
+    |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
+    |_____________________________|_____________________________|
+    | Availability                | SUNWcsu                     |
+    |_____________________________|_____________________________|
+    | CSI                         | Enabled                     |
+    |_____________________________|_____________________________|
+
+  /usr/xpg4/bin/nice
+     ____________________________________________________________
+    |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
+    |_____________________________|_____________________________|
+    | Availability                | SUNWxcu4                    |
+    |_____________________________|_____________________________|
+    | CSI                         | Enabled                     |
+    |_____________________________|_____________________________|
+    | Interface Stability         | Standard                    |
+    |_____________________________|_____________________________|
+
+SEE ALSO
+     csh(1),    ksh(1),     nohup(1),     priocntl(1),     sh(1),
+     shell_builtins(1), nice(2), attributes(5), environ(5), stan-
+     dards(5)
+
+SunOS 5.10          Last change: 23 Jan 2004                    3
+
+emmb:/# 

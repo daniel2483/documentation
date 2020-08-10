@@ -1,0 +1,39 @@
+Uninstalling perl modules
+
+As you know, going into the build directory for a module and executing 
+"make uninstall" doesn't yet work for CPAN-installed modules :-)
+
+For most modules, there is a .packlist file that lists all of the files 
+that were installed by that module. Delete every file listed in the 
+.packlist, then delete the .packlist file itself, and you've uninstalled 
+the module.
+
+
+
+
+Why would you want to do such a thing?  Just take the
+path to this module out of @INC by editing your
+.profile and or PERL5LIB variable, unless you think
+its corrupt.
+
+perl -le 'print join("\n", @INC);'
+
+If you really want to remove this module do a backup
+first, tar cvf module.tar /path/to/module, 
+then rm -rf /path/to/module
+
+Here is a script to see what is installed.
+
+##-- Show me all installed Modules --##
+use File::Find 'find';
+use File::Spec::Functions;
+
+my $i=0;
+print "Your installed modules on $^O are:\n";
+print "-" x 38,"\n";
+find { wanted => sub { print ++$i, "\t$_\n" if
+/\.pm\z/ },
+    no_chdir => 1},
+@INC;
+ 
+Hope that helps! :)
