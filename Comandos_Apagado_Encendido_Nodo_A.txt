@@ -1,0 +1,71 @@
+Procedimiento para Apagar:
+
+1. Levantar GUI Veritas Cluster y EMM
+
+2. Nodo A: hagrp -switch Oracle1 -to emmb
+
+3. Nodo B: hastatus -sum | grep Oracle1   - para ver que quede online
+
+4.	Revisión de GUI EMM y Veritas Cluster.
+
+5. Nodo A: hagrp -switch SENTINELgrp -to emmb
+
+6. Nodo B: hastatus -sum | grep SENTINELgrp
+
+7.	Revisión de GUI EMM y Veritas Cluster.
+
+8. Nodo A: hagrp -switch Mediator1 -to emmb
+
+9. Nodo B: hastatus -sum | grep Mediator1
+
+10.	Revisión de GUI EMM y Veritas Cluster.
+
+11. Nodo A: hastop -local
+
+12. Nodo A: init 5
+
+13. Mantenimiento de Hardware y limpieza.
+
+
+Procedimiento para encender:
+
+Nodo A:
+
+
+1. Nodo A: Por alom: power on o botón en sitio.
+
+2. Nodo A: firmware updating
+
+3. Nodo A: hastart
+
+4. Levantar GUI Veritas Cluster y EMM
+
+5. Nodo B: hagrp -switch Oracle1 -to emma
+
+6. Nodo A: hastatus -sum | grep Oracle1
+
+7. 	Revisión de GUI EMM y Veritas Cluster.
+
+8. Nodo B: hagrp -switch SENTINELgrp -to emma
+
+9. Nodo A: hastatus -sum | grep SENTINELgrp
+
+10. 	Revisión de GUI EMM y Veritas Cluster.
+
+11. Nodo B: hagrp -switch Mediator1 -to emma
+
+12. Nodo A: hastatus -sum | grep Mediator1
+
+13. 	Revisión de GUI EMM y Veritas Cluster.
+
+
+
+emma:/# prtdiag -v | grep OBP
+OBP 4.30.0 2008/12/11 12:15
+emma:/# 
+
+emmb:/# prtdiag -v | grep OBP
+OBP 4.30.0 2008/12/11 12:15
+emmb:/# 
+
+
