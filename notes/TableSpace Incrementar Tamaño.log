@@ -1,0 +1,588 @@
+SQL> select file_name
+  2  from dba_data_files
+  3  where tablespace_name='INDX_HISTORY_GDM1';
+
+FILE_NAME
+--------------------------------------------------------------------------------
+/database/OTADB2/index/INDX_HISTORY_GDM_00.dbf
+
+SQL> alter tablespace INDX_HISTORY_GDM1
+  2  add datafile ‘/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf’
+  3  size 200M;
+add datafile ‘/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf’
+             *
+ERROR at line 2:
+ORA-02236: invalid file name
+
+
+SQL> alter tablespace INDX_HISTORY_GDM1
+  2  add datafile ‘/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf’
+  3  size 200M;
+add datafile ‘/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf’
+             *
+ERROR at line 2:
+ORA-02236: invalid file name
+
+
+SQL> alter tablespace INDX_HISTORY_GDM1
+  2  add datafile '/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf'
+  3  size 200M;
+alter tablespace INDX_HISTORY_GDM1
+*
+ERROR at line 1:
+ORA-01537: cannot add file '/database/OTADB2/index/INDX_HISTORY_GDM_01.dbf' -
+file already part of database
+
+
+SQL> alter tablespace INDX_HISTORY_GDM1
+  2  add datafile '/database/OTADB2/index/INDX_HISTORY_GDM_02.dbf'
+  3  size 200M;
+
+Tablespace altered.
+
+SQL> export ORACLE_SID=REPOSI
+SP2-0734: unknown command beginning "export ORA..." - rest of line ignored.
+SQL> exit
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ export ORACLE_SID=REPOSI ; sqlplus "/ as sysdba" @Table_space.sql
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:00:20 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+DATA_APPLI_RCA                 ONLINE                1,408.00               18.00        1,390.00     1.28 [--------------------]
+DATA_CAPABILITY_SRM            ONLINE                  317.91               12.91          305.00     4.06 [--------------------]
+DATA_CFM_RCA                   ONLINE                2,048.00              698.00        1,350.00    34.08 [XXXXXX--------------]
+DATA_CONTENT_ARM               ONLINE                1,854.38               14.38        1,840.00      .78 [--------------------]
+DATA_CORE_DEVICE_GDM1          ONLINE                  155.60                5.41          150.19     3.48 [--------------------]
+DATA_DEVICE_SRM                ONLINE                  459.18                9.18          450.00     2.00 [--------------------]
+DATA_FILE_RCA_P_00             ONLINE                3,840.00               60.00        3,780.00     1.56 [--------------------]
+DATA_GDM1                      ONLINE                1,024.00              112.19          911.81    10.96 [XX------------------]
+DATA_GROUP_GDM1_00             ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_GROUP_GDM1_P_00           ONLINE                  529.83                1.83          528.00      .35 [--------------------]
+DATA_HISTORY_GCDT1             ONLINE                  176.62              104.62           72.00    59.23 [XXXXXXXXXXX---------]
+DATA_HISTORY_GDM1              ONLINE                  206.05              154.05           52.00    74.76 [XXXXXXXXXXXXXX------]
+DATA_HISTORY_OUT_SRM           ONLINE                  100.00               40.00           60.00    40.00 [XXXXXXXX------------]
+DATA_HISTORY_P10_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P11_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P12_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P1_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P2_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P3_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P4_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P5_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P6_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P7_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P8_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P9_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_IMEI_GCDT1                ONLINE                  706.80               68.80          638.00     9.73 [X-------------------]
+DATA_IMEI_SWAP_GDM1            ONLINE                  441.52                 .27          441.25      .06 [--------------------]
+DATA_JAVA_RCA                  ONLINE                1,271.57               31.57        1,240.00     2.48 [--------------------]
+DATA_LAST_EVENT_GCDT1          ONLINE                  529.83               66.83          463.00    12.61 [XX------------------]
+DATA_LAST_EVENT_GDM1           ONLINE                3,090.63              152.63        2,938.00     4.94 [--------------------]
+DATA_MB_CSD_MBRCA              ONLINE                1,536.00              456.00        1,080.00    29.69 [XXXXX---------------]
+DATA_MB_KEY_MBRCA              ONLINE                3,840.00              810.00        3,030.00    21.09 [XXXX----------------]
+DATA_MB_REP_MBRCA              ONLINE                  128.00                 .44          127.56      .34 [--------------------]
+DATA_MB_SYNC_MBRCA             ONLINE                1,536.00              326.00        1,210.00    21.22 [XXXX----------------]
+DATA_MOBILES_GDM1              ONLINE               10,240.00                 .88       10,239.13      .01 [--------------------]
+DATA_OPTION_SRM                ONLINE                  370.88                5.88          365.00     1.59 [--------------------]
+DATA_REF_ARM                   ONLINE                  200.00                1.25          198.75      .63 [--------------------]
+DATA_REF_SRM                   ONLINE                  100.00                1.31           98.69     1.31 [--------------------]
+DATA_REP_RCA                   ONLINE                  200.00                 .94          199.06      .47 [--------------------]
+DATA_SERVICE_GDM1_00           ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_SERVICE_GDM1_P_00         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_01         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_02         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_03         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_04         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_05         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_06         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_07         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_08         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_09         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_10         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_11         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_12         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_13         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_14         ONLINE                3,826.48               13.48        3,813.00      .35 [--------------------]
+DATA_SUBSCRIPTION_SRM          ONLINE                  406.20               36.20          370.00     8.91 [X-------------------]
+DATA_SWAP_RCA_P_00             ONLINE                  100.00               20.00           80.00    20.00 [XXXX----------------]
+INDX_APPLI_RCA                 ONLINE                  964.72               24.72          940.00     2.56 [--------------------]
+INDX_CAPABILITY_SRM            ONLINE                  366.66                4.66          362.00     1.27 [--------------------]
+INDX_CFM_RCA                   ONLINE                2,000.00            1,690.00          310.00    84.50 [XXXXXXXXXXXXXXXX----]
+INDX_CONTENT_ARM               ONLINE                  685.46                5.46          680.00      .80 [--------------------]
+INDX_CORE_DEVICE_GDM1          ONLINE                  164.15               10.96          153.19     6.68 [X-------------------]
+INDX_DEVICE_SRM                ONLINE                  708.96                4.96          704.00      .70 [--------------------]
+INDX_FILE_RCA                  ONLINE                1,024.00               19.00        1,005.00     1.86 [--------------------]
+INDX_FILE_RCA_P_00             ONLINE                  271.20               21.20          250.00     7.82 [X-------------------]
+INDX_GDM1                      ONLINE                  323.63               75.25          248.38    23.25 [XXXX----------------]
+INDX_GROUP_GDM1                ONLINE                  433.37                1.37          432.00      .32 [--------------------]
+INDX_GROUP_GDM1_P_00           ONLINE                  772.89                1.89          771.00      .24 [--------------------]
+INDX_HISTORY_GCDT1             ONLINE                2,351.51              367.51        1,984.00    15.63 [XXX-----------------]
+INDX_HISTORY_GDM1              ONLINE                  568.65              371.65          197.00    65.36 [XXXXXXXXXXXXX-------]
+INDX_HISTORY_OUT_SRM           ONLINE                   50.00                1.00           49.00     2.00 [--------------------]
+INDX_HISTORY_P10_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P11_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P12_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P1_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P2_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P3_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P4_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P5_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P6_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P7_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P8_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P9_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_IMEI_GCDT1                ONLINE                  280.48               81.48          199.00    29.05 [XXXXX---------------]
+INDX_IMEI_SWAP_GDM1            ONLINE                  352.55                 .17          352.38      .05 [--------------------]
+INDX_JAVA_RCA                  ONLINE                  803.29               48.29          755.00     6.01 [X-------------------]
+INDX_LAST_EVENT_GCDT1          ONLINE                  910.48              258.48          652.00    28.39 [XXXXX---------------]
+INDX_LAST_EVENT_GDM1           ONLINE                5,529.54              386.54        5,143.00     6.99 [X-------------------]
+INDX_MB_CSD_MBRCA              ONLINE                  768.00              578.00          190.00    75.26 [XXXXXXXXXXXXXXX-----]
+INDX_MB_KEY_MBRCA              ONLINE                1,408.00            1,158.00          250.00    82.24 [XXXXXXXXXXXXXXXX----]
+INDX_MB_SYNC_MBRCA             ONLINE                1,536.00              766.00          770.00    49.87 [XXXXXXXXX-----------]
+INDX_MOBILES_GDM1              ONLINE                6,656.00                 .94        6,655.06      .01 [--------------------]
+INDX_OPTION_SRM                ONLINE                  341.16                2.16          339.00      .63 [--------------------]
+INDX_REF_ARM                   ONLINE                  100.00                1.44           98.56     1.44 [--------------------]
+INDX_REF_SRM                   ONLINE                   50.00                2.50           47.50     5.00 [X-------------------]
+INDX_REP_RCA                   ONLINE                  200.00                1.88          198.13      .94 [--------------------]
+INDX_SERVICE_GDM1              ONLINE                4,096.00              121.00        3,975.00     2.95 [--------------------]
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+INDX_SERVICE_GDM1_P_00         ONLINE                3,163.88               65.88        3,098.00     2.08 [--------------------]
+INDX_SERVICE_GDM1_P_01         ONLINE                3,163.88               66.88        3,097.00     2.11 [--------------------]
+INDX_SUBSCRIPTION_SRM          ONLINE                  527.69                6.69          521.00     1.27 [--------------------]
+INDX_SWAP_RCA_P_00             ONLINE                  100.00                4.00           96.00     4.00 [--------------------]
+LOB_FILE_RCA                   ONLINE                3,933.92                1.23        3,932.69      .03 [--------------------]
+LOB_GDM1                       ONLINE                7,867.84                3.84        7,864.00      .05 [--------------------]
+LOB_REF_ARM                    ONLINE                  200.00                 .69          199.31      .34 [--------------------]
+LOB_REP_RCA                    ONLINE                  200.00                 .31          199.69      .16 [--------------------]
+LOB_SWAP_RCA                   ONLINE                  400.00                 .44          399.56      .11 [--------------------]
+SYSAUX                         ONLINE                1,024.00              188.38          835.63    18.40 [XXX-----------------]
+SYSTEM                         ONLINE                1,024.00              365.94          658.06    35.74 [XXXXXXX-------------]
+TEMP                           TEMP                 10,240.00              805.00        9,435.00     7.86 [X-------------------]
+TOOL_OTA4G                     ONLINE                  500.00              143.81          356.19    28.76 [XXXXX---------------]
+UNDO                           ONLINE                4,096.00            4,096.00             .00   100.00 [XXXXXXXXXXXXXXXXXXXX]
+USERS                          ONLINE                    5.00                 .56            4.44    11.25 [XX------------------]
+USER_GCDT1                     ONLINE                   10.00                 .19            9.81     1.88 [--------------------]
+USER_GDM1                      ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_MBRCA                     ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_RCA                       ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+WEBLOTECH                      ONLINE                1,024.00                 .31        1,023.69      .03 [--------------------]
+                                          ------------------- ------------------- ---------------
+sum                                                176,095.68           15,403.18      160,692.50
+
+117 rows selected.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ sqlplus "/ as sysdba"
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:18:18 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+SQL> select file_name
+  2  from dba_data_files
+  3  where tablespace_name='UNDO';
+
+FILE_NAME
+--------------------------------------------------------------------------------
+/database/OTADB2/undo/UNDO_0.dbf
+/database/OTADB2/undo/UNDO_1.dbf
+
+SQL> alter tablespace UNDO
+  2  add datafile '/database/OTADB2/undo/UNDO_2.dbf'
+  3  size 500M;
+
+Tablespace altered.
+
+SQL> exit
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ export ORACLE_SID=REPOSI ; sqlplus "/ as sysdba" @Table_space.sql
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:20:03 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+DATA_APPLI_RCA                 ONLINE                1,408.00               18.00        1,390.00     1.28 [--------------------]
+DATA_CAPABILITY_SRM            ONLINE                  317.91               12.91          305.00     4.06 [--------------------]
+DATA_CFM_RCA                   ONLINE                2,048.00              698.00        1,350.00    34.08 [XXXXXX--------------]
+DATA_CONTENT_ARM               ONLINE                1,854.38               14.38        1,840.00      .78 [--------------------]
+DATA_CORE_DEVICE_GDM1          ONLINE                  155.60                5.41          150.19     3.48 [--------------------]
+DATA_DEVICE_SRM                ONLINE                  459.18                9.18          450.00     2.00 [--------------------]
+DATA_FILE_RCA_P_00             ONLINE                3,840.00               60.00        3,780.00     1.56 [--------------------]
+DATA_GDM1                      ONLINE                1,024.00              112.19          911.81    10.96 [XX------------------]
+DATA_GROUP_GDM1_00             ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_GROUP_GDM1_P_00           ONLINE                  529.83                1.83          528.00      .35 [--------------------]
+DATA_HISTORY_GCDT1             ONLINE                  176.62              105.62           71.00    59.80 [XXXXXXXXXXX---------]
+DATA_HISTORY_GDM1              ONLINE                  206.05              154.05           52.00    74.76 [XXXXXXXXXXXXXX------]
+DATA_HISTORY_OUT_SRM           ONLINE                  100.00               40.00           60.00    40.00 [XXXXXXXX------------]
+DATA_HISTORY_P10_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P11_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P12_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P1_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P2_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P3_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P4_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P5_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P6_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P7_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P8_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P9_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_IMEI_GCDT1                ONLINE                  706.80               68.80          638.00     9.73 [X-------------------]
+DATA_IMEI_SWAP_GDM1            ONLINE                  441.52                 .27          441.25      .06 [--------------------]
+DATA_JAVA_RCA                  ONLINE                1,271.57               31.57        1,240.00     2.48 [--------------------]
+DATA_LAST_EVENT_GCDT1          ONLINE                  529.83               66.83          463.00    12.61 [XX------------------]
+DATA_LAST_EVENT_GDM1           ONLINE                3,090.63              152.63        2,938.00     4.94 [--------------------]
+DATA_MB_CSD_MBRCA              ONLINE                1,536.00              456.00        1,080.00    29.69 [XXXXX---------------]
+DATA_MB_KEY_MBRCA              ONLINE                3,840.00              810.00        3,030.00    21.09 [XXXX----------------]
+DATA_MB_REP_MBRCA              ONLINE                  128.00                 .44          127.56      .34 [--------------------]
+DATA_MB_SYNC_MBRCA             ONLINE                1,536.00              326.00        1,210.00    21.22 [XXXX----------------]
+DATA_MOBILES_GDM1              ONLINE               10,240.00                 .88       10,239.13      .01 [--------------------]
+DATA_OPTION_SRM                ONLINE                  370.88                5.88          365.00     1.59 [--------------------]
+DATA_REF_ARM                   ONLINE                  200.00                1.25          198.75      .63 [--------------------]
+DATA_REF_SRM                   ONLINE                  100.00                1.31           98.69     1.31 [--------------------]
+DATA_REP_RCA                   ONLINE                  200.00                 .94          199.06      .47 [--------------------]
+DATA_SERVICE_GDM1_00           ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_SERVICE_GDM1_P_00         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_01         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_02         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_03         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_04         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_05         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_06         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_07         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_08         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_09         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_10         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_11         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_12         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_13         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_14         ONLINE                3,826.48               13.48        3,813.00      .35 [--------------------]
+DATA_SUBSCRIPTION_SRM          ONLINE                  406.20               36.20          370.00     8.91 [X-------------------]
+DATA_SWAP_RCA_P_00             ONLINE                  100.00               20.00           80.00    20.00 [XXXX----------------]
+INDX_APPLI_RCA                 ONLINE                  964.72               24.72          940.00     2.56 [--------------------]
+INDX_CAPABILITY_SRM            ONLINE                  366.66                4.66          362.00     1.27 [--------------------]
+INDX_CFM_RCA                   ONLINE                2,000.00            1,690.00          310.00    84.50 [XXXXXXXXXXXXXXXX----]
+INDX_CONTENT_ARM               ONLINE                  685.46                5.46          680.00      .80 [--------------------]
+INDX_CORE_DEVICE_GDM1          ONLINE                  164.15               10.96          153.19     6.68 [X-------------------]
+INDX_DEVICE_SRM                ONLINE                  708.96                4.96          704.00      .70 [--------------------]
+INDX_FILE_RCA                  ONLINE                1,024.00               19.00        1,005.00     1.86 [--------------------]
+INDX_FILE_RCA_P_00             ONLINE                  271.20               21.20          250.00     7.82 [X-------------------]
+INDX_GDM1                      ONLINE                  323.63               75.25          248.38    23.25 [XXXX----------------]
+INDX_GROUP_GDM1                ONLINE                  433.37                1.37          432.00      .32 [--------------------]
+INDX_GROUP_GDM1_P_00           ONLINE                  772.89                1.89          771.00      .24 [--------------------]
+INDX_HISTORY_GCDT1             ONLINE                2,351.51              367.51        1,984.00    15.63 [XXX-----------------]
+INDX_HISTORY_GDM1              ONLINE                  568.65              371.65          197.00    65.36 [XXXXXXXXXXXXX-------]
+INDX_HISTORY_OUT_SRM           ONLINE                   50.00                1.00           49.00     2.00 [--------------------]
+INDX_HISTORY_P10_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P11_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P12_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P1_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P2_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P3_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P4_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P5_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P6_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P7_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P8_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P9_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_IMEI_GCDT1                ONLINE                  280.48               81.48          199.00    29.05 [XXXXX---------------]
+INDX_IMEI_SWAP_GDM1            ONLINE                  352.55                 .17          352.38      .05 [--------------------]
+INDX_JAVA_RCA                  ONLINE                  803.29               48.29          755.00     6.01 [X-------------------]
+INDX_LAST_EVENT_GCDT1          ONLINE                  910.48              258.48          652.00    28.39 [XXXXX---------------]
+INDX_LAST_EVENT_GDM1           ONLINE                5,529.54              386.54        5,143.00     6.99 [X-------------------]
+INDX_MB_CSD_MBRCA              ONLINE                  768.00              578.00          190.00    75.26 [XXXXXXXXXXXXXXX-----]
+INDX_MB_KEY_MBRCA              ONLINE                1,408.00            1,158.00          250.00    82.24 [XXXXXXXXXXXXXXXX----]
+INDX_MB_SYNC_MBRCA             ONLINE                1,536.00              766.00          770.00    49.87 [XXXXXXXXX-----------]
+INDX_MOBILES_GDM1              ONLINE                6,656.00                 .94        6,655.06      .01 [--------------------]
+INDX_OPTION_SRM                ONLINE                  341.16                2.16          339.00      .63 [--------------------]
+INDX_REF_ARM                   ONLINE                  100.00                1.44           98.56     1.44 [--------------------]
+INDX_REF_SRM                   ONLINE                   50.00                2.50           47.50     5.00 [X-------------------]
+INDX_REP_RCA                   ONLINE                  200.00                1.88          198.13      .94 [--------------------]
+INDX_SERVICE_GDM1              ONLINE                4,096.00              121.00        3,975.00     2.95 [--------------------]
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+INDX_SERVICE_GDM1_P_00         ONLINE                3,163.88               65.88        3,098.00     2.08 [--------------------]
+INDX_SERVICE_GDM1_P_01         ONLINE                3,163.88               66.88        3,097.00     2.11 [--------------------]
+INDX_SUBSCRIPTION_SRM          ONLINE                  527.69                6.69          521.00     1.27 [--------------------]
+INDX_SWAP_RCA_P_00             ONLINE                  100.00                4.00           96.00     4.00 [--------------------]
+LOB_FILE_RCA                   ONLINE                3,933.92                1.23        3,932.69      .03 [--------------------]
+LOB_GDM1                       ONLINE                7,867.84                3.84        7,864.00      .05 [--------------------]
+LOB_REF_ARM                    ONLINE                  200.00                 .69          199.31      .34 [--------------------]
+LOB_REP_RCA                    ONLINE                  200.00                 .31          199.69      .16 [--------------------]
+LOB_SWAP_RCA                   ONLINE                  400.00                 .44          399.56      .11 [--------------------]
+SYSAUX                         ONLINE                1,024.00              188.75          835.25    18.43 [XXX-----------------]
+SYSTEM                         ONLINE                1,024.00              365.94          658.06    35.74 [XXXXXXX-------------]
+TEMP                           TEMP                 10,240.00              805.00        9,435.00     7.86 [X-------------------]
+TOOL_OTA4G                     ONLINE                  500.00              143.81          356.19    28.76 [XXXXX---------------]
+UNDO                           ONLINE                4,596.00            4,073.06          522.94    88.62 [XXXXXXXXXXXXXXXXX---]
+USERS                          ONLINE                    5.00                 .56            4.44    11.25 [XX------------------]
+USER_GCDT1                     ONLINE                   10.00                 .19            9.81     1.88 [--------------------]
+USER_GDM1                      ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_MBRCA                     ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_RCA                       ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+WEBLOTECH                      ONLINE                1,024.00                 .31        1,023.69      .03 [--------------------]
+                                          ------------------- ------------------- ---------------
+sum                                                176,595.68           15,381.62      161,214.06
+
+117 rows selected.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ sqlplus "/ as sysdba"
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:20:58 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+SQL> alter tablespace UNDO
+  2  add datafile '/database/OTADB2/undo/UNDO_2.dbf'
+  3  size 500M;
+alter tablespace UNDO
+*
+ERROR at line 1:
+ORA-01537: cannot add file '/database/OTADB2/undo/UNDO_2.dbf' - file already
+part of database
+
+
+SQL> alter tablespace UNDO
+  2  add datafile '/database/OTADB2/undo/UNDO_3.dbf'
+  3  size 500M;
+
+Tablespace altered.
+
+SQL> exit
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ export ORACLE_SID=REPOSI ; sqlplus "/ as sysdba" @Table_space.sql
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:22:21 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+DATA_APPLI_RCA                 ONLINE                1,408.00               18.00        1,390.00     1.28 [--------------------]
+DATA_CAPABILITY_SRM            ONLINE                  317.91               12.91          305.00     4.06 [--------------------]
+DATA_CFM_RCA                   ONLINE                2,048.00              698.00        1,350.00    34.08 [XXXXXX--------------]
+DATA_CONTENT_ARM               ONLINE                1,854.38               14.38        1,840.00      .78 [--------------------]
+DATA_CORE_DEVICE_GDM1          ONLINE                  155.60                5.41          150.19     3.48 [--------------------]
+DATA_DEVICE_SRM                ONLINE                  459.18                9.18          450.00     2.00 [--------------------]
+DATA_FILE_RCA_P_00             ONLINE                3,840.00               60.00        3,780.00     1.56 [--------------------]
+DATA_GDM1                      ONLINE                1,024.00              112.19          911.81    10.96 [XX------------------]
+DATA_GROUP_GDM1_00             ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_GROUP_GDM1_P_00           ONLINE                  529.83                1.83          528.00      .35 [--------------------]
+DATA_HISTORY_GCDT1             ONLINE                  176.62              105.62           71.00    59.80 [XXXXXXXXXXX---------]
+DATA_HISTORY_GDM1              ONLINE                  206.05              154.05           52.00    74.76 [XXXXXXXXXXXXXX------]
+DATA_HISTORY_OUT_SRM           ONLINE                  100.00               40.00           60.00    40.00 [XXXXXXXX------------]
+DATA_HISTORY_P10_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P11_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P12_SRM           ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P1_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P2_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P3_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P4_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P5_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P6_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P7_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P8_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_HISTORY_P9_SRM            ONLINE                  794.73               14.73          780.00     1.85 [--------------------]
+DATA_IMEI_GCDT1                ONLINE                  706.80               68.80          638.00     9.73 [X-------------------]
+DATA_IMEI_SWAP_GDM1            ONLINE                  441.52                 .27          441.25      .06 [--------------------]
+DATA_JAVA_RCA                  ONLINE                1,271.57               31.57        1,240.00     2.48 [--------------------]
+DATA_LAST_EVENT_GCDT1          ONLINE                  529.83               66.83          463.00    12.61 [XX------------------]
+DATA_LAST_EVENT_GDM1           ONLINE                3,090.63              152.63        2,938.00     4.94 [--------------------]
+DATA_MB_CSD_MBRCA              ONLINE                1,536.00              456.00        1,080.00    29.69 [XXXXX---------------]
+DATA_MB_KEY_MBRCA              ONLINE                3,840.00              810.00        3,030.00    21.09 [XXXX----------------]
+DATA_MB_REP_MBRCA              ONLINE                  128.00                 .44          127.56      .34 [--------------------]
+DATA_MB_SYNC_MBRCA             ONLINE                1,536.00              326.00        1,210.00    21.22 [XXXX----------------]
+DATA_MOBILES_GDM1              ONLINE               10,240.00                 .88       10,239.13      .01 [--------------------]
+DATA_OPTION_SRM                ONLINE                  370.88                5.88          365.00     1.59 [--------------------]
+DATA_REF_ARM                   ONLINE                  200.00                1.25          198.75      .63 [--------------------]
+DATA_REF_SRM                   ONLINE                  100.00                1.31           98.69     1.31 [--------------------]
+DATA_REP_RCA                   ONLINE                  200.00                 .94          199.06      .47 [--------------------]
+DATA_SERVICE_GDM1_00           ONLINE                  100.00                1.00           99.00     1.00 [--------------------]
+DATA_SERVICE_GDM1_P_00         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_01         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_02         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_03         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_04         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_05         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_06         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_07         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_08         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_09         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_10         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_11         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_12         ONLINE                3,826.48               20.48        3,806.00      .54 [--------------------]
+DATA_SERVICE_GDM1_P_13         ONLINE                3,826.48               14.48        3,812.00      .38 [--------------------]
+DATA_SERVICE_GDM1_P_14         ONLINE                3,826.48               13.48        3,813.00      .35 [--------------------]
+DATA_SUBSCRIPTION_SRM          ONLINE                  406.20               36.20          370.00     8.91 [X-------------------]
+DATA_SWAP_RCA_P_00             ONLINE                  100.00               20.00           80.00    20.00 [XXXX----------------]
+INDX_APPLI_RCA                 ONLINE                  964.72               24.72          940.00     2.56 [--------------------]
+INDX_CAPABILITY_SRM            ONLINE                  366.66                4.66          362.00     1.27 [--------------------]
+INDX_CFM_RCA                   ONLINE                2,000.00            1,690.00          310.00    84.50 [XXXXXXXXXXXXXXXX----]
+INDX_CONTENT_ARM               ONLINE                  685.46                5.46          680.00      .80 [--------------------]
+INDX_CORE_DEVICE_GDM1          ONLINE                  164.15               10.96          153.19     6.68 [X-------------------]
+INDX_DEVICE_SRM                ONLINE                  708.96                4.96          704.00      .70 [--------------------]
+INDX_FILE_RCA                  ONLINE                1,024.00               19.00        1,005.00     1.86 [--------------------]
+INDX_FILE_RCA_P_00             ONLINE                  271.20               21.20          250.00     7.82 [X-------------------]
+INDX_GDM1                      ONLINE                  323.63               75.25          248.38    23.25 [XXXX----------------]
+INDX_GROUP_GDM1                ONLINE                  433.37                1.37          432.00      .32 [--------------------]
+INDX_GROUP_GDM1_P_00           ONLINE                  772.89                1.89          771.00      .24 [--------------------]
+INDX_HISTORY_GCDT1             ONLINE                2,351.51              367.51        1,984.00    15.63 [XXX-----------------]
+INDX_HISTORY_GDM1              ONLINE                  568.65              371.65          197.00    65.36 [XXXXXXXXXXXXX-------]
+INDX_HISTORY_OUT_SRM           ONLINE                   50.00                1.00           49.00     2.00 [--------------------]
+INDX_HISTORY_P10_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P11_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P12_SRM           ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P1_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P2_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P3_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P4_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P5_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P6_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P7_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P8_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_HISTORY_P9_SRM            ONLINE                   76.48                2.48           74.00     3.24 [--------------------]
+INDX_IMEI_GCDT1                ONLINE                  280.48               81.48          199.00    29.05 [XXXXX---------------]
+INDX_IMEI_SWAP_GDM1            ONLINE                  352.55                 .17          352.38      .05 [--------------------]
+INDX_JAVA_RCA                  ONLINE                  803.29               48.29          755.00     6.01 [X-------------------]
+INDX_LAST_EVENT_GCDT1          ONLINE                  910.48              258.48          652.00    28.39 [XXXXX---------------]
+INDX_LAST_EVENT_GDM1           ONLINE                5,529.54              386.54        5,143.00     6.99 [X-------------------]
+INDX_MB_CSD_MBRCA              ONLINE                  768.00              578.00          190.00    75.26 [XXXXXXXXXXXXXXX-----]
+INDX_MB_KEY_MBRCA              ONLINE                1,408.00            1,158.00          250.00    82.24 [XXXXXXXXXXXXXXXX----]
+INDX_MB_SYNC_MBRCA             ONLINE                1,536.00              766.00          770.00    49.87 [XXXXXXXXX-----------]
+INDX_MOBILES_GDM1              ONLINE                6,656.00                 .94        6,655.06      .01 [--------------------]
+INDX_OPTION_SRM                ONLINE                  341.16                2.16          339.00      .63 [--------------------]
+INDX_REF_ARM                   ONLINE                  100.00                1.44           98.56     1.44 [--------------------]
+INDX_REF_SRM                   ONLINE                   50.00                2.50           47.50     5.00 [X-------------------]
+INDX_REP_RCA                   ONLINE                  200.00                1.88          198.13      .94 [--------------------]
+INDX_SERVICE_GDM1              ONLINE                4,096.00              121.00        3,975.00     2.95 [--------------------]
+
+TABLESPACE                     STATUS                TOTAL_MB             USED_MB         FREE_MB PCT_USED GRAPH (X=5%)
+------------------------------ ---------- ------------------- ------------------- --------------- -------- -------------------------
+INDX_SERVICE_GDM1_P_00         ONLINE                3,163.88               65.88        3,098.00     2.08 [--------------------]
+INDX_SERVICE_GDM1_P_01         ONLINE                3,163.88               66.88        3,097.00     2.11 [--------------------]
+INDX_SUBSCRIPTION_SRM          ONLINE                  527.69                6.69          521.00     1.27 [--------------------]
+INDX_SWAP_RCA_P_00             ONLINE                  100.00                4.00           96.00     4.00 [--------------------]
+LOB_FILE_RCA                   ONLINE                3,933.92                1.23        3,932.69      .03 [--------------------]
+LOB_GDM1                       ONLINE                7,867.84                3.84        7,864.00      .05 [--------------------]
+LOB_REF_ARM                    ONLINE                  200.00                 .69          199.31      .34 [--------------------]
+LOB_REP_RCA                    ONLINE                  200.00                 .31          199.69      .16 [--------------------]
+LOB_SWAP_RCA                   ONLINE                  400.00                 .44          399.56      .11 [--------------------]
+SYSAUX                         ONLINE                1,024.00              188.75          835.25    18.43 [XXX-----------------]
+SYSTEM                         ONLINE                1,024.00              365.94          658.06    35.74 [XXXXXXX-------------]
+TEMP                           TEMP                 10,240.00              805.00        9,435.00     7.86 [X-------------------]
+TOOL_OTA4G                     ONLINE                  500.00              143.81          356.19    28.76 [XXXXX---------------]
+UNDO                           ONLINE                5,096.00            4,073.13        1,022.88    79.93 [XXXXXXXXXXXXXXX-----]
+USERS                          ONLINE                    5.00                 .56            4.44    11.25 [XX------------------]
+USER_GCDT1                     ONLINE                   10.00                 .19            9.81     1.88 [--------------------]
+USER_GDM1                      ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_MBRCA                     ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+USER_RCA                       ONLINE                   10.00                 .06            9.94      .63 [--------------------]
+WEBLOTECH                      ONLINE                1,024.00                 .31        1,023.69      .03 [--------------------]
+                                          ------------------- ------------------- ---------------
+sum                                                177,095.68           15,381.68      161,714.00
+
+117 rows selected.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ sqlplus "/ as sysdba"
+
+SQL*Plus: Release 10.2.0.4.0 - Production on Fri Jul 29 12:37:35 2011
+
+Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+
+SQL> date
+SP2-0042: unknown command "date" - rest of line ignored.
+SQL> help
+
+ HELP
+ ----
+
+ Accesses this command line help system. Enter HELP INDEX or ? INDEX
+ for a list of topics. In iSQL*Plus, click the Help button to display
+ iSQL*Plus online help.
+ You can view SQL*Plus resources at http://otn.oracle.com/tech/sql_plus/
+ and the Oracle Database Library at http://otn.oracle.com/documentation/
+
+ HELP|? [topic]
+
+
+SQL> date help
+SP2-0042: unknown command "date help" - rest of line ignored.
+SQL> help date 
+SP2-0172: No HELP matching this topic was found.
+SQL> exit
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bit Production
+With the Partitioning, Data Mining and Real Application Testing options
+ora102@otasrv1 [~] $ date
+Fri Jul 29 12:39:09 CST 2011
+ora102@otasrv1 [~] $ date
+Fri Jul 29 13:00:52 CST 2011
+ora102@otasrv1 [~] $ date
+Fri Jul 29 13:38:04 CST 2011
+ora102@otasrv1 [~] $ date -s 13:46
+date: cannot set date: Operation not permitted
+Fri Jul 29 13:46:00 CST 2011
+ora102@otasrv1 [~] $ su -
+Password: 
+[root@otasrv1 ~]# date
+Fri Jul 29 13:38:34 CST 2011
+[root@otasrv1 ~]# date -s 13:47
+Fri Jul 29 13:47:00 CST 2011
+[root@otasrv1 ~]# date
+Fri Jul 29 13:47:11 CST 2011
+[root@otasrv1 ~]# exit
+logout
+ora102@otasrv1 [~] $ date
+Fri Jul 29 13:47:43 CST 2011
+ora102@otasrv1 [~] $ exit
+logout
+[root@otasrv1 ~]# exit
+logout
