@@ -1,0 +1,14 @@
+sed -n 's/.*manufacturer.*>\(.*\)..manufacturer.*name.*>\(.*\)..name>.*/\1,\2/p'
+
+sed -n -e 's/.*<id>\(.*\)<\/id>.*/\1/p' file.xml
+
+
+sed -n 's/.*<manufacturer.*>\(.*\)<\/manufacturer>/\1/p'
+
+sed -n 's/.*name.*>\(.*\)..*name.*>/\1/p'
+
+sed -n 's/.*manufacturer.*>\(.*\)..manufacturer.*name.*>\(.*\)..name>.*/\1,\2/p'
+
+
+
+sed -n 's/.*<manufacturer[^>]*>\(.*\)<\/manufacturer><name[^>]*>\([^<]*\)<\/name>.*/\1,\2/p'
