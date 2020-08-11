@@ -1,0 +1,94 @@
+SQL> create user alterdba identified by oracle
+  2  default tablespace inventory temporary tablespace temp
+  3  quota unlimited on inventory;
+
+User created.
+
+SQL> grant connect, resource to alterdba;
+
+Grant succeeded.
+
+SQL> conn sh/sh
+Connected.
+SQL> grant select on customers to alterdba;
+
+Grant succeeded.
+
+SQL> conn alterdba/oracle
+Connected.
+SQL> create table cust1 as
+  2  select * from sh.customers;
+
+Table created.
+
+SQL> 1
+  1* create table cust1 as
+SQL> c/cust1/&tabla
+  1* create table &tabla as
+SQL> r
+  1  create table &tabla as
+  2* select * from sh.customers
+Enter value for tabla: cust2
+old   1: create table &tabla as
+new   1: create table cust2 as
+
+Table created.
+
+SQL> r
+  1  create table &tabla as
+  2* select * from sh.customers
+Enter value for tabla: cust3
+old   1: create table &tabla as
+new   1: create table cust3 as
+
+Table created.
+
+SQL> r
+  1  create table &tabla as
+  2* select * from sh.customers
+Enter value for tabla: cust4
+old   1: create table &tabla as
+new   1: create table cust4 as
+select * from sh.customers
+                 *
+ERROR at line 2:
+ORA-01652: unable to extend temp segment by 128 in tablespace INVENTORY 
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> conn sys as sysdba
+Connected.
+
+SQL> r
+  1  alter tablespace inventory
+  2* add datafile '/u01/app/oracle/oradata/ORCL/datafile/inventory02.dbf' size 10m
+
+Tablespace altered.
+
+SQL> conn alterdba/oracle
+Connected.
+SQL> select * from cat;
+
+TABLE_NAME                     TABLE_TYPE                                       
+------------------------------ -----------                                      
+CUST2                          TABLE                                            
+CUST3                          TABLE                                            
+CUST1                          TABLE                                            
+
+SQL> create table cust4 as select * from cust3;
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> conn sys/oracle as sysdba
+SQL> select tablespace_name, sum(bytes)/1024/1024 Mb
+     from dba_free_space
+     group by tablespace_name;
+
+SQL> spool off

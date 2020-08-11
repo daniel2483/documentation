@@ -1,0 +1,75 @@
+
+!CREAR UNA TABLA CON CIERTAS VARAS
+CREATE TABLE "INVENTORY"."PRODUCT_MASTER" ( "PRODUCT_ID" NUMBER(7), "PRODUCT_NAME" VARCHAR2(50) NOT NULL , "CODE" VARCHAR2(10) NOT NULL , "REORDER_THRESHOLD" NUMBER(5), "COST" NUMBER(5, 2), "PRICE" NUMBER(5, 2), CONSTRAINT "PK_INV" PRIMARY KEY ("PRODUCT_ID") VALIDATE , CONSTRAINT "CHK_REORDER" CHECK (REORDER_THRESHOLD > 0) VALIDATE )
+
+!CREAR UNA TABLA A PARTIR DE OTRA
+CREATE TABLE "INVENTORY"."OBSOLETE_PRODUCTS" AS SELECT PRODUCT_ID,PRODUCT_NAME,CODE,COST,PRICE FROM INVENTORY.PRODUCT_MASTER
+
+CREATE TABLE CUST1 AS SELECT * FROM SH.CUSTOMERS
+
+!CREAR UN INDEX PARA UNA TABLA
+CREATE INDEX "INVENTORY"."OBS_CODE" ON "INVENTORY"."OBSOLETE_PRODUCTS" ("CODE")
+
+!crear un index combinado
+create index inventory.poh_prod_id_qty on INVENTORY.product_on_hand(product_id,quantity);
+
+!AGREGAR UN PAR DE COLUMNAS
+ALTER TABLE "INVENTORY"."PRODUCT_MASTER" ADD ( "PRIMARY_SOURCE" VARCHAR2(50), "SECONDARY_SOURCE" VARCHAR2(50)) 
+!VOLARSE UNA TABLA Y TODAS LAS VARAS
+DROP TABLE "INVENTORY"."OBSOLETE_PRODUCTS" CASCADE CONSTRAINTS
+!CREAR UNA VISTA
+CREATE VIEW "INVENTORY"."WAREHOUSE_VW" AS SELECT PRODUCT_NAME, QUANTITY,WAREHOUSE_CITY FROM PRODUCT_MASTER PM, PRODUCT_ON_HAND POH WHERE PM.PRODUCT_ID=POH.PRODUCT_ID 
+CREATE INDEX "INVENTORY"."CODE_FUNC" ON "INVENTORY"."PRODUCT_MASTER" (UPPER(SUBSTR(CODE,5,2))
+
+!crear user
+create user ALTERDBA IDENTIFIED BY "ORACLE" default tablespace INVENTORY profile default account unlock;
+GRANT CONNECT TO ALTERDBA;#permiso de conectarse
+GRANT RESOURCE TO ALTERDBA;#todos los permisos
+!AUMENTAR EL TABLESPACE
+ alter TABLESPACE INVENTORY ADD DATAFILE '/u01/app/oracle/oradata/ORCL/datafile/inventory02.dbf' size 12M
+
+!ver espacio libre en los tablespace
+select tablespace_name, sum(bytes)/1048576 MB from dba_free_space group by tablespace_name; 
+!ver users
+select * from dba_users where username='SH';
+
+!conflicto de blocking
+ALTER SYSTEM KILL SESSION '139,4081' IMMEDIATE
+
+!modificar tablespace del undo
+ALTER DATABASE DATAFILE '/u01/app/oracle/oradata/ORCL/datafile/o1_mf_undotbs1_6polt8z4_.dbf' RESIZE 100M
+ALTER DATABASE DATAFILE '/u01/app/oracle/oradata/ORCL/datafile/o1_mf_undotbs1_6polt8z4_.dbf' AUTOEXTEND OFF
+
+!hacer auditoria XML
+ALTER SYSTEM SET audit_trail = "XML" SCOPE=SPFILE#se tiene despues q reiniciar la DB
+!para activar
+AUDIT DELETE, INSERT, UPDATE ON HR.JOBS BY SESSION
+!para desactivar
+NOAUDIT DELETE ON HR.JOBS
+NOAUDIT INSERT ON HR.JOBS
+NOAUDIT UPDATE ON HR.JOBS
+ALTER SYSTEM SET audit_trail = "NONE" SCOPE=SPFILE#se tiene despues q reiniciar la DB
+
+!ver el status de un index en un schema
+select index_name, table_name, status from user_indexes where status <> 'valid';
+
+!hacer un archivo log extra para recovery
+ALTER SYSTEM SET log_archive_dest_1 = "LOCATION=/u01/app/oracle/archive/ OPTIONAL REOPEN=300" SCOPE=BOTH
+ALTER SYSTEM SET log_archive_dest_10 = "LOCATION=USE_DB_RECOVERY_FILE_DEST OPTIONAL REOPEN=300" SCOPE=BOTH
+
+!ver el status
+ select status from v$instance;
+!para montarla
+SQL> alter database mount;
+
+!para correr un tail
+SQL> host tail -20 $ORACLE_BASE/admin/orcl/bdump/aler*
+
+!cantidad de archivos
+select count(*) from hr.countries;
+
+!flash back a un estado anterior
+FLASHBACK TABLE HR.DEPARTMENTS2 TO SCN 745178
+
+
+
