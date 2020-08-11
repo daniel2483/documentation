@@ -29,7 +29,7 @@ print
 tcp        0      0 0.0.0.0:199             0.0.0.0:*               LISTEN
 
 
-
+service snmpd status
 
 service snmpd start
 

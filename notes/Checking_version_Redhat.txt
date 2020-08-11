@@ -1,0 +1,8 @@
+Ver version de Redhat
+
+cat /proc/version 
+cat /proc/cpuinfo
+cat /proc/meminfo
+
+
+cat /etc/redhat-release
