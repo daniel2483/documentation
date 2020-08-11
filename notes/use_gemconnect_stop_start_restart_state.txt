@@ -1,0 +1,31 @@
+You use the gemconnect script file to start, stop, restart, and view the status of Device
+Manager V5.0.
+The gemconnect script is installed in the %PLATFORM_HOME%/FRWK/bin directory. It
+can be run from anywhere.
+
+
+Run the script as follows:
+gemconnect [-options] [-options with args] {start|stop|restart|state|help}
+
+Note: Device Manager V5.0 may share the same platform with other LinqUs Over-The-Air Suite products; the script file starts and stops the entire platform.
+
+Table 1 - Stop and Start Commands
+
+Task Command Comment
+Start the platform %PLATFORM_HOME%/FRWK/bin/
+gemconnect start
+Stop the platform %PLATFORM_HOME%/FRWK/bin/
+gemconnect stop
+Restart the platform %PLATFORM_HOME%/FRWK/bin/
+gemconnect restart
+View the state of the
+platform
+%PLATFORM_HOME%/FRWK/bin/
+gemconnect state
+Displays the current status of
+all LinqUs Over-The-Air
+Suite products on the
+platform
+Get help %PLATFORM_HOME%/FRWK/bin/
+gemconnect help
+View help for the platform

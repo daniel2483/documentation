@@ -1,0 +1,25 @@
+Healthcheck ADD
+
+1. Checking space:
+
+	df -kh
+
+
+2. Checking cpu
+
+	mpstat
+
+3. Checking uptime
+
+	uptime
+
+4. Checking memory
+
+	vmstat -s
+	vmstat -a
+
+5. Checking routing Table
+
+	nestat -nr
+
+6. 

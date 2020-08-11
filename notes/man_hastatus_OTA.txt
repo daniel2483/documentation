@@ -1,0 +1,21 @@
+[root@otasrv2 gemaltobin]# hastatus -sum
+
+-- SYSTEM STATE
+-- System               State                Frozen              
+
+A  otasrv1              RUNNING              0                    
+A  otasrv2              RUNNING              0                    
+
+-- GROUP STATE
+-- Group           System               Probed     AutoDisabled    State          
+
+B  ClusterService  otasrv1              Y          N               ONLINE         
+B  ClusterService  otasrv2              Y          N               OFFLINE        
+B  sg_db           otasrv1              Y          N               ONLINE         
+B  sg_db           otasrv2              Y          N               OFFLINE        
+B  sg_network      otasrv1              Y          N               ONLINE         
+B  sg_network      otasrv2              Y          N               ONLINE         
+B  sg_ota          otasrv1              Y          N               OFFLINE        
+B  sg_ota          otasrv2              Y          N               ONLINE         
+B  sg_sumos        otasrv1              Y          N               ONLINE         
+B  sg_sumos        otasrv2              Y          N               OFFLINE 

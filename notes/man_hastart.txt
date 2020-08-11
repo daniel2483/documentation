@@ -1,0 +1,47 @@
+[root@otasrv1 ~]# man hastart
+HASTART(1M)                       VCS 5.0 MP3                      HASTART(1M)
+
+NAME
+       hastart - start the VCS server on the local system
+
+SYNOPSIS
+       hastart -onenode
+
+       hastart -help
+
+       hastart -v
+
+       hastart -version
+
+AVAILABILITY
+       VRTSvcs
+
+DESCRIPTION
+       The hastart command, without options, starts the VCS server and related processes on the local system. The VCS server and related processes then
+       automatically join the cluster.
+
+OPTIONS
+       -onenode
+              Use this option only to run VCS on a single system on which LLT and GAB are not installed. Do not use this option on a multisystem cluster.
+
+              If this option is specified, hastart forks off a process called GABSIM, and the VCS server connects to GABSIM instead of GAB.
+
+       -help  This option returns the usage of the hastart command.
+
+       -v     This option returns the version level of the software.
+
+       -version
+              This option returns expanded information about the software version.
+
+SEE ALSO
+       hasys(1M),
+
+       hastop(1M)
+
+COPYRIGHTS
+       Copyright (c) 2008 Symantec.
+
+       All rights reserved.
+
+                                  07/03/2008                       HASTART(1M)
+(END) 

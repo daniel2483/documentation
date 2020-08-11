@@ -1,0 +1,76 @@
+
+HASTOP(1M)                        VCS 5.0 MP3                       HASTOP(1M)
+
+NAME
+       hastop - stop the VCS server on one or more systems in a cluster
+
+SYNOPSIS
+       hastop -local [-force | -evacuate | -noautodisable]
+
+       hastop -local [-force | -evacuate -noautodisable]
+
+       hastop -sys system ... [-force | -evacuate | -noautodisable]
+
+       hastop -sys system ... [-force | -evacuate -noautodisable]
+
+       hastop -all [-force]
+
+       hastop [-help]
+
+AVAILABILITY
+       VRTSvcs
+
+DESCRIPTION
+       The hastop command stops the VCS server and related processes on all systems, the local system, or a specific system.
+
+       The value of the cluster attribute, EngineShutdown, specifies how the engine is to proceed when the hastop command is issued. Possible EngineShutdown
+       attribute values and their significance are:
+
+       ·  Enable - process all hastop commands (default behavior)
+
+       ·  Disable - reject all hastop commands
+
+       ·  DisableClusStop - do not process the hastop -all command, but process all other hastop commands
+
+       ·  PromptClusStop - prompt for user confirmation before running the hastop -all command, but process all others
+
+       ·  PromptLocal - prompt for user confirmation before processing the hastop -local command, but process all other hatstop commands
+
+       ·  PromptAlways - prompt for user confirmation before executing any hastop command
+
+       The EngineShutdown attribute value is not considered when the hastop command is issued with the -force option.
+
+OPTIONS
+       -local [-force | -evacuate -noautodisable]
+
+       -local [-force | -evacuate -noautodisable]
+              The -local option stops the VCS server on the system on which the command is issued. When the VCS server stops a system, the system’s service
+              groups are also stopped. The -force option stops the VCS server, but allows the service groups to continue running. The -evacuate option migrates
+              all groups to other systems, if possible. The -noautodisable option ensures that service groups that can run on the node for which hastop is
+              invoked are not autodisabled while VCS is stopped. The -noautodisable option can also be used with -evacuate option, but not with -force option.
+
+       -sys system ... [-force | -evacuate | -noautodisable]
+
+       -sys system ... [-force | -evacuate -noautodisable]
+              The -evacuate fails over the system’s active service groups to another system in the cluster, before the system is stopped. Otherwise, the
+              applications are taken off line. The -sys option stops the VCS server on the system specified. Multiple servers may be specified. The -force option
+              enables the service groups to continue running. The -noautodisable option ensures that service groups that can run on the node for which hastop is
+              invoked are not autodisabled while VCS is stopped. The -noautodisable option can also be used with -evacuate option, but not with -force option.
+
+       -all [-force]
+              Stop the VCS server on all systems in the cluster, and take all service groups offline. The -force option specifies that the VCS server stops on
+              all systems, but that service groups continue running.
+
+       [-help]
+              Display usage. Equivalent to using hastop without arguments.
+
+SEE ALSO
+       haconf(1M)
+
+COPYRIGHTS
+       Copyright (c) 2008 Symantec.
+
+       All rights reserved.
+
+                                  07/03/2008                        HASTOP(1M)
+[root@otasrv1 ~]# 

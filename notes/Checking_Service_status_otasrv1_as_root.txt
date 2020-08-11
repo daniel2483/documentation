@@ -1,0 +1,187 @@
+[root@otasrv1 ~]# service --status-all
+acpid (pid 9405) is running...
+amd is stopped
+anacron is stopped
+arpwatch is stopped
+atd (pid 12432) is running...
+auditd (pid 8447) is running...
+automount (pid 9385) is running...
+Avahi daemon is running
+Avahi DNS daemon is not running
+bgpd is stopped
+hcid (pid 9174) is running...
+sdpd (pid 9178) is running...
+capi not installed - No such file or directory (2)
+ccsd is stopped
+conmand is stopped
+Frequency scaling enabled using ondemand governor
+crond (pid 11653) is running...
+cupsd is stopped
+cups-config-daemon is obsolete
+cyrus-master is stopped
+dc_client is stopped
+dc_server is stopped
+dhcp6r is stopped
+dhcp6s is stopped
+dhcpd is stopped
+dhcrelay is stopped
+dnsmasq is stopped
+dovecot is stopped
+dund is stopped
+edac-util: Fatal: Unable to get EDAC data: Unable to find EDAC data in sysfs
+exim is stopped
+Usage: /etc/init.d/firstboot {start|stop}
+Usage: /etc/init.d/fmservice { start | stop }
+bmc-watchdog is stopped
+ipmidetectd is stopped
+GAB is loaded and configured
+gpm (pid 11634) is running...
+hald (pid 12581) is running...
+hidd (pid 9351) is running...
+hpiod (pid 10275) is running...
+hpssd (pid 10288) is running...
+httpd is stopped
+innconfval: hostname does not resolve or domain not set in inn.conf
+makedbz: hostname does not resolve or domain not set in inn.conf
+innd is stopped
+Firewall is stopped.
+ipmi_msghandler module not loaded.
+ipmi_si module not loaded.
+ipmi_devintf module not loaded.
+/dev/ipmi0 does not exist.
+could not open include filename: '/etc/ipsec.d/*.conf' (tried  and )
+IPsec running  - pluto pid: 10245
+pluto pid 10245
+No tunnels up
+Firewall is stopped.
+irattach is stopped
+irqbalance (pid 8489) is running...
+iscsid (pid 7882 7881) is running...
+iscsid (pid 7882 7881) is running...
+Current state of server : NOT RUNNING
+Checking jexec statuskadmind is stopped
+Kdump is not operational
+kpropd is stopped
+krb524d is stopped
+krb5kdc is stopped
+ktune stettings are not applied.
+slapd is stopped
+lisa is stopped
+LLT is loaded and configured
+mailman is stopped
+mcstransd is stopped
+mdadm is stopped
+mdmpd is stopped
+dbus-daemon (pid 24103 9163) is running...
+multipathd is stopped
+mysqld is stopped
+rndc: connect failed: 127.0.0.1#953: connection refused
+named is stopped
+usage: /etc/init.d/nbclient { start | stop | start_msg | stop_msg }
+usage: /etc/init.d/netbackup { start | stop | start_msg | stop_msg }
+usage: /etc/init.d/netbackup.08-12-10.10:18:00 { start | stop | start_msg | stop_msg }
+netconsole module not loaded
+Netlabel is stopped.
+netplugd is stopped
+Configured devices:
+lo bond0 bond1 eth0 eth1 eth2 eth3 eth4 eth5 eth6 eth7 eth8 eth9 eth10 eth11
+Currently active devices:
+lo eth0 eth1 eth2 eth4 eth5 eth6 bond0 bond1
+NetworkManager is stopped
+rpc.mountd is stopped
+nfsd is stopped
+rpc.rquotad is stopped
+rpc.statd (pid 8546) is running...
+nscd is stopped
+ntpd is stopped
+oddjobd is stopped
+aisexec is stopped
+Checking for openhpid daemon: 
+openhpid is stopped
+hpiSubagent is stopped
+Low level hardware support loaded:
+        none found
+
+Upper layer protocol modules:
+        ib_iser 
+
+User space access modules:
+        none found
+
+Connection management modules:
+        rdma_cm ib_cm iw_cm 
+
+opensm is stopped
+ospf6d is stopped
+ospfd is stopped
+pand is stopped
+pcscd (pid 9287) is running...
+pkcsslotd is stopped
+portmap (pid 8513) is running...
+master is stopped
+postmaster is stopped
+privoxy is stopped
+Process accounting is disabled.
+qdiskd is stopped
+Please refer to /var/log/messages
+radiusd is stopped
+rdisc is stopped
+ripd is stopped
+ripngd is stopped
+rpc.idmapd (pid 9127) is running...
+rpc.rstatd is stopped
+rsyslogd is stopped
+rklogd is stopped
+rpc.rusersd is stopped
+rwhod is stopped
+saslauthd is stopped
+Couldn't create file parser context for file "/etc/cluster/cluster.conf": No such file or directory at /usr/lib64/perl5/vendor_perl/5.8.8/x86_64-linux-thread-multi/XML/LibXML.pm line 435.
+ at /sbin/fence_scsi_test line 114
+sendmail is stopped
+setroubleshootd is stopped
+smartd (pid 13171) is running...
+smbd is stopped
+nmbd is stopped
+snmpd (pid 24949) is running...
+snmptrapd is stopped
+spamd is stopped
+squid is stopped
+openssh-daemon (pid  10571) is running...
+syslogd (pid 8474) is running...
+klogd (pid 8477) is running...
+tcsd is stopped
+CIM server is not running
+/etc/init.d/tomcat5 is stopped
+tux is stopped
+uuidd (pid 10707) is running...
+had (pid 14517) is running...
+Xvnc (pid 23999) is running...
+VxVM VVR INFO V-5-4-0 Usage: /etc/init.d/vras-vradmind.sh { start | stop | restart }
+vsftpd is stopped
+Unknown action 'status', use 'start' or 'stop'.
+Usage: /etc/init.d/vxdcli.sh { start | stop | restart }
+VxFEN module is not loaded
+VxVM VVR ERROR V-5-2-3930 Usage: /etc/init.d/vxnm-vxnetd { start | stop | restart }
+Usage: /etc/init.d/vxpal.actionagent { start | stop | restart }
+Usage:   /etc/init.d/vxpal.gridnode { start | stop }
+Usage:  /etc/init.d/vxpal.StorageAgent { start | stop }
+Symantec Private Branch Exchange is running
+VxVM VVR INFO V-5-4-0 Usage: /etc/init.d/vxrsyncd.sh { start | stop | restart }
+vxconfigd (pid 8690) is running...
+Starting vxvm-reconfig [  OK  ]
+VxVM vxvm-startvs ERROR V-5-2-4530 Volume Server license not present
+watchdog is stopped
+wdaemon is stopped
+Usage: /etc/init.d/webconsole { start | stop }
+winbindd is stopped
+wpa_supplicant is stopped
+xfs (pid 12411) is running...
+xinetd (pid 10599) is running...
+running
+ypbind is stopped
+rpc.yppasswdd is stopped
+ypserv is stopped
+rpc.ypxfrd is stopped
+yum-updatesd (pid 12598) is running...
+zebra is stopped
+[root@otasrv1 ~]# 
