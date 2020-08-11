@@ -1,0 +1,4 @@
+sed -n ’22p’
+
+donde 22 es el número de linea.
+

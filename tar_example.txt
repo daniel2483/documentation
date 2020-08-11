@@ -1,0 +1,3 @@
+ejemplo de TAR
+
+tar -cvf Project_GMAP.tar ProyectoGMAP/

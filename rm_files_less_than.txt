@@ -1,0 +1,1 @@
+find /home/develop/stp-output/statistics_TPS/ -name "STP_*" -size -3k -exec rm {};

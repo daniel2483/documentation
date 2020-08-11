@@ -1,0 +1,37 @@
+check SNMP is running:
+
+
+
+ps -aux | grep snmp
+
+print
+
+root   5512  0.0  2.3  5872 3012 pts/0    S    22:04   0:00 /usr/sbin/snmpd
+
+
+
+
+
+lsof -i :199
+
+print 
+
+COMMAND  PID USER   FD   TYPE DEVICE SIZE NODE NAME
+snmpd   5512 root    4u  IPv4  34432       TCP *:smux (LISTEN)
+
+
+
+
+netstat -natv | grep ':199'
+
+print
+
+tcp        0      0 0.0.0.0:199             0.0.0.0:*               LISTEN
+
+
+service snmpd status
+
+service snmpd start
+
+chkconfig --add snmpd
+

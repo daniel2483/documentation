@@ -1,0 +1,4 @@
+Reiniciar servicio ssh
+
+[dgps1]/lib/svc/method
+# ./sshd restart

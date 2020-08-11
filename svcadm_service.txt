@@ -1,0 +1,3 @@
+Habilitar/deshabilitar servicios
+[smpc1/etc/inet] svcadm disable sendmail
+[smpc1/etc/inet] svcadm enable sendmail

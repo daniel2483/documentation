@@ -1,0 +1,4 @@
+/usr/lib/mail/sh/check-hostname
+
+
+Revision de hostname para recomendaciones
