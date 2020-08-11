@@ -1,0 +1,144 @@
+1 TSU ---> 32 E1s
+3 AS
+2 Infra Servers
+1 Mass storage
+
+Maxima capacidad Con 4 TSU
+
+
+14 AS
+
+
+
+4 Storage 
+
+Soporta
+
+TSS200 32
+
+TSS100 8
+
+Aqui utiliza todo DC
+
+10 Tarjetas
+
+8 IOPS
+
+2 CPC
+
+IOP Card
+
+
+
+2 tarjetas fiber 2 puertos
+
+
+2 infraServers
+Infra1
+
+Infra2
+
+Squid - Web Proxy
+
+En caso de CR
+
+
+AS1  --------   As2(VIP)       AS3      Para el caso de Cr
+ |   Heartbeat     ^
+ |                 |
+ |		   |--------- Telco Server
+ |				TSS
+ |                               ^
+ |                               |
+ --------------------------------
+
+
+WebDav Extension de servidor apache encargado de hacer interface entre AS e IS
+
+
+   TSS---------->AS
+                 | 
+                 |
+                 |
+		IS
+
+
+
+Squid
+
+	web proxy
+
+	tiene 2 fx
+
+	2 niveles:  proxy servers(no es el caso de CR)
+		    entre el Telco Server y el AS para manejar 
+
+
+		AS----------->IS
+                ^ 
+             ---| 
+             |
+             |
+	TSS IOP
+            Squid
+
+Apache
+
+Esta instalado en IS, AS y SS
+
+JBoss AS   
+
+Es el corazon de toda la aplicación. Es basado en java 5.Toda la parte de aplicación es
+JBoss
+
+Tomcat
+
+Esun gateway entre Apache HTTPd Web Server  hacia JBoss AS
+
+Por lo que son 3 modulos de software
+
+
+TCattach --> CLI
+
+IOP SW Modiles and Fx
+
+1
+2  ----
+3  ---- VoiceXML Browser 
+4  ----
+5
+6
+7
+8
+9
+a
+b
+c
+
+
+Infra Server
+
+datos se encuentran en la siguiente ruta
+
+/usr/db/mail/repository/...
+
+Los prompts, anuncios, VXML files,
+
+Parametro  
+
+Redirect Reason: si vamos o sino vamos a enviar notificación.
+
+
+Voicemail
+
+por short code para CR
+
+Escenario
+
+A = Yo
+
+B = Serv
+
+C = Yo... esto es una recuperación.
+
+
