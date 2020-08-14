@@ -1,0 +1,11 @@
+"C:\Program Files\PuTTY\pscp.exe" -sftp -l hans -pw changeme C:\Access\sample.txt 192.168.1.6:/home/hans/
+
+C:\Users\edalroz\Desktop\TT\DB_Guatemala\Infra
+
+
+"C:\Program Files\PuTTY\pscp.exe" -sftp -l fecast -pw CastroDelValle C:\Users\edalroz\Desktop\TT\DB_Guatemala\Infra\data_revenue_infra_W40.txt 186.15.224.6:/
+
+"C:\Program Files\PuTTY\pscp.exe" -sftp -l fecast -pw Castr0DelValle C:\Users\edalroz\Desktop\TT\DB_Guatemala\Infra\data_revenue_infra_W40.txt 186.15.224.6:/home/fecast/Preventivos/in
+
+"C:\Program Files\PuTTY\pscp.exe" -sftp -l roiner -pw Charak222 C:\Users\edalroz\Desktop\TT\DB_Guatemala\Infra\data_revenue_infra_W40.txt 186.15.224.6:/home/fecast/Preventivos/in
+
