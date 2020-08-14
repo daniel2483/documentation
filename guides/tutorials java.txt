@@ -1,0 +1,12 @@
+http://www.scribd.com/doc/2700653/tutorial-basico-java
+
+http://netbeans-tutorial.blogspot.com/2007/10/netbeans-create-jframe-container.html
+
+http://www.javamexico.org/blogs/pipiripau/cargar_una_imagen_en_un_jpanel_en_netbeans  Imagen en JPanel
+
+http://grupos.emagister.com/debate/jpanel__netbeans_ayuda_porfavor_/6709-289456   JPanel
+
+http://download.oracle.com/javase/tutorial/uiswing/components/frame.html ingles
+
+http://www.javarmi.com/2010/09/jframe-tutorial-and-example/
+
