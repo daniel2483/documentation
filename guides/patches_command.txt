@@ -1,0 +1,23 @@
+Comandos para ver parches
+
+showrev -p
+
+showrev -p | more
+
+
+To look for the existence of a specific patch, you can pipe the output to grep and search for a patch-id pattern. If you require a specific patch like 113964-09, it is advisable to search for the base id 113964. The -09 following the base id is the version of the patch. To look for the existence and version of patch 113964, run:
+
+showrev -p | grep 113964
+
+
+
+By default, the files replaced by the application of a patch in Solaris are preserved to enable removal of the patch and restoration of the system to its pre-patched state.
+
+To remove a typical patch, such as 116012-01, run this command as superuser:
+
+patchrm 116012-01
+
+
+If you specified a non-default backout directory during the patchadd process, you must specify that during the patch removal. If the backout directory was /var/tmp/patch/backout, then the removal command would be:
+
+patchrm -B /var/tmp/patch/backout 116012-01

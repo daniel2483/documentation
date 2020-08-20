@@ -1,0 +1,4 @@
+find -size +10000c -size -20000c -print
+find por tamaño
+
+find / -size +100000 -print

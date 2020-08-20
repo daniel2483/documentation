@@ -1,0 +1,34 @@
+Formas de instalar modulos de PERL
+
+There are several ways to get Perl modules from CPAN installed on your unix-based system. Keep in mind that there is always more than one way to do it with Perl, and this is no different. Before embarking upon any installation, it's a good idea to download the module, unzip it and check out the documentation. In general, though, most modules are installed in the same method.
+The simplest way to get Perl modules installed is to use the CPAN module itself. If you are the system administrator and want to install the module system-wide, you'll need to switch to your root user. To fire up the CPAN module, just get to your command line and run this:
+
+ perl -MCPAN -e shell 
+
+If this is the first time you've run CPAN, it's going to ask you a series of questions - in most cases the default answer is fine. Once you find yourself staring at the cpan> command prompt, installing a module is as easy as install MODULE::NAME - for example, to install the HTML::Template module you'd type:
+
+ cpan> install HTML::Template 
+       install Net::SSH::Perl
+       install Math::GMP
+       install YAML
+       install Net::SSH::Perl::SSH2
+
+CPAN should take it from there and you'll wind up with the module installed into your Perl library.
+Let's say you're on your system command line and you just want to install a module as quickly as possible - you can run the Perl CPAN module via command line perl and get it installed in a single line:
+
+ perl -MCPAN -e 'install HTML::Template' 
+
+As I mentioned earlier, it's always advisable to download a module yourself, especially if you're having problems installing with CPAN. If you're on the command line, you can use something like wget to grab the file. Next you'll want to unzip it with something like:
+
+ tar -zxvf HTML-Template-2.8.tar.gz 
+
+This will unzip the module into a directory, then you can move in and poke around - look for the README or INSTALL files. In most cases, installing a module by hand is still pretty easy, though (although not as easy as CPAN). Once you've switched into the base directory for the module, you should be able to get it installed by typing:
+
+ perl Makefile.PL
+ make
+ make test
+ make install 
+
+
+MIME::Types
+
