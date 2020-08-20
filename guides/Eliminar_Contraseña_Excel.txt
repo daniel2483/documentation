@@ -1,0 +1,38 @@
+1. Ir a View o Vista
+2. Darle Click en Macros, esto abre la ventana Macro
+3. En Nombre Macro o Macro Name poner Eliminar_Password. 
+4. Presionar el botón Create o Crear. Esto abre el Module1 en VBA
+5. Copiar y pegar el siguiente Sub:
+
+Sub Eliminar_Password()
+
+Dim a As Integer, b As Integer, c As Integer
+Dim d As Integer, e As Integer, f As Integer
+Dim a1 As Integer, a2 As Integer, a3 As Integer
+Dim a4 As Integer, a5 As Integer, a6 As Integer
+
+On Error Resume Next
+For a = 65 To 66: For b = 65 To 66: For c = 65 To 66
+For d = 65 To 66: For e = 65 To 66: For a1 = 65 To 66
+For a2 = 65 To 66: For a3 = 65 To 66: For a4 = 65 To 66
+For a5 = 65 To 66: For a6 = 65 To 66: For f = 32 To 126
+Contraseña = Chr(a) & Chr(b) & Chr(c) & Chr(d) & Chr(e) & Chr(a1) _
+& Chr(a2) & Chr(a3) & Chr(a4) & Chr(a5) & Chr(a6) & Chr(f)
+ActiveSheet.Unprotect Contraseña
+
+If ActiveSheet.ProtectContents = False Then
+MsgBox "¡Buenas Noticias! " & vbCr & "Se ha quitado la contraseña" & vbCr & Contraseña
+
+Exit Sub
+End If
+
+Next: Next: Next: Next: Next: Next
+Next: Next: Next: Next: Next: Next
+
+End Sub
+
+6. Salvar la Macro VBA y darle cerrar
+7. Ir nuevamente a View o Vista, darle en Macro.
+8. Selecciono la nueva Macro creada Eliminar_Password.
+9. Y por último presiono el Botón Ejecutar o Run.
+10. Aparece el mensaje de que el password ha sido eliminado.

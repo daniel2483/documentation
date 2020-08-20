@@ -1,0 +1,26 @@
+Create Reporitories
+
+http://odyniec.net/articles/ubuntu-subversion-server/ 
+
+SubVersion
+
+http://svnbook.red-bean.com/nightly/es/svn-book.pdf
+
+http://www.um.es/atica/documentos/PREsubversion.pdf
+
+http://picandocodigo.net/downloads/docs/subversion-presentacion-01.pdf
+
+svn+ssh://192.168.25.26/usr/local/svn/repositories/proyecto_TT
+
+
+
+
+Tipo de URL – Forma de acceso
+file:/// Acceso directo en disco local.
+http:// Acceso via protocolo WebDAV a servidor Apache conciente de 
+Subversion.
+https:// Igual que http://, pero con cifrado SSL.
+svn:// Acceder a través de protocolo propio a servidor svnserve.
+svn+ssh:// Igual que svn:// pero por túnel SSH.
+
+svnserver --version
