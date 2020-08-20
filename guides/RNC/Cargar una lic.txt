@@ -1,0 +1,48 @@
+###############################################################
+####Cargar una Lic en un nodo####
+
+/home/ejorhern/Licencias 1ra Portadora/MTR_594_NodoB/B43006_899722_130905_070448.xml
+
+desde el OSS:
+moshell MTR594                    ;ingreso al sitio
+lt all
+altk                              ;veo alarmas
+license server                    ;veo status de la lic
+l ls                              ;veo los directorios dentro del nodo
+ls                                ;veo los directorios dentro del OSS
+exit                              ;salgo del nodo
+ls                                ;veo los directorios dentro del OSS
+cd "Licencias 1ra Portadora"      ;ingreso dentro del fichero. Busco MTR_594_NodoB
+cd MTR_594_NodoB                  ;ingreso dentro del fichero
+pwd                               ;veo la direcc donde esta el fichero y la copio (/home/ejorhern/Licencias 1ra Portadora/MTR_594_NodoB) 
+ls                                ;ingreso dentro del fichero y copio la Lic (B43006_899722_130905_070448.xml )
+moshell MTR594                    ;ingreso nuevamente al nodo
+lt all
+
+
+
+
+
+acl 6                             ;veo los MO de la Lic
+acc 6 updateLicenseKeyFile        ;copio el MO a ejecutar (Y. 1-user, 2-pass, 3-ipOSS:10.196.19.68. 4-copio direccion y fichero a cargar (17+18=4))
+altk                              ;verifico que no hay alarmas
+
+################################################################ 
+
+/home/ejorhern/Licencias 1ra Portadora/RUR_011_NodoB/630818_393341_130905_201717.xml
+
+##################################################################
+Otra forma:
+
+desde el OSS:
+
+moshell RUR494
+altk 
+license server
+acc 6 updateLicenseKeyFile
+
+/home/ejorhern/Licencias 1ra Portadora/RUR_494_NodoB/354732_181551_130906_164815.xml 
+
+;despues de haber cargado la Lic en el OSS copio la direcc desde el FZ
+
+#####################################################################

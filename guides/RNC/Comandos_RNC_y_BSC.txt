@@ -1,0 +1,98 @@
+2G-GSM
+
+
+BSC
+
+BTS:
+
+rxtcp:moty=rxotg,cell=MTR147a;       --> Obtengo que TG esta asociado a un sector A de un Sitio y Channel Group Asociados
+rxtcp:moty=rxotg,cell=MTR147b;       --> Obtengo que TG esta asociado a un sector B de un Sitio y Channel Group Asociados
+rxtcp:moty=rxotg,cell=MTR147c;       --> Obtengo que TG esta asociado a un sector C de un Sitio y Channel Group Asociados
+rxtcp:moty=rxotg,cell=MTR147d;       --> Obtengo que TG esta asociado a un sector D de un Sitio y Channel Group Asociados
+rxasp:mo=rxotg-707;                  --> Obtengo a que sitio pertenece un TG y Alarmas Internas
+rxmsp:mo=rxotg-707,subord;           --> Obtengo el estado de los Radios de un sitio
+rxmop:mo=rxotg-707,subord;           --> Obtengo Datos de un sitio
+rxcdp:mo=rxotg-707;                  --> Obtengo datos de configuración de un sitio
+rxmfp:mo=rxotg-707;                  --> Estado del sitio
+rxmfp:mo=rxotg-707,faulty,subord;    --> Alarmas de un sitio
+rxmfp:moty=rxotg;                    --> Obtengo todos los TGs configurados en una BSC
+allip:alcat=ext;                     --> Obtengo todas las alarmas Externas
+
+
+3G
+
+RNC
+
+lt all                   --> Comando inicial para cargar MOs
+lst "SITE_ID"            --> Comando para verificar que el sitio pertenece a esa RNC
+get "SITE_ID" iub        --> Comando para obetner el ID del iub
+get Proxy                --> Comando para obtener info del Iub (IP address de tráfico)
+lst "SITE_ID"|Iub_"iub"  --> 
+!moshell "IP Address"    --> Comando para acceder al sitio por la direccion IP de OYM
+!moshell "SITE_ID"       --> Comando para ingresar al sitio por medio del ID.
+l moshell "IP Address"   --> Comando para acceder al sitio por la direccion IP de OYM
+l moshell "SITE_ID"      --> Comando para ingresar al sitio por medio del ID.
+lst                      --> Lista los MOs
+lst cell 1.*0            --> Muestra celdas Unlocked y Disable
+lst cell 1.*1            --> Muestra celdas Unlocked and Enable
+lst cell 0.*0            --> Muestra celdas locked y Disable
+get all rbsid            --> Muestra todos los Iublins de una RNC 
+get all rncmod           --> Muestra todos los RncModules por RBSs
+lst cell                 --> Lista todas las celdas de una RNC
+st cell                  --> Lista el estatus de todas las celdas
+lst iub                  --> Lista todas las Iubs
+st iub                   --> Lista el estado de las IUbs
+lkra                     --> Para observar repartición de celdas por RNC Module y por Subrack
+bo                       --> Muestra las tarjetas
+al                       --> Muestra las alarmas de la RNC
+ala                      --> Muestra las alarmas y los detalles
+alt                      --> Lista las alarmas por Time / Severity / Specific Problem / Cause / MO - Reference
+readclock                --> Muestra el dia y hora
+
+
+NodoB:
+
+Comandos NodoB
+lt all               --> Comando inicial para cargar MOs
+get 0                --> Para ver info del sitio (nombre del sitio y tipo RBS)
+cabx                 --> Para ver informacion del sitio Valores de potencia, VSWR y RL. Tipo de tarjeta
+lh ru fui get vswr   --> Para ver niveles de VWSR
+license status       --> Para ver el estado de la licencia (estado del LKF)
+license iu status    --> Para ver Time left de la licencia
+lget . fingerprint   --> Para obtener el valor del fingerprint
+get . iub            --> Comando para obtener iub del sitio
+get . ipadd          --> Se utiliza para la obtención del IP Address del sitio
+altk                 --> Obtencion de alarmas del sitio
+get radio            --> Muestra los usuarios conectados en una celda
+inv                  --> Muestra los siguientes datos capacity / License Key / Softwares
+license lkf          --> Muestra los siguientes datos  "Finger Print" / License Number / version of license key file
+get . grace          --> Muestra el tiempo de gracia de expiracción de la licencia
+readclock            --> Muestra el dia y hora
+cabs                 --> Muestra los siguientes datos Boards / Software / Revision
+
+
+
+Valores
+RL > 18
+VSWR < 1.3
+
+
+4G-LTE
+
+MME
+
+enodoB:
+
+
+Notas:
+password del nodoB: rbs
+En sitios 3G para DUW2001 existe una alarma
+
+
+Glosario
+
+VSWR --> Reflexión de potencia
+Backplane Nodo Id --> es igual al fingerprint
+Fingerprint --> Valor necesario para la obtención de la licencia
+MO --> Manage Object
+LKF --> License Key File
