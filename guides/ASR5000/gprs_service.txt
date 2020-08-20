@@ -1,0 +1,134 @@
+[local]SCDESCRMPN1C1EZA1# show  gprs-service all
+Friday April 13 10:37:47 CST 2012
+
+Service name              : gprs-cr
+Context                   : gn-gp
+Status                    : STARTED
+Accounting Context Name   : gy
+SGSN Number               : 50670000200
+Self PLMN Id*             : MCC: 712, MNC:  03
+MAP Context               : gr
+MAP Service               : map-cr
+HSS Service               : Not defined
+SGTP Context              : gn-gp
+SGTP Service              : sgtp-cr
+EGTP Service              : Not defined
+GS Service                : Not defined
+CAMEL Service             : Not defined
+DSCP Template             : Not defined
+SM-T3385 Timeout          : 8 secs
+SM-T3386 Timeout          : 8 secs
+SM-T3395 Timeout          : 8 secs
+SM-Max Activate Retries   : 4
+SM-Max Modify Retries     : 4
+SM-Max Deactivate Retries : 4
+SM-Ignore PCO IE Decode Error     : Enabled
+SM-Trim Trailing Spaces in APN    : Disabled
+SM-APN Partial match              : Disabled
+SM-APN(R) from First Sub Record   : Enabled
+GMM TRAU Timeout          : 30 secs
+GMM-T3302 Timeout         : 12 mins
+GMM-T3314 Timeout         : 44 secs
+GMM-T3314 Timer Backup    : Disabled
+GMM-T3314 Nego Timeout    : 44 secs
+GMM-T3322 Timeout         : 6 secs
+GMM-T3350 Timeout         : 6 secs
+GMM-Mnr Timeout           : 58 mins
+GMM-Purge Timeout         : 10080 mins
+GMM-T3313 Timeout         : 5 secs
+GMM-T3312 Timeout         : 54 mins
+GMM-T3323 Timeout         : 54 mins
+GMM-T3370 Timeout         : 6 secs
+GMM-Max Identity Retries  : 4
+GMM-T3360 Timeout         : 6 secs
+GMM-Max Auth Retries      : 4
+GMM LLC Timeout           : 5 secs
+GMM LLC PDU Life Time     : 600 centi-secs
+LLC Uplink Pdu len Validation        : Done
+LLC MAX Negotiable N201-U for SAPI3  : 1520 octets
+LLC MAX Negotiable N201-U for SAPI5  : 1520 octets
+LLC MAX Negotiable N201-U for SAPI9  : 1520 octets
+LLC MAX Negotiable N201-U for SAPI11 : 1520 octets
+GMM accept procedure      : old tlli
+LLC IOVUI in xid-reset    : send 
+LLC Reset VUR during intra RAU : Disabled 
+LLC detect overflow : Disabled 
+GMM ciph gmm msg from unknown ms : ignore
+Ciphering Algorithm       : 
+  Priority 1              : gea0 
+  Priority 2              : gea0 
+  Priority 3              : gea0 
+  Priority 4              : gea0 
+Ciphering Algorithm Negotiation Failure Action     : Use GEA0
+GMM-Perform-Identity-After-Auth                    : Enabled
+Admin Disconnect - clear subscription data         : Enabled
+Admin Disconnect - Detach Type IE                  : Reattach-Required
+Reporting Action - Event Record                    : Disabled
+Check IMEI Timeout Action                          : Reject
+SNDCP Re-assembly timeout   : 30 secs
+Sgsn-context-request ptmsi-signature-absence       : Not Allowed
+dns israu-mcc-mnc-encoding                         : Decimal
+Accounting cdr-types                               : scdr
+nsei 4401 lac 2004 rac 1 
+nsei 4401 lac 2006 rac 1 
+nsei 4401 lac 2007 rac 1 
+nsei 4401 lac 2008 rac 1 
+nsei 4401 lac 501 rac 1 24 
+nsei 4401 lac 2005 rac 1 
+nsei 4401 lac 2001 rac 1 
+nsei 4401 lac 2002 rac 1 
+nsei 4401 lac 2003 rac 1 
+nsei 4402 lac 2017 rac 1 
+nsei 4402 lac 2016 rac 1 
+nsei 4402 lac 2015 rac 1 
+nsei 4402 lac 2014 rac 1 
+nsei 4402 lac 2010 rac 1 
+nsei 4402 lac 2011 rac 1 
+nsei 4402 lac 2012 rac 1 
+nsei 4402 lac 2013 rac 1 
+Charging Characteristics(CC) Profiles:
+   Profile 0:
+     Buckets: 4 
+   Profile 1:
+     Buckets: 4 
+   Profile 2:
+     Buckets: 4 
+   Profile 3:
+     Buckets: 4 
+   Profile 4:
+     Buckets: 4 
+   Profile 5:
+     Buckets: 4 
+   Profile 6:
+     Buckets: 4 
+   Profile 7:
+     Buckets: 4 
+   Profile 8:
+     Buckets: 4 
+   Profile 9:
+     Buckets: 4 
+   Profile 10:
+     Buckets: 4 
+   Profile 11:
+     Buckets: 4 
+   Profile 12:
+     Buckets: 4 
+   Profile 13:
+     Buckets: 4 
+   Profile 14:
+     Buckets: 4 
+   Profile 15:
+     Buckets: 4 
+paging-policy max-page-retransmission : 2 
+paging-policy last-known-area location-area 
+Session setup timeout         : 60 secs
+Gprs NRI Length               : 0
+
+GMM Message Handlers
+|--------------------|-----------------------------------|------------------------------|
+|Procedure           |Condition                          |Action                        |
+|--------------------|-----------------------------------|------------------------------|
+|Attach              |P-TMSI Signature Mismatch          |Allow                         |
+|--------------------|-----------------------------------|------------------------------|
+
+[local]SCDESCRMPN1C1EZA1# 
