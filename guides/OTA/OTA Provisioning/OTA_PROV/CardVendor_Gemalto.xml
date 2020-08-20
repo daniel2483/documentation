@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CardVendorModule SYSTEM "cardframework.dtd">
+
+<!-- ========================================================================================== -->
+<!-- Reference DATA                                                                             -->
+<!-- Contains:                                                                                  -->
+<!-- 	One CardVendor identified by name: Axalto                                               -->
+<!-- ========================================================================================== -->
+
+<CardVendorModule>
+    <CardVendor
+      name="Gemalto"
+      description="Reference Data: vendor for Gemalto cards"/>
+</CardVendorModule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CardDefinitionModule SYSTEM "cardframework.dtd">
+
+<!--- ------------------------------------------------------------------------------------------ -->
+<!--- Reference DATA                                                                             -->
+<!--- Contains:                                                                                  -->
+<!--- 	One CardDefiniton identified by internal name: Template used for the training            -->
+<!--- ------------------------------------------------------------------------------------------ -->
+
+<CardDefinitionModule>
+    <CardDefinition
+      internalName=""
+      commercialName=""
+      osName=""
+      osVersion=""
+      chipManufacturer=""
+      chipModel=""
+      eepromSize=""
+      ramSize=""
+      romSize=""
+      freeSize=""
+      protocol=""/>
+</CardDefinitionModule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MBCardModule SYSTEM "messageBuilder.dtd">
+<MBCardModule>
+  <MBCard serialNumber="">
+    <SecurityDomain
+      securityDomainID=""
+      defaultSyncID="default"
+      implicitRcAlgoNumber=""
+      proprietaryRcAlgoNumber="">
+      <Sync value=""/>
+      <Keyset versionNumber="">
+        <Kic value="" algoNumber=""/> 
+        <Kid value="" algoNumber=""/>
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+</MBCardModule>

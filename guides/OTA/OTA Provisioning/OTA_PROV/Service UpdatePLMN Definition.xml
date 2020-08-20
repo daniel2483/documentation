@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ServiceDeclModule SYSTEM "cardframework.dtd">
+
+<ServiceDeclModule>
+<ServiceDecl name="UpdatePLMN" handlerName="rca.serviceDecl.UpdatePLMN" state="1" isCardIndependent="false"/>
+</ServiceDeclModule>

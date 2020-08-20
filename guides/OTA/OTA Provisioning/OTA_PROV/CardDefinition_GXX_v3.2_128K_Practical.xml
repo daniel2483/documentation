@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CardDefinitionModule SYSTEM "cardframework.dtd">
+
+<CardDefinitionModule>
+<CardDefinition internalName="GX3G_v2.2_128K_Practical" 
+commercialName="GemXplore 3G v2.2 128K" 
+osName="GemXplore3GV2.2" 
+osVersion="MSA04" 
+chipManufacturer="Infineon" 
+chipModel="Confidential" 
+eepromSize="65536" 
+ramSize="-1" 
+romSize="-1" 
+freeSize="-1" />
+
+</CardDefinitionModule>

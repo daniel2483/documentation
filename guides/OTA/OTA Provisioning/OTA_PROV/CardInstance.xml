@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CardContentModule SYSTEM "cardframework.dtd">
+
+<!-- ========================================================================================== -->
+<!-- Reference DATA                                                                             -->
+<!-- Contains:                                                                                  -->
+<!-- this is a template used for the training                                                   -->
+<!-- ------------------------------------------------------------------------------------------ -->
+
+<CardContentModule>
+  <SimCard serialNumber="" imsi="" msisdn="" profileName="" state=""/>
+</CardContentModule>

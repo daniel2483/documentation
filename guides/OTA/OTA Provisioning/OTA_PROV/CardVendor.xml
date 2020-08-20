@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CardProfileModule SYSTEM "cardframework.dtd">
+
+<!--- ------------------------------------------------------------------------------------------ -->
+<!--- Reference DATA                                                                             -->
+<!--- Contains:                                                                                  -->
+<!--- 	One CardVendor identified by name:                                                       -->
+<!--- 	used for the training                                                                    -->
+<!--- ------------------------------------------------------------------------------------------ -->
+
+<CardVendorModule>
+    <CardVendor
+      name=""
+      description=""/>
+</CardVendorModule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CardVendorModule SYSTEM "cardframework.dtd">
+
+<CardVendorModule>
+<CardVendor name= "Card_Vendor_Practical" description= "CardVendorPractical"/>
+</CardVendorModule>

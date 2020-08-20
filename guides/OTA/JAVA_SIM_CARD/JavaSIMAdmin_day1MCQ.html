@@ -1,0 +1,338 @@
+<HTML><HEAD></HEAD><BODY bgColor=#5084bc>
+<FORM METHOD="POST" NAME=QCM ACTION="./JavaSIMAdmin_day1MCQAnswers.html">
+<SCRIPT LANGUAGE="JavaScript">
+function checkResponse()
+{
+  nb_response=0;
+  false_question="";
+   question_text="Question";
+   nb_false_question=0;
+
+   if((QCM.Q1_1.checked==false) && (QCM.Q1_2.checked==false) && (QCM.Q1_3.checked==true))
+{
+nb_response++;
+}
+else {
+QCM.Q1_1.checked==false; 
+QCM.Q1_2.checked==false; 
+QCM.Q1_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 1";
+nb_false_question++;
+}
+  if((QCM.Q2_1.checked==true) && (QCM.Q2_2.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q2_1.checked==false; 
+QCM.Q2_2.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 2";
+nb_false_question++;
+}
+  if((QCM.Q3_1.checked==true) && (QCM.Q3_2.checked==false) && (QCM.Q3_3.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q3_1.checked==false; 
+QCM.Q3_2.checked==false; 
+QCM.Q3_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 3";
+nb_false_question++;
+}
+  if((QCM.Q4_1.checked==true) && (QCM.Q4_2.checked==false) && (QCM.Q4_3.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q4_1.checked==false; 
+QCM.Q4_2.checked==false; 
+QCM.Q4_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 4";
+nb_false_question++;
+}
+  if((QCM.Q5_1.checked==false) && (QCM.Q5_2.checked==true) && (QCM.Q5_3.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q5_1.checked==false; 
+QCM.Q5_2.checked==false; 
+QCM.Q5_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 5";
+nb_false_question++;
+}
+  if((QCM.Q6_1.checked==false) && (QCM.Q6_2.checked==true) && (QCM.Q6_3.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q6_1.checked==false; 
+QCM.Q6_2.checked==false; 
+QCM.Q6_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 6";
+nb_false_question++;
+}
+  if((QCM.Q7_1.checked==false) && (QCM.Q7_2.checked==true) && (QCM.Q7_3.checked==false) && (QCM.Q7_4.checked==false))
+{
+nb_response++;
+}
+else {
+QCM.Q7_1.checked==false; 
+QCM.Q7_2.checked==false; 
+QCM.Q7_3.checked==false; 
+QCM.Q7_4.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 7";
+nb_false_question++;
+}
+  if((QCM.Q8_1.checked==false) && (QCM.Q8_2.checked==false) && (QCM.Q8_3.checked==false) && (QCM.Q8_4.checked==true))
+{
+nb_response++;
+}
+else {
+QCM.Q8_1.checked==false; 
+QCM.Q8_2.checked==false; 
+QCM.Q8_3.checked==false; 
+QCM.Q8_4.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 8";
+nb_false_question++;
+}
+  if((QCM.Q9_1.checked==false) && (QCM.Q9_2.checked==true))
+{
+nb_response++;
+}
+else {
+QCM.Q9_1.checked==false; 
+QCM.Q9_2.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 9";
+nb_false_question++;
+}
+  if((QCM.Q10_1.checked==false) && (QCM.Q10_2.checked==false) && (QCM.Q10_3.checked==false) && (QCM.Q10_4.checked==true))
+{
+nb_response++;
+}
+else {
+QCM.Q10_1.checked==false; 
+QCM.Q10_2.checked==false; 
+QCM.Q10_3.checked==false; 
+QCM.Q10_4.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 10";
+nb_false_question++;
+}
+  if((QCM.Q11_1.checked==false) && (QCM.Q11_2.checked==false) && (QCM.Q11_3.checked==true))
+{
+nb_response++;
+}
+else {
+QCM.Q11_1.checked==false; 
+QCM.Q11_2.checked==false; 
+QCM.Q11_3.checked==false; 
+if (nb_false_question) false_question=false_question+", ";
+false_question=false_question+" 11";
+nb_false_question++;
+}
+alerte_string="Number of good responses:"+nb_response+"/11"
+if (nb_false_question==0) 
+   alerte_string=alerte_string+"\n\n" 
+                +"    VERY GOOD !  "; 
+if (nb_false_question==1) 
+   alerte_string=alerte_string+"\n" 
+                +question_text+false_question+" is false"; 
+if (nb_false_question>1) 
+   alerte_string=alerte_string+"\n" 
+                +question_text+"s"+false_question+" are false"; 
+ alert(alerte_string); }
+</SCRIPT>
+<TD><font size="6" color="#FFFFFF"><CENTER>
+Questions on First Day of Java SIM Card Administration Training Course
+</CENTER></font></TD>
+<BR><BR>
+<font size="4" color="#FFFFFF">Information:<BR><BR>
+The "answer" button give the numbers of good responses.<BR>
+The "reset" button reset the responses.<BR>
+The "View all answers" button give all answers and explanations.
+</font><BR><BR><BR>
+
+<TD><U><font size="5" color="#FFFFFF">
+ Introduction</U><BR><BR>
+</font></TD>
+
+<TD><font size="4" color="#FFFFFF">
+1: What does it mean JCVM ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q1_1">Join Curriculum Vitae Minimalist</TD>
+<TD><INPUT Type="checkbox" NAME="Q1_2">absolutely nothing</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q1_3">Java Card Virtual Machine</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+2: Is a Java Card always SIM Card ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q2_1">No</TD>
+<TD><INPUT Type="checkbox" NAME="Q2_2">Yes</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+3: What is the standard name of the Sim Tolkit API ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q3_1">43.019</TD>
+<TD><INPUT Type="checkbox" NAME="Q3_2">101.19</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q3_3">11.14</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+4: Global Platform standard is related to :
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q4_1">Security Model</TD>
+<TD><INPUT Type="checkbox" NAME="Q4_2">Communication with the network</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q4_3">Protocol definition</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+5: 23.048 standard basics is
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q5_1">Sim Alliance</TD>
+<TD><INPUT Type="checkbox" NAME="Q5_2">Global Platform</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q5_3">Java Card</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><U><font size="5" color="#FFFFFF">
+ Java Card and SIM Toolkit Development</U><BR><BR>
+</font></TD>
+
+<TD><font size="4" color="#FFFFFF">
+6: A SIM Toolkit Applet is a Java Card Applet
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q6_1">No</TD>
+<TD><INPUT Type="checkbox" NAME="Q6_2">Yes</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q6_3">No !</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+7: A JavaCard Applet is known by the OS with :
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q7_1">its TAR</TD>
+<TD><INPUT Type="checkbox" NAME="Q7_2">its AID</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q7_3">both</TD>
+<TD><INPUT Type="checkbox" NAME="Q7_4">its name</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+8: In the applet development, which file does not exist ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q8_1">.JAR file</TD>
+<TD><INPUT Type="checkbox" NAME="Q8_2">.CAP file</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q8_3">.CLASS</TD>
+<TD><INPUT Type="checkbox" NAME="Q8_4">.JAC</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+9: The INSTALL APDU command validates the loading of the bytecode in the EEPROM
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q9_1">Yes</TD>
+<TD><INPUT Type="checkbox" NAME="Q9_2">No</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><font size="4" color="#FFFFFF">
+10: Which command is used  to create an instance ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q10_1">PUT DATA</TD>
+<TD><INPUT Type="checkbox" NAME="Q10_2">LOAD</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q10_3">SET STATUS</TD>
+<TD><INPUT Type="checkbox" NAME="Q10_4">INSTALL(install)</TD>
+</TR>
+<TR>
+</TR>
+</TABLE>
+<BR>
+<BR>
+
+<TD><U><font size="5" color="#FFFFFF">
+ Conclusion</U><BR><BR>
+</font></TD>
+
+<TD><font size="4" color="#FFFFFF">
+11: After this day I am able to load/install a basic STK applet ?
+</font><TABLE BORDER=0 WIDTH=100%><BR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q11_1">a what ???</TD>
+<TD><INPUT Type="checkbox" NAME="Q11_2">No</TD>
+</TR>
+<TR>
+<TD><INPUT Type="checkbox" NAME="Q11_3">OF COURSE I AM:))</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+ <TABLE ><BR><TR>  <TD width=50%>  <INPUT Type="button" NAME="Answer" Value="Answer" onClick='checkResponse()' >	</TD><TD> 	<INPUT Type="reset" NAME="reset" value="reset"> 	</TD></TR></TABLE></TD><TABLE></FORM><BR> <FORM METHOD="SUBMIT" ACTION="JavaSIMAdmin_day1MCQAnswers.html"> <INPUT type="Submit" NAME="submit" Value="View all answers"> </FORM> <P ALIGN="RIGHT"><I><FONT SIZE=1>generated with MCQmaker 1.0</P></I></FONT></BODY></HTML>

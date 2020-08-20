@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CardDefinitionModule SYSTEM "cardframework.dtd">
+
+<CardDefinitionModule>
+<CardDefinition internalName="GXX_v3.2_128K_OC" 
+commercialName="GemXplore Xpresso v3.2 128K" 
+osName="GemXploreXpressoV3.2" 
+osVersion="MPH037" 
+chipManufacturer="Philips" 
+chipModel="Confidential" 
+eepromSize="99999" 
+ramSize="-1" 
+romSize="-1" 
+freeSize="-1" />
+
+</CardDefinitionModule>

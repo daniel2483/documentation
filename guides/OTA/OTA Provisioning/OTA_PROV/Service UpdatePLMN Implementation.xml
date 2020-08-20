@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ServiceImplModule SYSTEM "cardframework.dtd">
+
+<ServiceImplModule>
+<ServiceImpl name="2G_0348_Update_PLMN" 
+serviceName="UpdatePLMN" 
+state="1" 
+javaClassName="rca.serviceImpl.generic0348.UpdatePLMN" 
+scriptName="rca/serviceImpl/generic0348/UpdatePLMN.script" 
+cardContentUpdateActivated="false" 
+cardContentCheckActivated="true" 
+applicationIdentifier="B00010" 
+securityLevel="0" >
+</ServiceImpl> 
+<ServiceImpl name="UICC_2G_0348_Update_PLMN" 
+serviceName="UpdatePLMN" 
+state="1" 
+javaClassName="rca.serviceImpl.generic0348.UpdatePLMN" 
+scriptName="rca/serviceImpl/generic0348/UpdatePLMN.script" 
+cardContentUpdateActivated="false" 
+cardContentCheckActivated="true" 
+applicationIdentifier="B00000" 
+securityLevel="0" >
+</ServiceImpl> 
+<ServiceImpl name="Simera_Update_PLMN" 
+serviceName="UpdatePLMN" 
+state="1" 
+javaClassName="rca.serviceImpl.generic0348.UpdatePLMN" 
+scriptName="rca/serviceImpl/generic0348/UpdatePLMN.script" 
+cardContentUpdateActivated="false" 
+cardContentCheckActivated="true" 
+applicationIdentifier="7F2000" 
+securityLevel="0" >
+</ServiceImpl> 
+<ServiceImpl name="ESMSv1_UpdatePLMN" 
+serviceName="UpdatePLMN" 
+state="1" 
+javaClassName="rca.serviceImpl.gemplus.UpdatePLMNService" 
+scriptName="rca/serviceImpl/gemplus/UpdatePLMN.txt" 
+cardContentUpdateActivated="false" 
+cardContentCheckActivated="true" 
+applicationIdentifier="3F00" 
+securityLevel="0" >
+</ServiceImpl> 
+<ServiceImpl name="ESMSv2_UpdatePLMN" 
+serviceName="UpdatePLMN" 
+state="1" 
+javaClassName="rca.serviceImpl.gemplus.UpdatePLMNService" 
+scriptName="rca/serviceImpl/gemplus/UpdatePLMN.txt" 
+cardContentUpdateActivated="false" 
+cardContentCheckActivated="true" 
+applicationIdentifier="01" 
+securityLevel="0" >
+</ServiceImpl> 
+</ServiceImplModule>

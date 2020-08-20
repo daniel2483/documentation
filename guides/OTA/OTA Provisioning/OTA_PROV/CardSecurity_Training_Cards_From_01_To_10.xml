@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MBCardModule SYSTEM "messageBuilder.dtd">
+<MBCardModule>
+  <MBCard serialNumber="8931104000000004001">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004002">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004003">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004004">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004005">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004006">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004007">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004008">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004009">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+  <MBCard serialNumber="8931104000000004010">
+    <SecurityDomain
+      securityDomainID="A00000001810010801000000B20100"
+      defaultSyncID="default"
+      implicitRcAlgoNumber="6"
+      proprietaryRcAlgoNumber="6">
+      <Sync value="0000000000"/>
+      <Keyset versionNumber="2">
+        <Kic value="30423042304430443045304530463046" algoNumber="3"/> <!-- Triple DES in outer CBC mode using 2 keys -->
+        <Kid value="0123456789ABCDEF100276FEDCBA0123" algoNumber="3"/>  <!-- Triple DES in outer CBC mode using 2 keys -->
+      </Keyset>
+    </SecurityDomain>
+  </MBCard>
+</MBCardModule>
+

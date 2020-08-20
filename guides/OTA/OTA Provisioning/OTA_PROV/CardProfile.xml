@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CardDefinitionModule SYSTEM "cardframework.dtd">
+
+<!--- ------------------------------------------------------------------------------------------ -->
+<!--- Reference DATA                                                                             -->
+<!--- Contains:                                                                                  -->
+<!--- 	One CardProfile identified by name:                                                      -->
+<!--- 	template used for the training                                                           -->
+<!--- ------------------------------------------------------------------------------------------ -->
+
+<CardProfileModule>
+    <CardProfile
+      name="Profile_name"
+      state=""
+      phase=""
+      cardVendor=""
+      cardDefinition=""
+      serviceImpl=""
+      capabilities="0348">
+        <!-- RC algo: XOR4 -->
+        <FormattingProperties>
+            <!-- CP: include CPL/CHL -->
+            <!-- RP: include all -->
+            <Formatting0348Properties
+              isCplChlRequiredInCertificate="true"
+              isRplRhlRequiredInCertificate="true"
+              isRpiRequiredInCertificate="true"
+            />
+            <FormattingGPProperties
+              multipleLoadCommandPerMessage="true"
+              maxLoadCommandLength="260"
+            />
+        </FormattingProperties>
+        <TransportProperties>
+            <TransportProperties0340
+              tpudBufferSize="140"
+              concatBufferSpace="255"
+            />
+        </TransportProperties>
+        <EntityProperties>
+            <!-- RFM properties -->
+            <JavaPackageProperties
+              label="RFM package"
+              packageAid="A0000000180309"
+              packageMajorVersion="1"
+              packageMinorVersion="0"
+            />
+            <JavaAppletProperties
+              label="RFM applet"
+              appletAid="A00000001803090000000000B00010"
+              packageAid="A0000000180309"
+              packageMajorVersion="1"
+              packageMinorVersion="0"
+              concatenationAvailable="true"
+              isSelectable="true"
+            />
+            <JavaAppletInstanceProperties
+              label="RFM applet instance"
+              instanceAid="A00000001803090000000000B00010"
+              appletAid="A00000001803090000000000B00010"
+              packageAid="A0000000180309"
+              packageMajorVersion="1"
+              packageMinorVersion="0">         
+                <SecurisationSet>
+                    <Securisation0348 index="0" spi="0000" kic="10" kid="10"/>
+                </SecurisationSet>
+            </JavaAppletInstanceProperties>
+            <!-- RAM properties (card manager) -->
+            <JavaPackageProperties
+              label="RAM package"
+              packageAid="A000000018434D"
+              packageMajorVersion="1"
+              packageMinorVersion="0"
+            />
+            <JavaAppletProperties
+              label="RAM applet"
+              appletAid="A000000018434D08090A0B0C000000"
+              packageAid="A000000018434D"
+              packageMajorVersion="1"
+              packageMinorVersion="0"
+              concatenationAvailable="true"
+              isSelectable="true"
+            />
+            <JavaAppletInstanceProperties 
+              label="RAM applet instance"
+              instanceAid="A000000018434D08090A0B0C000000"
+              appletAid="A000000018434D08090A0B0C000000"
+              packageAid="A000000018434D"
+              packageMajorVersion="1"
+              packageMinorVersion="0"
+              msl="00">
+                <SecurisationSet>
+                    <Securisation0348 index="0" spi="0000" kic="10" kid="10"/>
+                </SecurisationSet>
+            </JavaAppletInstanceProperties>
+        </EntityProperties>
+        <CardStructure name="Profile_name">
+            <CardFile name="MF" type="&MF_FILE;" identifier="3F00" fileSize="0">
+                <CardFile name="ICCID" type="&EF_TRANSPARENT_FILE;" identifier="2FE2" fileSize="10"/>
+                <CardFile name="TELECOM" type="&DF_FILE;" identifier="7F10" fileSize="0">
+                    <CardFile name="ADN" type="&EF_LINEAR_FILE;" identifier="6F3A" recordNumber="200" recordSize="28"/>
+                    <CardFile name="FDN" type="&EF_LINEAR_FILE;" identifier="6F3B" recordNumber="10" recordSize="28"/>
+                    <CardFile name="MSISDN" type="&EF_LINEAR_FILE;" identifier="6F40" recordNumber="2" recordSize="28"/>
+                    <CardFile name="SMSP" type="&EF_LINEAR_FILE;" identifier="6F42" recordNumber="3" recordSize="40"/>
+                    <CardFile name="SDN" type="&EF_LINEAR_FILE;" identifier="6F49" recordNumber="5" recordSize="28"/>
+                    <CardFile name="BDN" type="&EF_LINEAR_FILE;" identifier="6F4D" recordNumber="5" recordSize="28"/>
+                </CardFile>
+                <CardFile name="GSM" type="&DF_FILE;" identifier="7F20" fileSize="0">
+                    <CardFile name="LP" type="&EF_TRANSPARENT_FILE;" identifier="6F05" fileSize="4"/>
+                    <CardFile name="IMSI" type="&EF_TRANSPARENT_FILE;" identifier="6F07" fileSize="9"/>
+                    <CardFile name="PLMN" type="&EF_TRANSPARENT_FILE;" identifier="6F30" fileSize="48"/>
+                    <CardFile name="HPLMN" type="&EF_TRANSPARENT_FILE;" identifier="6F31" fileSize="1"/>
+                    <CardFile name="SST" type="&EF_TRANSPARENT_FILE;" identifier="6F38" fileSize="15"/>
+                    <CardFile name="CBMI" type="&EF_TRANSPARENT_FILE;" identifier="6F45" fileSize="20"/>
+                    <CardFile name="SPN" type="&EF_TRANSPARENT_FILE;" identifier="6F46" fileSize="17"/>
+                    <CardFile name="ACC" type="&EF_TRANSPARENT_FILE;" identifier="6F78" fileSize="2"/>
+                    <CardFile name="FPLMN" type="&EF_TRANSPARENT_FILE;" identifier="6F7B" fileSize="12"/>
+                </CardFile>
+            </CardFile>
+            <!-- RFM applet -->
+            <JavaPackage
+              aid="A0000000180309"
+              majorVersion="1"
+              minorVersion="0"
+              securityDomain="A000000018434D08090A0B0C000000"
+              estimatedSize="0">
+                <JavaApplet aid="A00000001803090000000000B00010">
+                    <JavaAppletInstance
+                      aid="A00000001803090000000000B00010"
+                      status="SELECTABLE"
+                      estimatedSize="0"
+                      configuration=""
+                      securityDomain="A000000018434D08090A0B0C000000"
+                      tar="B00010"/>
+                </JavaApplet>
+            </JavaPackage>
+            <!-- RAM applet (card manager) -->
+            <JavaPackage
+              aid="A000000018434D"
+              majorVersion="1"
+              minorVersion="0"
+              securityDomain="A000000018434D08090A0B0C000000"
+              estimatedSize="0">
+                <JavaApplet aid="A000000018434D08090A0B0C000000">
+                      <JavaAppletInstance
+                        aid="A000000018434D08090A0B0C000000"
+                        status="SELECTABLE"
+                        estimatedSize="0"
+                        configuration=""
+                        securityDomain="A000000018434D08090A0B0C000000"
+                        tar="000000"/>
+                </JavaApplet>
+            </JavaPackage>
+        </CardStructure>
+    </CardProfile>
+</CardProfileModule>
