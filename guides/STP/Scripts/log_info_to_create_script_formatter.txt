@@ -1,0 +1,103 @@
+od -c STP_30011213._output.log
+
+tr -d '\001' < STP_30011213._output.log > test.txt
+cat test.txt | nawk 'NR==40'
+
+    crher1mls    100%     1000*    1000  TX:    265    780   12-01-01 00:04:51
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==42'
+    crher1hls    100%     1200*    1200  TX:    166    378   12-01-01 00:04:51
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==42' | nawk '{print$0}'
+    crher1hls    100%     1200*    1200  TX:    166    378   12-01-01 00:04:51
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==43' | nawk '{print$0}'
+                                        RCV:    166    378   12-01-01 00:04:51
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print$0}'
+    crher1sls    100%      400*     400  TX:     67    167   12-01-24 15:58:06
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==45' | nawk '{print$0}'
+                                        RCV:     68    167   12-01-02 11:57:36
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print$0}'
+    crher1sls    100%      400*     400  TX:     67    167   12-01-24 15:58:06
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print$0(substr($1,1,10)}'
+nawk: {print$0(substr($1,1,10)}
+nawk:                         ^ syntax error
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,1,10))}'
+crher1sls
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,1,9))}'
+crher1sls
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,1,8))}'
+crher1sl
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,1,9))}'
+crher1sls
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,12,3))}'
+
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($1,14,3))}'
+
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($2,14,3))}'
+
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,14,3))}'
+   
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,1,12))}'
+    crher1sl
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,1,15))}'
+    crher1sls  
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,1,29))}'
+    crher1sls    100%      40
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,15,5))}'
+   10
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,15,6))}'
+   100
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,15,7))}'
+   100%
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,16,7))}'
+  100% 
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,17,7))}'
+ 100%  
+ericsson@Wireshark-01 ~/test $ cat test.txt | nawk 'NR==44' | nawk '{print(substr($0,18,7))}'
+100%   
+
+Formato Fecha=2011-<Mes>-<Dia>
+        Hora=12:00
+
+
+ericsson@Wireshark-01 ~/test $ ls -ltrh | nawk '{print$6}'
+
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+2012-01-30
+ericsson@Wireshark-01 ~/test $ ls -ltrh | nawk '{print$7}'
+
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:19
+14:51
+15:58
+ericsson@Wireshark-01 ~/test $ 

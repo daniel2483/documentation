@@ -1,0 +1,8 @@
+`(sleep 1; echo vhpadill; sleep 1;echo <>; sleep 3;echo "show services ggsn status | no-more";sleep 2;echo "show snmp mib walk ggsnAlarmTa
+ble | no-more";sleep 1;echo "show chassis alarms | no-more";sleep 2;echo "show system alarms | no-more";sleep 2;echo "show chassis environment | no-more";sle
+ep 2;echo "show services ggsn statistics apn | no-more";sleep 5;echo "show interfaces terse | no-more";sleep 1;echo "show system uptime | no-more";sleep 1;ec
+ho "show system storage | no-more";sleep 1;echo "show chassis routing-engine | no-more";sleep 1;echo "show chassis craft-interface | no-more";sleep 1;echo "s
+how log messages | no-more";sleep 1)|telnet 10.196.27.34`;
+
+
+`(sleep 3;echo 17;sleep 1;)|10.196.27.34`;

@@ -1,0 +1,55 @@
+#!/usr/bin/perl -w
+#-----------------------------------------------------
+#       Created by: Francisco Zumbado
+#               Ericsson 20101405
+#           Alerta Large Account
+#----------------------------------------------------- 
+
+use Net::Telnet;
+use MIME::Lite;
+use Net::SMTP;
+use DBI;
+$fecha=`date +%d%m%y`;
+chomp($fecha); 
+$equipos="/home/chiskex/bin/equipos1.txt";
+open EQUIPOS, "$equipos" or die "can't open '$file_name': $!";
+foreach (<EQUIPOS>){
+	print "\nInicio ".`date`;
+	@datos=split(/,/);
+	print "Equipo: $datos[0]";
+	$logfile ="/home/chiskex/bin/log/$datos[0]_input.log";
+	$file_name="/home/chiskex/bin/backups_mpbn/$datos[0].$fecha.cfg";
+	$telnet = new Net::Telnet ( Timeout=>10,input_log=>$file_name,	output_log=>$logfile,Errmode=>'return');
+	$telnet->open($datos[1]); 
+	$telnet->print("\n");
+	$telnet->waitfor('/login: $/i');
+	$telnet->print("$datos[3]");
+	$telnet->waitfor('/password: $/i');
+	$telnet->print("$datos[4]");
+	$telnet->waitfor(String     => $datos[2]);
+	if ($datos[6]eq "")
+	{	
+		$telnet->print("$datos[5]");
+		$str= $telnet->getline();
+		print "$str";
+		$telnet->print("                                                                                                                        ");
+		$telnet->waitfor(String     => $datos[2]);
+		$telnet->print("exit");
+	}
+	else
+	{	
+		$telnet->print("$datos[5]");
+		$telnet->waitfor(String     => $datos[2]);
+		$telnet->print("$datos[6]");
+		$telnet->waitfor(String     => $datos[2]);
+		$telnet->print("$datos[7]");
+		$telnet->print("                ");
+		$telnet->waitfor(String     => $datos[2]);
+		$telnet->print("exit");
+	}
+	$telnet->close($datos[1]);
+	$telnet->waitfor(String => '$');
+	print"\nFinalizo ".`date`."\n";
+}
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
