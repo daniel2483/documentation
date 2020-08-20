@@ -1,0 +1,4 @@
+-	show subscriber data-rate summary – To look at the total number of subscriber along with total uplink and downlink
+-	show session progress --  To look at number of calls established with different services.
+-	show active-charging sessions full – It will show you complete ACS information of all the subscribers connected.
+-	Show subscriber summary apn <apn name> -- It will show you subscriber summary per APN.
