@@ -36,7 +36,7 @@ Here you can find my certificates:
 
 ## Networking
 - IPv6 Fundamentals [Certification](certificates/Diploma_IPv6_Fundamentals.pdf)
-- SMS [Certification](certrificates/Diploma_SMS_Daniel_Rodriguez.pdf)
+- SMS [Certification](certificates/Diploma_SMS_Daniel_Rodriguez.pdf)
 
 ## Cloud
 - AWS Partner [Certification](certificates/AWS%20Partner.pdf)
