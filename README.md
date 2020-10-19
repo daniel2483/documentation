@@ -35,8 +35,8 @@ Here you can find my certificates:
 - Full Stack Development Introduction [Certification](certificates/Full%20Stack%20Development%20Intro.pdf)
 
 ## Networking
-- IPv6 Fundamentals [Certification](Diploma_IPv6_Fundamentals.pdf)
-- SMS [Certification](Diploma_SMS_Daniel_Rodriguez.pdf)
+- IPv6 Fundamentals [Certification](certificates/Diploma_IPv6_Fundamentals.pdf)
+- SMS [Certification](certrificates/Diploma_SMS_Daniel_Rodriguez.pdf)
 
 ## Cloud
 - AWS Partner [Certification](certificates/AWS%20Partner.pdf)
