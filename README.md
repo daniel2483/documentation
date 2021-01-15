@@ -1,6 +1,6 @@
 # Resume and Certifications
 
-Here you can find my [Resume](resume/Jose%20Daniel%20Rodríguez%20Sánchez_english_resume_2020.pdf)
+Here you can find my [Resume](resume/Jose%20Daniel%20Rodríguez%20Sánchez_english_resume_2021.pdf)
 
 Here you can find my certificates:
 
