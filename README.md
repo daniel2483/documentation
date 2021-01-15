@@ -1,6 +1,8 @@
 # Resume and Certifications
 
-Here you can find my [Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2021.pdf)
+Here you can find my 
+[PDF Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2021.pdf) or
+[WORD Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2021.docx)
 
 Here you can find my certificates:
 
