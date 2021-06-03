@@ -56,7 +56,7 @@ Here you can find my certificates:
 - Solaris System Administrator [Certification](certificates/certificate_System_admin_Solaris_10.pdf)
 
 ## Databases
-- Data Bases Program (from NextU)[Certification] (certificates/Next_U_certificado_Base_de_Datos.pdf)
+- Data Bases Program (from NextU) [Certification](certificates/Next_U_certificado_Base_de_Datos.pdf)
 
 ## Other
 - Open Source [Certification](certificates/Open%20Source.pdf)
