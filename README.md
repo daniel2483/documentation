@@ -54,7 +54,7 @@ Here you can find my certificates:
 
 ## Operating Systems
 - Solaris System Administrator [Certification](certificates/certificate_System_admin_Solaris_10.pdf)
-- CompTIA Linux+ certification [Certification]("certificates/Dani_CompTIA Linux+_ce_certificate.pdf") 
+- CompTIA Linux+ certification [Certification](certificates/Dani_CompTIA%20Linux+_ce_certificate.pdf) 
 
 ## Databases
 - Data Bases Program (from NextU) [Certification](certificates/Next_U_certificado_Base_de_Datos.pdf)
