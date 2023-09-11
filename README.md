@@ -1,7 +1,7 @@
 # Resume and Certifications
 
 Here you can find my 
-[PDF Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2023_resume.pdf) or
+[PDF Resume](resume/Jose_Daniel_Rodriguez_Sanchez_english_resume_2023_resume.pdf) or
 [WORD Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2023_resume.docx)
 
 ## Degrees
