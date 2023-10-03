@@ -54,6 +54,7 @@ Here you can find my certificates:
 
 ## Operating Systems
 - Solaris System Administrator [Certification](certificates/certificate_System_admin_Solaris_10.pdf)
+- SCCM for Beginners [Certification](certificates/SCCMForBeginners.pdf)
 - CompTIA Linux+ certification [Certification](certificates/Dani_CompTIA%20Linux+_ce_certificate.pdf) 
 
 ## Databases
