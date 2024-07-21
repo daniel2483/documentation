@@ -61,10 +61,10 @@ Here you can find my certificates:
 - Data Bases Program (from NextU) [Certification](certificates/Next_U_certificado_Base_de_Datos.pdf)
 
 ## Artificial Intelligence
-- AI 101 fundamentals for managers And Leaders (Udemy) [Certification](certificates/AI 101 fundamentals for managers And Leaders_certificate.pdf)
-- Artificial Intelligence & Machine Learning for Business (Udemy) [Certification](certificates/Artificial Intelligence & Machine Learning for Business.pdf)
-- Generative AI for Business Leaders (Udemy) [Certication](certificates/Generative AI for Business Leaders.pdf)
-- Intro to ChatGPT and Generative AI (Udemy) [Certification](certificates/Intro to ChatGPT and Generative AI.pdf)
+- AI 101 fundamentals for managers And Leaders (Udemy) [Certification](certificates/AI%20101%20fundamentals%20for%20managers%20And%20Leaders%20certificate.pdf)
+- Artificial Intelligence & Machine Learning for Business (Udemy) [Certification](certificates/Artificial%20Intelligence%20&%20Machine%20Learning%20for%20Business.pdf)
+- Generative AI for Business Leaders (Udemy) [Certification](certificates/Generative_AI_for_Business_Leaders.pdf)
+- Intro to ChatGPT and Generative AI (Udemy) [Certification](certificates/Intro%20to%20ChatGPT%20and%20Generative%20AI.pdf)
 
 ## Other
 - Open Source [Certification](certificates/Open%20Source.pdf)
