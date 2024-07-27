@@ -65,6 +65,7 @@ Here you can find my certificates:
 - Artificial Intelligence & Machine Learning for Business (Udemy) [Certification](certificates/Artificial%20Intelligence%20&%20Machine%20Learning%20for%20Business.pdf)
 - Generative AI for Business Leaders (Udemy) [Certification](certificates/Generative_AI_for_Business_Leaders.pdf)
 - Intro to ChatGPT and Generative AI (Udemy) [Certification](certificates/Intro%20to%20ChatGPT%20and%20Generative%20AI.pdf)
+- Generative AI for Beginners (Udemy) [Certification](Generative_AI_for_Beginners.pdf)
 
 ## Other
 - Open Source [Certification](certificates/Open%20Source.pdf)
