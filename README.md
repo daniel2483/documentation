@@ -66,7 +66,7 @@ Here you can find my certificates:
 - Generative AI for Business Leaders (Udemy) [Certification](certificates/Generative_AI_for_Business_Leaders.pdf)
 - Intro to ChatGPT and Generative AI (Udemy) [Certification](certificates/Intro%20to%20ChatGPT%20and%20Generative%20AI.pdf)
 - Generative AI for Beginners (Udemy) [Certification](certificates/Generative_AI_for_Beginners.pdf)
-- Machine Learning & Data Science: The complete visual guide (Udemy)[certificates/Machine_Learning_and_Data_Science_The_Complete_Visual_Guide_Daniel_Rodriguez.pdf]
+- Machine Learning & Data Science: The complete visual guide (Udemy) [Certification](certificates/Machine_Learning_and_Data_Science_The_Complete_Visual_Guide_Daniel_Rodriguez.pdf)
 
 ## Other
 - Open Source [Certification](certificates/Open%20Source.pdf)
