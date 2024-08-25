@@ -60,12 +60,13 @@ Here you can find my certificates:
 ## Databases
 - Data Bases Program (from NextU) [Certification](certificates/Next_U_certificado_Base_de_Datos.pdf)
 
-## Artificial Intelligence
+## Artificial Intelligence and Machine Learning
 - AI 101 fundamentals for managers And Leaders (Udemy) [Certification](certificates/AI%20101%20fundamentals%20for%20managers%20And%20Leaders%20certificate.pdf)
 - Artificial Intelligence & Machine Learning for Business (Udemy) [Certification](certificates/Artificial%20Intelligence%20&%20Machine%20Learning%20for%20Business.pdf)
 - Generative AI for Business Leaders (Udemy) [Certification](certificates/Generative_AI_for_Business_Leaders.pdf)
 - Intro to ChatGPT and Generative AI (Udemy) [Certification](certificates/Intro%20to%20ChatGPT%20and%20Generative%20AI.pdf)
 - Generative AI for Beginners (Udemy) [Certification](certificates/Generative_AI_for_Beginners.pdf)
+- Machine Learning & Data Science: The complete visual guide (Udemy)[certificates/Machine_Learning_and_Data_Science_The_Complete_Visual_Guide_Daniel_Rodriguez.pdf]
 
 ## Other
 - Open Source [Certification](certificates/Open%20Source.pdf)
