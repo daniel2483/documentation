@@ -59,6 +59,7 @@ Here you can find my certificates:
 
 ## Databases
 - Data Bases Program (from NextU) [Certification](certificates/Next_U_certificado_Base_de_Datos.pdf)
+- MySQL (O'Reilly) [Certification](certificates/MySQL_Certificate_Daniel_Rodriguez.pdf)
 
 ## Artificial Intelligence and Machine Learning
 - AI 101 fundamentals for managers And Leaders (Udemy) [Certification](certificates/AI%20101%20fundamentals%20for%20managers%20And%20Leaders%20certificate.pdf)
