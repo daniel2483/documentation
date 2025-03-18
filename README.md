@@ -1,8 +1,8 @@
 # Resume and Certifications
 
 Here you can find my 
-[PDF Resume](resume/Jose_Daniel_Rodriguez_Sanchez_english_resume_2024_details.pdf) or
-[WORD Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2024_details.docx)
+[PDF Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2024_details.pdf) or
+[WORD Resume](resume/Jose_Daniel_Rodríguez_Sánchez_english_resume_2024_details.docx)
 
 ## Degrees
 - [High School Diploma](certificates/Bachiller_medio_jose_daniel_rodriguez_sanchez.pdf)
